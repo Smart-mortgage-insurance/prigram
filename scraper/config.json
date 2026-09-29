@@ -1,0 +1,28 @@
+{
+  "channels": [
+    { "username": "channelkikar",          "enabled": true },
+    { "username": "behadrei_harebim_bhol", "enabled": true },
+    { "username": "merkaz",                "enabled": true },
+    { "username": "hamoked_il",            "enabled": true },
+    { "username": "firstreportsnews",      "enabled": true },
+    { "username": "ramreports",            "enabled": true }
+  ],
+  "limits": {
+    "max_items": 200,
+    "max_messages_per_channel": 25,
+    "max_media_bytes": 12000000
+  },
+  "text_filter": {
+    "min_length": 8,
+    "drop_if_contains": [
+      "לפרסום בערוץ", "לפרסום אצלנו", "לפרסום לחצו", "לפרטים והרשמה",
+      "חייגו עכשיו", "התקשרו עכשיו", "הטבה בלעדית", "הנחה בלעדית", "קופון",
+      "במבצע השבוע", "מוקד המכירות", "להזמנת כרטיסים", "דרושים", "דרוש/ה"
+    ],
+    "drop_regex": ["\\*\\d{3,4}\\b", "\\b1-?[78]00\\b", ">>>", "<<<"]
+  },
+  "media_filter": {
+    "gemini_model": "gemini-2.5-flash",
+    "allow_videos": true
+  }
+}

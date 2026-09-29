@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>טלפרי · ערוצי טלגרם פתוחים בנטפרי</title>
+<meta name="description" content="טלפרי — צפייה בערוצי עדכונים ציבוריים מטלגרם, מסוננים ופתוחים בנטפרי. התוכן מובא כלשונו מהערוצים המקוריים.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#eaf2f8; --card:#fff; --ink:#14212b; --muted:#7b8a97; --line:#dde7ef;
+    --tg:#2aabee; --tg-deep:#1686c4; --tg-soft:#e3f3fc;
+    --free:#14a36b; --free-soft:#def5ea;
+    --gold:#9a7b26; --gold-soft:#f7efd9;
+    --shadow:0 1px 1px rgba(20,33,43,.04),0 4px 14px rgba(20,33,43,.06);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:var(--paper);color:var(--ink);font-family:"Heebo",-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit}
+
+  /* header */
+  header.top{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+  .top-in{max-width:1080px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:16px}
+  .brand{display:flex;align-items:center;gap:11px;min-width:0}
+  .logo{width:48px;height:48px;border-radius:14px;flex-shrink:0;background:linear-gradient(135deg,var(--tg),var(--free));
+    display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(42,171,238,.35)}
+  .logo svg{width:26px;height:26px}
+  .brand h1{font-family:"Suez One",Georgia,serif;font-weight:400;margin:0;font-size:clamp(24px,4vw,30px);line-height:1}
+  .brand h1 .f{color:var(--free)}
+  .brand .sub{font-size:12.5px;color:var(--muted);font-weight:600;margin-top:4px}
+  .search{flex:1;max-width:380px;margin-inline-start:auto;position:relative}
+  .search input{width:100%;border:1px solid var(--line);background:#f3f7fa;border-radius:999px;padding:10px 40px 10px 14px;font-size:14px;font-family:inherit;color:var(--ink);outline:none}
+  .search input:focus{border-color:var(--tg);background:#fff}
+  .search svg{position:absolute;top:50%;transform:translateY(-50%);inset-inline-start:13px;width:17px;height:17px;opacity:.4}
+  @media(max-width:640px){.search{display:none}}
+
+  /* channel chips */
+  .chips-bar{background:var(--card);border-bottom:1px solid var(--line)}
+  .chips{max-width:1080px;margin:0 auto;padding:10px 16px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{display:inline-flex;align-items:center;gap:7px;flex-shrink:0;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px 5px 6px;font-size:13.5px;font-weight:600;cursor:pointer;color:var(--ink)}
+  .chip.all{padding-inline:14px}
+  .chip.on{background:var(--tg);border-color:var(--tg);color:#fff}
+  .chip .ava{width:24px;height:24px;font-size:11px}
+
+  /* layout */
+  .wrap{max-width:1080px;margin:0 auto;display:flex;gap:24px;padding:18px 16px;align-items:flex-start}
+  .side{width:290px;flex-shrink:0;position:sticky;top:140px}
+  .feed{flex:1;min-width:0;max-width:680px;margin-inline:auto}
+  @media(max-width:980px){.side{display:none}}
+
+  .notice{background:var(--tg-soft);border:1px solid #c6e6f7;color:#1c5a7d;border-radius:12px;padding:10px 14px;font-size:13px;margin-bottom:16px;display:flex;gap:9px;align-items:flex-start}
+  .notice b{color:var(--tg-deep)}
+  .notice .x{margin-inline-start:auto;background:none;border:0;color:inherit;cursor:pointer;font-size:16px;opacity:.6}
+
+  /* avatar */
+  .ava{width:42px;height:42px;border-radius:50%;flex-shrink:0;object-fit:cover;display:inline-flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:800;font-size:17px;background:var(--tg)}
+
+  /* post */
+  .post{display:flex;gap:10px;margin-bottom:18px;align-items:flex-start;animation:rise .3s ease both}
+  @keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .post > .ava{margin-top:2px}
+  .post .col{flex:1;min-width:0}
+  .bubble{background:var(--card);border:1px solid var(--line);border-radius:16px;border-top-right-radius:5px;box-shadow:var(--shadow);padding:11px 15px 9px}
+  .src{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:5px}
+  .src .nm{font-weight:800;font-size:14.5px;color:var(--tg-deep);cursor:pointer}
+  .src .via{font-size:11.5px;color:var(--muted);font-weight:600}
+  .fwd{font-size:12.5px;color:var(--muted);margin-bottom:4px}
+  .fwd b{color:var(--tg-deep);font-weight:700}
+  .bt{font-size:16px;white-space:pre-wrap;word-break:break-word;line-height:1.6}
+  .post.fresh .bubble{animation:flash 1.8s ease}
+  @keyframes flash{0%{background:var(--tg-soft);border-color:var(--tg)}100%{background:var(--card)}}
+  .media{margin-top:10px;display:grid;gap:5px;border-radius:12px;overflow:hidden}
+  .media.n2,.media.n3,.media.n4{grid-template-columns:1fr 1fr}
+  .media.n3 > :first-child{grid-column:1 / -1}
+  .media img,.media video{width:100%;height:100%;max-height:460px;object-fit:cover;display:block;border-radius:8px;background:#e6edf2}
+  .media img{cursor:zoom-in}
+  .meta{display:flex;align-items:center;gap:12px;margin-top:8px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+  .meta .sp{flex:1}
+  .meta a,.meta button{background:none;border:0;padding:0;color:var(--muted);font-size:12px;font-weight:600;cursor:pointer}
+  .meta a:hover,.meta button:hover{color:var(--tg-deep)}
+  .meta .rep:hover{color:#c0392b}
+
+  /* promo */
+  .post.promo .ava{background:linear-gradient(135deg,#c39a3a,#7d5f16)}
+  .promo .bubble{border-color:var(--gold);background:linear-gradient(180deg,#fffdf6,#fff)}
+  .promo .tag{font-size:10.5px;font-weight:800;color:var(--gold);background:var(--gold-soft);padding:2px 8px;border-radius:5px}
+  .promo .adv{font-weight:800;font-size:16px;color:var(--ink)}
+  .cta{display:inline-block;margin-top:10px;background:var(--ink);color:#fff;font-weight:700;font-size:14px;padding:9px 18px;border-radius:10px}
+
+  /* side */
+  .box{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:15px 16px;margin-bottom:14px;font-size:13.5px}
+  .box h3{margin:0 0 8px;font-size:15px}
+  .box p{margin:0;color:#4b5a66}
+  .box .ad-img{width:calc(100% + 32px);margin:-15px -16px 12px;display:block;border-radius:14px 14px 0 0}
+  .placard{background:var(--gold-soft);border:1px dashed var(--gold);border-radius:14px;padding:16px;text-align:center}
+  .placard .h{font-weight:800;color:#6b5a1e}
+  .placard .n{display:block;margin-top:6px;font-weight:800;color:var(--gold);font-size:16px}
+
+  footer{max-width:1080px;margin:0 auto;padding:22px 16px 50px;text-align:center;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;line-height:1.8}
+  footer button{background:none;border:0;color:var(--tg-deep);font-weight:700;cursor:pointer;font-size:12.5px;padding:0}
+
+  .empty{text-align:center;color:var(--muted);padding:60px 20px;font-size:15px}
+  .more{display:block;margin:6px auto 30px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 26px;font-weight:700;color:var(--tg-deep);cursor:pointer}
+
+  /* overlays */
+  .lb{position:fixed;inset:0;background:rgba(10,16,22,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:16px;cursor:zoom-out}
+  .lb.open{display:flex}
+  .lb img{max-width:100%;max-height:100%;border-radius:8px}
+  .modal{position:fixed;inset:0;background:rgba(10,16,22,.55);display:none;align-items:center;justify-content:center;z-index:110;padding:16px}
+  .modal.open{display:flex}
+  .modal .card{background:#fff;border-radius:16px;max-width:520px;width:100%;max-height:88vh;overflow:auto;padding:22px 22px 18px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+  .modal h2{margin:0 0 10px;font-size:20px}
+  .modal p,.modal li{font-size:14px;color:#3d4b57;line-height:1.65}
+  .modal ul{padding-inline-start:20px;margin:8px 0}
+  .modal label{display:block;font-size:13px;font-weight:700;margin:12px 0 4px}
+  .modal input,.modal select,.modal textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 11px;font-family:inherit;font-size:14px}
+  .modal textarea{min-height:80px;resize:vertical}
+  .modal .row{display:flex;gap:8px;justify-content:flex-start;margin-top:16px}
+  .btn{border:0;border-radius:10px;padding:10px 20px;font-weight:700;font-size:14px;cursor:pointer}
+  .btn.pri{background:var(--tg);color:#fff}
+  .btn.sec{background:#eef3f7;color:var(--ink)}
+  .quote{background:#f5f8fa;border-inline-start:3px solid var(--tg);border-radius:8px;padding:8px 10px;font-size:13px;color:#4b5a66;max-height:90px;overflow:hidden}
+  .status{font-size:13.5px;margin-top:10px;font-weight:600}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="brand">
+      <div class="logo"><svg viewBox="0 0 24 24" fill="#fff"><path d="M21.4 3.6 2.9 10.8c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.8c.3-1.3-.5-1.9-1.5-1.4zM9 13.4l9.6-6.1c.5-.3.9-.1.5.2l-8.2 7.4-.3 3.4L9 13.4z"/></svg></div>
+      <div>
+        <h1>טל<span class="f">פרי</span></h1>
+        <div class="sub">ערוצי עדכונים מטלגרם · פתוח ומסונן בנטפרי</div>
+      </div>
+    </div>
+    <div class="search">
+      <input id="q" type="search" placeholder="חיפוש בעדכונים…" autocomplete="off">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+    </div>
+  </div>
+  <div class="chips-bar"><div class="chips" id="chips"></div></div>
+</header>
+
+<div class="wrap">
+  <aside class="side" id="side"></aside>
+  <main class="feed">
+    <div class="notice" id="notice">ℹ️<div>כל הפוסטים כאן <b>מובאים כלשונם</b> מערוצי טלגרם ציבוריים, בציון שם הערוץ. טלפרי אינו כותב, עורך או מאמת את התוכן. <button id="aboutLink" style="background:none;border:0;padding:0;color:var(--tg-deep);font-weight:700;cursor:pointer;font-size:13px">פרטים</button></div><button class="x" id="noticeX" aria-label="סגירה">✕</button></div>
+    <div id="feed"><div class="empty">טוען עדכונים…</div></div>
+  </main>
+</div>
+
+<footer>
+  © <span id="yr"></span> טלפרי · <span id="updatedLine"></span><br>
+  התכנים באתר מועתקים כלשונם מערוצי טלגרם ציבוריים. האחריות לתוכן כל פוסט חלה על הערוץ שפרסם אותו.<br>
+  <button data-open="about">הבהרה משפטית ותנאי שימוש</button> · <button data-open="report-general">בקשת הסרה / פנייה</button>
+</footer>
+
+<div class="lb" id="lightbox"><img id="lbImg" alt=""></div>
+
+<div class="modal" id="about"><div class="card">
+  <h2>אודות טלפרי והבהרה משפטית</h2>
+  <p>טלפרי מציג עדכונים מערוצי טלגרם <b>ציבוריים</b>, עבור גולשים שאין להם גישה לטלגרם (למשל ברשת נטפרי).</p>
+  <ul>
+    <li>כל פוסט מוצג <b>כלשונו</b>, בציון שם הערוץ המקורי ומועד הפרסום בו. איננו כותבים, עורכים, מנסחים מחדש או מאמתים את התוכן.</li>
+    <li>האחריות לתוכן כל פוסט — לרבות דיוקו — חלה על הערוץ שפרסם אותו. אין לראות בהצגת פוסט אימוץ, אישור או הסכמה עם תוכנו.</li>
+    <li>הסינון שלנו מסיר פרסומות ותמונות שאינן מתאימות לציבור החרדי. הוא אינו בודק את נכונות הדברים.</li>
+    <li><b>בקשות הסרה:</b> מי שנפגע מפוסט, או בעל זכויות בתוכן, יכול ללחוץ על "בקשת הסרה" ליד הפוסט. אנו מטפלים בבקשות בהקדם, ופוסט שיש בו פגיעה יוסר.</li>
+    <li>ערוץ שאינו מעוניין להופיע באתר מוזמן לפנות אלינו, והוא יוסר.</li>
+  </ul>
+  <div class="row"><button class="btn sec" data-close>סגירה</button></div>
+</div></div>
+
+<div class="modal" id="report"><div class="card">
+  <h2 id="repTitle">בקשת הסרה</h2>
+  <div class="quote" id="repQuote"></div>
+  <form id="repForm">
+    <label for="repReason">סיבת הפנייה</label>
+    <select id="repReason" name="reason">
+      <option>פגיעה בשם טוב / לשון הרע</option>
+      <option>מידע שגוי או מטעה</option>
+      <option>פגיעה בפרטיות</option>
+      <option>הפרת זכויות יוצרים</option>
+      <option>תוכן לא צנוע / לא ראוי</option>
+      <option>בקשת ערוץ להסרה מהאתר</option>
+      <option>אחר</option>
+    </select>
+    <label for="repText">פירוט (לא חובה)</label>
+    <textarea id="repText" name="details"></textarea>
+    <label for="repContact">טלפון או מייל לחזרה (לא חובה)</label>
+    <input id="repContact" name="contact" autocomplete="off">
+    <div class="status" id="repStatus"></div>
+    <div class="row"><button class="btn pri" type="submit" id="repSend">שליחה</button><button class="btn sec" type="button" data-close>ביטול</button></div>
+  </form>
+</div></div>
+
+<script>
+const NEWS_URL="data/news.json", PROMO_URL="data/sponsored.json", REMOVED_URL="data/removed.json", REFRESH_MS=60000, PAGE=30;
+const AD_CONTACT="054-8427249";                                   // ← טלפון לפרסום באתר
+const REPORT_KEY="ada496e6-156f-4974-9ac9-846bdeebbae1";          // ← web3forms access key לבקשות הסרה
+const COLORS=["#2aabee","#14a36b","#e0793a","#8e5bd6","#d2455a","#2f8f9d","#c29b1c","#5b6ee0"];
+
+let data={items:[],channels:{}}, promos={items:[]}, removed=new Set(), seen=new Set();
+let filterCh="", query="", shown=PAGE, first=true;
+const $=id=>document.getElementById(id);
+$("yr").textContent=new Date().getFullYear();
+
+const esc=s=>(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+function relTime(iso){
+  if(!iso) return "";
+  const d=new Date(iso),s=Math.floor((Date.now()-d)/1000);
+  if(s<60) return "כעת";
+  if(s<3600) return "לפני "+Math.floor(s/60)+" דק׳";
+  if(s<86400){const h=Math.floor(s/3600);return "לפני "+h+(h===1?" שעה":" שעות");}
+  return d.toLocaleDateString("he-IL",{day:"numeric",month:"short"})+" "+d.toLocaleTimeString("he-IL",{hour:"2-digit",minute:"2-digit"});
+}
+const hhmm=iso=>iso?new Date(iso).toLocaleTimeString("he-IL",{hour:"2-digit",minute:"2-digit"}):"";
+const fmtViews=v=>v==null?"":v>=1e6?(v/1e6).toFixed(1)+"M":v>=1e3?(v/1e3).toFixed(1).replace(/\.0$/,"")+"K":String(v);
+const chName=u=>(data.channels[u]&&data.channels[u].title)||u;
+function avatar(u,cls){
+  const c=data.channels[u]||{};
+  if(c.avatar) return `<img class="ava ${cls||""}" src="${c.avatar}" alt="">`;
+  let h=0;for(const ch of u)h=(h*31+ch.charCodeAt(0))>>>0;
+  return `<span class="ava ${cls||""}" style="background:${COLORS[h%COLORS.length]}">${esc(chName(u).trim().charAt(0))}</span>`;
+}
+
+function mediaHTML(media){
+  if(!media||!media.length) return "";
+  return `<div class="media n${Math.min(media.length,4)}">`+media.slice(0,4).map(m=>
+    m.type==="video"?`<video src="${m.file}"${m.poster?` poster="${m.poster}"`:""} controls preload="none"></video>`
+                    :`<img src="${m.file||m.image}" loading="lazy" alt="" onerror="this.remove()">`).join("")+`</div>`;
+}
+
+function postHTML(it,fresh){
+  const u=it.post.split("/")[0];
+  return `<article class="post${fresh?" fresh":""}">
+    ${avatar(u)}
+    <div class="col"><div class="bubble">
+      <div class="src"><span class="nm" data-ch="${esc(u)}">${esc(chName(u))}</span><span class="via">ערוץ טלגרם ציבורי · ${hhmm(it.ts)}</span></div>
+      ${it.forwarded_from?`<div class="fwd">הועבר מתוך: <b>${esc(it.forwarded_from)}</b></div>`:""}
+      ${it.text?`<div class="bt">${esc(it.text)}</div>`:""}
+      ${mediaHTML(it.media)}
+      <div class="meta">
+        <span>${relTime(it.ts)}</span>${it.views!=null?`<span>👁 ${fmtViews(it.views)}</span>`:""}
+        <span class="sp"></span>
+        <a href="https://t.me/${esc(it.post)}" target="_blank" rel="noopener nofollow" title="הקישור למקור בטלגרם (חסום בנטפרי)">מקור ↗</a>
+        <button class="rep" data-rep="${esc(it.post)}">⚑ בקשת הסרה</button>
+      </div>
+    </div></div>
+  </article>`;
+}
+
+function promoHTML(p){
+  let cta="";
+  if(p.cta_phone) cta=`<a class="cta" href="tel:${p.cta_phone.replace(/[^0-9+]/g,"")}">${esc(p.cta_label||"לפרטים")} ${esc(p.cta_phone)}</a>`;
+  else if(p.cta_url) cta=`<a class="cta" href="${esc(p.cta_url)}" target="_blank" rel="noopener">${esc(p.cta_label||"לפרטים")}</a>`;
+  return `<article class="post promo"><span class="ava">★</span><div class="col"><div class="bubble">
+    <div class="src"><span class="adv">${esc(p.advertiser||"")}</span><span class="tag">ממומן</span></div>
+    ${p.text?`<div class="bt">${esc(p.text)}</div>`:""}${p.image?mediaHTML([{type:"image",image:p.image}]):""}${cta}
+  </div></div></article>`;
+}
+
+function renderChips(){
+  const counts={};data.items.forEach(i=>{const u=i.post.split("/")[0];counts[u]=(counts[u]||0)+1;});
+  const us=Object.keys(data.channels).sort((a,b)=>(counts[b]||0)-(counts[a]||0));
+  $("chips").innerHTML=`<button class="chip all${filterCh?"":" on"}" data-ch="">כל הערוצים</button>`+
+    us.map(u=>`<button class="chip${filterCh===u?" on":""}" data-ch="${esc(u)}">${avatar(u)}${esc(chName(u))}</button>`).join("");
+}
+
+function renderSide(){
+  const pinned=(promos.items||[]).filter(p=>p.enabled!==false&&p.pin);
+  let h=pinned.map(p=>`<div class="box">${p.image?`<img class="ad-img" src="${esc(p.image)}" alt="">`:""}<h3>${esc(p.advertiser||"")}</h3><p>${esc(p.text||"")}</p>
+    ${p.cta_phone?`<a class="cta" href="tel:${p.cta_phone.replace(/[^0-9+]/g,"")}">${esc(p.cta_label||"לפרטים")}</a>`:""}</div>`).join("");
+  h+=`<div class="box"><h3>מה זה טלפרי?</h3><p>עדכונים מערוצי טלגרם ציבוריים, בלי צורך בטלגרם — פתוח בנטפרי, עם סינון תמונות ופרסומות. כל פוסט מובא כלשונו בשם הערוץ שפרסם אותו.</p></div>`;
+  h+=`<div class="placard"><div class="h">📣 מעוניינים לפרסם?</div><span class="n">${AD_CONTACT}</span></div>`;
+  $("side").innerHTML=h;
+}
+
+function render(isRefresh){
+  let items=data.items.filter(i=>!removed.has(i.post));
+  if(filterCh) items=items.filter(i=>i.post.split("/")[0]===filterCh);
+  if(query) items=items.filter(i=>(i.text||"").includes(query)||chName(i.post.split("/")[0]).includes(query));
+  if(!items.length){$("feed").innerHTML=`<div class="empty">${query||filterCh?"לא נמצאו עדכונים.":"אין עדכונים כרגע. חוזרים בקרוב…"}</div>`;return;}
+  const inline=(promos.items||[]).filter(p=>p.enabled!==false&&!p.pin);
+  let html="";
+  items.slice(0,shown).forEach((it,i)=>{
+    html+=postHTML(it,isRefresh&&!seen.has(it.post));
+    if(inline.length&&(i+1)%7===0) html+=promoHTML(inline[((i+1)/7-1)%inline.length]);
+  });
+  if(items.length>shown) html+=`<button class="more" id="more">עוד עדכונים</button>`;
+  $("feed").innerHTML=html;
+}
+
+async function jget(u){const r=await fetch(u+"?t="+Date.now(),{cache:"no-store"});if(!r.ok)throw new Error(r.status);return r.json();}
+async function load(isRefresh){
+  try{
+    const [n,p,r]=await Promise.all([jget(NEWS_URL),jget(PROMO_URL).catch(()=>({items:[]})),jget(REMOVED_URL).catch(()=>({posts:[]}))]);
+    data={items:n.items||[],channels:n.channels||{}}; promos=p; removed=new Set(r.posts||[]);
+    renderChips(); renderSide(); render(isRefresh&&!first);
+    seen=new Set(data.items.map(i=>i.post)); first=false;
+    if(n.updated) $("updatedLine").textContent="עודכן "+relTime(n.updated);
+  }catch(e){ if(!isRefresh) $("feed").innerHTML='<div class="empty">לא ניתן לטעון עדכונים כרגע. נסו לרענן בעוד רגע.</div>'; }
+}
+
+/* modals */
+const openM=id=>$(id).classList.add("open"), closeM=el=>el.closest(".modal").classList.remove("open");
+let repPost="";
+function openReport(post){
+  repPost=post||"";
+  const it=data.items.find(i=>i.post===post);
+  $("repTitle").textContent=post?"בקשת הסרה לפוסט":"בקשת הסרה / פנייה";
+  $("repQuote").style.display=it?"":"none";
+  $("repQuote").textContent=it?chName(post.split("/")[0])+": "+(it.text||"[תמונה]").slice(0,220):"";
+  $("repStatus").textContent=""; $("repForm").reset(); $("repSend").disabled=false;
+  openM("report");
+}
+$("repForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const fd=new FormData();
+  fd.append("access_key",REPORT_KEY);
+  fd.append("subject","טלפרי – בקשת הסרה"+(repPost?" ("+repPost+")":""));
+  fd.append("from_name","טלפרי");
+  fd.append("post",repPost||"כללי");
+  fd.append("reason",$("repReason").value);
+  fd.append("details",$("repText").value);
+  fd.append("contact",$("repContact").value);
+  $("repSend").disabled=true; $("repStatus").style.color=""; $("repStatus").textContent="שולח…";
+  try{
+    const r=await fetch("https://api.web3forms.com/submit",{method:"POST",body:fd}); const j=await r.json();
+    if(!j.success) throw 0;
+    $("repStatus").style.color="var(--free)"; $("repStatus").textContent="✓ הבקשה התקבלה ותטופל בהקדם. תודה!";
+    setTimeout(()=>$("report").classList.remove("open"),2200);
+  }catch(_){ $("repSend").disabled=false; $("repStatus").style.color="#c0392b"; $("repStatus").textContent="השליחה נכשלה. נסו שוב בעוד רגע."; }
+});
+
+document.addEventListener("click",e=>{
+  const t=e.target;
+  const ch=t.closest("[data-ch]");
+  if(ch){filterCh=ch.dataset.ch;shown=PAGE;renderChips();render(false);window.scrollTo({top:0,behavior:"smooth"});return;}
+  const rep=t.closest("[data-rep]"); if(rep){openReport(rep.dataset.rep);return;}
+  const op=t.closest("[data-open]"); if(op){op.dataset.open==="about"?openM("about"):openReport("");return;}
+  if(t.closest("[data-close]")||t.classList.contains("modal")){closeM(t);return;}
+  if(t.id==="more"){shown+=PAGE;render(false);return;}
+  const img=t.closest(".media img"); if(img){$("lbImg").src=img.src;$("lightbox").classList.add("open");}
+});
+$("lightbox").addEventListener("click",()=>$("lightbox").classList.remove("open"));
+$("aboutLink").addEventListener("click",()=>openM("about"));
+$("q").addEventListener("input",e=>{query=e.target.value.trim();shown=PAGE;render(false);});
+try{ if(localStorage.getItem("tf_notice")) $("notice").remove(); }catch(_){}
+$("noticeX").addEventListener("click",()=>{$("notice").remove();try{localStorage.setItem("tf_notice","1")}catch(_){}});
+
+load(false);
+setInterval(()=>load(true),REFRESH_MS);
+</script>
+</body>
+</html>

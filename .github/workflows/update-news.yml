@@ -10,7 +10,7 @@ permissions:
 
 # a newly launched run replaces the running loop -> continuous, no overlap
 concurrency:
-  group: telefree-feed
+  group: prigram-feed
   cancel-in-progress: true
 
 jobs:
@@ -33,8 +33,8 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          git config user.name  "טלפרי"
-          git config user.email "bot@telefree.local"
+          git config user.name  "פריגרם"
+          git config user.email "bot@prigram.local"
           for i in $(seq 1 20); do
             echo "=== cycle $i / 20 ==="
             python scraper/scrape.py || echo "scrape error, continuing"

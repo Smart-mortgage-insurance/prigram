@@ -1,11 +1,65 @@
 {
   "channels": [
-    { "username": "channelkikar",          "enabled": true },
-    { "username": "behadrei_harebim_bhol", "enabled": true },
-    { "username": "merkaz",                "enabled": true },
-    { "username": "hamoked_il",            "enabled": true },
-    { "username": "firstreportsnews",      "enabled": true },
-    { "username": "ramreports",            "enabled": true }
+    {
+      "username": "channelkikar",
+      "enabled": true
+    },
+    {
+      "username": "behadrei_harebim_bhol",
+      "enabled": true
+    },
+    {
+      "username": "merkaz",
+      "enabled": true
+    },
+    {
+      "username": "hamoked_il",
+      "enabled": true
+    },
+    {
+      "username": "firstreportsnews",
+      "enabled": true
+    },
+    {
+      "username": "ramreports",
+      "enabled": true
+    },
+    {
+      "username": "abualiexpress",
+      "enabled": true
+    },
+    {
+      "username": "amitsegal",
+      "enabled": true
+    },
+    {
+      "username": "kann_news",
+      "enabled": true
+    },
+    {
+      "username": "news0404il",
+      "enabled": true
+    },
+    {
+      "username": "jdnnews",
+      "enabled": true
+    },
+    {
+      "username": "yediotnews",
+      "enabled": true
+    },
+    {
+      "username": "hadshotbezmanemet",
+      "enabled": true
+    },
+    {
+      "username": "israelhayomofficial",
+      "enabled": true
+    },
+    {
+      "username": "haredim10",
+      "enabled": true
+    }
   ],
   "limits": {
     "max_items": 200,
@@ -15,11 +69,27 @@
   "text_filter": {
     "min_length": 8,
     "drop_if_contains": [
-      "לפרסום בערוץ", "לפרסום אצלנו", "לפרסום לחצו", "לפרטים והרשמה",
-      "חייגו עכשיו", "התקשרו עכשיו", "הטבה בלעדית", "הנחה בלעדית", "קופון",
-      "במבצע השבוע", "מוקד המכירות", "להזמנת כרטיסים", "דרושים", "דרוש/ה"
+      "לפרסום בערוץ",
+      "לפרסום אצלנו",
+      "לפרסום לחצו",
+      "לפרטים והרשמה",
+      "חייגו עכשיו",
+      "התקשרו עכשיו",
+      "הטבה בלעדית",
+      "הנחה בלעדית",
+      "קופון",
+      "במבצע השבוע",
+      "מוקד המכירות",
+      "להזמנת כרטיסים",
+      "דרושים",
+      "דרוש/ה"
     ],
-    "drop_regex": ["\\*\\d{3,4}\\b", "\\b1-?[78]00\\b", ">>>", "<<<"]
+    "drop_regex": [
+      "\\*\\d{3,4}\\b",
+      "\\b1-?[78]00\\b",
+      ">>>",
+      "<<<"
+    ]
   },
   "media_filter": {
     "gemini_model": "gemini-2.5-flash",

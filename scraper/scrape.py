@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-טלפרי – mirrors public Telegram channels into a NetFree-reachable feed.
+פריגרם – mirrors public Telegram channels into a NetFree-reachable feed.
 
 Transparent aggregator: every post is shown AS-IS, attributed to its source
 channel, with a link to the original. We do not edit, rewrite or re-word posts
@@ -300,7 +300,7 @@ def prune_media(items, channels):
 
 
 def main():
-    log("== טלפרי scraper ==  image filter:", "ON" if GEMINI_KEY else "OFF (text-only)")
+    log("== פריגרם scraper ==  image filter:", "ON" if GEMINI_KEY else "OFF (text-only)")
     news = load_json(NEWS_PATH, {"items": [], "channels": {}})
     removed = set(load_json(REMOVED_PATH, {"posts": []}).get("posts", []))
     enabled = [c for c in CFG["channels"] if c.get("enabled", True)]
@@ -316,6 +316,10 @@ def main():
         uname = ch["username"]
         log("-> @" + uname)
         info, msgs = fetch_channel(uname)
+        if not msgs:
+            log("   ! no public posts (wrong username / private / empty) - skipped")
+            channels.pop(uname, None)
+            continue
         if info:
             prev = channels.get(uname, {})
             avatar = prev.get("avatar") or process_avatar(info)

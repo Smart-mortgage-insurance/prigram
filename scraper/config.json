@@ -41,23 +41,31 @@
       "enabled": true
     },
     {
-      "username": "jdnnews",
-      "enabled": true
-    },
-    {
-      "username": "yediotnews",
-      "enabled": true
-    },
-    {
-      "username": "hadshotbezmanemet",
-      "enabled": true
-    },
-    {
       "username": "israelhayomofficial",
       "enabled": true
     },
     {
-      "username": "haredim10",
+      "username": "N12chat",
+      "enabled": true
+    },
+    {
+      "username": "ynetalerts",
+      "enabled": true
+    },
+    {
+      "username": "glz_news",
+      "enabled": true
+    },
+    {
+      "username": "ch13news",
+      "enabled": true
+    },
+    {
+      "username": "hamodia_il",
+      "enabled": true
+    },
+    {
+      "username": "kikar_news",
       "enabled": true
     }
   ],

@@ -283,7 +283,7 @@ function promoHTML(p){
 
 function renderChips(){
   const counts={};data.items.forEach(i=>{const u=i.post.split("/")[0];counts[u]=(counts[u]||0)+1;});
-  const us=Object.keys(data.channels).sort((a,b)=>(counts[b]||0)-(counts[a]||0));
+  const us=Object.keys(data.channels).filter(u=>counts[u]).sort((a,b)=>(counts[b]||0)-(counts[a]||0));
   $("chips").innerHTML=`<button class="chip all${filterCh?"":" on"}" data-ch="">כל הערוצים</button>`+
     us.map(u=>`<button class="chip${filterCh===u?" on":""}" data-ch="${esc(u)}">${avatar(u)}${esc(chName(u))}</button>`).join("");
 }

@@ -360,7 +360,15 @@ def main():
         time.sleep(1)
 
     items = sorted(existing.values(), key=lambda x: x.get("ts") or "", reverse=True)
-    items = items[: CFG["limits"]["max_items"]]
+    # per-channel cap, so busy channels never push the quieter ones off the site
+    per_ch, kept = CFG["limits"].get("max_items_per_channel", 20), {}
+    capped = []
+    for it in items:
+        ch = it["post"].split("/")[0]
+        if kept.get(ch, 0) < per_ch:
+            kept[ch] = kept.get(ch, 0) + 1
+            capped.append(it)
+    items = capped[: CFG["limits"]["max_items"]]
     prune_media(items, channels)
 
     out = {"updated": datetime.now(timezone.utc).isoformat(),

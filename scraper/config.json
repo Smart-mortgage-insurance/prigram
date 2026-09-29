@@ -51,28 +51,13 @@
     {
       "username": "ynetalerts",
       "enabled": true
-    },
-    {
-      "username": "glz_news",
-      "enabled": true
-    },
-    {
-      "username": "ch13news",
-      "enabled": true
-    },
-    {
-      "username": "hamodia_il",
-      "enabled": true
-    },
-    {
-      "username": "kikar_news",
-      "enabled": true
     }
   ],
   "limits": {
-    "max_items": 200,
+    "max_items": 400,
     "max_messages_per_channel": 25,
-    "max_media_bytes": 12000000
+    "max_media_bytes": 12000000,
+    "max_items_per_channel": 20
   },
   "text_filter": {
     "min_length": 8,

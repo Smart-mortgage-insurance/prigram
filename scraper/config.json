@@ -93,6 +93,7 @@
   },
   "media_filter": {
     "gemini_model": "gemini-2.5-flash",
-    "allow_videos": true
+    "allow_videos": true,
+    "allow_without_gemini": true
   }
 }

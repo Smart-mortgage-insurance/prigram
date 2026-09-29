@@ -38,6 +38,8 @@ with open(CONFIG_PATH, encoding="utf-8") as fh:
     CFG = json.load(fh)
 
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
+# without a Gemini key, keep images anyway (NetFree filters images on the user's side)
+UNFILTERED_OK = CFG["media_filter"].get("allow_without_gemini", False)
 
 SESSION = requests.Session()
 SESSION.headers.update({
@@ -232,8 +234,8 @@ def save_media(key, data, ctype, default_ext):
 
 def process_media(post, media):
     """Download + filter; returns local media entries (images/videos that passed)."""
-    if not GEMINI_KEY:
-        return []  # no filter available -> text only, never unfiltered images
+    if not GEMINI_KEY and not UNFILTERED_OK:
+        return []  # no filter available -> text only
     max_bytes = CFG["limits"]["max_media_bytes"]
     kept = []
     for m in media:
@@ -250,7 +252,7 @@ def process_media(post, media):
             if not pdata:
                 continue
             judge, jmime = pdata, pctype
-        if not gemini_image_ok(judge, jmime):
+        if GEMINI_KEY and not gemini_image_ok(judge, jmime):
             log("    - media rejected by filter")
             continue
         entry = {"type": m["type"],
@@ -265,10 +267,10 @@ def process_media(post, media):
 def process_avatar(info):
     """Channel logos are shown for attribution; still pass the modesty filter."""
     src = info.pop("avatar_src", None)
-    if not src or not GEMINI_KEY:
+    if not src or not (GEMINI_KEY or UNFILTERED_OK):
         return None
     data, ctype = download(src, 2000000)
-    if not data or not gemini_image_ok(data, ctype):
+    if not data or (GEMINI_KEY and not gemini_image_ok(data, ctype)):
         return None
     return save_media("avatar:" + info["username"], data, ctype, ".jpg")
 
@@ -300,7 +302,7 @@ def prune_media(items, channels):
 
 
 def main():
-    log("== פריגרם scraper ==  image filter:", "ON" if GEMINI_KEY else "OFF (text-only)")
+    log("== פריגרם scraper ==  image filter:", "ON" if GEMINI_KEY else ("OFF (images kept, NetFree filters)" if UNFILTERED_OK else "OFF (text-only)"))
     news = load_json(NEWS_PATH, {"items": [], "channels": {}})
     removed = set(load_json(REMOVED_PATH, {"posts": []}).get("posts", []))
     enabled = [c for c in CFG["channels"] if c.get("enabled", True)]

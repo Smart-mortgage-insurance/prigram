@@ -330,6 +330,13 @@ def main():
     removed = set(load_json(REMOVED_PATH, {"posts": []}).get("posts", []))
     enabled = [c for c in CFG["channels"] if c.get("enabled", True)]
     enabled_names = {c["username"] for c in enabled}
+    # some channels mark every real news item with a fixed prefix ("הפרגוד:");
+    # their sponsored posts come without it, so anything unprefixed is dropped
+    prefixes = {c["username"]: c["require_prefix"] for c in enabled if c.get("require_prefix")}
+
+    def channel_ok(post, raw):
+        pre = prefixes.get(post.split("/")[0])
+        return not pre or re.sub(r"^[\s‎‏*]+", "", raw or "").startswith(pre)
 
     cutoff = (datetime.now(timezone.utc) - timedelta(days=CFG["limits"].get("max_age_days", 5))).isoformat()
     existing = {}
@@ -339,6 +346,8 @@ def main():
             continue
         # re-apply the current filters, so filter changes also clean older posts
         it["text"] = clean_text(it.get("text", ""))
+        if not channel_ok(it["post"], it["text"]):
+            continue
         if it["text"] and not text_allowed(it["text"]):
             continue
         if not it["text"] and not it.get("media"):
@@ -371,6 +380,9 @@ def main():
                 continue
             if post in removed or (msg["ts"] or "") < cutoff:
                 continue  # removed on request, or an old post (dead/moved channel)
+            if not channel_ok(post, msg["text"]):
+                log("   - dropped (sponsored: no channel prefix)")
+                continue
             if msg["text"] and not text_allowed(msg["text"]):
                 log("   - dropped (ad/spam)")
                 continue

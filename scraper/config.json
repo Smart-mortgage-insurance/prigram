@@ -41,10 +41,6 @@
       "enabled": true
     },
     {
-      "username": "kikar_hashabbat",
-      "enabled": true
-    },
-    {
       "username": "behadrey",
       "enabled": true
     },
@@ -53,35 +49,7 @@
       "enabled": true
     },
     {
-      "username": "charedim10",
-      "enabled": true
-    },
-    {
       "username": "haskupim",
-      "enabled": true
-    },
-    {
-      "username": "jdn_news",
-      "enabled": true
-    },
-    {
-      "username": "jdn_co_il",
-      "enabled": true
-    },
-    {
-      "username": "emess_news",
-      "enabled": true
-    },
-    {
-      "username": "kolhai_news",
-      "enabled": true
-    },
-    {
-      "username": "kore_news",
-      "enabled": true
-    },
-    {
-      "username": "kikarm_musik",
       "enabled": true
     }
   ],
@@ -163,7 +131,9 @@
       "הישארו מעודכנים בכל הפלטפורמות",
       "לערוץ הוואטסאפ",
       "להצטרפות לערוץ",
-      "לעדכוני הפרגוד בטלגרם"
+      "לעדכוני הפרגוד בטלגרם",
+      "להמשך קריאה, כנסו",
+      "להצטרפות לקבוצות"
     ],
     "strip_line_regex": [
       "^\\d+ תגובות$",

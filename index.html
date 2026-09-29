@@ -350,6 +350,7 @@ document.addEventListener("click",e=>{
   const img=t.closest(".media img"); if(img){$("lbImg").src=img.src;$("lightbox").classList.add("open");}
 });
 $("lightbox").addEventListener("click",()=>$("lightbox").classList.remove("open"));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".modal.open,.lb.open").forEach(m=>m.classList.remove("open"));});
 $("aboutLink").addEventListener("click",()=>openM("about"));
 $("q").addEventListener("input",e=>{query=e.target.value.trim();shown=PAGE;render(false);});
 try{ if(localStorage.getItem("tf_notice")) $("notice").remove(); }catch(_){}

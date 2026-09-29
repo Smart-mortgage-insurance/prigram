@@ -1,23 +1,11 @@
 {
   "channels": [
     {
-      "username": "channelkikar",
-      "enabled": true
-    },
-    {
-      "username": "behadrei_harebim_bhol",
-      "enabled": true
-    },
-    {
       "username": "merkaz",
       "enabled": true
     },
     {
       "username": "hamoked_il",
-      "enabled": true
-    },
-    {
-      "username": "firstreportsnews",
       "enabled": true
     },
     {
@@ -30,10 +18,6 @@
     },
     {
       "username": "amitsegal",
-      "enabled": true
-    },
-    {
-      "username": "kann_news",
       "enabled": true
     },
     {
@@ -51,37 +35,123 @@
     {
       "username": "ynetalerts",
       "enabled": true
+    },
+    {
+      "username": "kikarhashabat",
+      "enabled": true
+    },
+    {
+      "username": "kikar_hashabat",
+      "enabled": true
+    },
+    {
+      "username": "kikarnews",
+      "enabled": true
+    },
+    {
+      "username": "bhol_co_il",
+      "enabled": true
+    },
+    {
+      "username": "bhol_news",
+      "enabled": true
+    },
+    {
+      "username": "behadrei_haredim",
+      "enabled": true
+    },
+    {
+      "username": "bholnews",
+      "enabled": true
+    },
+    {
+      "username": "kann_hadashot",
+      "enabled": true
+    },
+    {
+      "username": "kannews",
+      "enabled": true
     }
   ],
   "limits": {
     "max_items": 400,
     "max_messages_per_channel": 25,
     "max_media_bytes": 12000000,
-    "max_items_per_channel": 20
+    "max_items_per_channel": 20,
+    "max_age_days": 5
   },
   "text_filter": {
-    "min_length": 8,
     "drop_if_contains": [
-      "לפרסום בערוץ",
-      "לפרסום אצלנו",
-      "לפרסום לחצו",
-      "לפרטים והרשמה",
-      "חייגו עכשיו",
-      "התקשרו עכשיו",
+      "Binance",
+      "במבצע השבוע",
+      "בשיתוף פעולה עם",
+      "דירות אחרונות",
+      "דרוש/ה",
+      "דרושים",
+      "הון עצמי",
       "הטבה בלעדית",
       "הנחה בלעדית",
-      "קופון",
-      "במבצע השבוע",
-      "מוקד המכירות",
+      "הנחה על",
+      "הפקדת ההשקעה",
+      "הצטרפו עכשיו",
+      "התחדש! כל העדכונים",
+      "התקשרו עכשיו",
+      "זמין לצפייה",
+      "חייגו עכשיו",
+      "להזמנות",
       "להזמנת כרטיסים",
-      "דרושים",
-      "דרוש/ה"
+      "להרשמה",
+      "לפרטים והרשמה",
+      "לפרטים נוספים",
+      "לפרסום אצלנו",
+      "לפרסום בערוץ",
+      "לפרסום לחצו",
+      "לצפייה בפרק",
+      "לצפייה בתוכנית המלאה",
+      "לרכישה",
+      "לשותפות",
+      "מוקד המכירות",
+      "מזמינה אתכם",
+      "מזמינים אתכם",
+      "מחירים מיוחדים",
+      "משקיעים שלנו",
+      "פודקאסט",
+      "פרק הבכורה",
+      "צפו בתוכנית המלאה",
+      "צרו איתי קשר",
+      "קופון",
+      "קריפטו",
+      "רווחים עצומים",
+      "תוכן ממומן",
+      "תוכן שיווקי"
     ],
     "drop_regex": [
       "\\*\\d{3,4}\\b",
       "\\b1-?[78]00\\b",
       ">>>",
-      "<<<"
+      "<<<",
+      "\\d+\\s*%\\s*הנחה",
+      "החל מ[-־]?\\s*[\\d,\\.]+\\s*(₪|ש\"ח|יורו|\\$)",
+      "[\\d,]+\\s*₪"
+    ],
+    "min_letters": 12,
+    "cut_from": [
+      "המוקד - להצטרפות",
+      "חדשות 04 | עקבו אחרינו",
+      "מבזקי⚡️רעם",
+      "מבזקי⚡רעם",
+      "-------------",
+      "כדי להגיב לכתבה לחצו כאן",
+      "למבזק המלא ב-ynet",
+      "הקישור המקורי:",
+      "הישארו מעודכנים בכל הפלטפורמות",
+      "לערוץ הוואטסאפ",
+      "להצטרפות לערוץ"
+    ],
+    "strip_line_regex": [
+      "^\\d+ תגובות$",
+      "^תגובה אחת$",
+      "^[➖—\\-_=•.]+$"
     ]
   },
   "media_filter": {

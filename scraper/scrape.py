@@ -19,7 +19,7 @@ import time
 import base64
 import hashlib
 import mimetypes
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 import requests
 from bs4 import BeautifulSoup
@@ -153,14 +153,28 @@ URL_RE = re.compile(r"https?://\S+|t\.me/\S+", re.I)
 DROP_REGEX = [re.compile(p) for p in CFG["text_filter"].get("drop_regex", [])]
 
 
+HANDLE_RE = re.compile(r"(?<!\w)@[A-Za-z0-9_]{3,}")
+FOOTER_RE = [re.compile(p) for p in CFG["text_filter"].get("strip_line_regex", [])]
+
+
 def clean_text(text):
-    # only raw links are removed: they point at Telegram, which NetFree blocks
+    # removed: raw links (Telegram is blocked in NetFree) and each channel's own
+    # "join us / follow us" footer. The news text itself is never changed.
+    for marker in CFG["text_filter"].get("cut_from", []):
+        pos = text.find(marker)
+        if pos != -1:
+            text = text[:pos]
     text = URL_RE.sub("", text)
+    text = HANDLE_RE.sub("", text)
+    text = "\n".join(ln for ln in text.split("\n")
+                     if not any(rx.search(ln.strip()) for rx in FOOTER_RE))
     text = re.sub(r"[ \t]{2,}", " ", text)
     return re.sub(r"\n{3,}", "\n\n", text).strip()
 
 
 def text_allowed(text):
+    if len(re.sub(r"\W", "", text)) < CFG["text_filter"].get("min_letters", 12):
+        return False  # "#", "שר החוץ" and similar fragments
     low = text.lower()
     if any(b.lower() in low for b in CFG["text_filter"].get("drop_if_contains", [])):
         return False
@@ -308,9 +322,19 @@ def main():
     enabled = [c for c in CFG["channels"] if c.get("enabled", True)]
     enabled_names = {c["username"] for c in enabled}
 
-    existing = {it["post"]: it for it in news.get("items", [])
-                if it.get("post") not in removed
-                and it.get("post", "").split("/")[0] in enabled_names}
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=CFG["limits"].get("max_age_days", 5))).isoformat()
+    existing = {}
+    for it in news.get("items", []):
+        if (it.get("post") in removed or it.get("post", "").split("/")[0] not in enabled_names
+                or (it.get("ts") or "") < cutoff):
+            continue
+        # re-apply the current filters, so filter changes also clean older posts
+        it["text"] = clean_text(it.get("text", ""))
+        if it["text"] and not text_allowed(it["text"]):
+            continue
+        if not it["text"] and not it.get("media"):
+            continue
+        existing[it["post"]] = it
     channels = {k: v for k, v in news.get("channels", {}).items() if k in enabled_names}
     new_count = 0
 
@@ -336,10 +360,13 @@ def main():
                 if msg["views"] is not None:
                     existing[post]["views"] = msg["views"]  # keep view counts fresh
                 continue
-            if post in removed:
+            if post in removed or (msg["ts"] or "") < cutoff:
+                continue  # removed on request, or an old post (dead/moved channel)
+            if msg["text"] and not text_allowed(msg["text"]):
+                log("   - dropped (ad/spam)")
                 continue
             text = clean_text(msg["text"])
-            if len(text) < CFG["text_filter"]["min_length"] and not msg["media"]:
+            if not text and not msg["media"]:
                 continue
             if text and not text_allowed(text):
                 log("   - dropped (ad/spam)")

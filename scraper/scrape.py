@@ -155,6 +155,8 @@ DROP_REGEX = [re.compile(p) for p in CFG["text_filter"].get("drop_regex", [])]
 
 HANDLE_RE = re.compile(r"(?<!\w)@[A-Za-z0-9_]{3,}")
 FOOTER_RE = [re.compile(p) for p in CFG["text_filter"].get("strip_line_regex", [])]
+# per-line leftovers: "| source >>", arrows pointing at a removed link, bare domains
+TRAIL_RE = [re.compile(p) for p in CFG["text_filter"].get("strip_regex", [])]
 
 
 def clean_text(text):
@@ -166,8 +168,15 @@ def clean_text(text):
             text = text[:pos]
     text = URL_RE.sub("", text)
     text = HANDLE_RE.sub("", text)
-    text = "\n".join(ln for ln in text.split("\n")
-                     if not any(rx.search(ln.strip()) for rx in FOOTER_RE))
+    lines = []
+    for ln in text.split("\n"):
+        ln = ln.strip()
+        for _ in range(3):  # repeat: stripping one tail can expose another
+            for rx in TRAIL_RE:
+                ln = rx.sub("", ln).strip()
+        if not any(rx.search(ln) for rx in FOOTER_RE):
+            lines.append(ln)
+    text = "\n".join(lines)
     text = re.sub(r"[ \t]{2,}", " ", text)
     return re.sub(r"\n{3,}", "\n\n", text).strip()
 

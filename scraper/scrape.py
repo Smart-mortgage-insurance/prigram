@@ -160,6 +160,8 @@ HANDLE_RE = re.compile(r"(?<!\w)@[A-Za-z0-9_]{3,}")
 FOOTER_RE = [re.compile(p) for p in CFG["text_filter"].get("strip_line_regex", [])]
 # per-line leftovers: "| source >>", arrows pointing at a removed link, bare domains
 TRAIL_RE = [re.compile(p) for p in CFG["text_filter"].get("strip_regex", [])]
+# camera / "see above" emojis pointing at media we don't show: swapped for a space
+SPACE_RE = [re.compile(p) for p in CFG["text_filter"].get("replace_with_space", [])]
 
 
 def clean_text(text):
@@ -171,6 +173,8 @@ def clean_text(text):
             text = text[:pos]
     text = URL_RE.sub("", text)
     text = HANDLE_RE.sub("", text)
+    for rx in SPACE_RE:
+        text = rx.sub(" ", text)
     lines = []
     for ln in text.split("\n"):
         ln = ln.strip()
@@ -341,6 +345,12 @@ def main():
         pre = prefixes.get(post.split("/")[0])
         return not pre or re.sub(r"^[\s‎‏*]+", "", raw or "").startswith(pre)
 
+    def is_caption(post, text):
+        """A few words that came attached to a photo/video: meaningless without it."""
+        pre = prefixes.get(post.split("/")[0], "")
+        body = text[len(pre):] if pre and text.startswith(pre) else text
+        return len(body.split()) <= CFG["text_filter"].get("caption_max_words", 0)
+
     cutoff = (datetime.now(timezone.utc) - timedelta(days=CFG["limits"].get("max_age_days", 5))).isoformat()
     existing = {}
     for it in news.get("items", []):
@@ -399,6 +409,9 @@ def main():
                 continue
             media = process_media(post, msg["media"])
             if not text and not media:
+                continue
+            if msg["media"] and not media and is_caption(post, text):
+                log("   - dropped (caption of a photo/video we don't show)")
                 continue
             existing[post] = {
                 "id": "p" + hashlib.sha1(post.encode()).hexdigest()[:12],

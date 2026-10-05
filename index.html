@@ -140,6 +140,10 @@
   .btn.sec{background:#eef3f7;color:var(--ink)}
   .quote{background:#f5f8fa;border-inline-start:3px solid var(--tg);border-radius:8px;padding:8px 10px;font-size:13px;color:#4b5a66;max-height:90px;overflow:hidden}
   .status{font-size:13.5px;margin-top:10px;font-weight:600}
+  .fab{position:fixed;bottom:18px;inset-inline-start:18px;z-index:90;display:flex;align-items:center;gap:8px;background:var(--tg-deep);color:#fff;border:0;border-radius:999px;padding:11px 18px;font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.22)}
+  .fab:hover{background:var(--tg)}
+  .fab svg{width:18px;height:18px}
+  @media(max-width:640px){.fab{padding:12px}.fab span{display:none}}
 </style>
 </head>
 <body>
@@ -205,6 +209,22 @@
     <input id="repContact" name="contact" autocomplete="off">
     <div class="status" id="repStatus"></div>
     <div class="row"><button class="btn pri" type="submit" id="repSend">שליחה</button><button class="btn sec" type="button" data-close>ביטול</button></div>
+  </form>
+</div></div>
+
+<button class="fab" data-msg aria-label="שליחת הודעה למערכת"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>הודעה למערכת</span></button>
+
+<div class="modal" id="msg"><div class="card">
+  <h2>הודעה למערכת</h2>
+  <p>יש לכם ידיעה, הצעה לשיפור, ערוץ שכדאי להוסיף או סתם מילה טובה? כתבו לנו.</p>
+  <form id="msgForm">
+    <label for="msgText">ההודעה</label>
+    <textarea id="msgText" name="message" required maxlength="2000" style="min-height:120px"></textarea>
+    <label for="msgContact">טלפון או מייל לחזרה (לא חובה)</label>
+    <input id="msgContact" name="contact" autocomplete="off" maxlength="120">
+    <input type="checkbox" name="botcheck" id="msgBot" tabindex="-1" autocomplete="off" style="display:none">
+    <div class="status" id="msgStatus"></div>
+    <div class="row"><button class="btn pri" type="submit" id="msgSend">שליחה</button><button class="btn sec" type="button" data-close>ביטול</button></div>
   </form>
 </div></div>
 
@@ -352,8 +372,32 @@ $("repForm").addEventListener("submit",async e=>{
   }catch(_){ $("repSend").disabled=false; $("repStatus").style.color="#c0392b"; $("repStatus").textContent="השליחה נכשלה. נסו שוב בעוד רגע."; }
 });
 
+function openMsg(){ $("msgStatus").textContent=""; $("msgSend").disabled=false; openM("msg"); setTimeout(()=>$("msgText").focus(),50); }
+$("msgForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const text=$("msgText").value.trim(); if(!text) return;
+  const fd=new FormData();
+  fd.append("access_key",REPORT_KEY);
+  fd.append("subject","נטגרם – הודעה למערכת");
+  fd.append("from_name","נטגרם");
+  fd.append("message",text);
+  fd.append("contact",$("msgContact").value);
+  if($("msgBot").checked) fd.append("botcheck","1");
+  $("msgSend").disabled=true; $("msgStatus").style.color=""; $("msgStatus").textContent="שולח…";
+  try{
+    const r=await fetch("https://api.web3forms.com/submit",{method:"POST",body:fd}); const j=await r.json();
+    if(!j.success) throw 0;
+    $("msgStatus").style.color="var(--free)"; $("msgStatus").textContent="ההודעה נשלחה. תודה!";
+    $("msgForm").reset();
+    setTimeout(()=>$("msg").classList.remove("open"),2200);
+  }catch(_){ $("msgSend").disabled=false; $("msgStatus").style.color="#c0392b"; $("msgStatus").textContent="השליחה נכשלה. נסו שוב בעוד רגע."; }
+});
+if(location.hash==="#msg") openMsg();
+addEventListener("hashchange",()=>{ if(location.hash==="#msg") openMsg(); });
+
 document.addEventListener("click",e=>{
   const t=e.target;
+  if(t.closest("[data-msg]")){openMsg();return;}
   const ch=t.closest("[data-ch]");
   if(ch){filterCh=ch.dataset.ch;shown=PAGE;renderChips();render(false);window.scrollTo({top:0,behavior:"smooth"});return;}
   const rep=t.closest("[data-rep]"); if(rep){openReport(rep.dataset.rep);return;}

@@ -40,6 +40,9 @@ with open(CONFIG_PATH, encoding="utf-8") as fh:
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
 # without a Gemini key, keep images anyway (NetFree filters images on the user's side)
 UNFILTERED_OK = CFG["media_filter"].get("allow_without_gemini", False)
+# Photos/videos in the channels mostly belong to press photographers and agencies.
+# Re-hosting them needs a licence, so post media is off unless explicitly enabled.
+MEDIA_ON = CFG["media_filter"].get("enabled", True)
 
 SESSION = requests.Session()
 SESSION.headers.update({
@@ -257,8 +260,8 @@ def save_media(key, data, ctype, default_ext):
 
 def process_media(post, media):
     """Download + filter; returns local media entries (images/videos that passed)."""
-    if not GEMINI_KEY and not UNFILTERED_OK:
-        return []  # no filter available -> text only
+    if not MEDIA_ON or (not GEMINI_KEY and not UNFILTERED_OK):
+        return []  # media switched off, or no filter available -> text only
     max_bytes = CFG["limits"]["max_media_bytes"]
     kept = []
     for m in media:
@@ -346,6 +349,8 @@ def main():
             continue
         # re-apply the current filters, so filter changes also clean older posts
         it["text"] = clean_text(it.get("text", ""))
+        if not MEDIA_ON:
+            it["media"] = []  # also strips photos/videos already published
         if not channel_ok(it["post"], it["text"]):
             continue
         if it["text"] and not text_allowed(it["text"]):

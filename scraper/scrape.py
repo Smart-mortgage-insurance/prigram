@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-פריגרם – mirrors public Telegram channels into a NetFree-reachable feed.
+נטגרם – mirrors public Telegram channels into a NetFree-reachable feed.
 
 Transparent aggregator: every post is shown AS-IS, attributed to its source
 channel, with a link to the original. We do not edit, rewrite or re-word posts
@@ -328,7 +328,7 @@ def prune_media(items, channels):
 
 
 def main():
-    log("== פריגרם scraper ==  image filter:", "ON" if GEMINI_KEY else ("OFF (images kept, NetFree filters)" if UNFILTERED_OK else "OFF (text-only)"))
+    log("== נטגרם scraper ==  image filter:", "ON" if GEMINI_KEY else ("OFF (images kept, NetFree filters)" if UNFILTERED_OK else "OFF (text-only)"))
     news = load_json(NEWS_PATH, {"items": [], "channels": {}})
     removed = set(load_json(REMOVED_PATH, {"posts": []}).get("posts", []))
     enabled = [c for c in CFG["channels"] if c.get("enabled", True)]

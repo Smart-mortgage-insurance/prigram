@@ -34,7 +34,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          git config user.name  "פריגרם"
+          git config user.name  "נטגרם"
           git config user.email "bot@prigram.local"
           END=$((SECONDS + 1200))
           while [ $SECONDS -lt $END ]; do

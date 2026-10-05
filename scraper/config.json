@@ -185,5 +185,11 @@
     "allow_videos": true,
     "allow_without_gemini": true,
     "enabled": false
+  },
+  "person_filter": {
+    "enabled": true,
+    "gemini_model": "gemini-2.5-flash-lite",
+    "batch": 20,
+    "min_interval_sec": 180
   }
 }

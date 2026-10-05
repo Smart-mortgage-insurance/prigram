@@ -30,6 +30,7 @@ DATA_DIR = os.path.join(ROOT, "data")
 MEDIA_DIR = os.path.join(DATA_DIR, "media")
 NEWS_PATH = os.path.join(DATA_DIR, "news.json")
 REMOVED_PATH = os.path.join(DATA_DIR, "removed.json")
+PF_PATH = os.path.join(DATA_DIR, "person_filter.json")
 CONFIG_PATH = os.path.join(HERE, "config.json")
 
 os.makedirs(MEDIA_DIR, exist_ok=True)
@@ -306,6 +307,91 @@ def process_avatar(info):
 
 
 # --------------------------------------------------------------------------- #
+# Person filter: posts that speak badly about specific people never go up
+# --------------------------------------------------------------------------- #
+PERSON_PROMPT = (
+    "אתה בודק מבזקי חדשות לפני פרסום באתר, כדי למנוע פרסום לשון הרע ופגיעה בפרטיות.\n"
+    "לפניך רשימת מבזקים ממוספרת. לכל מבזק החזר block=true או block=false.\n\n"
+    "block=true כאשר המבזק עוסק באדם מסוים שאפשר לזהות (בשמו, בתפקידו או בתיאורו), "
+    "או בעסק או מוסד פרטי מסוים, ויש בו אחד מאלה:\n"
+    "- ייחוס עבירה, שחיתות, מרמה, אלימות, פגיעה מינית או התנהגות מבישה;\n"
+    "- שם או פרטים מזהים של חשוד, עצור, נאשם, קטין, נפגע עבירה או חולה;\n"
+    "- עלבון, לעג, כינוי גנאי או ביזוי, גם אם הוא מובא כציטוט מפי אדם אחר;\n"
+    "- רכילות, שמועה או טענה לא מבוססת, ופרטים אישיים, משפחתיים, רפואיים או כספיים.\n\n"
+    "block=false כאשר: המבזק אינו עוסק באדם מסוים; דיווח ענייני ונייטרלי על אירוע; "
+    "הודעה רשמית של צבא, משטרה, ממשלה או בית משפט בלי פרטים מזהים של אדם פרטי; "
+    "עמדה או ביקורת עניינית על מדיניות ועל החלטות של נבחרי ציבור, בלי עלבון אישי; "
+    "דיווח על אויב, ארגון טרור או מחבל; מזג אוויר, תחבורה, ספורט, אירועים.\n\n"
+    "בכל מקרה של ספק החזר block=true.\n"
+    'החזר JSON בלבד בצורה: [{"i": 1, "block": false}, ...] עם רשומה לכל מבזק.\n\n'
+)
+
+
+def gemini_person_check(texts):
+    """Returns a list of booleans (True = block) for the given posts, or None on any failure."""
+    pf = CFG.get("person_filter", {})
+    endpoint = ("https://generativelanguage.googleapis.com/v1beta/models/"
+                "{}:generateContent?key={}".format(pf.get("gemini_model", "gemini-2.5-flash-lite"), GEMINI_KEY))
+    listing = "\n\n".join("מבזק {}:\n{}".format(n + 1, t[:1500]) for n, t in enumerate(texts))
+    body = {"contents": [{"parts": [{"text": PERSON_PROMPT + listing}]}],
+            "generationConfig": {"temperature": 0, "responseMimeType": "application/json"}}
+    try:
+        r = requests.post(endpoint, json=body, timeout=90)
+        if r.status_code != 200:
+            log("   ! person filter HTTP {}: {}".format(r.status_code, r.text[:200].replace(GEMINI_KEY, "***")))
+            return None
+        rows = json.loads(r.json()["candidates"][0]["content"]["parts"][0]["text"])
+        verdict = {int(row["i"]): bool(row["block"]) for row in rows}
+        if set(verdict) != set(range(1, len(texts) + 1)):
+            log("   ! person filter: answer does not cover every post")
+            return None
+        return [verdict[n + 1] for n in range(len(texts))]
+    except Exception as exc:
+        log("   ! person filter error: {}".format(str(exc).replace(GEMINI_KEY, "***")[:200]))
+        return None
+
+
+def person_filter(existing, blocked, state):
+    """Checks every unchecked post. New posts that could not be checked are held back
+    (not published) and tried again on a later cycle; blocked ones are remembered."""
+    pf = CFG.get("person_filter", {})
+    pending = [it for it in existing.values() if it.get("text") and not it.get("checked")]
+    if not pf.get("enabled") or not pending:
+        return
+    if not GEMINI_KEY:
+        log("person filter: OFF - no GEMINI_API_KEY, posts are published unchecked")
+        return
+
+    def hold_new(items):
+        for it in items:
+            if it.get("_new"):
+                existing.pop(it["post"], None)
+
+    now = time.time()
+    if now - state.get("pf_last", 0) < pf.get("min_interval_sec", 180):
+        hold_new(pending)  # stay inside the free quota: wait for the next window
+        return
+    state["pf_last"] = now
+    size = pf.get("batch", 20)
+    n_blocked = 0
+    for start in range(0, len(pending), size):
+        batch = pending[start:start + size]
+        verdicts = gemini_person_check([it["text"] for it in batch])
+        if verdicts is None:
+            hold_new(pending[start:])
+            break
+        for it, block in zip(batch, verdicts):
+            if block:
+                existing.pop(it["post"], None)
+                blocked.add(it["post"])
+                n_blocked += 1
+            else:
+                it["checked"] = True
+        time.sleep(4)
+    log("person filter: {} checked, {} blocked".format(len(pending), n_blocked))
+
+
+# --------------------------------------------------------------------------- #
 # Merge + persist
 # --------------------------------------------------------------------------- #
 def load_json(path, default):
@@ -335,6 +421,8 @@ def main():
     log("== נטגרם scraper ==  image filter:", "ON" if GEMINI_KEY else ("OFF (images kept, NetFree filters)" if UNFILTERED_OK else "OFF (text-only)"))
     news = load_json(NEWS_PATH, {"items": [], "channels": {}})
     removed = set(load_json(REMOVED_PATH, {"posts": []}).get("posts", []))
+    pf_state = load_json(PF_PATH, {})
+    blocked = set(pf_state.get("blocked", {}))
     enabled = [c for c in CFG["channels"] if c.get("enabled", True)]
     enabled_names = {c["username"] for c in enabled}
     # some channels mark every real news item with a fixed prefix ("הפרגוד:");
@@ -356,6 +444,8 @@ def main():
     for it in news.get("items", []):
         if (it.get("post") in removed or it.get("post", "").split("/")[0] not in enabled_names
                 or (it.get("ts") or "") < cutoff):
+            continue
+        if it.get("post") in blocked:
             continue
         # re-apply the current filters, so filter changes also clean older posts
         it["text"] = clean_text(it.get("text", ""))
@@ -393,7 +483,7 @@ def main():
                 if msg["views"] is not None:
                     existing[post]["views"] = msg["views"]  # keep view counts fresh
                 continue
-            if post in removed or (msg["ts"] or "") < cutoff:
+            if post in removed or post in blocked or (msg["ts"] or "") < cutoff:
                 continue  # removed on request, or an old post (dead/moved channel)
             if not channel_ok(post, msg["text"]):
                 log("   - dropped (sponsored: no channel prefix)")
@@ -421,9 +511,20 @@ def main():
                 "views": msg["views"],
                 "forwarded_from": msg["forwarded_from"],
                 "media": media,
+                "_new": True,
             }
             new_count += 1
         time.sleep(1)
+
+    person_filter(existing, blocked, pf_state)
+    for it in existing.values():
+        it.pop("_new", None)
+    # remember blocked posts only while the channel page can still serve them
+    now, keep = time.time(), (CFG["limits"].get("max_age_days", 5) + 2) * 86400
+    seen = pf_state.get("blocked", {})
+    pf_state["blocked"] = {p: seen.get(p, now) for p in sorted(blocked) if now - seen.get(p, now) < keep}
+    with open(PF_PATH, "w", encoding="utf-8") as fh:
+        json.dump(pf_state, fh, ensure_ascii=False, indent=1)
 
     items = sorted(existing.values(), key=lambda x: x.get("ts") or "", reverse=True)
     # per-channel cap, so busy channels never push the quieter ones off the site

@@ -2,11 +2,12 @@ name: Update news feed
 
 on:
   schedule:
-    - cron: "*/15 * * * *"   # relaunches the loop so it runs around the clock
+    - cron: "*/15 * * * *"   # fallback only: GitHub delays scheduled runs by hours
   workflow_dispatch:
 
 permissions:
   contents: write
+  actions: write   # lets a finished run start the next one
 
 # a newly launched run replaces the running loop -> continuous, no overlap
 concurrency:
@@ -16,7 +17,7 @@ concurrency:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,14 +30,14 @@ jobs:
       - name: Install dependencies
         run: pip install -r scraper/requirements.txt
 
-      - name: Continuous scrape (refresh every ~minute)
+      - name: Continuous scrape (refresh every ~minute, for 20 minutes)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           git config user.name  "פריגרם"
           git config user.email "bot@prigram.local"
-          for i in $(seq 1 20); do
-            echo "=== cycle $i / 20 ==="
+          END=$((SECONDS + 1200))
+          while [ $SECONDS -lt $END ]; do
             python scraper/scrape.py || echo "scrape error, continuing"
             git add data/
             if git diff --cached --quiet; then
@@ -47,3 +48,11 @@ jobs:
             fi
             sleep 60
           done
+
+      # Chain: start the next run ourselves instead of waiting for the schedule.
+      # Skipped when this run was cancelled (a newer run already replaced it).
+      - name: Start the next run
+        if: ${{ success() || failure() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run update-news.yml --repo "$GITHUB_REPOSITORY" --ref main

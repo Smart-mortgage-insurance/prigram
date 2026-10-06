@@ -105,22 +105,22 @@
     },
     {
       "username": "NewToolsIBuyIL",
-      "enabled": true,
+      "enabled": false,
       "kind": "deals"
     },
     {
       "username": "OuTravel2",
-      "enabled": true,
+      "enabled": false,
       "kind": "deals"
     },
     {
       "username": "couponcodeil",
-      "enabled": true,
+      "enabled": false,
       "kind": "deals"
     },
     {
       "username": "dealsvip",
-      "enabled": true,
+      "enabled": false,
       "kind": "deals"
     }
   ],

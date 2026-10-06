@@ -1,41 +1,42 @@
-# One-off helper: find current Telegram usernames of news outlets (runs on Actions).
-import re, requests
+"""Checks candidate channel usernames on t.me/s: is it a public channel, how big, how fresh.
+Prints numbers only (no post text)."""
+import sys
+from datetime import datetime, timezone
+import requests
 from bs4 import BeautifulSoup
-S = requests.Session(); S.headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/126 Safari/537.36"
-LINK = re.compile(r"(?:t\.me|telegram\.me)/(?:s/)?([A-Za-z0-9_+]{4,40})", re.I)
 
-def links(url):
-    try:
-        return sorted(set(LINK.findall(S.get(url, timeout=25).text)))
-    except Exception as e:
-        return ["ERR " + str(e)[:60]]
+CANDIDATES = sys.argv[1:] or """
+Jobs_in_Jerusalem Labor_Ministry taasuka50plusminus israel_media_industry jobnikim findjobil
+jobsHOTjobss TheMisrot workyes3 Workingyes1 OVDIM_BCHIK shafir_job jobstory Works_Israeli
+Tech_Galilee_Golan_Channel spacial4u couponcodeil dealsvip hashmalneto_deals NewToolsIBuyIL
+OuTravel2 copterdeal
+""".split()
+UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36"}
 
-print("### links inside old channels (moved notices)")
-for ch in ["channelkikar", "kikar_hashabbat", "jdn_news", "behadrei_harebim_bhol", "kikarm_musik"]:
-    print(ch, "->", links("https://t.me/s/" + ch))
-
-print("### links on outlet websites")
-for site in ["https://www.kikar.co.il/", "https://www.jdn.co.il/", "https://ch10.co.il/", "https://www.kore.co.il/",
-             "https://www.emess.co.il/", "https://www.bhol.co.il/", "https://www.hm-news.co.il/", "https://www.actualic.co.il/",
-             "https://www.hamechadesh.co.il/", "https://www.kolhai.co.il/", "https://www.kikar.co.il/newsflash"]:
-    print(site, "->", links(site))
 
 def info(u):
-    try:
-        r = S.get("https://t.me/s/" + u, timeout=25)
-        soup = BeautifulSoup(r.text, "html.parser")
-        t = soup.select_one(".tgme_channel_info_header_title")
-        times = [x["datetime"] for x in soup.select("a.tgme_widget_message_date time") if x.get("datetime")]
-        subs = soup.select_one(".tgme_channel_info_counter .counter_value")
-        return "{} | last={} | subs={}".format(t.get_text(strip=True) if t else None,
-                                               max(times)[:16] if times else None, subs.get_text() if subs else None)
-    except Exception as e:
-        return "ERR " + str(e)[:60]
+    r = requests.get("https://t.me/s/" + u, headers=UA, timeout=25)
+    soup = BeautifulSoup(r.text, "html.parser")
+    msgs = soup.select(".tgme_widget_message")
+    if not msgs:
+        return "NO PUBLIC FEED"
+    title = soup.select_one(".tgme_channel_info_header_title")
+    subs = soup.select_one(".tgme_channel_info_counter .counter_value")
+    times = [t["datetime"] for t in soup.select(".tgme_widget_message_date time[datetime]")]
+    now = datetime.now(timezone.utc)
+    ages = sorted((now - datetime.fromisoformat(t)).total_seconds() / 3600 for t in times)
+    texts = [m.select_one(".tgme_widget_message_text") for m in msgs]
+    lens = [len(t.get_text()) for t in texts if t]
+    links = sum(1 for t in texts if t and t.select_one("a[href^=http]"))
+    return "subs={} posts={} newest={:.0f}h oldest={:.0f}h with_text={} avg_len={} with_link={} photos={} | {}".format(
+        subs.get_text() if subs else "?", len(msgs), ages[0] if ages else -1, ages[-1] if ages else -1,
+        len(lens), sum(lens) // max(1, len(lens)), links,
+        sum(1 for m in msgs if m.select_one(".tgme_widget_message_photo_wrap")),
+        title.get_text(strip=True) if title else "?")
 
-print("### candidate usernames")
-for u in ["kikar", "kikarnews", "kikar_news", "kikarhashabat", "kikar_co_il", "kikarhashabbat", "kikarofficial", "kikar_official",
-          "kikar1", "kikar_il", "KikarHashabbatNews", "kikar_hashabbat_news", "jdn", "jdnnews", "jdn_il", "JDN_News_il", "jdnisrael",
-          "jdn_hadashot", "ch10news", "charedim_10", "haredim10news", "ch10_news", "kore_co_il", "korenews", "kolhai", "kolhai93",
-          "emess", "emessnews", "hm_news", "hmnews", "actualic", "hamodia", "hamodia_news", "yated", "hamevaser",
-          "kolbarama", "kol_barama", "bhol", "bholnews", "behadrei", "haredi_news", "charedi_news", "chadashot_charedi"]:
-    print(u, "->", info(u))
+
+for u in CANDIDATES:
+    try:
+        print(u, "->", info(u))
+    except Exception as exc:
+        print(u, "-> ERROR", type(exc).__name__)

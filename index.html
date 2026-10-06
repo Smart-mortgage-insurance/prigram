@@ -315,7 +315,7 @@ function renderSide(){
   const pinned=(promos.items||[]).filter(p=>p.enabled!==false&&p.pin);
   let h=pinned.map(p=>`<div class="box">${p.image?`<img class="ad-img" src="${esc(p.image)}" alt="">`:""}<h3>${esc(p.advertiser||"")}</h3><p>${esc(p.text||"")}</p>
     ${p.cta_phone?`<a class="cta" href="tel:${p.cta_phone.replace(/[^0-9+]/g,"")}">${esc(p.cta_label||"לפרטים")}</a>`:""}</div>`).join("");
-  h+=`<div class="box"><h3>מה זה נטגרם?</h3><p>עדכונים מערוצי טלגרם ציבוריים, בלי צורך בטלגרם — פתוח בנטפרי, בלי פרסומות. כל פוסט מובא כלשונו בשם הערוץ שפרסם אותו.</p></div>`;
+  h+=`<div class="box"><h3>מה זה נטגרם?</h3><p>לוח דרושים ומבצעים מערוצי טלגרם ציבוריים, בלי צורך בטלגרם — פתוח בנטפרי. כל מודעה מובאת כלשונה, בשם הערוץ שפרסם אותה ועם הקישורים המקוריים.</p></div>`;
   h+=`<div class="placard"><div class="h">📣 מעוניינים לפרסם?</div><span class="n">${AD_CONTACT}</span></div>`;
   $("side").innerHTML=h;
 }

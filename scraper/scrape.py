@@ -13,6 +13,7 @@ NetFree users; every image passes a Gemini modesty filter first.
 
 import os
 import re
+import copy
 import io
 import json
 import time
@@ -104,12 +105,23 @@ def parse_messages(soup):
         if not post_id:
             continue
 
-        text = ""
+        text = rich = ""
         tnode = msg.select_one("div.tgme_widget_message_text")
         if tnode:
             for br in tnode.find_all("br"):
                 br.replace_with("\n")
             text = tnode.get_text().strip()
+            # same text with link targets kept visible (used by job/deal boards)
+            rnode = copy.copy(tnode)
+            for a in rnode.find_all("a"):
+                href, label = a.get("href", ""), a.get_text().strip()
+                if not href.startswith("http") or "//t.me/" in href or "telegram.me/" in href:
+                    a.replace_with("" if label.startswith(("http", "@", "t.me")) else label)
+                elif label.startswith("http") or label.rstrip(".\u2026") in href:
+                    a.replace_with(" {} ".format(href))
+                else:
+                    a.replace_with("{} {} ".format(label, href))
+            rich = rnode.get_text().strip()
 
         ts = None
         tm = msg.select_one("a.tgme_widget_message_date time")
@@ -146,7 +158,7 @@ def parse_messages(soup):
         if not text and not media:
             continue
         out.append({"post": post_id, "text": text, "ts": ts, "views": views,
-                    "forwarded_from": fwd, "media": media})
+                    "forwarded_from": fwd, "media": media, "rich": rich})
     return out
 
 
@@ -187,6 +199,20 @@ def clean_text(text):
     text = "\n".join(lines)
     text = re.sub(r"[ \t]{2,}", " ", text)
     return re.sub(r"\n{3,}", "\n\n", text).strip()
+
+
+def clean_board(text):
+    # job/deal boards: links are the whole point, so only Telegram-internal ones go
+    text = re.sub(r"(https?://)?(t|telegram)\.me/\S+", "", text)
+    text = re.sub(r"[ \t]{2,}", " ", text)
+    text = "\n".join(ln.strip() for ln in text.split("\n"))
+    return re.sub(r"\n{3,}", "\n\n", text).strip()
+
+
+def allowed(kind, text):
+    if kind:  # boards: the ad is the content, only empty fragments are dropped
+        return len(re.sub(r"[\W\d_]", "", text)) >= CFG["text_filter"].get("min_letters", 12)
+    return text_allowed(text)
 
 
 def text_allowed(text):
@@ -448,12 +474,13 @@ def main():
         if it.get("post") in blocked:
             continue
         # re-apply the current filters, so filter changes also clean older posts
-        it["text"] = clean_text(it.get("text", ""))
+        if not it.get("kind"):
+            it["text"] = clean_text(it.get("text", ""))
         if not MEDIA_ON:
             it["media"] = []  # also strips photos/videos already published
         if not channel_ok(it["post"], it["text"]):
             continue
-        if it["text"] and not text_allowed(it["text"]):
+        if it["text"] and not allowed(it.get("kind"), it["text"]):
             continue
         if not it["text"] and not it.get("media"):
             continue
@@ -463,6 +490,7 @@ def main():
 
     for ch in enabled:
         uname = ch["username"]
+        kind = ch.get("kind")
         log("-> @" + uname)
         info, msgs = fetch_channel(uname)
         if not msgs:
@@ -475,6 +503,8 @@ def main():
             info.pop("avatar_src", None)
             channels[uname] = {"title": ch.get("title") or info["title"],
                                "avatar": avatar}
+            if kind:
+                channels[uname]["kind"] = kind
         log("   {} messages".format(len(msgs)))
 
         for msg in msgs[-CFG["limits"]["max_messages_per_channel"]:]:
@@ -488,13 +518,13 @@ def main():
             if not channel_ok(post, msg["text"]):
                 log("   - dropped (sponsored: no channel prefix)")
                 continue
-            if msg["text"] and not text_allowed(msg["text"]):
+            if msg["text"] and not allowed(kind, msg["text"]):
                 log("   - dropped (ad/spam)")
                 continue
-            text = clean_text(msg["text"])
+            text = clean_board(msg["rich"] or msg["text"]) if kind else clean_text(msg["text"])
             if not text and not msg["media"]:
                 continue
-            if text and not text_allowed(text):
+            if text and not allowed(kind, text):
                 log("   - dropped (ad/spam)")
                 continue
             media = process_media(post, msg["media"])
@@ -513,6 +543,8 @@ def main():
                 "media": media,
                 "_new": True,
             }
+            if kind:
+                existing[post]["kind"] = kind
             new_count += 1
         time.sleep(1)
 

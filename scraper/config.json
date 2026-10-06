@@ -2,61 +2,126 @@
   "channels": [
     {
       "username": "merkaz",
-      "enabled": true
+      "enabled": false
     },
     {
       "username": "hamoked_il",
-      "enabled": true,
+      "enabled": false,
       "require_prefix": "המוקד:"
     },
     {
       "username": "ramreports",
-      "enabled": true
+      "enabled": false
     },
     {
       "username": "abualiexpress",
-      "enabled": true
+      "enabled": false
     },
     {
       "username": "amitsegal",
-      "enabled": true
+      "enabled": false
     },
     {
       "username": "news0404il",
-      "enabled": true
+      "enabled": false
     },
     {
       "username": "israelhayomofficial",
-      "enabled": true
+      "enabled": false
     },
     {
       "username": "N12chat",
-      "enabled": true
+      "enabled": false
     },
     {
       "username": "ynetalerts",
-      "enabled": true
+      "enabled": false
     },
     {
       "username": "Moshepargod",
-      "enabled": true,
+      "enabled": false,
       "require_prefix": "הפרגוד:"
     },
     {
       "username": "behadrey",
-      "enabled": true
+      "enabled": false
     },
     {
       "username": "hamechadesh",
-      "enabled": true
+      "enabled": false
     },
     {
       "username": "haskupim",
-      "enabled": true
+      "enabled": false
     },
     {
       "username": "RealKikarHashabat",
-      "enabled": true
+      "enabled": false
+    },
+    {
+      "username": "Workingyes1",
+      "enabled": true,
+      "kind": "jobs"
+    },
+    {
+      "username": "Jobs_in_Jerusalem",
+      "enabled": true,
+      "kind": "jobs"
+    },
+    {
+      "username": "OVDIM_BCHIK",
+      "enabled": true,
+      "kind": "jobs"
+    },
+    {
+      "username": "jobsHOTjobss",
+      "enabled": true,
+      "kind": "jobs"
+    },
+    {
+      "username": "israel_media_industry",
+      "enabled": true,
+      "kind": "jobs"
+    },
+    {
+      "username": "TheMisrot",
+      "enabled": true,
+      "kind": "jobs"
+    },
+    {
+      "username": "jobnikim",
+      "enabled": true,
+      "kind": "jobs"
+    },
+    {
+      "username": "Tech_Galilee_Golan_Channel",
+      "enabled": true,
+      "kind": "jobs"
+    },
+    {
+      "username": "taasuka50plusminus",
+      "enabled": true,
+      "kind": "jobs"
+    },
+    {
+      "username": "NewToolsIBuyIL",
+      "enabled": true,
+      "kind": "deals"
+    },
+    {
+      "username": "OuTravel2",
+      "enabled": true,
+      "kind": "deals"
+    },
+    {
+      "username": "couponcodeil",
+      "enabled": true,
+      "kind": "deals"
+    },
+    {
+      "username": "dealsvip",
+      "enabled": true,
+      "kind": "deals"
     }
   ],
   "limits": {
@@ -64,7 +129,7 @@
     "max_messages_per_channel": 25,
     "max_media_bytes": 12000000,
     "max_items_per_channel": 20,
-    "max_age_days": 5
+    "max_age_days": 14
   },
   "text_filter": {
     "drop_if_contains": [
@@ -187,7 +252,7 @@
     "enabled": false
   },
   "person_filter": {
-    "enabled": true,
+    "enabled": false,
     "gemini_model": "gemini-2.5-flash-lite",
     "batch": 20,
     "min_interval_sec": 180

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-06T11:03:57.744912+00:00",
+ "updated": "2026-10-06T11:05:11.947564+00:00",
  "channels": {
   "Workingyes1": {
    "title": "עבודות איכות בכל הארץ",
@@ -47,7 +47,7 @@
    "kind": "jobs"
   }
  },
- "count": 77,
+ "count": 76,
  "items": [
   {
    "id": "pb64f041dfb7e",
@@ -880,21 +880,6 @@
     {
      "type": "image",
      "file": "data/media/f3f623c2f7fabd10.jpg"
-    }
-   ],
-   "kind": "jobs"
-  },
-  {
-   "id": "p0ba17e5b1cef",
-   "post": "jobsHOTjobss/17634",
-   "ts": "2026-09-22T11:04:29+00:00",
-   "text": "",
-   "views": 214,
-   "forwarded_from": null,
-   "media": [
-    {
-     "type": "image",
-     "file": "data/media/bee8960d07e8f9f9.jpg"
     }
    ],
    "kind": "jobs"

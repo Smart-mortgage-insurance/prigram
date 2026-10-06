@@ -6,10 +6,8 @@ import requests
 from bs4 import BeautifulSoup
 
 CANDIDATES = sys.argv[1:] or """
-Jobs_in_Jerusalem Labor_Ministry taasuka50plusminus israel_media_industry jobnikim findjobil
-jobsHOTjobss TheMisrot workyes3 Workingyes1 OVDIM_BCHIK shafir_job jobstory Works_Israeli
-Tech_Galilee_Golan_Channel spacial4u couponcodeil dealsvip hashmalneto_deals NewToolsIBuyIL
-OuTravel2 copterdeal
+holysale11 LametayelDigital hulmeudar AviationNewsIL isroteldeals SecretFlights
+miluim_deals behatsdaa hist_org amorclubhotel
 """.split()
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36"}
 

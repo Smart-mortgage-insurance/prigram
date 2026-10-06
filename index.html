@@ -181,7 +181,7 @@
 
 <div class="modal" id="about"><div class="card">
   <h2>אודות נטגרם והבהרה משפטית</h2>
-  <p>נטגרם מציג עדכונים מערוצי טלגרם <b>ציבוריים</b>, עבור גולשים שאין להם גישה לטלגרם (למשל ברשת נטפרי).</p>
+  <p>נטגרם מציג מודעות דרושים ומבצעים מערוצי טלגרם <b>ציבוריים</b>, במקום אחד וגם בלי חשבון טלגרם.</p>
   <ul>
     <li>כל פוסט מוצג <b>כלשונו</b>, בציון שם הערוץ המקורי ומועד הפרסום בו. איננו כותבים, עורכים, מנסחים מחדש או מאמתים את התוכן.</li>
     <li>האחריות לתוכן כל פוסט — לרבות דיוקו — חלה על הערוץ שפרסם אותו. אין לראות בהצגת פוסט אימוץ, אישור או הסכמה עם תוכנו.</li>
@@ -286,7 +286,7 @@ function postHTML(it,fresh){
       <div class="meta">
         <span>${relTime(it.ts)}</span>${it.views!=null?`<span>👁 ${fmtViews(it.views)}</span>`:""}
         <span class="sp"></span>
-        <a href="https://t.me/${esc(it.post)}" target="_blank" rel="noopener nofollow" title="הקישור למקור בטלגרם (חסום בנטפרי)">מקור ↗</a>
+        <a href="https://t.me/${esc(it.post)}" target="_blank" rel="noopener nofollow" title="הקישור למקור בטלגרם">מקור ↗</a>
         <button class="rep" data-rep="${esc(it.post)}">⚑ בקשת הסרה</button>
       </div>
     </div></div>

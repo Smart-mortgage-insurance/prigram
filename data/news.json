@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-06T08:31:45.830033+00:00",
+ "updated": "2026-10-06T08:33:00.109163+00:00",
  "channels": {
   "Workingyes1": {
    "title": "עבודות איכות בכל הארץ",
@@ -47,7 +47,7 @@
    "kind": "jobs"
   }
  },
- "count": 76,
+ "count": 75,
  "items": [
   {
    "id": "p55459b8b28e7",
@@ -867,16 +867,6 @@
      "file": "data/media/bee8960d07e8f9f9.jpg"
     }
    ],
-   "kind": "jobs"
-  },
-  {
-   "id": "pa7ba780f8787",
-   "post": "Israel_media_industry/3833",
-   "ts": "2026-09-22T08:32:02+00:00",
-   "text": "דרוש/ה מפעיל/ת חדר שידור לערוץ חדשות היושב בנמל יפו\nלעבודה במשרה מלאה ובמשמרות (כולל סופשים וחגים)\nקו\"ח ל -> D.sahnovsky@i24news.tv",
-   "views": 674,
-   "forwarded_from": null,
-   "media": [],
    "kind": "jobs"
   }
  ]

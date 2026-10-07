@@ -145,6 +145,9 @@
   .status{font-size:13.5px;margin-top:10px;font-weight:600}
   .bt .lnk{display:inline-block;direction:ltr;background:var(--tg-soft);color:var(--tg-deep);font-weight:700;font-size:13.5px;text-decoration:none;border-radius:999px;padding:0 9px;margin:1px 0;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:bottom}
   .bt .lnk:hover{background:var(--tg);color:#fff}
+  .wanum{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:10px;background:var(--tg-soft);border-radius:10px;padding:7px 12px;font-size:13.5px;font-weight:600;color:var(--ink)}
+  .wanum a{direction:ltr;font-weight:800;font-size:15px;color:var(--tg-deep);text-decoration:none;letter-spacing:.3px}
+  .wanum button{border:0;background:#fff;color:var(--tg-deep);border-radius:7px;padding:3px 10px;font-family:inherit;font-weight:700;font-size:12.5px;cursor:pointer}
   .chip.kind{font-weight:800}
   .adframe{position:relative;display:block;width:100%;overflow:hidden;border-radius:14px;background:#e0f1e8;box-shadow:var(--shadow)}
   .adframe iframe{position:absolute;top:0;left:0;border:0;transform-origin:0 0;pointer-events:none}
@@ -269,6 +272,24 @@ const linkify=t=>esc(t).replace(/https?:\/\/[^\s<]+/g,m=>{
   let host; try{host=new URL(u.replace(/&amp;/g,"&")).hostname.replace(/^www\./,"");}catch(_){return m;}
   return `<a class="lnk" href="${u}" target="_blank" rel="noopener nofollow">${host} ↗</a>`+tail;
 });
+/* מספרי טלפון שמסתתרים בתוך קישורי וואטסאפ — מוצגים בגלוי למי שאין לו וואטסאפ */
+function waNums(text){
+  const t=String(text||""), out=[];
+  const shown=t.replace(/https?:\/\/[^\s<]+/g," ").replace(/[-\s.()]/g,"");
+  const re=/wa\.me\/\+?(\d{9,15})|whatsapp\.com\/send\/?\?[^\s<]*?phone=\+?(\d{9,15})/gi;
+  let m;
+  while((m=re.exec(t))){
+    let d=m[1]||m[2];
+    if(/^0[2-9]\d{7,8}$/.test(d)) d="972"+d.slice(1);
+    const loc=d.indexOf("972")===0?"0"+d.slice(3):"";
+    if(out.some(o=>o.intl===d)) continue;
+    if(shown.includes(loc||d)) continue;                            // המספר כבר כתוב במודעה
+    out.push({intl:d,show:loc?loc.replace(/^(0\d{1,2})(\d{7})$/,"$1-$2"):"+"+d});
+  }
+  return out;
+}
+const waNumHTML=text=>waNums(text).map(n=>
+  `<div class="wanum">📱 מספר הוואטסאפ של המפרסם: <a href="tel:+${n.intl}">${n.show}</a><button data-copynum="${n.show.replace(/-/g,"")}">העתקה</button></div>`).join("");
 const chName=u=>(data.channels[u]&&data.channels[u].title)||u;
 function avatar(u,cls){
   const c=data.channels[u]||{};
@@ -293,6 +314,7 @@ function postHTML(it,fresh){
       ${it.forwarded_from?`<div class="fwd">הועבר מתוך: <b>${esc(it.forwarded_from)}</b></div>`:""}
       ${it.text?`<div class="bt">${linkify(it.text)}</div>`:""}
       ${mediaHTML(it.media)}
+      ${waNumHTML(it.text)}
       <div class="meta">
         <span>${relTime(it.ts)}</span>${it.views!=null?`<span>👁 ${fmtViews(it.views)}</span>`:""}
         <span class="sp"></span>
@@ -446,6 +468,7 @@ document.addEventListener("click",e=>{
   const kd=t.closest("[data-kind]");
   if(kd){filterKind=kd.dataset.kind;filterCh="";shown=PAGE;renderChips();render(false);window.scrollTo({top:0,behavior:"smooth"});return;}
   if(ch){filterCh=ch.dataset.ch;if(!filterCh)filterKind="";shown=PAGE;renderChips();render(false);window.scrollTo({top:0,behavior:"smooth"});return;}
+  const cn=t.closest("[data-copynum]"); if(cn){navigator.clipboard&&navigator.clipboard.writeText(cn.dataset.copynum).then(()=>{cn.textContent="הועתק ✓";setTimeout(()=>cn.textContent="העתקה",1500);});return;}
   const rep=t.closest("[data-rep]"); if(rep){openReport(rep.dataset.rep);return;}
   const op=t.closest("[data-open]"); if(op){op.dataset.open==="about"?openM("about"):openReport("");return;}
   if(t.closest("[data-close]")||t.classList.contains("modal")){closeM(t);return;}

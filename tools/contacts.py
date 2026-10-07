@@ -83,6 +83,16 @@ for url in URLS:
     try:
         page = requests.get(url, headers=UA, timeout=25).text
         names = {m for m in TME.findall(page) if m.lower() not in ("s", "share", "joinchat")}
+        if "--deep" in ARGS:      # follow same-site links one level down (index sites link via their own pages)
+            host = url.split("/")[2]
+            subs = {h for h in re.findall(r'href="(https?://%s/[^"#?]+)"' % re.escape(host), page)}
+            subs = sorted(h for h in subs if not re.search(r"/(category|tag|page|wp-|feed|author)", h))[:70]
+            for h in subs:
+                try:
+                    names |= {m for m in TME.findall(requests.get(h, headers=UA, timeout=15).text)
+                              if m.lower() not in ("s", "share", "joinchat")}
+                except Exception:
+                    pass
         FOUND.update(names)
         print("PAGE", len(page), len(names), url[:80])
     except Exception as exc:

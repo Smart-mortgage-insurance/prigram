@@ -16,7 +16,8 @@ ENABLED = [c["username"] for c in CFG["channels"] if c.get("enabled", True) and 
 KNOWN = {c["username"].lower() for c in CFG["channels"]}
 ARGS = " ".join(sys.argv[1:]).split()
 DISCOVER = "--discover" in ARGS          # also probe every channel mentioned by the given/enabled ones
-CHANNELS = [a for a in ARGS if not a.startswith("--")] or ENABLED
+URLS = [a for a in ARGS if a.startswith("http")]          # web pages to mine for t.me links
+CHANNELS = [a for a in ARGS if not a.startswith(("--", "http"))] or ([] if URLS else ENABLED)
 FOUND = set()
 
 PHONE = re.compile(r"(?<!\d)(?:\+?972[-\s]?|0)(?:5\d|[2-4]|7\d|[89])[-\s]?\d{3}[-\s]?\d{4}(?!\d)")
@@ -78,6 +79,14 @@ def run(names, tag):
             print(tag + " " + json.dumps({"u": u, "error": type(exc).__name__}))
 
 
+for url in URLS:
+    try:
+        page = requests.get(url, headers=UA, timeout=25).text
+        names = {m for m in TME.findall(page) if m.lower() not in ("s", "share", "joinchat")}
+        FOUND.update(names)
+        print("PAGE", len(page), len(names), url[:80])
+    except Exception as exc:
+        print("PAGE ERROR", type(exc).__name__, url[:80])
 run(CHANNELS, "CONTACT")
 if DISCOVER:
     done = {c.lower() for c in CHANNELS} | KNOWN

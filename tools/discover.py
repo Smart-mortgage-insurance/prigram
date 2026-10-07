@@ -18,13 +18,19 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
       "Accept-Language": "he-IL,he;q=0.9,en;q=0.6"}
 CFG = json.loads((Path(__file__).resolve().parent.parent / "scraper" / "config.json").read_text(encoding="utf-8"))
 KNOWN = {c["username"].lower() for c in CFG["channels"]}
-SEEDS = [c["username"] for c in CFG["channels"] if c.get("enabled", True) and c.get("kind") == "jobs"]
-SEEDS += [a for a in sys.argv[1:] if not a.startswith("--")]
+RE_MODE = "--re" in sys.argv                 # hunt real-estate channels instead of job channels
+ARGS = [a for a in sys.argv[1:] if not a.startswith("--")]
+if RE_MODE:                                  # every channel we know may point at a flats channel; args are direct candidates
+    SEEDS = [c["username"] for c in CFG["channels"]] + ["Recommended_channels", "RSHIMAE"]
+else:
+    SEEDS = [c["username"] for c in CFG["channels"] if c.get("enabled", True) and c.get("kind") == "jobs"] + ARGS
 
 TME = re.compile(r"(?:t\.me|telegram\.me)/(?:s/)?([A-Za-z][\w]{3,31})(?![\w])", re.I)
 MENTION = re.compile(r"(?<![\w@.])@([A-Za-z]\w{4,31})")
 SKIP = {"s", "share", "joinchat", "addstickers", "iv", "proxy", "socks", "login", "addlist", "boost", "c", "telegram"}
 JOB = re.compile(r"דרוש|משר[הות]|עבוד[הות]|קו\"ח|קורות חיים|שכר|תפקיד|למשרד|גיוס|job|hiring|vacanc", re.I)
+if RE_MODE:
+    JOB = re.compile(r"דיר[הת]|דירות|להשכרה|למכירה|חדרים|חד'|נדל\"ן|נדלן|מ\"ר|תיווך|שכירות|פנטהאוז|יחידת דיור|קומה", re.I)
 HEB = re.compile(r"[֐-׿]")
 PHONE = re.compile(r"(?<!\d)(?:\+?972[-\s]?|0)(?:5\d|[2-4]|7\d|[89])[-\s]?\d{3}[-\s]?\d{4}(?!\d)")
 EMAIL = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
@@ -39,7 +45,7 @@ QUERIES = """דרושים|משרות|דרושה|לוח דרושים|משרות �
 
 S = requests.Session()
 S.headers.update(UA)
-BUDGET = [900]          # max HTTP requests for the whole run
+BUDGET = [1700 if RE_MODE else 900]          # max HTTP requests for the whole run
 
 
 def get(url, **kw):
@@ -135,11 +141,11 @@ def is_jobs(d):
 
 
 checked, results = set(KNOWN), {}
-queue = set()
+queue = set(ARGS) if RE_MODE else set()
 for s in SEEDS:
-    queue |= crawl(s, 12)
+    queue |= crawl(s, 8 if RE_MODE else 12)
 print("SEED-LINKS", len(queue))
-if "--no-search" not in sys.argv:
+if "--no-search" not in sys.argv and not RE_MODE:
     queue |= search_engines()
 print("QUEUE", len(queue), "budget", BUDGET[0])
 
@@ -158,7 +164,7 @@ for depth in range(3):
         if is_jobs(d):
             print("FOUND " + json.dumps(d, ensure_ascii=True), flush=True)
             if d["newest_h"] < 24 * 30:
-                nxt |= crawl(u, 4)
+                nxt |= crawl(u, 8 if RE_MODE else 4)
     queue = nxt
     print("ROUND", depth, "checked", len(checked), "next", len(queue), "budget", BUDGET[0], flush=True)
 

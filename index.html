@@ -36,6 +36,14 @@
   .search input:focus{border-color:var(--tg);background:#fff}
   .search svg{position:absolute;top:50%;transform:translateY(-50%);inset-inline-start:13px;width:17px;height:17px;opacity:.4}
   @media(max-width:640px){.search{display:none}}
+  .postjob{flex-shrink:0;display:inline-flex;align-items:center;gap:8px;border:0;background:var(--tg-deep);color:#fff;border-radius:999px;padding:9px 16px;font-weight:800;font-size:14px;cursor:pointer;white-space:nowrap}
+  .postjob:hover{background:var(--tg)}
+  .postjob small{background:#fff;color:var(--tg-deep);border-radius:999px;padding:1px 8px;font-size:11.5px;font-weight:800}
+  @media(max-width:640px){.postjob{margin-inline-start:auto;padding:8px 13px;font-size:13px}}
+  .freebar{background:var(--tg-soft);border-radius:10px;padding:9px 12px;font-size:13.5px;font-weight:600;color:var(--tg-deep);margin:4px 0 2px}
+  .modal .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media(max-width:520px){.modal .two{grid-template-columns:1fr}}
+  .via.direct{background:var(--tg-soft);color:var(--tg-deep);border-radius:999px;padding:1px 9px;font-weight:700}
 
   /* channel chips */
   .chips-bar{background:var(--card);border-bottom:1px solid var(--line)}
@@ -170,6 +178,7 @@
       <input id="q" type="search" placeholder="חיפוש משרה, תחום או עיר…" autocomplete="off">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
     </div>
+    <button class="postjob" data-job>＋ פרסום משרה <small>חינם</small></button>
   </div>
   <div class="chips-bar"><div class="chips" id="chips"></div></div>
   <div class="ticker"><div class="label"><span class="dot"></span>חדש בלוח</div><div class="tw"><div class="track" id="tickTrack"></div></div></div>
@@ -230,6 +239,28 @@
 
 <button class="fab" data-msg aria-label="שליחת הודעה למערכת"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>הודעה למערכת</span></button>
 
+<div class="modal" id="job"><div class="card">
+  <h2>פרסום משרה בלוח</h2>
+  <div class="freebar">🎁 הפרסום כרגע בחינם. המודעה תעלה ללוח לאחר אישור המערכת.</div>
+  <form id="jobForm">
+    <label for="jobTitle">כותרת המשרה</label>
+    <input id="jobTitle" name="title" required maxlength="90" placeholder="לדוגמה: דרוש/ה מזכיר/ה למשרד בירושלים" autocomplete="off">
+    <label for="jobText">פרטי המשרה</label>
+    <textarea id="jobText" name="details" required maxlength="1500" style="min-height:110px" placeholder="תיאור התפקיד, דרישות, שעות ותנאים"></textarea>
+    <div class="two">
+      <div><label for="jobCity">עיר / אזור</label><input id="jobCity" name="city" maxlength="60" autocomplete="off"></div>
+      <div><label for="jobScope">היקף משרה</label><select id="jobScope" name="scope"><option value="">לא צוין</option><option>משרה מלאה</option><option>משרה חלקית</option><option>עבודה מהבית</option><option>עבודה זמנית</option></select></div>
+    </div>
+    <label for="jobContact">איך פונים? (טלפון או מייל — יוצג במודעה)</label>
+    <input id="jobContact" name="contact" required maxlength="120" autocomplete="off">
+    <label for="jobBy">שם העסק / המפרסם (לא חובה)</label>
+    <input id="jobBy" name="by" maxlength="80" autocomplete="off">
+    <input type="checkbox" name="botcheck" id="jobBot" tabindex="-1" autocomplete="off" style="display:none">
+    <div class="status" id="jobStatus"></div>
+    <div class="row"><button class="btn pri" type="submit" id="jobSend">שליחה לאישור</button><button class="btn sec" type="button" data-close>ביטול</button></div>
+  </form>
+</div></div>
+
 <div class="modal" id="msg"><div class="card">
   <h2>הודעה למערכת</h2>
   <p>יש לכם ידיעה, הצעה לשיפור, ערוץ שכדאי להוסיף או סתם מילה טובה? כתבו לנו.</p>
@@ -245,6 +276,7 @@
 </div></div>
 
 <script>
+const DIRECT_URL="data/direct.json", DIRECT_CH="_direct";         // משרות שפורסמו ישירות באתר (אחרי אישור)
 const NEWS_URL="data/news.json", PROMO_URL="data/sponsored.json", REMOVED_URL="data/removed.json", REFRESH_MS=60000, PAGE=30;
 const AD_CONTACT="054-8427249";                                   // ← טלפון לפרסום באתר
 const REPORT_KEY="ada496e6-156f-4974-9ac9-846bdeebbae1";          // ← web3forms access key לבקשות הסרה
@@ -310,7 +342,7 @@ function postHTML(it,fresh){
   return `<article class="post${fresh?" fresh":""}">
     ${avatar(u)}
     <div class="col"><div class="bubble">
-      <div class="src"><span class="nm" data-ch="${esc(u)}">${esc(chName(u))}</span><span class="via">ערוץ טלגרם ציבורי · ${hhmm(it.ts)}</span></div>
+      <div class="src"><span class="nm" data-ch="${esc(u)}">${esc(chName(u))}</span>${it.direct?`<span class="via direct">פורסם ישירות בלוח</span>`:`<span class="via">ערוץ טלגרם ציבורי · ${hhmm(it.ts)}</span>`}</div>
       ${it.forwarded_from?`<div class="fwd">הועבר מתוך: <b>${esc(it.forwarded_from)}</b></div>`:""}
       ${it.text?`<div class="bt">${linkify(it.text)}</div>`:""}
       ${mediaHTML(it.media)}
@@ -318,7 +350,7 @@ function postHTML(it,fresh){
       <div class="meta">
         <span>${relTime(it.ts)}</span>${it.views!=null?`<span>👁 ${fmtViews(it.views)}</span>`:""}
         <span class="sp"></span>
-        <a href="https://t.me/${esc(it.post)}" target="_blank" rel="noopener nofollow" title="הקישור למקור בטלגרם">מקור ↗</a>
+        ${it.direct?"":`<a href="https://t.me/${esc(it.post)}" target="_blank" rel="noopener nofollow" title="הקישור למקור בטלגרם">מקור ↗</a>`}
         <button class="rep" data-rep="${esc(it.post)}">⚑ בקשת הסרה</button>
       </div>
     </div></div>
@@ -399,8 +431,13 @@ function buildTicker(){
 async function jget(u){const r=await fetch(u+"?t="+Date.now(),{cache:"no-store"});if(!r.ok)throw new Error(r.status);return r.json();}
 async function load(isRefresh){
   try{
-    const [n,p,r]=await Promise.all([jget(NEWS_URL),jget(PROMO_URL).catch(()=>({items:[]})),jget(REMOVED_URL).catch(()=>({posts:[]}))]);
+    const [n,p,r,dj]=await Promise.all([jget(NEWS_URL),jget(PROMO_URL).catch(()=>({items:[]})),jget(REMOVED_URL).catch(()=>({posts:[]})),jget(DIRECT_URL).catch(()=>({items:[]}))]);
     data={items:n.items||[],channels:n.channels||{}}; promos=p; removed=new Set(r.posts||[]);
+    const direct=(dj.items||[]).filter(d=>d.id&&d.text).map(d=>({post:DIRECT_CH+"/"+d.id,kind:"jobs",text:d.text,ts:d.ts,direct:true}));
+    if(direct.length){
+      data.channels[DIRECT_CH]={title:"נטגרם · משרות מהגולשים"};
+      data.items=data.items.concat(direct).sort((a,b)=>new Date(b.ts||0)-new Date(a.ts||0));
+    }
     renderChips(); renderSide(); buildTicker(); render(isRefresh&&!first);
     seen=new Set(data.items.map(i=>i.post)); first=false;
     if(n.updated) $("updatedLine").textContent="עודכן "+relTime(n.updated);
@@ -438,6 +475,31 @@ $("repForm").addEventListener("submit",async e=>{
   }catch(_){ $("repSend").disabled=false; $("repStatus").style.color="#c0392b"; $("repStatus").textContent="השליחה נכשלה. נסו שוב בעוד רגע."; }
 });
 
+function openJob(){ $("jobStatus").textContent=""; $("jobSend").disabled=false; openM("job"); setTimeout(()=>$("jobTitle").focus(),50); }
+$("jobForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const v=id=>$(id).value.trim();
+  if(!v("jobTitle")||!v("jobText")||!v("jobContact")) return;
+  const fd=new FormData();
+  fd.append("access_key",REPORT_KEY);
+  fd.append("subject","נטגרם – משרה חדשה לאישור: "+v("jobTitle"));
+  fd.append("from_name","נטגרם");
+  fd.append("title",v("jobTitle"));
+  fd.append("details",v("jobText"));
+  fd.append("city",v("jobCity"));
+  fd.append("scope",$("jobScope").value);
+  fd.append("contact",v("jobContact"));
+  fd.append("by",v("jobBy"));
+  if($("jobBot").checked) fd.append("botcheck","1");
+  $("jobSend").disabled=true; $("jobStatus").style.color=""; $("jobStatus").textContent="שולח…";
+  try{
+    const r=await fetch("https://api.web3forms.com/submit",{method:"POST",body:fd}); const j=await r.json();
+    if(!j.success) throw 0;
+    $("jobStatus").style.color="var(--free)"; $("jobStatus").textContent="✓ המשרה התקבלה ותעלה ללוח לאחר אישור. תודה!";
+    $("jobForm").reset();
+    setTimeout(()=>$("job").classList.remove("open"),2600);
+  }catch(_){ $("jobSend").disabled=false; $("jobStatus").style.color="#c0392b"; $("jobStatus").textContent="השליחה נכשלה. נסו שוב בעוד רגע."; }
+});
 function openMsg(){ $("msgStatus").textContent=""; $("msgSend").disabled=false; openM("msg"); setTimeout(()=>$("msgText").focus(),50); }
 $("msgForm").addEventListener("submit",async e=>{
   e.preventDefault();
@@ -463,6 +525,7 @@ addEventListener("hashchange",()=>{ if(location.hash==="#msg") openMsg(); });
 
 document.addEventListener("click",e=>{
   const t=e.target;
+  if(t.closest("[data-job]")){openJob();return;}
   if(t.closest("[data-msg]")){openMsg();return;}
   const ch=t.closest("[data-ch]");
   const kd=t.closest("[data-kind]");

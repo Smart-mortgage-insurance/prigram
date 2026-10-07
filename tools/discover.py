@@ -22,6 +22,8 @@ RE_MODE = "--re" in sys.argv                 # hunt real-estate channels instead
 ARGS = [a for a in sys.argv[1:] if not a.startswith("--")]
 if RE_MODE:                                  # every channel we know may point at a flats channel; args are direct candidates
     SEEDS = [c["username"] for c in CFG["channels"]] + ["Recommended_channels", "RSHIMAE"]
+    if "--only" in sys.argv:                 # check just the given candidates (and whatever they point at)
+        SEEDS = []
 else:
     SEEDS = [c["username"] for c in CFG["channels"] if c.get("enabled", True) and c.get("kind") == "jobs"] + ARGS
 

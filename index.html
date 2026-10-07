@@ -143,6 +143,13 @@
   .bt .lnk{display:inline-block;direction:ltr;background:var(--tg-soft);color:var(--tg-deep);font-weight:700;font-size:13.5px;text-decoration:none;border-radius:999px;padding:0 9px;margin:1px 0;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:bottom}
   .bt .lnk:hover{background:var(--tg);color:#fff}
   .chip.kind{font-weight:800}
+  .adframe{position:relative;display:block;width:100%;overflow:hidden;border-radius:14px;background:#e0f1e8;box-shadow:var(--shadow)}
+  .adframe iframe{position:absolute;top:0;left:0;border:0;transform-origin:0 0;pointer-events:none}
+  .adframe .adtag{position:absolute;top:6px;left:6px;z-index:2;font-size:10px;font-weight:700;background:rgba(255,255,255,.88);color:#55606a;padding:1px 7px;border-radius:5px}
+  .side .adframe{margin-bottom:14px}
+  .post.adpost{justify-content:center}
+  .post.adpost .adframe{max-width:360px}
+  @media(min-width:981px){.post.m-only{display:none}}
   .fab{position:fixed;bottom:18px;inset-inline-start:18px;z-index:90;display:flex;align-items:center;gap:8px;background:var(--tg-deep);color:#fff;border:0;border-radius:999px;padding:11px 18px;font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.22)}
   .fab:hover{background:var(--tg)}
   .fab svg{width:18px;height:18px}
@@ -293,7 +300,15 @@ function postHTML(it,fresh){
   </article>`;
 }
 
+function adFrame(p){
+  const w=p.w||1080,h=p.h||1800;
+  return `<a class="adframe" href="${esc(p.cta_url||"#")}" target="_blank" rel="noopener sponsored" style="aspect-ratio:${w}/${h}" data-adw="${w}"><span class="adtag">מודעה</span><iframe src="${esc(p.html)}" width="${w}" height="${h}" scrolling="no" tabindex="-1" title="${esc(p.advertiser||"מודעה")}"></iframe></a>`;
+}
+function fitAds(){document.querySelectorAll(".adframe").forEach(a=>{if(a.clientWidth)a.querySelector("iframe").style.transform=`scale(${a.clientWidth/+a.dataset.adw})`;});}
+addEventListener("resize",fitAds);
+let adShown=0, sideHTML="";
 function promoHTML(p){
+  if(p.html) return adShown++<2?`<article class="post adpost${p.mobile_only?" m-only":""}">${adFrame(p)}</article>`:"";
   let cta="";
   if(p.cta_phone) cta=`<a class="cta" href="tel:${p.cta_phone.replace(/[^0-9+]/g,"")}">${esc(p.cta_label||"לפרטים")} ${esc(p.cta_phone)}</a>`;
   else if(p.cta_url) cta=`<a class="cta" href="${esc(p.cta_url)}" target="_blank" rel="noopener">${esc(p.cta_label||"לפרטים")}</a>`;
@@ -313,11 +328,11 @@ function renderChips(){
 
 function renderSide(){
   const pinned=(promos.items||[]).filter(p=>p.enabled!==false&&p.pin);
-  let h=pinned.map(p=>`<div class="box">${p.image?`<img class="ad-img" src="${esc(p.image)}" alt="">`:""}<h3>${esc(p.advertiser||"")}</h3><p>${esc(p.text||"")}</p>
+  let h=pinned.filter(p=>p.html).map(adFrame).join("")+pinned.filter(p=>!p.html).map(p=>`<div class="box">${p.image?`<img class="ad-img" src="${esc(p.image)}" alt="">`:""}<h3>${esc(p.advertiser||"")}</h3><p>${esc(p.text||"")}</p>
     ${p.cta_phone?`<a class="cta" href="tel:${p.cta_phone.replace(/[^0-9+]/g,"")}">${esc(p.cta_label||"לפרטים")}</a>`:""}</div>`).join("");
   h+=`<div class="box"><h3>מה זה נטגרם?</h3><p>לוח דרושים: משרות מערוצי טלגרם ציבוריים, בלי צורך בטלגרם. כל מודעה מובאת כלשונה, בשם הערוץ שפרסם אותה ועם הקישורים המקוריים.</p></div>`;
   h+=`<div class="placard"><div class="h">📣 מעוניינים לפרסם?</div><span class="n">${AD_CONTACT}</span></div>`;
-  $("side").innerHTML=h;
+  if(h!==sideHTML){$("side").innerHTML=sideHTML=h;fitAds();}
 }
 
 function render(isRefresh){
@@ -327,13 +342,13 @@ function render(isRefresh){
   if(query) items=items.filter(i=>(i.text||"").includes(query)||chName(i.post.split("/")[0]).includes(query));
   if(!items.length){$("feed").innerHTML=`<div class="empty">${query||filterCh||filterKind?"לא נמצאו עדכונים.":"אין עדכונים כרגע. חוזרים בקרוב…"}</div>`;return;}
   const inline=(promos.items||[]).filter(p=>p.enabled!==false&&!p.pin);
-  let html="";
+  let html=""; adShown=0;
   items.slice(0,shown).forEach((it,i)=>{
     html+=postHTML(it,isRefresh&&!seen.has(it.post));
     if(inline.length&&(i+1)%7===0) html+=promoHTML(inline[((i+1)/7-1)%inline.length]);
   });
   if(items.length>shown) html+=`<button class="more" id="more">עוד עדכונים</button>`;
-  $("feed").innerHTML=html;
+  $("feed").innerHTML=html; fitAds();
 }
 
 function buildTicker(){

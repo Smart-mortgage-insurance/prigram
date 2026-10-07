@@ -10,6 +10,27 @@
    "cta_label": "לפרטים חייגו",
    "cta_phone": "050-0000000",
    "cta_url": ""
+  },
+  {
+   "enabled": true,
+   "advertiser": "קונים חכם",
+   "html": "ads/konim.html",
+   "w": 1080,
+   "h": 1800,
+   "cta_url": "https://smart-mortgage-insurance.github.io/konim-hacham/?utm_source=netgram",
+   "id": "konim-side",
+   "pin": true
+  },
+  {
+   "enabled": true,
+   "advertiser": "קונים חכם",
+   "html": "ads/konim.html",
+   "w": 1080,
+   "h": 1800,
+   "cta_url": "https://smart-mortgage-insurance.github.io/konim-hacham/?utm_source=netgram",
+   "id": "konim-feed",
+   "pin": false,
+   "mobile_only": true
   }
  ]
 }

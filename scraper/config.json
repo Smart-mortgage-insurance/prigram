@@ -104,6 +104,26 @@
       "kind": "jobs"
     },
     {
+      "username": "jeniatafkidplus",
+      "kind": "jobs",
+      "enabled": true
+    },
+    {
+      "username": "Nortech_Spotlight",
+      "kind": "jobs",
+      "enabled": true
+    },
+    {
+      "username": "PMO_jobs",
+      "kind": "jobs",
+      "enabled": true
+    },
+    {
+      "username": "LogOnSoftware",
+      "kind": "jobs",
+      "enabled": true
+    },
+    {
       "username": "NewToolsIBuyIL",
       "enabled": false,
       "kind": "deals"

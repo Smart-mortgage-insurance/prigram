@@ -420,11 +420,11 @@ addEventListener("resize",()=>{fitAds();restoreCars();});
 let adShown=0, sideHTML="", adHTML="";
 function promoHTML(p){
   let cta="";
-  if(p.cta_phone) cta=`<a class="cta" href="tel:${p.cta_phone.replace(/[^0-9+]/g,"")}">${esc(p.cta_label||"לפרטים")} ${esc(p.cta_phone)}</a>`;
-  else if(p.cta_url) cta=`<a class="cta" href="${esc(p.cta_url)}" target="_blank" rel="noopener">${esc(p.cta_label||"לפרטים")}</a>`;
+  if(p.cta_url) cta+=`<a class="cta" href="${esc(p.cta_url)}" target="_blank" rel="noopener">${esc(p.cta_label||"לפרטים")}</a> `;
+  if(p.cta_phone) cta+=`<a class="cta" href="tel:${p.cta_phone.replace(/[^0-9+]/g,"")}">${p.cta_url?"📞":esc(p.cta_label||"לפרטים")} ${esc(p.cta_phone)}</a>`;
   return `<article class="post promo"><span class="ava">★</span><div class="col"><div class="bubble">
     <div class="src"><span class="adv">${esc(p.advertiser||"")}</span><span class="tag">ממומן</span></div>
-    ${p.text?`<div class="bt">${esc(p.text)}</div>`:""}${p.image?mediaHTML([{type:"image",image:p.image}]):""}${cta}
+    ${p.text?`<div class="bt">${linkify(p.text)}</div>`:""}${p.image?mediaHTML([{type:"image",image:p.image}]):""}${cta}
   </div></div></article>`;
 }
 

@@ -124,6 +124,16 @@
       "enabled": true
     },
     {
+      "username": "jobswipe",
+      "kind": "jobs",
+      "enabled": true
+    },
+    {
+      "username": "HiTech_Jobs_In_Israel",
+      "kind": "jobs",
+      "enabled": true
+    },
+    {
       "username": "NewToolsIBuyIL",
       "enabled": false,
       "kind": "deals"

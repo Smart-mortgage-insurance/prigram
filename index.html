@@ -230,6 +230,7 @@
 <div class="modal" id="report"><div class="card">
   <h2 id="repTitle">בקשת הסרה</h2>
   <div class="quote" id="repQuote"></div>
+  <div class="wanum" id="repId" style="display:none">מזהה הפוסט: <a id="repIdLink" target="_blank" rel="noopener nofollow"></a><button type="button" id="repIdCopy">העתקה</button></div>
   <form id="repForm">
     <label for="repReason">סיבת הפנייה</label>
     <select id="repReason" name="reason">
@@ -501,6 +502,9 @@ function openReport(post){
   $("repTitle").textContent=post?"בקשת הסרה לפוסט":"בקשת הסרה / פנייה";
   $("repQuote").style.display=it?"":"none";
   $("repQuote").textContent=it?chName(post.split("/")[0])+": "+(it.text||"[תמונה]").slice(0,220):"";
+  const tg=post&&!(it&&it.direct);                                  // לפוסט מטלגרם מציגים את המזהה ואת קישור המקור
+  $("repId").style.display=tg?"":"none";
+  if(tg){ $("repIdLink").textContent=post; $("repIdLink").href="https://t.me/"+post; $("repIdCopy").dataset.copynum=post; }
   $("repStatus").textContent=""; $("repForm").reset(); $("repSend").disabled=false;
   openM("report");
 }
@@ -511,6 +515,7 @@ $("repForm").addEventListener("submit",async e=>{
   fd.append("subject","נטגרם – בקשת הסרה"+(repPost?" ("+repPost+")":""));
   fd.append("from_name","נטגרם");
   fd.append("post",repPost||"כללי");
+  if(repPost) fd.append("link","https://t.me/"+repPost);
   fd.append("reason",$("repReason").value);
   fd.append("details",$("repText").value);
   fd.append("contact",$("repContact").value);

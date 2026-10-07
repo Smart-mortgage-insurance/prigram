@@ -142,46 +142,6 @@
       "username": "dealsvip",
       "enabled": false,
       "kind": "deals"
-    },
-    {
-      "username": "nester_rent_jerusalem",
-      "kind": "realestate",
-      "enabled": true
-    },
-    {
-      "username": "nester_rent_telaviv",
-      "kind": "realestate",
-      "enabled": true
-    },
-    {
-      "username": "nester_rent_ramatgan",
-      "kind": "realestate",
-      "enabled": true
-    },
-    {
-      "username": "nester_rent_petahtikva",
-      "kind": "realestate",
-      "enabled": true
-    },
-    {
-      "username": "nester_rent_rishonlezion",
-      "kind": "realestate",
-      "enabled": true
-    },
-    {
-      "username": "nester_rent_beersheva",
-      "kind": "realestate",
-      "enabled": true
-    },
-    {
-      "username": "nester_rent_haifa",
-      "kind": "realestate",
-      "enabled": true
-    },
-    {
-      "username": "nester_rent_herzliya",
-      "kind": "realestate",
-      "enabled": true
     }
   ],
   "limits": {

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07T21:21:45.918451+00:00",
+ "updated": "2026-10-07T21:23:44.051392+00:00",
  "channels": {
   "Workingyes1": {
    "title": "עבודות איכות בכל הארץ",
@@ -65,39 +65,596 @@
    "title": "Log-On Software",
    "avatar": "data/media/0971c578000bdd24.jpg",
    "kind": "jobs"
+  },
+  "nester_rent_jerusalem": {
+   "title": "ירושלים דירות להשכרה ללא תיווך",
+   "avatar": "data/media/93a2056d8f8a06e2.jpg",
+   "kind": "realestate"
+  },
+  "nester_rent_telaviv": {
+   "title": "תל אביב דירות להשכרה ללא תיווך",
+   "avatar": "data/media/bfa329fbba340418.jpg",
+   "kind": "realestate"
+  },
+  "nester_rent_ramatgan": {
+   "title": "רמת גן גבעתיים דירות להשכרה ללא תיווך",
+   "avatar": "data/media/13c761e1241d3406.jpg",
+   "kind": "realestate"
+  },
+  "nester_rent_petahtikva": {
+   "title": "פתח תקווה דירות להשכרה ללא תיווך",
+   "avatar": "data/media/65bd3261b4d669b5.jpg",
+   "kind": "realestate"
+  },
+  "nester_rent_rishonlezion": {
+   "title": "ראשון לציון דירות להשכרה ללא תיווך",
+   "avatar": "data/media/6b66c505e712ec08.jpg",
+   "kind": "realestate"
+  },
+  "nester_rent_beersheva": {
+   "title": "באר שבע דירות להשכרה ללא תיווך",
+   "avatar": "data/media/87a2a79c17bb5b23.jpg",
+   "kind": "realestate"
+  },
+  "nester_rent_haifa": {
+   "title": "חיפה דירות להשכרה ללא תיווך",
+   "avatar": "data/media/134e9baee24a506b.jpg",
+   "kind": "realestate"
+  },
+  "nester_rent_herzliya": {
+   "title": "הרצליה רמת השרון דירות להשכרה ללא תיווך",
+   "avatar": "data/media/b843ef5b9f5b2230.jpg",
+   "kind": "realestate"
   }
  },
- "count": 96,
+ "count": 125,
  "items": [
+  {
+   "id": "p350583eecee6",
+   "post": "nester_rent_beersheva/135685",
+   "ts": "2026-10-07T20:26:05+00:00",
+   "text": "להשכרה ברחוב ביאליק באר שבע\nרחוב ביאליק 37, קומה ראשונה\nמזגן בכל חדר\nספה, ארונות וטלוויזיה בסלון\nמקרר, כיריים גז, תנור ומיקרוגל\nמכונת כביסה\nכניסה ב־15/10\nמחיר 3600\nמקלט בבניין (הדירה בקומה ראשונה ממש ליד)\nלפרטים נוספים ולתיאום ביקור עם בעל הדירה, מוזמנים לפנות\nשכ״ד ₪3600\n\nצור קשר:\nמסנג׳ר https://m.facebook.com/1416019012 | נסטר https://dl.nester.co.il/IJHnbVs\nㅤ",
+   "views": 2,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/3c0c8874749e9ac3.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/b2b1748278868d1c.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
+   "id": "pf051217ab1ed",
+   "post": "nester_rent_beersheva/135679",
+   "ts": "2026-10-07T20:25:51+00:00",
+   "text": "🔥 יחידת דיור קומה 1 בשכונה ו׳ 🔥\nיחידת דיור קומה 1 בשכונה ו׳\nהלח״י, שכונה ו׳\nמשופצת ומרוהטת קומפלט\n2,300 ש״ח כולל ארנונה ומים\nכניסה מיידית\nצ׳קים חובה\nשליו אדרי\nללא דמי תיווך - תמיד!\nשכ״ד ₪2300\n\nצור קשר:\nנסטר https://dl.nester.co.il/1hrfhbK\nㅤ",
+   "views": 2,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/066cf8fb9e12c098.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/654680f815124243.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/6550527ce4596dd9.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/7427cd7f96c3bddb.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/e5924797ce34779c.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/2c20eb274ce68057.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
+   "id": "p1eadb8fd5e6c",
+   "post": "nester_rent_beersheva/135672",
+   "ts": "2026-10-07T20:25:41+00:00",
+   "text": "🔥 דירת גן חדר וסלון🔥\nדירת גן חדר וסלון\nגינה פרטית\nרבנו תם, שכונה ד׳\nדירת גן משופצת ומרוהטת קומפלט\n2,500 ש״ח כולל הכל חוץ מחשמל\nכניסה מיידית\nצ׳קים חובה\nשליו אדרי\nללא דמי תיווך - תמיד!\nשכ״ד ₪2500\n\nצור קשר:\nנסטר https://dl.nester.co.il/NSz49wT\nㅤ",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/0888b858b90ed371.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/0af8a15e8fbcb85c.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/e4aed33c5de7a3a6.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/e9f92e2a53fe73f4.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/2adf36a4b6c1f46e.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/7c5fa710dfc13c4b.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/e81c297e4f39c210.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
+   "id": "pf0310e518c54",
+   "post": "nester_rent_beersheva/135665",
+   "ts": "2026-10-07T20:25:24+00:00",
+   "text": "דירה חדשה להשכרה ל-3 שותפים – משופצת מהיסוד!\nדירת 4 חדרים מרווחת, משופצת ברמה גבוהה ומגיעה עם ריהוט מלא – פשוט להגיע עם מזוודות ולהיכנס!\nמיקום: דרך השלום 41, שכונה ג׳\nגודל: כ-110 מ״ר\n4 חדרים\n2 חדרי שירותים\nריהוט מלא\nשיפוץ מהיסוד, ברמה גבוהה\nמיקום מרכזי ונוח:\nכ-15 דקות מהאוניברסיטה\nכ-10 דקות מתחנת רכבת צפון\nשכר דירה: 3,900 ₪\nאופן תשלום: צ׳קים בלבד\nכניסה: 01/10\nללא דמי תיווך לשוכר!\nלשלוח הודעת וואטסאפ בקישו\n-סטיב\n\nצור קשר:\nוואטסאפ https://wa.me/972556830686 | מסנג׳ר https://m.facebook.com/100001677574875 | נסטר https://dl.nester.co.il/99aAMZE\nㅤ",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/df15d5d1dc63423e.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/d881eab680761e1e.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/b1fe83ff36c898c1.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/a2353096beb18fa1.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/5d02265a804483e2.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/726637702ef7fb11.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/bc25e9162e88f4b3.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
+   "id": "p369a09ad7c38",
+   "post": "nester_rent_herzliya/27773",
+   "ts": "2026-10-07T20:17:03+00:00",
+   "text": "מתפנה דירה בשכונת יד התשעה\nדירה הכוללת שני חדרי שינה, סלון ומטבח, במיקום נוח ונגיש – קרובה לכביש 531, לתחנת הרכבת וכ־10 דקות מאוניברסיטת רייכמן.\nהדירה מושכרת ללא ריהוט\nאפשר בעלי חיים\nקומה 4 ללא מעלית\nכניסה ב־1.11.26\nשכר דירה: 3,500 ₪ לחודש\nלא כולל חשמל, מים, גז וועד בית.\nלחתימת חוזה השכירות נדרשים שני ערבים בעלי תלושי שכר.\nלפרטים נוספים ותיאום ביקור מוזמנים להתקשר:\n\nנא לא להתקשר בשבת.\n\nצור קשר:\nוואטסאפ https://wa.me/972504449574 | מסנג׳ר https://m.facebook.com/100000517221042 | נסטר https://dl.nester.co.il/jv4GHOf\nㅤ",
+   "views": 5,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/bfbe7ab5af69ee66.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/679f36644b130885.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/4ba59727c6dfab68.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/a2b6f893335cde3f.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/75bfecf16361314c.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/ec10eb5f2ff7d02e.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/447c2b4e7f3aa5f4.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
+   "id": "pf1689ac96035",
+   "post": "nester_rent_herzliya/27769",
+   "ts": "2026-10-07T20:16:48+00:00",
+   "text": "להשכרה\nדירת שני חדרים בשכונת נוה ישראל\n55 מ\"ר, משופצת, קומה ראשונה\nמחיר: 4,700 ש\"ח כולל הכל חוץ מחשמל\nמרוהטת חלקית: מיטה, שני ארונות, שני מזגנים\nמוכרת: מקרר,טוסטר אובן, שולחן+4 כיסאות (עדיפות תינתן למי שיקנה)\nכניסה מיידית\nפרטים נוספים\n\nצור קשר:\nנסטר https://dl.nester.co.il/IOptle0\nㅤ",
+   "views": 5,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/59d81f18a9c9dbb9.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/5960cad476f32bfa.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/9c36d8e42e183377.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/4e87896e3ca17103.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
+   "id": "p402a0485eb6a",
+   "post": "nester_rent_herzliya/27760",
+   "ts": "2026-10-07T20:15:57+00:00",
+   "text": "דירת יוקרה בפרויקט המסילה, הרצליה\nנוף שדמות 58, המסילה – הרצליה ב’\nדירה חדשה ומושקעת, 5 חדרים מרווחת (במקור 6), 160 מ”ר.\nכל דירה כזו לא נשארת הרבה זמן בשוק – ברמת גימור שאין הרבה כמוה.\nמה מחכה לכם בפנים:\n• מטבח חדש ומאובזר ברמה גבוהה\n• פרקט פישבון בכל הבית\n• חימום תת-רצפתי\n• מזגני VRF\n• מערכת חשמל חכמה, אודיו וידאו מובנה\n• ארונות חדשים בכל החדרים ובחדרי האמבטיה\nמחסן + 2 חניות צמודות וחדר כושר בבניין\nדירה שמחכה למי שמחפש בית אמיתי, לא רק כתובת – עיצוב מוקפד, פרטים שחושבים עליהם, ואיכות חיים בלב הרצליה.\nמחיר שכירות: ₪25,000 לחודש\nלפרטים ותיאום ביקור: | אוריין\n\nצור קשר:\nוואטסאפ https://wa.me/972526882324 | מסנג׳ר https://m.facebook.com/100034056660093 | נסטר https://dl.nester.co.il/tP2pMT9\nㅤ",
+   "views": 5,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/55e29d8902dc5f61.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/617734c72224ba5e.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/48a6dfffa17d475c.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/caf2798f09fa7dbf.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/27d58bdcfee18b19.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/86d5643e4c40e17c.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/3773a2bda44717b0.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/03a05db79d3a93e1.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/0ef3ae9518dc1537.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
+   "id": "p6dd64127cf5b",
+   "post": "nester_rent_telaviv/281854",
+   "ts": "2026-10-07T20:08:17+00:00",
+   "text": "2 מיוחדת במינה\nללא תיווך\nיחידת דיור מושקעת מעוצבת ויפה\n2 חדרים ענקים - 62 מ״ר\nמרפסת שמש\nבניין חדיש לאחר תמ\"א\nמרוהטת ומאובזרת קומפלט\nבלב הצפון החדש של ת\"א,\nבין כיכר המדינה לפארק הירקון\nמטבח מאובזר קומפלט\nכולל מדיח, כלים וסכו״ם\nחוויית כניסה עם מזוודה\nלדירה מוכנה ומטופחת\nמנעול חכם ללא מפתח\nכניסה ויציאה באמצעות\nזיהוי סמארטפון/קודן\nללא עישון / ללא חיות מחמד\n7,900₪\nאופציה לחניה - בתוספת תשלום\nגילי\nשכ״ד ₪7900\n\nצור קשר:\nוואטסאפ https://wa.me/972544605177 | מסנג׳ר https://m.facebook.com/100003387938473 | נסטר https://dl.nester.co.il/FiPur7i\nㅤ",
+   "views": 8,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/5ba5014fff34c1fa.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/08d8b7c7a85d6d46.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/543073d4a5aec078.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/586c7edce0a27555.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/d7fd3f693b8ac5b3.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/8cbb46cefa3a166e.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/8dda87b4bb5d387c.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/307bd3b6532a4aa8.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/bd9d1351f36acc7f.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
+   "id": "p3782a1c2b66d",
+   "post": "nester_rent_telaviv/281848",
+   "ts": "2026-10-07T20:07:25+00:00",
+   "text": "מחפשים משרד שכיף לעבוד בו ומרשים לקבל בו לקוחות?\nלהשכרה משרד יוקרתי במגדל ספיר, במתחם הבורסה ברמת גן!\nמשרד עם עיצוב מוקפד וחלוקה נוחה שמתאימה למגוון שימושים.\n61 מ״ר המחולקים לשני חדרים: חדר גדול ומרווח שיכול לשמש לעבודה משותפת, לישיבות או לצוות טלפניות, וחדר נוסף שמתאים למשרד פרטי.\nמחיצות זכוכית מרשימות, טפטים מעוצבים, תקרה חשופה, פרקט ומטבחון בנגרות אישית, כל הפרטים שיוצרים סביבת עבודה נעימה וייצוגית.\nרוצים לראות אם זה המקום הבא לעסק שלכם?\nשלחו הודעה לפרטים ולתיאום סיור.\nאושר -\nשכ״ד ₪6300\n\nצור קשר:\nוואטסאפ https://wa.me/972542645860 | מסנג׳ר https://m.facebook.com/100001548877586 | נסטר https://dl.nester.co.il/oLcN7ci\nㅤ",
+   "views": 9,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/a66864a20ed2e132.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/389108ecb73d33d8.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/053fb7d5df348a39.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/6c2fe78f330c2d83.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/c47434292b6c0406.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/16211f07b9b0c656.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
   {
    "id": "pa48902110fcf",
    "post": "Workingyes1/9729",
    "ts": "2026-10-07T20:01:51+00:00",
    "text": "🔥 דרושים עובדים גברים למשמרת בוקר - עבודה קלילה ונוחה! 🔥\n\n✔️ לא התרמות ✋\n✔️ תנאים מעולים ואווירה משפחתית 🌟\n✔️ שכר: 40 ש\"ח לשעה 💸\n✔️ +בונוסים שווים🔥🤑\n✔️ עבודה מיידית! 🚀\n\n⏰ שעות עבודה: 9:00 - 16:00\n📍 מיקום: מתחם BSR, בני ברק\n\n*מעל גיל 18 בלבד!\n\n📞 מתאים לך? צור עכשיו קשר לפרטים נוספים! 🙂\nhttps://api.whatsapp.com/send?phone=972737576751&text=%D7%94%D7%99%D7%99+%D7%90%D7%A0%D7%99+%D7%9E%D7%AA%D7%A2%D7%A0%D7%99%D7%99%D7%9F+%D7%91%D7%A7%D7%A9%D7%A8+%D7%9C%D7%9E%D7%A9%D7%A8%D7%AA+%D7%A0%D7%A6%D7%99%D7%92+%D7%94%D7%9E%D7%9B%D7%99%D7%A8%D7%95%D7%AA.+%D7%90%D7%A9%D7%9E%D7%97+%D7%9C%D7%A7%D7%91%D7%95%D7%A2+%D7%A8%D7%90%D7%99%D7%95%D7%9F+%D7%A2%D7%91%D7%95%D7%93%D7%94\n\nעבודות איכות לחרדים >>>\nhttps://chat.whatsapp.com/EHB5fQfMNS01gZI60zyHNU",
-   "views": 27,
+   "views": 28,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
+  },
+  {
+   "id": "pff05fbe2ca67",
+   "post": "nester_rent_telaviv/281846",
+   "ts": "2026-10-07T19:46:44+00:00",
+   "text": "סאבלט בדירת 3 חדרים במרכז תל אביב!\nתאריכים - 09 עד 30 בדצמבר (21 לילות)\nדירה גדולה ומרווחת, מודרנית ומאוברזת באופן מלא בלב תל אביב (ארלוזורוב פינת דיזנגוף).\nעל הדירה:\n3 חדרים, מרווחת ונעימה\n2 חדרי שינה - אחד עם מיטה סופר קינז (180200) והשני עם מיטה זוגית (140190)\n2 עמדות עבודה עם מסכים, WIFI\nמטבח מאובזר באופן מלא, שולחן אוכל גדול ל6 אנשים\nחדר שירות עם מכונת כביסה\nספה מדהימה וטלוויזיה 75\"\nתקרות גבוהות, חלונות גבוהים\nמזגנים בכל החדרים\nמיקום מושלם במרחק של 2 דקות מרחוב דיזנגוף, 5 דקות מהילטון והים.\nחנויות, סופרים ומסעדות במרחק כמה צעדים.\nמחיר 9000 ש\"ח לכל התקופה, כולל חשבונות.\nModern and spacious 3 room (2 bedroom) apartment in the heart of Tel Aviv (Arlozorov/ Dizengoff), steps from the beach and the city action.\nThe apartment offers:\n3 large rooms including 2 bedrooms (one with a super king bed (180200) & one with a double bed (140190))\n2 work stations with monitors, strong WIFI\nFull kitchen, large dining table for 6\nService room with a laundry machine\nCoz…\n\nצור קשר:\nנסטר https://dl.nester.co.il/Maa6Nu0\nㅤ",
+   "views": 12,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/2bb67f791fc576d0.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/dfa02bc877900cb6.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
+   "id": "p6beea00206df",
+   "post": "nester_rent_telaviv/281840",
+   "ts": "2026-10-07T19:46:35+00:00",
+   "text": "Cozy studio sublet in central Tel Aviv from October 13 (possibly a couple of days earlier) Minimum stay: 1 week, until October 19. Preference for someone looking to stay for a month, with an option to extend. De Picciotto St. — amazing location between Rothschild Blvd, Levinsky Market, and the Railway Park. Bright, renovated, and cozy studio with lots of natural light The apartment faces the back courtyard, so it’s nice and quiet despite the central location Fully furnished with: • bed + mattress • fridge • washing machine • dryer • table • sofa • shelving unit • wardrobe 5,150 ₪ per month, including all bills and internet. DM me for more details, photos, and a video\nשכ״ד ₪5150\n\nצור קשר:\nנסטר https://dl.nester.co.il/MpKgppZ\nㅤ",
+   "views": 7,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/8ca1c5a8e1f65be0.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/2c62f890c8519f0e.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/01d9186b419a063a.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/878ef7602af528c2.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/2fae6022b7cd20ae.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/0566c3a25a055638.jpg"
+    }
+   ],
+   "kind": "realestate"
   },
   {
    "id": "pa791015f2054",
    "post": "Workingyes1/9728",
    "ts": "2026-10-07T19:31:43+00:00",
    "text": "🎬 מחפשים עורך/ת וידאו לסושיאל!\n\nחיים את הרשתות ומבינים את השפה?\nאנחנו מחפשים עורך/ת עם ראש גדול, יצירתיות ויוזמה, שיודעים להפוך רעיון לסרטון שעוצר את הגלילה.\n\n✦ ניסיון בעריכת סרטונים לסושיאל\n✦ היכרות עם אינסטגרם, טיקטוק וטרנדים ברשת\n✦ הבנה בקצב, בסטוריטלינג ובתוכן שמייצר מעורבות\n✦ היכרות בסיסית עם כלי AI ושילובם ביצירת תוכן ובעריכה\n\n📍 משרה מלאה בפתח תקווה\n\nמתאים לכם? שלחו לנו קורות חיים ותיק עבודות בפרטי 📩\nAnael@htv.co.il\n\nעבודות איכות לחרדים >>>\nhttps://chat.whatsapp.com/BxW7ULvTHgOEfdRSxTQciQ",
-   "views": 38,
+   "views": 39,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
+  },
+  {
+   "id": "pb5f2a0526654",
+   "post": "nester_rent_jerusalem/105574",
+   "ts": "2026-10-07T19:22:31+00:00",
+   "text": "NEW FOR RENT REHAVIA — Prime Location 3 rooms | 2 bedrooms 90 sqm 3rd floor / 7 Premium location in one of Jerusalem’s most sought-after neighborhoods Directly opposite the Great Synagogue Spacious & bright Balcony A/C in every room Shabbat elevator Private parking Unfurnished ₪8,300 FRIDAY VIEWINGS AVAILABLE! Please coordinate with me in advance. Agent JF REALTY\nשכ״ד ₪8300\n\nצור קשר:\nנסטר https://dl.nester.co.il/8mrqyas\nㅤ",
+   "views": 8,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/5a4b66789f43f07d.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/0030ba7196e84d66.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/049b058d39497157.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/b35904e2ab40e1d2.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/02f500880fdf1c4b.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/9222dbd8e0d97f1b.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/217e99bca575fca1.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/996c8e9a716e094c.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/0dc3b43d398e2fe5.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
+   "id": "p8b5910302b4d",
+   "post": "nester_rent_jerusalem/105569",
+   "ts": "2026-10-07T19:22:10+00:00",
+   "text": "להשכרה ישירות מהבעלים — דירת 3 חדרים בגבעת שאול\nמתאימה גם <u>לעובדים זרים</u> ולחברות המחפשות מגורים לעובדיהן\n4,500 ₪ לחודש כולל ארנונה ומים | ללא תיווך | כניסה מיידית\nרחוב דוד הראובני 16, גבעת שאול, ירושלים — מול מספר 18, ליד רחוב נג'ארה.\nדירה בשטח של כ־55 מ\"ר, עם סלון ומטבח ושני חדרים נוספים.\nמטבח חדש\nמערכת חשמל חדשה ובטיחותית\nחלון בכל חדר וללא רטיבות\nמזגן אחד\nחדר רחצה עם מקלחת ושירותים\nהדירה ישנה ופשוטה, אך מתפקדת. אינה מרוהטת ואין מרפסת. נמצאת בקומה הראשונה — העלייה במדרגות ברזל.\nבניין ותיק ובו 6 דירות בלבד, שבו מתגוררים גם עובדים זרים. אין עבודות תמ\"א בבניין.\nשכר דירה: 4,500 ₪ לחודש, כולל ארנונה ומים.\nחשמל בתשלום נפרד לפי הצריכה.\nלפרטים ולתיאום ביקור — ויטוריו ששון\nטלפון / WhatsApp:\nישירות מהבעלים — ללא דמי תיווך.\nשכ״ד ₪4500\n\nצור קשר:\nנסטר https://dl.nester.co.il/VeeZc4s\nㅤ",
+   "views": 7,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/de4984bdd9b71881.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/63b2afbe10784801.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/28861b63c96bfb06.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/c56aae2de799d202.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/48b218ecbec4f22f.jpg"
+    }
+   ],
+   "kind": "realestate"
   },
   {
    "id": "p50325435f936",
    "post": "Workingyes1/9727",
    "ts": "2026-10-07T18:54:35+00:00",
    "text": "יש לכם ראש יצירתי? יודעים להפוך רעיון לסרטון שאי אפשר להוריד ממנו את העיניים? 🎬\n\nאנחנו מחפשים עורך/ת וידאו ואפטריסט/ית עם ראש גדול, חוש לקצב ותשוקה ליצירה.\n\n✦ שליטה ברמה גבוהה ב־After Effects\n✦ ניסיון ביצירת פרומואים ובעריכת וידאו\n✦ יכולת לשלב גרפיקה, אנימציה ואפקטים\n✦ היכרות עם כלי AI ושילובם ביצירת פרומואים\n✦ עין לפרטים ויכולת לקחת רעיון עד לתוצר הסופי\n\n📍 משרה מלאה בפתח תקווה\n\nמתאים לכם? שלחו קורות חיים ותיק עבודות בפרטי 📩\nshirac@htv.co.il\n\nעבודות איכות לחרדים >>>\nhttps://chat.whatsapp.com/BxW7ULvTHgOEfdRSxTQciQ",
-   "views": 38,
+   "views": 39,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
+  },
+  {
+   "id": "p2a43d54e87ec",
+   "post": "nester_rent_jerusalem/105563",
+   "ts": "2026-10-07T18:47:04+00:00",
+   "text": "דירה להשכרה בנחלאות 2.5 חדרים\nקומה 2 אותנטית\n4800 ש״ח לחודש\nאבן ספיר 9 לפרטים בווטסאפ :\n\nצור קשר:\nנסטר https://dl.nester.co.il/FetWbnc\nㅤ",
+   "views": 12,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/50581d1a0249a859.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/29d4f4a34d34705e.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/f47a610015e1501c.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/5ab26bff5dfc3e13.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/955adcd3dfc5c81e.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
+   "id": "p5ab874797541",
+   "post": "nester_rent_ramatgan/71710",
+   "ts": "2026-10-07T18:10:40+00:00",
+   "text": "להשכרה ברחוב אבא הלל רמת גן דירת סטודיו מתוקה מרווחת ומוארת 30 מטר קומה 2 על עמודים 3000₪ כולל חשבונות פרט לחשמל דרוש צקים+תלושי משכורת תאריך כניסה - 1.11.26 נשאר בדירה בדירה מזגן, מקרר, ארון בגדים ובסיס מיטה אני מוכרת - מכונת כביסה, ספה, קומקום, מקרוגל ושולחן סלון לתיאום הגעה לשלוח לי הודעה\n\nצור קשר:\nנסטר https://dl.nester.co.il/iisth6B\nㅤ",
+   "views": 7,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/114d3d9e6e79e614.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/337dc698de987f38.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/56739afd3a95258b.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/7944e7d1ec90f66b.jpg"
+    }
+   ],
+   "kind": "realestate"
   },
   {
    "id": "pd9cdec929eb9",
@@ -110,11 +667,34 @@
    "kind": "jobs"
   },
   {
+   "id": "pcd50936333ab",
+   "post": "nester_rent_ramatgan/71707",
+   "ts": "2026-10-07T16:31:58+00:00",
+   "text": "דירת 4 חדרים בג'בוטינסקי 2 גבעתיים, משופצת, מטבח חדש, עם נוף פתוח למערב, גדולה, מרווחת ממוזגת ונעימה, מרוהטת חלקית, מיקום מצויין, מתאימה לשותפות/ים או משפחה. לרציניים כניסה מיידית מחיר 6,900 ש\"ח. לפרטים אלון דירת 4 חדרים בג'בוטינסקי 2 גבעתיים, משופצת, מטבח חדש, עם נוף פתוח למערב, גדולה, מרווחת ממוזגת ונעימה, מרוהטת חלקית, מיקום מצויין, מתאימה לשותפות/ים או משפחה. לרציניים כניסה מיידית\n\nצור קשר:\nוואטסאפ https://wa.me/972526696773 | מסנג׳ר https://m.facebook.com/100013917812873 | נסטר https://dl.nester.co.il/jpyPzFr\nㅤ",
+   "views": 10,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/73a6837bed6b0db0.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/8614ad595b0871e3.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/cb9fd135cb29f424.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
    "id": "p0d308a19e78f",
    "post": "Workingyes1/9726",
    "ts": "2026-10-07T16:31:41+00:00",
    "text": "יצירתיות. חדשנות. טכנולוגיה.\nנפגשים במקצוע אחד! 🎨 🖲️ ⚙️\n\nאם תמיד נמשכת ל עולם העיצוב, היצירה והפיתוח — את מוזמנת לממש את עצמך במסלול הייחודי:\nהנדסאי עיצוב תעשייתי במרכז החרדי להכשרה מקצועית שלוחת בני ברק\n\nבמהלך הלימודים תכירי את כל הדרך מרעיון למוצר:\n\n✨ פיתוח חשיבה יצירתית ותהליכי השראה.\n🤖 עיצוב ופיתוח באמצעות טכנולוגיות מתקדמות בשילוב AI.\n🛠️ בניית אבות טיפוס — מהרעיון הראשוני ועד למוצר מוגמר.\n🎓 דיפלומת הנדסאי מבוקשת ורישום במרשם ההנדסאים.\n\nמסלול מקצועי הפותח מגוון אפשרויות להשתלבות בעולם התעשייה והעיצוב כשכירה או כעצמאית.\n\n💵מגוון מלגות שוות למימון שכר הלימוד 💵\n\nרוצה לשמוע עוד?\n\nהשאירי פרטים עכשיו ונחזור אליכם עם כל המידע >>\nhttps://charedicts.yrdigital.co.il/industrial-design/?utm_source=zalul&utm_medium=whatsapp\n\nעבודות איכות לחרדים >>>\nhttps://chat.whatsapp.com/BxW7ULvTHgOEfdRSxTQciQ",
-   "views": 47,
+   "views": 48,
    "forwarded_from": null,
    "media": [
     {
@@ -123,6 +703,107 @@
     }
    ],
    "kind": "jobs"
+  },
+  {
+   "id": "p32186c135826",
+   "post": "nester_rent_ramatgan/71702",
+   "ts": "2026-10-07T16:30:54+00:00",
+   "text": "סבלאט ברמת גן\nמסבלטים את הדירה שלנו ברמת גן\nמיקום מעולה בשכונת הראשונים\nקרוב לבורסה ולרכבת הקלה\n4 חדרים מרווחת\nקומה רביעית עם מעלית\nחדר מאסטר עם שירותים ומקלחת\nחדר נוסף עם מיטה זוגית\nחדר ממד עם מיטה וחצי\nשירותים נוספים וחדר אמבטיה נוסף\nהדירה מאובזרת לחלוטין\n1.12.26 עד 15.1.27\nאפשר גם לחלק מהתקופה\nפרטים נוספים\nסיגל\nשכ״ד ₪1\n\nצור קשר:\nנסטר https://dl.nester.co.il/ZRmouvN\nㅤ",
+   "views": 9,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/1a286d214a92cda6.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/92897f71f46d4223.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/adc4e2975025103c.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/b285f277ede09fbc.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/72454628b4d2d065.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
+   "id": "pe02c1a5d6e2b",
+   "post": "nester_rent_ramatgan/71697",
+   "ts": "2026-10-07T16:16:47+00:00",
+   "text": "להשכרה בית פרטי 4 חדרים הכוללים חדר חיצוני. רחוב תל חי 36 רמת גן. שכירות 6200₪. איתן\n\nצור קשר:\nוואטסאפ https://wa.me/972523610780 | מסנג׳ר https://m.facebook.com/100075798870866 | נסטר https://dl.nester.co.il/hzSy86a\nㅤ",
+   "views": 10,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/e6d0bf6ff5bfc503.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/bc1eb4089f4d54a8.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/a57c39db8265d2f6.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/d9946c7263fdcd54.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/be70a106db5e7b58.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
+   "id": "p5160d1de4601",
+   "post": "nester_rent_ramatgan/71690",
+   "ts": "2026-10-07T16:16:12+00:00",
+   "text": "להשכרה – דירת 2 חדרים בבני ברק\nגבול רמת גן\nרחוב כנרת 13\nדירה משופצת לחלוטין, במיקום מצוין ברחוב אבא הלל – מול קניון רמת גן.\nמוארת ונעימה, מתאימה ליחיד או לזוג.\nפרטים: • דירת 2 חדרים\n• לאחר שיפוץ מלא\n• מרוהטת קומפלט\n• כוללת מוצרי חשמל: מכונת כביסה, מייבש, טלוויזיה ועוד\n• מיקום מרכזי עם גישה נוחה לתחבורה, חנויות ובילויים\nמחיר: 4,500 ₪\nלפרטים: דוד –\nלפרטים נוספים לחצו כאן:\n\nצור קשר:\nנסטר https://dl.nester.co.il/Ipx6KJx\nㅤ",
+   "views": 11,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/89711dc43cb95d84.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/1cc81cae81903f71.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/b231fdd60b49a5cd.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/9c90249e24bbb862.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/938ea66f51dd85fc.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/ff54a85f56f3dc33.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/b1a00b013271ba2b.jpg"
+    }
+   ],
+   "kind": "realestate"
   },
   {
    "id": "pf2ba374bf9a0",
@@ -139,7 +820,7 @@
    "post": "Workingyes1/9725",
    "ts": "2026-10-07T16:01:29+00:00",
    "text": "🚨🔥איש מכירות תותח? זה בשבילך!🔥🚨\n\n🎯 דרוש מנהל ומוביל מוקד מכירות\n📍 אלעד | א׳–ה׳ 08:00–17:00\n\nמחפשים אלוף מכירות עם אנרגיה, כריזמה ורעב להצלחה 🏆\nשיודע לסגור בעצמו וגם להוביל צוות לתוצאות! 📈\n\n💥 התפקיד כולל:\n✔️ ניהול והובלת מוקד מכירות\n✔️ גיוס, חניכה וליווי נציגים\n✔️ הובלת יעדים ושיפור ביצועים\n✔️ דוגמה אישית בשטח\n\n🔥 דרישות:\n🔹 ניסיון מוכח במכירות טלפוניות – חובה!\n🔹 יכולת הנהגה והנעת עובדים\n🔹 ניסיון ניהולי/אחמ״ש – יתרון\n🔹 התאמה לסביבה תורנית\n\n💰 שכר בסיס גבוה + בונוסים גבוהים!\n🎓 ליווי והכשרה לתפקיד הניהולי למתאימים\n\n📩 קו״ח במייל בלבד:\n📧 lidim1.m.y@gmail.com\n\n⚡ רציני ? בא להוביל! ⚡\n\nעבודות איכות לחרדים >>>\nhttps://chat.whatsapp.com/BxW7ULvTHgOEfdRSxTQciQ",
-   "views": 41,
+   "views": 42,
    "forwarded_from": null,
    "media": [
     {
@@ -150,11 +831,93 @@
    "kind": "jobs"
   },
   {
+   "id": "pdd22a2a59524",
+   "post": "nester_rent_petahtikva/39541",
+   "ts": "2026-10-07T15:46:18+00:00",
+   "text": "להשכרה דירת 3 חדרים ברח' הלוי 6 (כפר גנים ב')\n- 76 מ\"ר\n- קומה 2 מתוך 4\n- בניין עם 8 דירות בלבד\n- ממ\"ד\n- מרפסת\n- מעלית\n- חנייה פרטית\n- קרוב ליציאה ל471\nשכ\"ד: 5,600 ש\"ח.\nכניסה: אמצע נובמבר (גמיש מעט).\nהחלפה בחוזה עד 31.8 ואז חידוש מול בעלי הדירה.\nהדירה באה עם ארונות קיר, פינת אוכל וכיריים, ריהוט נוסף (תנור, מקרר, שידה, ריהוט מרפסת, ספה, מזרון, בסיס מיטה ועוד מוצעים למכירה).\nלפרטים ותיאום הגעה מוזמנים לפנות\n\nצור קשר:\nנסטר https://dl.nester.co.il/qKJ9Hoh\nㅤ",
+   "views": 20,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/afa561494cb5be30.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/9ba4d544324ba1c7.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/e7349b638d89f871.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/ece2e4b06f2013d3.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/6506c9b0c3c33695.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/a45136fffcd46090.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
+   "id": "p5e4d01391181",
+   "post": "nester_rent_petahtikva/39532",
+   "ts": "2026-10-07T15:37:11+00:00",
+   "text": "כל הקודם זוכה !!!!! דירה מהממת ומשופצת !!!!! בשכונת כפר אברהם דירת 3 חדרים 2 שירותים + מקלחת ריהוט חלקי מזגנים בכל הבית דלתות פנדור + סורגים קומה 3 בניין דתי ללא תיווך לכניסה מיידית 4000 ש״ח\n\nצור קשר:\nמסנג׳ר https://m.facebook.com/100082541275275 | נסטר https://dl.nester.co.il/Dj37OP8\nㅤ",
+   "views": 20,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/a92caa9f66b3b0e7.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/cbcd28e696b3a6c2.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/d72603b99ac20b59.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/aae360c398235838.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/4aab4f179f817306.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/cf1d7c5eacf2d12a.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/7a8a7c1fd1a7e236.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/6dd42598e041531d.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/cf772f18e70342f1.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
    "id": "pffe0bd19aada",
    "post": "Workingyes1/9724",
    "ts": "2026-10-07T15:30:18+00:00",
    "text": "פותחים שנה עם הזדמנות חדשה 💫\n\nבואו להשתלב בתעשייה הביטחונית בתפקידי ייצור של מערכות מתקדמות ורגישות.\n\nמה אנחנו מציעים?\n\n🏭 סביבת עבודה מקצועית ומותאמת\n🎓 הכשרה מקצועית\n📈 אפשרויות קידום והתפתחות\n🛡️ יציבות תעסוקתית לטווח ארוך\n⭐ תנאים מעולים\n🚌 מערך הסעות\n🍽️ ארוחות מהדרין\n\nמשרת כניסה - לא נדרשת הכשרה מקצועית קודמת\nמתאים לבעלי גישה טכנית, יכולת למידה ועבודת צוות.\nניסיון בתעשייה או סיווג ביטחוני קודם – יתרון.\n\nהמשרה באזור חיפה והקריות\n\n🔗 מעניין אתכם? מלאו את הפרטים בקישור ונחזור אליכם\nhttps://forms.cloud.microsoft/r/UcfAyUgytC\n\nעבודות איכות לחרדים >>>\nhttps://chat.whatsapp.com/BxW7ULvTHgOEfdRSxTQciQ",
-   "views": 39,
+   "views": 40,
    "forwarded_from": null,
    "media": [
     {
@@ -185,6 +948,33 @@
    "kind": "jobs"
   },
   {
+   "id": "p8c2df5eae0a1",
+   "post": "nester_rent_rishonlezion/31284",
+   "ts": "2026-10-07T14:51:53+00:00",
+   "text": "דירת 2.5 חדרים ברחוב הרב נריה, ראשון לציון\nדירת 2.5 חדרים ברחוב הרב נריה, ראשון לציון.\nדירה נעימה ומוארת במיקום מרכזי ונוח, סמוך למכללה למינהל ולמגוון חנויות, בתי קפה ותחבורה ציבורית.\nהדירה מציעה נוף פתוח, מיזוג, ממ\"ד וחניה. בניין מטופח, שקט ונעים עם 2 מעליות.\nמיקום אידיאלי לסטודנטים, זוגות ומשפחות, קרוב לכל מה שצריך, עם נגישות נוחה לצירי התחבורה המרכזיים.\nלפרטים נוספים, מוזמנים לפנות .\nשכ״ד ₪5500\n\nצור קשר:\nנסטר https://dl.nester.co.il/W1wIAus\nㅤ",
+   "views": 16,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/c5d230f9c3a7d4e7.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/5d87fc73a1811c94.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/bb7e151140424d4d.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/4ea7740e4af7f4e9.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
    "id": "p42e6462fd82f",
    "post": "Workingyes1/9722",
    "ts": "2026-10-07T14:31:28+00:00",
@@ -195,6 +985,45 @@
    "kind": "jobs"
   },
   {
+   "id": "p1006a60a457d",
+   "post": "nester_rent_petahtikva/39525",
+   "ts": "2026-10-07T14:22:11+00:00",
+   "text": "להשכרה דירת 2 חדרים ברח צה\"ל.\n(מאד קרובה לזבוטינסקי ) . דירה לא מחולקת.\n43 מטר לפי הארנונה אבל מרגישה יותר\nקומה 3 מתוך 3. אין מעלית , אין ממד\nיש מקלט בבניין\nיש חניה פרטית ששייכת לדירה\nדירה חמודה נעימה ושקטה .\nמזגן בסלון. מזגן בחדר השינה. דוד שמש\nמאוורר תקרה בחדר השינה\nארון קיר הזזה בחדר שינה\nספסל איחסןן דקורטיבי לאורך הוויטרינה\n3800 שח לחודש\nוועד 60 לחודש , ארנונה כ 400 לחודשיים\nכניסה 05.11\n\nצור קשר:\nמסנג׳ר https://m.facebook.com/100010080467968 | נסטר https://dl.nester.co.il/S7YSxq7\nㅤ",
+   "views": 23,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/c18c07e288977c3f.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/79fd081231b88617.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/f5550af608542f1a.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/f9fbd2ce3a39c6c4.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/18b37bc8cd6b43c1.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/8d1d638e4afb4465.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/22bc0487c8371af3.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
    "id": "pfe27469d213c",
    "post": "Workingyes1/9721",
    "ts": "2026-10-07T14:00:07+00:00",
@@ -203,6 +1032,139 @@
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
+  },
+  {
+   "id": "p5bea9949e756",
+   "post": "nester_rent_haifa/46855",
+   "ts": "2026-10-07T13:32:56+00:00",
+   "text": "דירה משופצת ומרוהטת להשכרה ברחוב חניתה, חיפה דירה נעימה ומוכנה למגורים, עם מרפסת וחדר ארונות – פתרון מעולה למי שמחפש נוחות וסטייל! רחוב חניתה, חיפה קומת כניסה משופצת מרוהטת מרפסת חדר ארונות כניסה: 4.11 3,800 ₪ לחודש ללא תיווך לפרטים ותיאום ביקור: ניר –\n\nצור קשר:\nוואטסאפ https://wa.me/972529570498 | מסנג׳ר https://m.facebook.com/100002075247552 | נסטר https://dl.nester.co.il/FZw8rOy\nㅤ",
+   "views": 3,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/5db6fdb459c0ac3a.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/c41b34dfbf221111.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/c5ef328c93385625.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/2b518c6daac19fd9.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/a08cf54e1420e235.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/70470074138acf20.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/a2f4f9933f646c1b.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
+   "id": "p718cc0248ac3",
+   "post": "nester_rent_haifa/46846",
+   "ts": "2026-10-07T13:32:18+00:00",
+   "text": "להשכרה דירה 3 חדרים הצלפים 9 רוממה 3700 ש״ח חניה פרטית\n\nצור קשר:\nנסטר https://dl.nester.co.il/PmTIYKu\nㅤ",
+   "views": 3,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/c81fe78ee9717c24.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/9fdb7225b2aab7ac.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/bf112d1700409bb2.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/6f2fc96fa647ca61.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/257cf5952474c0de.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/bdd00655d7162486.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/9f82f2f8ad4a98d0.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/f010eadb0a61e68d.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/4fb2272547e8fc82.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
+   "id": "pe9813dbc4902",
+   "post": "nester_rent_haifa/46837",
+   "ts": "2026-10-07T13:32:02+00:00",
+   "text": "משרדים להשכרה רק 40 ש\"ח למטר!!!\nברחוב יקותיאל בהרב 37 | מפרץ חיפה\n210 מטר ברוטו\nמשרד משופץ מרוהט חלקית\n7 חדרים + אופן ספייס + מטבחון וחדר אוכל\nקומה 2 עם מעלית\nפנוי לכניסה מיידית\nבניין מסודר עם שירותים קומתיים\nשכירות 8400 ₪ + מע\"מ\nדמי ניהול 1050 ₪ + מע\"מ\nלפרטים נוספים ותיאום ביקור בנכס עדן -\nמחפשים נכס מסחרי?\nשלחו הודעת ואטסאפ ואשמח לעזור\n\nצור קשר:\nוואטסאפ https://wa.me/972525353500 | מסנג׳ר https://m.facebook.com/100037085353446 | נסטר https://dl.nester.co.il/pBgQw4u\nㅤ",
+   "views": 3,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/e99c02db9f5c3abc.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/430ef555608880ff.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/dbfc938d2591a760.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/5f2e9653bd3bf4d3.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/0174bd555c198340.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/ccb8aba42e46a0ca.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/bcc004e6a5789505.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/71b4ecfaabc38006.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/dc2bf4d6bc2cf83f.jpg"
+    }
+   ],
+   "kind": "realestate"
   },
   {
    "id": "p85da45b193af",
@@ -269,7 +1231,7 @@
    "post": "Jobs_in_Jerusalem/36388",
    "ts": "2026-10-07T12:37:40+00:00",
    "text": "#ביתר_עילית\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 197,
+   "views": 198,
    "forwarded_from": null,
    "media": [
     {
@@ -658,6 +1620,111 @@
     }
    ],
    "kind": "jobs"
+  },
+  {
+   "id": "p30eb88923c99",
+   "post": "nester_rent_rishonlezion/31276",
+   "ts": "2026-10-06T17:20:07+00:00",
+   "text": "להשכרה ללא תיווך! דירת 3 חדרים מרווחת ומשופצת בראשון לציון\nמחפשים דירה גדולה, מוארת במיקום מעולה – ישר מהבעלים?\nברחוב ארלוזורוב המבוקש בראשון לציון, מוצעת להשכרה דירת 3 חדרים מעולה:\nגודל: כ-90 מ\"ר של ספייס ונוחות!\nהדירה עוברת שיפוץ מקיף טרם הכניסה! נכנסים לבית רענן, נקי ומשודרג.\nפרטי הדירה:\nגודל: כ-90 מ\"ר\nחדרים: 3 חדרים מרווחים\nקומה: 4 (ללא מעלית)\nחנייה: יש חנייה בבניין\nביטחון: מקלט מסודר בבניין\nתאריך כניסה: 10.11.2026\nמחיר: 5,500 ₪ לחודש\nללא עמלת תיווך!\nמיקום מרכזי ונוח, קרוב לתחבורה ציבורית, מרכזי קניות, בתי ספר וגינות.\nלפרטים נוספים ותיאום :\nשלחו לי הודעה פרטית\n\nצור קשר:\nמסנג׳ר https://m.facebook.com/535284588 | נסטר https://dl.nester.co.il/EoHwQS4\nㅤ",
+   "views": 26,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/fe0260e973bd7b04.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/b782cce5007e3265.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/0dcf492143a7b7a9.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/eeeff5693dabd4d5.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/575782961fc01114.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/528a470f430cb833.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/d52dcb523a991633.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/fa8137a3ad1f1ba5.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
+   "id": "p3d5a803daa27",
+   "post": "nester_rent_rishonlezion/31271",
+   "ts": "2026-10-06T17:19:52+00:00",
+   "text": "בראשון לציון, שכונת נווה ים 3400 שח יחידת סטודיו מקסימה, מרתף. מרוהטת- מיטה, מקרר, סלון, תנור וכיריים, מכונת כביסה, פינת אוכל, ארון. המחיר כולל ארנונה, מים וחיבור ל yes ללא בעלי חיים. יש כלב גדול. כניסה מיידית\n\nצור קשר:\nוואטסאפ https://wa.me/972522304582 | מסנג׳ר https://m.facebook.com/1009746520 | נסטר https://dl.nester.co.il/9FsXZcp\nㅤ",
+   "views": 23,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/d75942093b21caad.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/52a0b737b699e16e.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/4f2a779a446acfe2.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/b8aeaf7940953d5d.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/bbb972b1ddf75f23.jpg"
+    }
+   ],
+   "kind": "realestate"
+  },
+  {
+   "id": "pe506e5c80994",
+   "post": "nester_rent_rishonlezion/31266",
+   "ts": "2026-10-06T17:19:40+00:00",
+   "text": "להשכרה ברחוב אנילביץ, רמת אליהו, ראשון לציון דירת 2 חדרים קומה ראשונה, רק 3 מדרגות דירה משופצת, מוארת ונעימה בדירה נשארים: ארון, מכונת כביסה וטלוויזיה כניסה ב־20/11 שכר דירה: 3,850 ₪ לפרטים נוספים אפשר לפנות :\n\nצור קשר:\nנסטר https://dl.nester.co.il/kCvk5b8\nㅤ",
+   "views": 21,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/4126c612ec5962ca.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/7738a37ff1194ea9.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/3c696c9ec08cd896.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/80ad73a9c7d1615f.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/53490a8f4278af02.jpg"
+    }
+   ],
+   "kind": "realestate"
   },
   {
    "id": "p605aa5626b62",

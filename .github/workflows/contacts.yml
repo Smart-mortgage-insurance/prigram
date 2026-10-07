@@ -1,5 +1,11 @@
 name: Channel contacts
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      args:
+        description: "usernames and/or --discover (empty = enabled channels)"
+        required: false
+        default: ""
 jobs:
   contacts:
     runs-on: ubuntu-latest
@@ -8,4 +14,4 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -r scraper/requirements.txt
-      - run: python tools/contacts.py
+      - run: python tools/contacts.py ${{ inputs.args }}

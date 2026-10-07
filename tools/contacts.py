@@ -4,6 +4,7 @@ import json
 import re
 import sys
 from collections import Counter
+from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
@@ -11,7 +12,12 @@ from bs4 import BeautifulSoup
 
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36"}
 CFG = json.loads((Path(__file__).resolve().parent.parent / "scraper" / "config.json").read_text(encoding="utf-8"))
-CHANNELS = sys.argv[1:] or [c["username"] for c in CFG["channels"] if c.get("enabled", True) and c.get("kind")]
+ENABLED = [c["username"] for c in CFG["channels"] if c.get("enabled", True) and c.get("kind")]
+KNOWN = {c["username"].lower() for c in CFG["channels"]}
+ARGS = " ".join(sys.argv[1:]).split()
+DISCOVER = "--discover" in ARGS          # also probe every channel mentioned by the given/enabled ones
+CHANNELS = [a for a in ARGS if not a.startswith("--")] or ENABLED
+FOUND = set()
 
 PHONE = re.compile(r"(?<!\d)(?:\+?972[-\s]?|0)(?:5\d|[2-4]|7\d|[89])[-\s]?\d{3}[-\s]?\d{4}(?!\d)")
 EMAIL = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
@@ -44,20 +50,36 @@ def info(u):
     seen = Counter()
     for m in msgs:
         seen.update(tokens(m, own))
+    for t in list(seen) + (sorted(tokens(desc, own)) if desc else []):
+        if t.startswith("tg:"):
+            FOUND.add(t[3:].lstrip("@"))
+    times = [t["datetime"] for t in soup.select(".tgme_widget_message_date time[datetime]")]
+    now = datetime.now(timezone.utc)
+    ages = sorted((now - datetime.fromisoformat(t)).total_seconds() / 3600 for t in times)
     need = max(3, len(msgs) // 4)
     return {
         "u": u,
         "title": title.get_text(strip=True) if title else "",
         "subs": subs.get_text() if subs else "",
         "posts": len(msgs),
+        "newest_h": round(ages[0]) if ages else -1,
+        "oldest_h": round(ages[-1]) if ages else -1,
         "desc": desc.get_text(" ", strip=True)[:400] if desc else "",
         "desc_contacts": sorted(tokens(desc, own)) if desc else [],
         "footer_contacts": {k: v for k, v in seen.most_common(12) if v >= need},
     }
 
 
-for u in CHANNELS:
-    try:
-        print("CONTACT " + json.dumps(info(u), ensure_ascii=True))
-    except Exception as exc:
-        print("CONTACT " + json.dumps({"u": u, "error": type(exc).__name__}))
+def run(names, tag):
+    for u in names:
+        try:
+            print(tag + " " + json.dumps(info(u), ensure_ascii=True))
+        except Exception as exc:
+            print(tag + " " + json.dumps({"u": u, "error": type(exc).__name__}))
+
+
+run(CHANNELS, "CONTACT")
+if DISCOVER:
+    done = {c.lower() for c in CHANNELS} | KNOWN
+    cands = sorted(c for c in FOUND if c.lower() not in done and not c.startswith("+") and not c.lower().endswith("bot"))
+    run(cands[:120], "CAND")

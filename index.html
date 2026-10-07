@@ -432,8 +432,9 @@ async function jget(u){const r=await fetch(u+"?t="+Date.now(),{cache:"no-store"}
 async function load(isRefresh){
   try{
     const [n,p,r,dj]=await Promise.all([jget(NEWS_URL),jget(PROMO_URL).catch(()=>({items:[]})),jget(REMOVED_URL).catch(()=>({posts:[]})),jget(DIRECT_URL).catch(()=>({items:[]}))]);
-    data={items:n.items||[],channels:n.channels||{}}; promos=p; removed=new Set(r.posts||[]);
-    const direct=(dj.items||[]).filter(d=>d.id&&d.text).map(d=>({post:DIRECT_CH+"/"+d.id,kind:"jobs",text:d.text,ts:d.ts,direct:true}));
+    const live=x=>!x.until||new Date(x.until+"T23:59:59")>=new Date();          // "להציג עד" מכלי הניהול
+    data={items:n.items||[],channels:n.channels||{}}; promos={items:(p.items||[]).filter(live)}; removed=new Set(r.posts||[]);
+    const direct=(dj.items||[]).filter(d=>d.id&&d.text&&live(d)).map(d=>({post:DIRECT_CH+"/"+d.id,kind:"jobs",text:d.text,ts:d.ts,direct:true}));
     if(direct.length){
       data.channels[DIRECT_CH]={title:"נטגרם · משרות מהגולשים"};
       data.items=data.items.concat(direct).sort((a,b)=>new Date(b.ts||0)-new Date(a.ts||0));

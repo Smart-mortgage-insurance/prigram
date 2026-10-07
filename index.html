@@ -46,6 +46,13 @@
   .via.direct{background:var(--tg-soft);color:var(--tg-deep);border-radius:999px;padding:1px 9px;font-weight:700}
 
   /* channel chips */
+  .secbar{background:var(--card);border-bottom:1px solid var(--line)}
+  .sectabs{max-width:1320px;margin:0 auto;padding:0 16px;display:flex;gap:4px}
+  .sectab{border:0;background:none;font-family:inherit;font-weight:800;font-size:16px;color:var(--muted);padding:10px 20px 9px;cursor:pointer;border-bottom:3px solid transparent;display:flex;align-items:center;gap:8px}
+  .sectab:hover{color:var(--tg-deep)}
+  .sectab.on{color:var(--tg-deep);border-bottom-color:var(--tg)}
+  .sectab .new{background:#f2542d;color:#fff;border-radius:999px;font-size:10.5px;font-weight:800;padding:1px 7px}
+  @media(max-width:640px){.sectab{flex:1;justify-content:center;padding:9px 8px 8px;font-size:15px}}
   .chips-bar{background:var(--card);border-bottom:1px solid var(--line)}
   .chips{max-width:1320px;margin:0 auto;padding:10px 16px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
   .chips::-webkit-scrollbar{display:none}
@@ -160,6 +167,19 @@
   .adframe{position:relative;display:block;width:100%;overflow:hidden;border-radius:14px;background:#e0f1e8;box-shadow:var(--shadow)}
   .adframe iframe{position:absolute;top:0;left:0;border:0;transform-origin:0 0;pointer-events:none}
   .adframe .adtag{position:absolute;top:6px;left:6px;z-index:2;font-size:10px;font-weight:700;background:rgba(255,255,255,.88);color:#55606a;padding:1px 7px;border-radius:5px}
+  /* קרוסלת באנרים: עד 5, מתחלפים כל חצי דקה, אפשר להחליק או ללחוץ על החיצים */
+  .adcar{position:relative;direction:ltr;width:100%;margin:0 auto 14px}
+  .post.adpost .adcar{max-width:360px;margin-bottom:0}
+  .car-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:14px}
+  .car-track::-webkit-scrollbar{display:none}
+  .car-slide{flex:0 0 100%;scroll-snap-align:center;display:flex;justify-content:center;align-items:flex-start}
+  .adcar .adframe{margin:0}
+  .car-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:30px;height:30px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#1d2b2a;font-size:18px;font-weight:800;line-height:1;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;padding:0}
+  .car-nav:hover{background:#fff}
+  .car-nav.prev{left:6px}.car-nav.next{right:6px}
+  .car-dots{display:flex;justify-content:center;gap:6px;margin-top:8px}
+  .car-dots i{width:8px;height:8px;border-radius:50%;background:#c3ccd2;cursor:pointer}
+  .car-dots i.on{background:var(--tg-deep);width:20px;border-radius:999px}
   .post.adpost{justify-content:center}
   .post.adpost .adframe{max-width:360px}
   @media(min-width:981px){.post.m-only{display:none}}
@@ -173,13 +193,14 @@
 
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="./" aria-label="נטגרם – לוח דרושים מטלגרם לגולשי נטפרי"><svg class="wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 366 92" role="img" aria-label="נטגרם"><path fill="#a3a3a3" fill-rule="evenodd" d="M253.2 28.0L251.7 27.0L250.0 26.7L248.3 25.8L247.3 25.8L244.0 24.8L238.5 24.3L237.7 24.0L231.0 24.0L230.2 24.3L222.2 25.0L220.8 25.5L216.3 26.2L213.3 27.0L211.5 27.8L210.8 28.7L210.7 30.5L209.8 32.3L194.8 52.0L192.5 54.5L191.3 55.0L190.0 55.0L188.7 54.5L187.2 53.0L185.3 49.7L183.0 49.7L183.0 52.0L183.7 53.3L184.0 55.0L184.7 56.2L186.0 60.0L189.0 65.8L189.5 66.3L191.8 66.3L194.5 63.0L200.5 57.0L204.0 54.0L212.2 48.3L220.2 44.2L221.5 43.8L223.0 43.0L224.2 42.8L225.3 42.2L227.2 41.8L228.8 41.0L230.3 40.8L232.0 40.2L234.7 39.8L236.7 39.2L241.7 38.8L242.7 38.5L252.7 38.5L253.0 37.8ZM180.0 18.8L180.0 24.2L180.3 24.5L182.8 24.5L184.0 24.8L192.5 25.2L193.3 25.5L195.8 25.5L197.0 25.8L208.7 26.5L210.8 25.8L212.3 25.0L213.0 25.0L215.7 24.0L218.2 23.7L219.3 23.2L223.3 22.8L226.3 22.2L231.0 21.8L240.7 22.0L245.0 23.0L246.3 23.0L250.7 24.5L253.2 24.5L252.7 14.5L252.2 13.8L249.7 13.0L247.5 12.8L245.0 12.0L242.7 11.7L241.3 11.0L239.7 10.8L237.0 9.8L235.7 9.7L234.3 9.0L233.2 8.8L231.3 8.0L226.8 6.7L225.7 6.0L224.2 5.7L223.2 5.0L219.7 3.8L217.8 2.8L215.3 2.8L213.5 3.8L212.5 4.0L211.5 4.7L210.0 5.0L209.0 5.7L207.5 6.0L206.3 6.7L204.7 7.0L203.0 7.8L201.7 8.0L200.0 8.8L198.7 9.0L197.0 9.8L195.5 10.0L194.2 10.7L192.0 11.0L191.0 11.5L188.8 11.8L185.7 12.8L184.3 12.8L181.5 13.5L180.7 14.2L180.7 15.5L180.3 16.2L180.3 17.7Z"/><path fill="#787878" fill-rule="evenodd" d="M251.8 41.2L239.0 41.2L237.2 42.0L233.5 42.2L232.2 43.0L229.7 43.2L228.5 44.0L226.5 44.2L225.3 45.0L223.8 45.2L222.8 46.0L221.3 46.2L220.3 47.0L219.2 47.2L218.2 48.0L217.2 48.2L216.2 49.0L215.0 49.3L214.0 50.2L213.5 50.2L211.2 52.0L210.0 52.3L208.2 54.0L207.3 54.2L203.0 58.0L202.3 58.2L202.0 58.8L201.3 59.2L201.0 59.8L199.8 60.8L199.3 61.0L197.0 63.8L195.2 65.3L195.0 66.0L192.2 69.2L192.2 70.2L197.2 76.5L197.8 76.8L198.2 77.5L198.8 77.8L199.2 78.5L199.8 78.8L201.3 80.7L202.0 80.8L206.3 84.7L207.2 84.8L208.2 85.8L210.2 86.8L210.8 87.5L212.0 87.8L212.5 88.5L214.0 88.8L214.8 89.7L215.8 90.0L218.5 89.7L219.5 88.8L222.2 87.7L223.0 86.8L225.3 85.7L228.8 82.8L229.5 82.7L236.8 75.5L237.7 74.2L238.7 73.3L238.8 72.7L240.7 70.7L240.8 70.0L242.7 67.7L242.8 66.8L243.5 66.3L245.0 63.0L245.5 62.7L245.8 61.2L246.7 60.2L246.8 59.0L247.7 58.0L247.8 56.5L248.7 55.5L248.8 53.7L249.7 52.5L249.8 50.3L250.7 49.2L250.8 46.3L251.7 44.5ZM75.2 8.0L74.8 25.5L75.2 25.8L103.0 25.8L104.3 26.7L106.0 26.8L106.8 27.7L107.7 28.0L109.8 30.2L110.2 31.2L111.0 32.2L111.2 34.2L112.0 35.8L112.2 39.5L112.2 86.2L132.5 86.3L132.8 85.8L132.7 29.8L131.8 28.3L131.7 25.5L130.8 24.5L130.7 22.8L129.8 22.0L129.5 20.3L129.0 20.0L128.8 19.2L126.8 16.7L126.8 16.3L123.5 13.0L123.2 13.0L121.2 11.3L119.8 10.8L119.5 10.3L117.8 10.0L116.8 9.2L114.5 9.0L113.0 8.2ZM179.5 7.8L145.0 8.0L144.5 8.3L144.5 25.5L145.2 25.8L159.0 25.7L159.8 25.8L160.8 27.2L161.2 33.5L162.0 35.8L162.2 41.5L163.0 43.8L163.2 49.5L164.0 51.5L164.0 52.5L163.7 53.2L162.7 54.0L161.3 54.0L160.5 54.3L159.8 55.0L158.3 55.0L157.5 55.3L156.8 56.0L155.3 56.0L154.5 56.3L153.8 57.0L152.0 57.3L151.7 57.8L150.5 58.2L149.8 58.8L148.8 59.2L148.0 60.0L147.2 60.3L147.0 60.8L144.2 63.5L141.2 68.2L141.0 69.3L140.2 70.3L139.8 72.7L139.2 73.7L139.0 77.0L138.2 79.0L138.0 84.0L137.7 84.7L137.8 86.2L156.8 86.2L157.7 84.8L157.8 79.5L158.7 78.2L159.0 76.2L159.5 75.8L159.8 74.7L160.8 73.7L160.8 73.3L162.3 71.8L162.7 71.8L163.7 70.8L164.7 70.7L165.8 69.8L166.7 69.8L167.0 70.2L167.2 71.8L168.0 73.5L168.2 77.8L169.0 79.5L169.2 83.5L170.3 86.3L188.5 86.3L188.8 86.0L188.7 79.7L187.8 77.3L187.7 71.3L186.8 69.3L186.7 67.8L185.8 67.0L185.7 66.2L184.8 65.2L184.5 64.0L184.0 63.7L183.7 62.2L182.8 61.2L182.5 59.5L181.8 59.0L181.7 57.5L180.8 56.3L180.7 54.5L179.8 53.3L179.7 51.5L179.2 50.5L178.0 49.2L175.0 48.0L173.7 46.2L173.8 43.2L174.5 42.5L175.0 41.0L175.7 40.3L176.0 39.0L176.3 38.7L176.3 37.3L174.5 35.2L173.0 34.2L167.8 29.0L167.8 28.3L167.2 27.0L168.0 24.3L169.5 22.8L171.2 22.7L172.5 21.8L173.5 22.2L175.0 22.2L176.5 21.0L176.8 18.7L176.8 14.3L177.5 13.3L177.8 11.8L178.8 10.8L179.8 10.5L179.8 8.2ZM2.3 7.8L2.2 86.2L67.5 86.3L67.8 85.8L67.8 8.2ZM24.2 25.8L45.3 25.7L46.5 25.8L47.0 26.3L47.2 67.0L46.7 68.0L24.5 68.2L23.8 67.7L23.7 26.7Z"/><path fill="#658e86" fill-rule="evenodd" d="M171.2 26.7L171.2 27.7L171.7 28.3L177.8 33.8L179.2 33.8L179.7 33.5L180.8 33.5L182.7 33.0L187.7 32.8L190.8 32.0L196.0 31.8L198.8 31.0L200.0 31.0L200.5 31.3L198.3 32.8L195.8 33.2L194.7 33.8L192.8 34.0L191.5 34.8L189.7 35.0L188.0 35.8L185.7 36.2L184.7 36.8L182.8 37.0L181.2 38.0L180.2 39.0L178.8 41.8L178.2 42.5L177.7 43.5L177.7 44.8L178.2 45.0L180.0 44.8L181.0 44.2L183.3 43.5L184.3 44.0L185.0 45.0L185.2 45.8L185.8 46.5L187.2 49.3L187.7 49.8L188.2 51.3L189.3 52.8L191.8 52.8L197.0 46.0L197.5 45.7L198.0 44.7L203.7 37.7L204.0 36.8L204.5 36.5L208.3 31.2L208.3 30.0L208.0 29.2L207.5 28.7L206.0 28.3L199.5 27.8L194.7 27.8L193.0 27.3L190.8 27.3L190.2 27.0L181.7 26.8L177.3 26.0L172.3 25.8L171.5 26.2ZM327.2 7.7L327.0 25.8L341.0 25.8L341.5 26.0L342.0 26.8L342.0 64.3L341.8 65.2L341.0 66.3L338.8 68.0L322.8 68.2L323.0 86.3L341.8 86.5L343.5 86.0L348.3 85.7L349.0 85.2L351.0 84.8L352.2 84.0L353.5 83.7L357.5 80.8L358.8 79.5L359.0 78.8L360.7 76.8L360.8 76.0L361.8 74.5L362.0 73.2L362.8 71.7L363.0 69.5L363.8 66.3L363.8 8.0L363.7 7.7ZM306.7 8.0L305.2 7.8L303.5 7.0L301.8 7.0L298.8 6.3L291.0 6.3L289.2 6.8L285.8 7.0L284.2 7.8L282.3 8.0L280.3 9.2L280.5 27.2L283.3 26.8L284.7 26.0L286.5 25.8L288.7 25.0L291.8 25.0L294.2 26.0L295.8 27.3L296.8 28.7L298.0 32.0L297.8 58.0L297.2 59.2L296.8 61.0L296.2 61.8L295.7 63.2L294.0 65.3L291.3 67.8L290.5 68.2L289.8 68.8L286.0 70.0L281.0 69.8L279.5 69.0L278.3 68.8L276.7 67.8L274.0 65.3L273.0 64.0L271.0 59.8L270.8 57.5L270.0 54.2L270.2 8.2L269.7 7.7L249.2 7.7L248.7 8.2L248.7 9.5L249.0 9.8L251.7 10.0L254.2 11.0L255.7 12.8L256.3 20.8L256.8 22.3L256.8 33.2L256.0 37.5L255.8 42.0L255.0 44.5L254.8 47.0L254.0 49.2L253.8 51.0L253.0 52.7L252.8 54.5L252.0 55.8L251.8 57.2L251.0 58.3L250.8 59.7L250.0 60.8L250.0 65.0L250.7 66.0L251.0 68.0L251.8 69.2L252.0 70.5L254.0 74.0L254.8 74.8L255.0 75.5L259.8 80.7L262.3 82.7L263.3 83.0L265.5 84.5L267.3 85.0L268.5 85.8L269.8 86.0L271.3 86.8L273.5 87.0L275.8 87.8L287.5 88.2L292.2 87.8L294.3 87.0L296.3 86.8L297.7 86.0L299.0 85.8L302.3 84.0L303.5 83.7L307.8 80.7L312.8 75.5L313.0 74.8L313.8 74.0L315.5 71.3L316.0 69.8L316.8 68.7L317.0 67.5L317.8 66.3L318.0 64.7L318.8 63.0L319.0 60.2L319.8 57.3L319.8 29.5L319.0 26.0L318.7 22.5L318.0 21.5L317.8 19.8L317.0 18.5L316.8 17.3L316.0 16.3L315.7 15.3L314.0 13.2L311.5 10.8L309.3 9.3L307.8 8.8Z"/></svg><span class="tagline">לוח דרושים מטלגרם לגולשי נטפרי</span></a>
+    <a class="brand" href="./" aria-label="נטגרם – לוח דרושים מטלגרם לגולשי נטפרי"><svg class="wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 366 92" role="img" aria-label="נטגרם"><path fill="#a3a3a3" fill-rule="evenodd" d="M253.2 28.0L251.7 27.0L250.0 26.7L248.3 25.8L247.3 25.8L244.0 24.8L238.5 24.3L237.7 24.0L231.0 24.0L230.2 24.3L222.2 25.0L220.8 25.5L216.3 26.2L213.3 27.0L211.5 27.8L210.8 28.7L210.7 30.5L209.8 32.3L194.8 52.0L192.5 54.5L191.3 55.0L190.0 55.0L188.7 54.5L187.2 53.0L185.3 49.7L183.0 49.7L183.0 52.0L183.7 53.3L184.0 55.0L184.7 56.2L186.0 60.0L189.0 65.8L189.5 66.3L191.8 66.3L194.5 63.0L200.5 57.0L204.0 54.0L212.2 48.3L220.2 44.2L221.5 43.8L223.0 43.0L224.2 42.8L225.3 42.2L227.2 41.8L228.8 41.0L230.3 40.8L232.0 40.2L234.7 39.8L236.7 39.2L241.7 38.8L242.7 38.5L252.7 38.5L253.0 37.8ZM180.0 18.8L180.0 24.2L180.3 24.5L182.8 24.5L184.0 24.8L192.5 25.2L193.3 25.5L195.8 25.5L197.0 25.8L208.7 26.5L210.8 25.8L212.3 25.0L213.0 25.0L215.7 24.0L218.2 23.7L219.3 23.2L223.3 22.8L226.3 22.2L231.0 21.8L240.7 22.0L245.0 23.0L246.3 23.0L250.7 24.5L253.2 24.5L252.7 14.5L252.2 13.8L249.7 13.0L247.5 12.8L245.0 12.0L242.7 11.7L241.3 11.0L239.7 10.8L237.0 9.8L235.7 9.7L234.3 9.0L233.2 8.8L231.3 8.0L226.8 6.7L225.7 6.0L224.2 5.7L223.2 5.0L219.7 3.8L217.8 2.8L215.3 2.8L213.5 3.8L212.5 4.0L211.5 4.7L210.0 5.0L209.0 5.7L207.5 6.0L206.3 6.7L204.7 7.0L203.0 7.8L201.7 8.0L200.0 8.8L198.7 9.0L197.0 9.8L195.5 10.0L194.2 10.7L192.0 11.0L191.0 11.5L188.8 11.8L185.7 12.8L184.3 12.8L181.5 13.5L180.7 14.2L180.7 15.5L180.3 16.2L180.3 17.7Z"/><path fill="#787878" fill-rule="evenodd" d="M251.8 41.2L239.0 41.2L237.2 42.0L233.5 42.2L232.2 43.0L229.7 43.2L228.5 44.0L226.5 44.2L225.3 45.0L223.8 45.2L222.8 46.0L221.3 46.2L220.3 47.0L219.2 47.2L218.2 48.0L217.2 48.2L216.2 49.0L215.0 49.3L214.0 50.2L213.5 50.2L211.2 52.0L210.0 52.3L208.2 54.0L207.3 54.2L203.0 58.0L202.3 58.2L202.0 58.8L201.3 59.2L201.0 59.8L199.8 60.8L199.3 61.0L197.0 63.8L195.2 65.3L195.0 66.0L192.2 69.2L192.2 70.2L197.2 76.5L197.8 76.8L198.2 77.5L198.8 77.8L199.2 78.5L199.8 78.8L201.3 80.7L202.0 80.8L206.3 84.7L207.2 84.8L208.2 85.8L210.2 86.8L210.8 87.5L212.0 87.8L212.5 88.5L214.0 88.8L214.8 89.7L215.8 90.0L218.5 89.7L219.5 88.8L222.2 87.7L223.0 86.8L225.3 85.7L228.8 82.8L229.5 82.7L236.8 75.5L237.7 74.2L238.7 73.3L238.8 72.7L240.7 70.7L240.8 70.0L242.7 67.7L242.8 66.8L243.5 66.3L245.0 63.0L245.5 62.7L245.8 61.2L246.7 60.2L246.8 59.0L247.7 58.0L247.8 56.5L248.7 55.5L248.8 53.7L249.7 52.5L249.8 50.3L250.7 49.2L250.8 46.3L251.7 44.5ZM75.2 8.0L74.8 25.5L75.2 25.8L103.0 25.8L104.3 26.7L106.0 26.8L106.8 27.7L107.7 28.0L109.8 30.2L110.2 31.2L111.0 32.2L111.2 34.2L112.0 35.8L112.2 39.5L112.2 86.2L132.5 86.3L132.8 85.8L132.7 29.8L131.8 28.3L131.7 25.5L130.8 24.5L130.7 22.8L129.8 22.0L129.5 20.3L129.0 20.0L128.8 19.2L126.8 16.7L126.8 16.3L123.5 13.0L123.2 13.0L121.2 11.3L119.8 10.8L119.5 10.3L117.8 10.0L116.8 9.2L114.5 9.0L113.0 8.2ZM179.5 7.8L145.0 8.0L144.5 8.3L144.5 25.5L145.2 25.8L159.0 25.7L159.8 25.8L160.8 27.2L161.2 33.5L162.0 35.8L162.2 41.5L163.0 43.8L163.2 49.5L164.0 51.5L164.0 52.5L163.7 53.2L162.7 54.0L161.3 54.0L160.5 54.3L159.8 55.0L158.3 55.0L157.5 55.3L156.8 56.0L155.3 56.0L154.5 56.3L153.8 57.0L152.0 57.3L151.7 57.8L150.5 58.2L149.8 58.8L148.8 59.2L148.0 60.0L147.2 60.3L147.0 60.8L144.2 63.5L141.2 68.2L141.0 69.3L140.2 70.3L139.8 72.7L139.2 73.7L139.0 77.0L138.2 79.0L138.0 84.0L137.7 84.7L137.8 86.2L156.8 86.2L157.7 84.8L157.8 79.5L158.7 78.2L159.0 76.2L159.5 75.8L159.8 74.7L160.8 73.7L160.8 73.3L162.3 71.8L162.7 71.8L163.7 70.8L164.7 70.7L165.8 69.8L166.7 69.8L167.0 70.2L167.2 71.8L168.0 73.5L168.2 77.8L169.0 79.5L169.2 83.5L170.3 86.3L188.5 86.3L188.8 86.0L188.7 79.7L187.8 77.3L187.7 71.3L186.8 69.3L186.7 67.8L185.8 67.0L185.7 66.2L184.8 65.2L184.5 64.0L184.0 63.7L183.7 62.2L182.8 61.2L182.5 59.5L181.8 59.0L181.7 57.5L180.8 56.3L180.7 54.5L179.8 53.3L179.7 51.5L179.2 50.5L178.0 49.2L175.0 48.0L173.7 46.2L173.8 43.2L174.5 42.5L175.0 41.0L175.7 40.3L176.0 39.0L176.3 38.7L176.3 37.3L174.5 35.2L173.0 34.2L167.8 29.0L167.8 28.3L167.2 27.0L168.0 24.3L169.5 22.8L171.2 22.7L172.5 21.8L173.5 22.2L175.0 22.2L176.5 21.0L176.8 18.7L176.8 14.3L177.5 13.3L177.8 11.8L178.8 10.8L179.8 10.5L179.8 8.2ZM2.3 7.8L2.2 86.2L67.5 86.3L67.8 85.8L67.8 8.2ZM24.2 25.8L45.3 25.7L46.5 25.8L47.0 26.3L47.2 67.0L46.7 68.0L24.5 68.2L23.8 67.7L23.7 26.7Z"/><path fill="#658e86" fill-rule="evenodd" d="M171.2 26.7L171.2 27.7L171.7 28.3L177.8 33.8L179.2 33.8L179.7 33.5L180.8 33.5L182.7 33.0L187.7 32.8L190.8 32.0L196.0 31.8L198.8 31.0L200.0 31.0L200.5 31.3L198.3 32.8L195.8 33.2L194.7 33.8L192.8 34.0L191.5 34.8L189.7 35.0L188.0 35.8L185.7 36.2L184.7 36.8L182.8 37.0L181.2 38.0L180.2 39.0L178.8 41.8L178.2 42.5L177.7 43.5L177.7 44.8L178.2 45.0L180.0 44.8L181.0 44.2L183.3 43.5L184.3 44.0L185.0 45.0L185.2 45.8L185.8 46.5L187.2 49.3L187.7 49.8L188.2 51.3L189.3 52.8L191.8 52.8L197.0 46.0L197.5 45.7L198.0 44.7L203.7 37.7L204.0 36.8L204.5 36.5L208.3 31.2L208.3 30.0L208.0 29.2L207.5 28.7L206.0 28.3L199.5 27.8L194.7 27.8L193.0 27.3L190.8 27.3L190.2 27.0L181.7 26.8L177.3 26.0L172.3 25.8L171.5 26.2ZM327.2 7.7L327.0 25.8L341.0 25.8L341.5 26.0L342.0 26.8L342.0 64.3L341.8 65.2L341.0 66.3L338.8 68.0L322.8 68.2L323.0 86.3L341.8 86.5L343.5 86.0L348.3 85.7L349.0 85.2L351.0 84.8L352.2 84.0L353.5 83.7L357.5 80.8L358.8 79.5L359.0 78.8L360.7 76.8L360.8 76.0L361.8 74.5L362.0 73.2L362.8 71.7L363.0 69.5L363.8 66.3L363.8 8.0L363.7 7.7ZM306.7 8.0L305.2 7.8L303.5 7.0L301.8 7.0L298.8 6.3L291.0 6.3L289.2 6.8L285.8 7.0L284.2 7.8L282.3 8.0L280.3 9.2L280.5 27.2L283.3 26.8L284.7 26.0L286.5 25.8L288.7 25.0L291.8 25.0L294.2 26.0L295.8 27.3L296.8 28.7L298.0 32.0L297.8 58.0L297.2 59.2L296.8 61.0L296.2 61.8L295.7 63.2L294.0 65.3L291.3 67.8L290.5 68.2L289.8 68.8L286.0 70.0L281.0 69.8L279.5 69.0L278.3 68.8L276.7 67.8L274.0 65.3L273.0 64.0L271.0 59.8L270.8 57.5L270.0 54.2L270.2 8.2L269.7 7.7L249.2 7.7L248.7 8.2L248.7 9.5L249.0 9.8L251.7 10.0L254.2 11.0L255.7 12.8L256.3 20.8L256.8 22.3L256.8 33.2L256.0 37.5L255.8 42.0L255.0 44.5L254.8 47.0L254.0 49.2L253.8 51.0L253.0 52.7L252.8 54.5L252.0 55.8L251.8 57.2L251.0 58.3L250.8 59.7L250.0 60.8L250.0 65.0L250.7 66.0L251.0 68.0L251.8 69.2L252.0 70.5L254.0 74.0L254.8 74.8L255.0 75.5L259.8 80.7L262.3 82.7L263.3 83.0L265.5 84.5L267.3 85.0L268.5 85.8L269.8 86.0L271.3 86.8L273.5 87.0L275.8 87.8L287.5 88.2L292.2 87.8L294.3 87.0L296.3 86.8L297.7 86.0L299.0 85.8L302.3 84.0L303.5 83.7L307.8 80.7L312.8 75.5L313.0 74.8L313.8 74.0L315.5 71.3L316.0 69.8L316.8 68.7L317.0 67.5L317.8 66.3L318.0 64.7L318.8 63.0L319.0 60.2L319.8 57.3L319.8 29.5L319.0 26.0L318.7 22.5L318.0 21.5L317.8 19.8L317.0 18.5L316.8 17.3L316.0 16.3L315.7 15.3L314.0 13.2L311.5 10.8L309.3 9.3L307.8 8.8Z"/></svg><span class="tagline" id="tagline">לוח דרושים מטלגרם לגולשי נטפרי</span></a>
     <div class="search">
       <input id="q" type="search" placeholder="חיפוש משרה, תחום או עיר…" autocomplete="off">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
     </div>
-    <button class="postjob" data-job>＋ פרסום משרה <small>חינם</small></button>
+    <button class="postjob" data-job>＋ <span id="postLbl">פרסום משרה</span> <small>חינם</small></button>
   </div>
+  <div class="secbar"><div class="sectabs"><button class="sectab on" data-sec="jobs">💼 דרושים</button><button class="sectab" data-sec="realestate">🏠 נדל"ן <span class="new">חדש</span></button></div></div>
   <div class="chips-bar"><div class="chips" id="chips"></div></div>
   <div class="ticker"><div class="label"><span class="dot"></span>חדש בלוח</div><div class="tw"><div class="track" id="tickTrack"></div></div></div>
 </header>
@@ -261,6 +282,38 @@
   </form>
 </div></div>
 
+<div class="modal" id="apt"><div class="card">
+  <h2>פרסום דירה בלוח</h2>
+  <div class="freebar">🎁 הפרסום כרגע בחינם. המודעה תעלה ללוח לאחר אישור המערכת.</div>
+  <form id="aptForm">
+    <div class="two">
+      <div><label for="aptDeal">סוג העסקה</label><select id="aptDeal" name="deal"><option>להשכרה</option><option>למכירה</option></select></div>
+      <div><label for="aptType">סוג הנכס</label><select id="aptType" name="type"><option>דירה</option><option>יחידת דיור</option><option>בית פרטי</option><option>דירת גן / גג</option><option>מסחרי / משרד</option><option>מגרש</option><option>אחר</option></select></div>
+    </div>
+    <div class="two">
+      <div><label for="aptCity">עיר</label><input id="aptCity" name="city" required maxlength="40" autocomplete="off"></div>
+      <div><label for="aptHood">שכונה / רחוב</label><input id="aptHood" name="hood" maxlength="60" autocomplete="off"></div>
+    </div>
+    <div class="two">
+      <div><label for="aptRooms">חדרים</label><input id="aptRooms" name="rooms" maxlength="6" inputmode="decimal" autocomplete="off"></div>
+      <div><label for="aptPrice">מחיר (₪)</label><input id="aptPrice" name="price" maxlength="20" autocomplete="off"></div>
+    </div>
+    <div class="two">
+      <div><label for="aptSize">גודל במ"ר / קומה</label><input id="aptSize" name="size" maxlength="40" placeholder='לדוגמה: 80 מ"ר, קומה 2' autocomplete="off"></div>
+      <div><label for="aptEntry">תאריך כניסה</label><input id="aptEntry" name="entry" maxlength="40" placeholder="מיידי / תאריך" autocomplete="off"></div>
+    </div>
+    <label for="aptText">פרטים נוספים</label>
+    <textarea id="aptText" name="details" maxlength="1200" placeholder="מצב הדירה, מרפסת, מעלית, חניה, ריהוט וכדומה"></textarea>
+    <div class="two">
+      <div><label for="aptContact">טלפון ליצירת קשר (יוצג במודעה)</label><input id="aptContact" name="contact" required maxlength="60" inputmode="tel" autocomplete="off"></div>
+      <div><label for="aptBy">המפרסם</label><select id="aptBy" name="by"><option>פרטי, ללא תיווך</option><option>תיווך</option><option>קבלן / חברה</option></select></div>
+    </div>
+    <input type="checkbox" name="botcheck" id="aptBot" tabindex="-1" autocomplete="off" style="display:none">
+    <div class="status" id="aptStatus"></div>
+    <div class="row"><button class="btn pri" type="submit" id="aptSend">שליחה לאישור</button><button class="btn sec" type="button" data-close>ביטול</button></div>
+  </form>
+</div></div>
+
 <div class="modal" id="msg"><div class="card">
   <h2>הודעה למערכת</h2>
   <p>יש לכם ידיעה, הצעה לשיפור, ערוץ שכדאי להוסיף או סתם מילה טובה? כתבו לנו.</p>
@@ -276,7 +329,7 @@
 </div></div>
 
 <script>
-const DIRECT_URL="data/direct.json", DIRECT_CH="_direct";         // משרות שפורסמו ישירות באתר (אחרי אישור)
+const DIRECT_URL="data/direct.json", DIRECT_CH="_direct", DIRECT_RE="_direct_re";         // משרות שפורסמו ישירות באתר (אחרי אישור)
 const NEWS_URL="data/news.json", PROMO_URL="data/sponsored.json", REMOVED_URL="data/removed.json", REFRESH_MS=60000, PAGE=30;
 const AD_CONTACT="054-8427249";                                   // ← טלפון לפרסום באתר
 const REPORT_KEY="ada496e6-156f-4974-9ac9-846bdeebbae1";          // ← web3forms access key לבקשות הסרה
@@ -284,6 +337,26 @@ const COLORS=["#658e86","#4a726a","#7a7d80","#55585b","#86a8a1","#3f5f59","#9a9d
 
 let data={items:[],channels:{}}, promos={items:[]}, removed=new Set(), seen=new Set();
 let filterCh="", filterKind="", query="", shown=PAGE, first=true;
+/* שני לוחות באותו אתר: דרושים ונדל"ן */
+const SEC={
+  jobs:{tag:"לוח דרושים מטלגרם לגולשי נטפרי",q:"חיפוש משרה, תחום או עיר…",post:"פרסום משרה",empty:"אין משרות כרגע. חוזרים בקרוב…",hash:""},
+  realestate:{tag:'לוח נדל"ן מטלגרם לגולשי נטפרי',q:"חיפוש עיר, שכונה או מספר חדרים…",post:"פרסום דירה",empty:"עדיין אין כאן מודעות. אפשר לפרסם דירה בחינם בכפתור שלמעלה.",hash:"#nadlan"}
+};
+let section=location.hash==="#nadlan"?"realestate":"jobs";
+const secItems=()=>data.items.filter(i=>(i.kind==="realestate")===(section==="realestate"));
+const secPromos=()=>(promos.items||[]).filter(p=>(p.section==="realestate")===(section==="realestate"));   // לכל לוח הפרסומות שלו
+function applySection(){
+  const c=SEC[section];
+  document.querySelectorAll(".sectab").forEach(b=>b.classList.toggle("on",b.dataset.sec===section));
+  $("tagline").textContent=c.tag; $("q").placeholder=c.q; $("postLbl").textContent=c.post;
+  document.title="נטגרם · "+c.tag;
+}
+function setSection(sec){
+  if(sec===section) return;
+  section=sec; filterCh=""; filterKind=""; query=""; $("q").value=""; shown=PAGE;
+  try{history.replaceState(null,"",SEC[sec].hash||location.pathname+location.search);}catch(_){}
+  applySection(); renderChips(); renderSide(); buildTicker(); render(false); window.scrollTo({top:0});
+}
 const $=id=>document.getElementById(id);
 $("yr").textContent=new Date().getFullYear();
 
@@ -298,7 +371,7 @@ function relTime(iso){
 }
 const hhmm=iso=>iso?new Date(iso).toLocaleTimeString("he-IL",{hour:"2-digit",minute:"2-digit"}):"";
 const fmtViews=v=>v==null?"":v>=1e6?(v/1e6).toFixed(1)+"M":v>=1e3?(v/1e3).toFixed(1).replace(/\.0$/,"")+"K":String(v);
-const KIND={jobs:"דרושים",deals:"מבצעים"};
+const KIND={jobs:"דרושים",deals:"מבצעים",realestate:'נדל"ן'};
 const linkify=t=>esc(t).replace(/https?:\/\/[^\s<]+/g,m=>{
   let u=m,tail=""; const e=u.match(/[.,;:!?)\]]+$/); if(e){tail=e[0];u=u.slice(0,-tail.length);}
   let host; try{host=new URL(u.replace(/&amp;/g,"&")).hostname.replace(/^www\./,"");}catch(_){return m;}
@@ -361,6 +434,31 @@ function adFrame(p){
   const w=p.w||1080,h=p.h||1800;
   return `<a class="adframe" href="${esc(p.cta_url||"#")}" target="_blank" rel="noopener sponsored" style="aspect-ratio:${w}/${h}" data-adw="${w}" data-adh="${h}"><span class="adtag">מודעה</span><iframe src="${esc(p.html)}" width="${w}" height="${h}" scrolling="no" tabindex="-1" title="${esc(p.advertiser||"מודעה")}"></iframe></a>`;
 }
+const CAR_MAX=5, CAR_MS=30000, carIdx={};
+function carHTML(list,key){
+  if(!list.length) return "";
+  if(list.length===1) return adFrame(list[0]);
+  if((carIdx[key]||0)>=list.length) carIdx[key]=0;
+  return `<div class="adcar" data-car="${key}"><div class="car-track">${list.map(p=>`<div class="car-slide">${adFrame(p)}</div>`).join("")}</div>
+    <button class="car-nav prev" data-cargo="-1" aria-label="הבאנר הקודם">‹</button><button class="car-nav next" data-cargo="1" aria-label="הבאנר הבא">›</button>
+    <div class="car-dots">${list.map((_,i)=>`<i data-cardot="${i}"${i===(carIdx[key]||0)?' class="on"':""}></i>`).join("")}</div></div>`;
+}
+function carGo(car,i,smooth){
+  const tr=car.querySelector(".car-track"), n=tr.children.length;
+  i=((i%n)+n)%n; carIdx[car.dataset.car]=i;
+  tr.scrollTo({left:i*tr.clientWidth,behavior:smooth&&!document.hidden?"smooth":"auto"});
+  car.querySelectorAll(".car-dots i").forEach((d,k)=>d.classList.toggle("on",k===i));
+}
+const restoreCars=()=>document.querySelectorAll(".adcar").forEach(c=>carGo(c,carIdx[c.dataset.car]||0,false));
+let carTimer=0;
+function carStart(){ clearInterval(carTimer); carTimer=setInterval(()=>document.querySelectorAll(".adcar").forEach(c=>{ if(c.offsetParent) carGo(c,(carIdx[c.dataset.car]||0)+1,true); }),CAR_MS); }
+document.addEventListener("scroll",e=>{                       // החלקה ידנית: מעדכנים את הנקודות ואת המיקום השמור
+  const tr=e.target; if(!tr.classList||!tr.classList.contains("car-track")||!tr.clientWidth) return;
+  const car=tr.parentNode, i=Math.round(tr.scrollLeft/tr.clientWidth);
+  if(i!==carIdx[car.dataset.car]){ carIdx[car.dataset.car]=i; car.querySelectorAll(".car-dots i").forEach((d,k)=>d.classList.toggle("on",k===i)); }
+},true);
+carStart();
+document.addEventListener("visibilitychange",()=>{ if(!document.hidden) restoreCars(); });
 function fitAds(){
   // only the channel bar + ticker stay pinned; the logo row scrolls away to leave room for the ad column
   const hd=document.querySelector("header.top"), row=hd.querySelector(".top-in");
@@ -374,10 +472,9 @@ function fitAds(){
     if(a.clientWidth) a.querySelector("iframe").style.transform=`scale(${a.clientWidth/w0})`;
   });
 }
-addEventListener("resize",fitAds);
+addEventListener("resize",()=>{fitAds();restoreCars();});
 let adShown=0, sideHTML="", adHTML="";
 function promoHTML(p){
-  if(p.html) return adShown++<2?`<article class="post adpost${p.mobile_only?" m-only":""}">${adFrame(p)}</article>`:"";
   let cta="";
   if(p.cta_phone) cta=`<a class="cta" href="tel:${p.cta_phone.replace(/[^0-9+]/g,"")}">${esc(p.cta_label||"לפרטים")} ${esc(p.cta_phone)}</a>`;
   else if(p.cta_url) cta=`<a class="cta" href="${esc(p.cta_url)}" target="_blank" rel="noopener">${esc(p.cta_label||"לפרטים")}</a>`;
@@ -388,55 +485,62 @@ function promoHTML(p){
 }
 
 function renderChips(){
-  const counts={};data.items.forEach(i=>{const u=i.post.split("/")[0];counts[u]=(counts[u]||0)+1;});
+  const counts={};secItems().forEach(i=>{const u=i.post.split("/")[0];counts[u]=(counts[u]||0)+1;});
   const us=Object.keys(data.channels).filter(u=>counts[u]&&(!filterKind||data.channels[u].kind===filterKind)).sort((a,b)=>(counts[b]||0)-(counts[a]||0));
   $("chips").innerHTML=`<button class="chip all${filterCh||filterKind?"":" on"}" data-ch="">כל הערוצים</button>`+
-    Object.keys(KIND).filter(k=>data.items.some(i=>i.kind===k)).filter((k,_,a)=>a.length>1).map(k=>`<button class="chip kind${filterKind===k&&!filterCh?" on":""}" data-kind="${k}">${KIND[k]}</button>`).join("")+
+    Object.keys(KIND).filter(k=>secItems().some(i=>i.kind===k)).filter((k,_,a)=>a.length>1).map(k=>`<button class="chip kind${filterKind===k&&!filterCh?" on":""}" data-kind="${k}">${KIND[k]}</button>`).join("")+
     us.map(u=>`<button class="chip${filterCh===u?" on":""}" data-ch="${esc(u)}">${avatar(u)}${esc(chName(u))}</button>`).join("");
 }
 
 function renderSide(){
-  const pinned=(promos.items||[]).filter(p=>p.enabled!==false&&p.pin);
-  const ah=pinned.filter(p=>p.html).map(adFrame).join("");
+  const pinned=secPromos().filter(p=>p.enabled!==false&&p.pin);
+  const ah=carHTML(pinned.filter(p=>p.html).slice(0,CAR_MAX),"side-"+section);
   if(ah!==adHTML){$("adside").innerHTML=adHTML=ah;}
   let h=pinned.filter(p=>!p.html).map(p=>`<div class="box">${p.image?`<img class="ad-img" src="${esc(p.image)}" alt="">`:""}<h3>${esc(p.advertiser||"")}</h3><p>${esc(p.text||"")}</p>
     ${p.cta_phone?`<a class="cta" href="tel:${p.cta_phone.replace(/[^0-9+]/g,"")}">${esc(p.cta_label||"לפרטים")}</a>`:""}</div>`).join("");
-  h+=`<div class="box"><h3>מה זה נטגרם?</h3><p>לוח דרושים: משרות מערוצי טלגרם ציבוריים, בלי צורך בטלגרם. כל מודעה מובאת כלשונה, בשם הערוץ שפרסם אותה ועם הקישורים המקוריים.</p></div>`;
+  h+=`<div class="box"><h3>מה זה נטגרם?</h3><p>לוח דרושים ולוח נדל"ן: מודעות מערוצי טלגרם ציבוריים, בלי צורך בטלגרם. כל מודעה מובאת כלשונה, בשם הערוץ שפרסם אותה ועם הקישורים המקוריים.</p></div>`;
   h+=`<div class="placard"><div class="h">📣 מעוניינים לפרסם?</div><span class="n">${AD_CONTACT}</span></div>`;
   if(h!==sideHTML){$("side").innerHTML=sideHTML=h;}
-  fitAds();
+  fitAds(); restoreCars();
 }
 
 function render(isRefresh){
-  let items=data.items.filter(i=>!removed.has(i.post));
+  let items=secItems().filter(i=>!removed.has(i.post));
   if(filterKind) items=items.filter(i=>i.kind===filterKind);
   if(filterCh) items=items.filter(i=>i.post.split("/")[0]===filterCh);
   if(query) items=items.filter(i=>(i.text||"").includes(query)||chName(i.post.split("/")[0]).includes(query));
-  if(!items.length){$("feed").innerHTML=`<div class="empty">${query||filterCh||filterKind?"לא נמצאו עדכונים.":"אין עדכונים כרגע. חוזרים בקרוב…"}</div>`;return;}
-  const inline=(promos.items||[]).filter(p=>p.enabled!==false&&!p.pin);
-  let html=""; adShown=0;
+  if(!items.length){$("feed").innerHTML=`<div class="empty">${query||filterCh||filterKind?"לא נמצאו עדכונים.":SEC[section].empty}</div>`;return;}
+  const inl=secPromos().filter(p=>p.enabled!==false&&!p.pin);
+  const banners=inl.filter(p=>p.html).slice(0,CAR_MAX), inline=inl.filter(p=>!p.html);
+  let html="";
   items.slice(0,shown).forEach((it,i)=>{
     html+=postHTML(it,isRefresh&&!seen.has(it.post));
-    if(inline.length&&(i+1)%7===0) html+=promoHTML(inline[((i+1)/7-1)%inline.length]);
+    if((i+1)%7) return;
+    const k=(i+1)/7-1-(banners.length?1:0);                    // הבאנרים אחרי המודעה השביעית, פרסומות הטקסט בהמשך
+    if(k<0) html+=`<article class="post adpost${banners.every(b=>b.mobile_only)?" m-only":""}">${carHTML(banners,"feed-"+section)}</article>`;
+    else if(inline.length) html+=promoHTML(inline[k%inline.length]);
   });
   if(items.length>shown) html+=`<button class="more" id="more">עוד עדכונים</button>`;
-  $("feed").innerHTML=html; fitAds();
+  $("feed").innerHTML=html; fitAds(); restoreCars();
 }
 
 function buildTicker(){
-  const top=data.items.filter(i=>i.text&&!removed.has(i.post)).slice(0,10);
+  const top=secItems().filter(i=>i.text&&!removed.has(i.post)).slice(0,10);
   const one=top.map(i=>`<span class="t-item"><span class="t-time">${hhmm(i.ts)}</span><span class="t-src">${esc(chName(i.post.split("/")[0]))}:</span>${esc(i.text.split("\n")[0].slice(0,80))}</span>`).join("");
   $("tickTrack").innerHTML=one+one;
+  document.querySelector(".ticker").style.display=top.length?"":"none";
 }
 async function jget(u){const r=await fetch(u+"?t="+Date.now(),{cache:"no-store"});if(!r.ok)throw new Error(r.status);return r.json();}
 async function load(isRefresh){
   try{
     const [n,p,r,dj]=await Promise.all([jget(NEWS_URL),jget(PROMO_URL).catch(()=>({items:[]})),jget(REMOVED_URL).catch(()=>({posts:[]})),jget(DIRECT_URL).catch(()=>({items:[]}))]);
-    const live=x=>!x.until||new Date(x.until+"T23:59:59")>=new Date();          // "להציג עד" מכלי הניהול
+    const hm=new Date().toTimeString().slice(0,5);                                // "להציג עד" ושעות הצגה מכלי הניהול
+    const inHours=x=>!x.from_hour||!x.to_hour||(x.from_hour<=x.to_hour?hm>=x.from_hour&&hm<x.to_hour:hm>=x.from_hour||hm<x.to_hour);
+    const live=x=>(!x.until||new Date(x.until+"T23:59:59")>=new Date())&&inHours(x);
     data={items:n.items||[],channels:n.channels||{}}; promos={items:(p.items||[]).filter(live)}; removed=new Set(r.posts||[]);
-    const direct=(dj.items||[]).filter(d=>d.id&&d.text&&live(d)).map(d=>({post:DIRECT_CH+"/"+d.id,kind:"jobs",text:d.text,ts:d.ts,direct:true}));
+    const direct=(dj.items||[]).filter(d=>d.id&&d.text&&live(d)).map(d=>({post:(d.kind==="realestate"?DIRECT_RE:DIRECT_CH)+"/"+d.id,kind:d.kind==="realestate"?"realestate":"jobs",text:d.text,ts:d.ts,direct:true}));
     if(direct.length){
-      data.channels[DIRECT_CH]={title:"נטגרם · משרות מהגולשים"};
+      data.channels[DIRECT_CH]={title:"נטגרם · משרות מהגולשים"}; data.channels[DIRECT_RE]={title:"נטגרם · דירות מהגולשים"};
       data.items=data.items.concat(direct).sort((a,b)=>new Date(b.ts||0)-new Date(a.ts||0));
     }
     renderChips(); renderSide(); buildTicker(); render(isRefresh&&!first);
@@ -476,6 +580,26 @@ $("repForm").addEventListener("submit",async e=>{
   }catch(_){ $("repSend").disabled=false; $("repStatus").style.color="#c0392b"; $("repStatus").textContent="השליחה נכשלה. נסו שוב בעוד רגע."; }
 });
 
+function openApt(){ $("aptStatus").textContent=""; $("aptSend").disabled=false; openM("apt"); setTimeout(()=>$("aptCity").focus(),50); }
+$("aptForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const v=id=>$(id).value.trim();
+  if(!v("aptCity")||!v("aptContact")) return;
+  const fd=new FormData();
+  fd.append("access_key",REPORT_KEY);
+  fd.append("subject","נטגרם – דירה חדשה לאישור: "+v("aptDeal")+" ב"+v("aptCity"));
+  fd.append("from_name","נטגרם");
+  [["deal","aptDeal"],["type","aptType"],["city","aptCity"],["hood","aptHood"],["rooms","aptRooms"],["price","aptPrice"],["size","aptSize"],["entry","aptEntry"],["details","aptText"],["contact","aptContact"],["by","aptBy"]].forEach(([k,id])=>fd.append(k,v(id)));
+  if($("aptBot").checked) fd.append("botcheck","1");
+  $("aptSend").disabled=true; $("aptStatus").style.color=""; $("aptStatus").textContent="שולח…";
+  try{
+    const r=await fetch("https://api.web3forms.com/submit",{method:"POST",body:fd}); const j=await r.json();
+    if(!j.success) throw 0;
+    $("aptStatus").style.color="var(--free)"; $("aptStatus").textContent="✓ המודעה התקבלה ותעלה ללוח לאחר אישור. תודה!";
+    $("aptForm").reset();
+    setTimeout(()=>$("apt").classList.remove("open"),2600);
+  }catch(_){ $("aptSend").disabled=false; $("aptStatus").style.color="#c0392b"; $("aptStatus").textContent="השליחה נכשלה. נסו שוב בעוד רגע."; }
+});
 function openJob(){ $("jobStatus").textContent=""; $("jobSend").disabled=false; openM("job"); setTimeout(()=>$("jobTitle").focus(),50); }
 $("jobForm").addEventListener("submit",async e=>{
   e.preventDefault();
@@ -522,11 +646,14 @@ $("msgForm").addEventListener("submit",async e=>{
   }catch(_){ $("msgSend").disabled=false; $("msgStatus").style.color="#c0392b"; $("msgStatus").textContent="השליחה נכשלה. נסו שוב בעוד רגע."; }
 });
 if(location.hash==="#msg") openMsg();
-addEventListener("hashchange",()=>{ if(location.hash==="#msg") openMsg(); });
+addEventListener("hashchange",()=>{ if(location.hash==="#msg") openMsg(); if(location.hash==="#nadlan") setSection("realestate"); });
 
 document.addEventListener("click",e=>{
   const t=e.target;
-  if(t.closest("[data-job]")){openJob();return;}
+  const cg=t.closest("[data-cargo]"); if(cg){const c=cg.closest(".adcar");carGo(c,(carIdx[c.dataset.car]||0)+(+cg.dataset.cargo),true);carStart();return;}
+  const cd=t.closest("[data-cardot]"); if(cd){carGo(cd.closest(".adcar"),+cd.dataset.cardot,true);carStart();return;}
+  const sc=t.closest("[data-sec]"); if(sc){setSection(sc.dataset.sec);return;}
+  if(t.closest("[data-job]")){section==="realestate"?openApt():openJob();return;}
   if(t.closest("[data-msg]")){openMsg();return;}
   const ch=t.closest("[data-ch]");
   const kd=t.closest("[data-kind]");
@@ -546,6 +673,7 @@ $("q").addEventListener("input",e=>{query=e.target.value.trim();shown=PAGE;rende
 try{ if(localStorage.getItem("tf_notice")) $("notice").remove(); }catch(_){}
 $("noticeX").addEventListener("click",()=>{$("notice").remove();try{localStorage.setItem("tf_notice","1")}catch(_){}});
 
+applySection();
 load(false);
 setInterval(()=>load(true),REFRESH_MS);
 </script>

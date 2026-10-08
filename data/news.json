@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08T00:15:11.304028+00:00",
+ "updated": "2026-10-08T00:16:31.741713+00:00",
  "channels": {
   "Workingyes1": {
    "title": "עבודות איכות בכל הארץ",
@@ -64,11 +64,6 @@
   "LogOnSoftware": {
    "title": "Log-On Software",
    "avatar": "data/media/0971c578000bdd24.jpg",
-   "kind": "jobs"
-  },
-  "jobswipe": {
-   "title": "ערוץ המשרות הגדול",
-   "avatar": "data/media/fd3878432407c917.jpg",
    "kind": "jobs"
   },
   "HiTech_Jobs_In_Israel": {

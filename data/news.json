@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08T02:52:34.363766+00:00",
+ "updated": "2026-10-08T02:53:55.308645+00:00",
  "channels": {
   "Workingyes1": {
    "title": "עבודות איכות בכל הארץ",
@@ -44,11 +44,6 @@
   "Jobs_in_Jerusalem": {
    "title": "ערוץ העבודות באזור ירושלים",
    "avatar": "data/media/3c9e59f92d560afa.jpg",
-   "kind": "jobs"
-  },
-  "jeniatafkidplus": {
-   "title": "דרושים/ות משרות בירושלים וכל הארץ",
-   "avatar": "data/media/d0659a23ee5e9dc3.jpg",
    "kind": "jobs"
   },
   "Nortech_Spotlight": {

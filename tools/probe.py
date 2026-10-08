@@ -26,7 +26,9 @@ def info(u):
     texts = [m.select_one(".tgme_widget_message_text") for m in msgs]
     lens = [len(t.get_text()) for t in texts if t]
     links = sum(1 for t in texts if t and t.select_one("a[href^=http]"))
-    return "subs={} posts={} newest={:.0f}h oldest={:.0f}h with_text={} avg_len={} with_link={} photos={} | {}".format(
+    vids = sum(1 for m in msgs if m.select_one(".tgme_widget_message_video_player,.tgme_widget_message_roundvideo_player"))
+    verified = "VERIFIED " if soup.select_one(".tgme_channel_info_header_labels .verified-icon,.tgme_header_title .verified-icon,i.verified-icon") else ""
+    return verified + "videos={} ".format(vids) + "subs={} posts={} newest={:.0f}h oldest={:.0f}h with_text={} avg_len={} with_link={} photos={} | {}".format(
         subs.get_text() if subs else "?", len(msgs), ages[0] if ages else -1, ages[-1] if ages else -1,
         len(lens), sum(lens) // max(1, len(lens)), links,
         sum(1 for m in msgs if m.select_one(".tgme_widget_message_photo_wrap")),

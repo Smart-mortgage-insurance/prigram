@@ -126,7 +126,7 @@
     {
       "username": "jobswipe",
       "kind": "jobs",
-      "enabled": true
+      "enabled": false
     },
     {
       "username": "HiTech_Jobs_In_Israel",

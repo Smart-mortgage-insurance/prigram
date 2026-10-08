@@ -173,6 +173,8 @@
   .car-dots{display:flex;justify-content:center;gap:6px;margin-top:8px}
   .car-dots i{width:8px;height:8px;border-radius:50%;background:#c3ccd2;cursor:pointer}
   .car-dots i.on{background:var(--tg-deep);width:20px;border-radius:999px}
+  .bt .cta.inl,.box .cta.inl{margin:3px 0;text-decoration:none}
+  .tlink{color:var(--tg-deep);font-weight:700;text-decoration:underline}
   .post.adpost{justify-content:center}
   .post.adpost .adframe{max-width:360px}
   @media(min-width:981px){.post.m-only{display:none}}
@@ -339,6 +341,17 @@ function waNums(text){
 }
 const waNumHTML=text=>waNums(text).map(n=>
   `<div class="wanum">📱 מספר הוואטסאפ של המפרסם: <a href="tel:+${n.intl}">${n.show}</a><button data-copynum="${n.show.replace(/-/g,"")}">העתקה</button></div>`).join("");
+/* טקסט פרסומת: [מילה](קישור) = קישור, [!כיתוב](קישור) = כפתור. מותר רק https / tel / mailto */
+const MK=/\[(!?)([^\]\n]{1,80})\]\(((?:https?:\/\/|tel:|mailto:)[^\s)]+)\)/g;
+function promoText(t){
+  t=String(t||""); let out="",i=0,m; MK.lastIndex=0;
+  while((m=MK.exec(t))){
+    out+=linkify(t.slice(i,m.index));
+    out+=`<a class="${m[1]?"cta inl":"tlink"}" href="${esc(m[3])}"${/^http/.test(m[3])?' target="_blank" rel="noopener sponsored"':""}>${esc(m[2])}</a>`;
+    i=MK.lastIndex;
+  }
+  return out+linkify(t.slice(i));
+}
 const chName=u=>(data.channels[u]&&data.channels[u].title)||u;
 function avatar(u,cls){
   const c=data.channels[u]||{};
@@ -424,7 +437,7 @@ function promoHTML(p){
   if(p.cta_phone) cta+=`<a class="cta" href="tel:${p.cta_phone.replace(/[^0-9+]/g,"")}">${p.cta_url?"📞":esc(p.cta_label||"לפרטים")} ${esc(p.cta_phone)}</a>`;
   return `<article class="post promo"><span class="ava">★</span><div class="col"><div class="bubble">
     <div class="src"><span class="adv">${esc(p.advertiser||"")}</span><span class="tag">ממומן</span></div>
-    ${p.text?`<div class="bt">${linkify(p.text)}</div>`:""}${p.image?mediaHTML([{type:"image",image:p.image}]):""}${cta}
+    ${p.text?`<div class="bt">${promoText(p.text)}</div>`:""}${p.image?mediaHTML([{type:"image",image:p.image}]):""}${cta}
   </div></div></article>`;
 }
 
@@ -440,7 +453,7 @@ function renderSide(){
   const pinned=secPromos().filter(p=>p.enabled!==false&&p.pin);
   const ah=carHTML(pinned.filter(p=>p.html).slice(0,CAR_MAX),"side-"+section);
   if(ah!==adHTML){$("adside").innerHTML=adHTML=ah;}
-  let h=pinned.filter(p=>!p.html).map(p=>`<div class="box">${p.image?`<img class="ad-img" src="${esc(p.image)}" alt="">`:""}<h3>${esc(p.advertiser||"")}</h3><p>${esc(p.text||"")}</p>
+  let h=pinned.filter(p=>!p.html).map(p=>`<div class="box">${p.image?`<img class="ad-img" src="${esc(p.image)}" alt="">`:""}<h3>${esc(p.advertiser||"")}</h3><p style="white-space:pre-wrap">${promoText(p.text)}</p>
     ${p.cta_phone?`<a class="cta" href="tel:${p.cta_phone.replace(/[^0-9+]/g,"")}">${esc(p.cta_label||"לפרטים")}</a>`:""}</div>`).join("");
   h+=`<div class="box"><h3>מה זה נטגרם?</h3><p>לוח דרושים: משרות מערוצי טלגרם ציבוריים, בלי צורך בטלגרם. כל מודעה מובאת כלשונה, בשם הערוץ שפרסם אותה ועם הקישורים המקוריים.</p></div>`;
   h+=`<div class="placard"><div class="h">📣 מעוניינים לפרסם?</div><span class="n">${AD_CONTACT}</span></div>`;

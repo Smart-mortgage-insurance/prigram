@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08T02:53:55.308645+00:00",
+ "updated": "2026-10-08T02:55:18.020338+00:00",
  "channels": {
   "Workingyes1": {
    "title": "עבודות איכות בכל הארץ",
@@ -70,6 +70,11 @@
    "title": "ערוץ המשרות הגדול",
    "avatar": "data/media/fd3878432407c917.jpg",
    "kind": "jobs"
+  },
+  "jeniatafkidplus": {
+   "title": "דרושים/ות משרות בירושלים וכל הארץ",
+   "avatar": "data/media/d0659a23ee5e9dc3.jpg",
+   "kind": "jobs"
   }
  },
  "count": 135,
@@ -124,7 +129,7 @@
    "post": "HiTech_Jobs_In_Israel/136955",
    "ts": "2026-10-07T17:00:20+00:00",
    "text": "Embedded Software Engineer, Annapurna at Amazon\nLocation: Tel Aviv-Yafo, Tel Aviv, ISR\nPress here https://www.amazon.jobs/en/jobs/10571818/embedded-software-engineer-annapurna?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 165,
+   "views": 166,
    "forwarded_from": null,
    "media": [
     {

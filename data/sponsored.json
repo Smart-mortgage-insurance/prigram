@@ -31,18 +31,6 @@
       "cta_url": "https://mispara-david.github.io/hadgama.html",
       "id": "ad261008014027-side",
       "pin": true
-    },
-    {
-      "enabled": true,
-      "advertiser": "אבי פיננסים",
-      "until": "2026-10-11",
-      "html": "ads/ad261008014027.html",
-      "w": 520,
-      "h": 866,
-      "cta_url": "https://mispara-david.github.io/hadgama.html",
-      "id": "ad261008014027-feed",
-      "pin": false,
-      "mobile_only": true
     }
   ]
 }

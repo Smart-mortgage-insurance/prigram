@@ -389,7 +389,7 @@ function postHTML(it,fresh){
 
 function adFrame(p){
   const w=p.w||1080,h=p.h||1800;
-  return `<a class="adframe" href="${esc(p.cta_url||"#")}" target="_blank" rel="noopener sponsored" style="aspect-ratio:${w}/${h}" data-adw="${w}" data-adh="${h}"><span class="adtag">מודעה</span><iframe src="${esc(p.html)}" width="${w}" height="${h}" scrolling="no" tabindex="-1" title="${esc(p.advertiser||"מודעה")}"></iframe></a>`;
+  return `<a class="adframe" href="${esc(p.cta_url||"#")}" target="_blank" rel="noopener sponsored" style="aspect-ratio:${w}/${h}" data-adw="${w}" data-adh="${h}"><span class="adtag">מודעה</span><iframe src="${esc(p.html)}" sandbox="allow-scripts" width="${w}" height="${h}" scrolling="no" tabindex="-1" title="${esc(p.advertiser||"מודעה")}"></iframe></a>`;
 }
 const CAR_MAX=5, CAR_MS=30000, carIdx={};
 function carHTML(list,key){

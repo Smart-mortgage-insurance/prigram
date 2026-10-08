@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08T06:59:42.771582+00:00",
+ "updated": "2026-10-08T07:01:04.727524+00:00",
  "channels": {
   "Workingyes1": {
    "title": "עבודות איכות בכל הארץ",
@@ -80,6 +80,31 @@
  "count": 137,
  "items": [
   {
+   "id": "p15f3be703086",
+   "post": "HiTech_Jobs_In_Israel/136961",
+   "ts": "2026-10-08T07:00:05+00:00",
+   "text": "Supplier Quality Engineer at KLA\nLocation: Yavne, Israel\nPress here https://kla.wd1.myworkdayjobs.com/Search/job/Yavne-Israel/Supplier-Quality-Engineer_2641788-1?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "pe84e9b7a1f85",
+   "post": "HiTech_Jobs_In_Israel/136960",
+   "ts": "2026-10-08T07:00:02+00:00",
+   "text": "Software Engineer Intern at Taboola\nLocation: Tel Aviv, Israel\nPress here https://www.taboola.com/careers/job/8229871?gh_jid=8229871&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/947a64af47a45090.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
    "id": "pad23c85c0d39",
    "post": "jobswipe/63645",
    "ts": "2026-10-08T06:09:48+00:00",
@@ -99,7 +124,7 @@
    "post": "HiTech_Jobs_In_Israel/136959",
    "ts": "2026-10-08T05:00:45+00:00",
    "text": "Sales Development Representative (SDR) at Citybook Services LTD\nLocation: Jerusalem, Har Hotzvim, IL\nPress here https://citybook.breezy.hr/p/a4446455634b-sales-development-representative-sdr?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 88,
+   "views": 89,
    "forwarded_from": null,
    "media": [
     {
@@ -114,7 +139,7 @@
    "post": "HiTech_Jobs_In_Israel/136958",
    "ts": "2026-10-08T05:00:34+00:00",
    "text": "Advanced Software Development Engineer at NVIDIA\nLocation: 2 Locations\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Yokneam/Advanced-Software-Development-Engineer_JR2026783?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 89,
+   "views": 90,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -124,7 +149,7 @@
    "post": "HiTech_Jobs_In_Israel/136957",
    "ts": "2026-10-08T05:00:19+00:00",
    "text": "Senior Application Security Engineer at Via\nLocation: Tel Aviv\nPress here https://job-boards.greenhouse.io/via/jobs/8875777002?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 85,
+   "views": 88,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -437,26 +462,6 @@
      "file": "data/media/c85e8bf9ef18ba3b.jpg"
     }
    ],
-   "kind": "jobs"
-  },
-  {
-   "id": "p0bcdd11aff95",
-   "post": "HiTech_Jobs_In_Israel/136940",
-   "ts": "2026-10-07T15:00:09+00:00",
-   "text": "Senior Backend Engineer (Python) at http://Gong.io/\nLocation: Tel Aviv\nPress here https://job-boards.greenhouse.io/gongio/jobs/4668065006?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 142,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "pcb1e056e4589",
-   "post": "HiTech_Jobs_In_Israel/136939",
-   "ts": "2026-10-07T15:00:04+00:00",
-   "text": "Senior Product Manager at AppsFlyer\nLocation: Herzliya\nPress here https://careers.appsflyer.com/jobs/position/8874566002?gh_jid=8874566002&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 136,
-   "forwarded_from": null,
-   "media": [],
    "kind": "jobs"
   },
   {

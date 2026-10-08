@@ -134,6 +134,11 @@
       "enabled": true
     },
     {
+      "username": "telegram",
+      "kind": "jobs",
+      "enabled": true
+    },
+    {
       "username": "NewToolsIBuyIL",
       "enabled": false,
       "kind": "deals"

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T20:20:55.999375+00:00",
+ "updated": "2026-10-09T20:22:17.338792+00:00",
  "channels": {
   "TheMisrot": {
    "title": "משרות - ביטחון וממשל",
@@ -65,6 +65,11 @@
    "title": "Nortech_Spotlight",
    "avatar": "data/media/4404bce836c7d94f.jpg",
    "kind": "jobs"
+  },
+  "Israel_media_industry": {
+   "title": "אנדר קונטרול - דרושים בתקשורת, דיגיטל והייטק",
+   "avatar": "data/media/9b35e3726ebbeaaa.jpg",
+   "kind": "jobs"
   }
  },
  "count": 114,
@@ -74,7 +79,7 @@
    "post": "HiTech_Jobs_In_Israel/137040",
    "ts": "2026-10-09T15:00:17+00:00",
    "text": "Director WWOS Risk&Resilience, Worldwide Security Governance at Amazon\nLocation: Tel Aviv-Yafo, Tel Aviv, ISR\nPress here https://www.amazon.jobs/en/jobs/10508231/director-wwos-risk-resilience-worldwide-security-governance?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 124,
+   "views": 125,
    "forwarded_from": null,
    "media": [
     {

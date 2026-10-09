@@ -181,6 +181,8 @@
   .tlink{color:var(--tg-deep);font-weight:700;text-decoration:underline}
   .post.adpost{justify-content:center}
   .post.adpost .adframe{max-width:360px}
+  .promo .pbanner{margin:8px 0 2px}
+  .promo .pbanner .adframe{max-width:360px;margin:0 auto;box-shadow:none}
   @media(min-width:981px){.post.m-only{display:none}}
   .fab{position:fixed;bottom:18px;inset-inline-start:18px;z-index:90;display:flex;align-items:center;gap:8px;background:var(--tg-deep);color:#fff;border:0;border-radius:999px;padding:11px 18px;font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.22)}
   .fab:hover{background:var(--tg)}
@@ -464,6 +466,11 @@ function promoHTML(p){
   let cta="";
   if(p.cta_url) cta+=`<a class="cta" href="${esc(p.cta_url)}" target="_blank" rel="noopener">${esc(p.cta_label||"לפרטים")}</a> `;
   if(p.cta_phone) cta+=`<a class="cta" href="tel:${p.cta_phone.replace(/[^0-9+]/g,"")}">${p.cta_url?"📞":esc(p.cta_label||"לפרטים")} ${esc(p.cta_phone)}</a>`;
+  if(p.html) return `<article class="post promo${p.mobile_only?" m-only":""}"><span class="ava">★</span><div class="col"><div class="bubble">
+    <div class="src"><span class="adv">${esc(p.advertiser||"")}</span><span class="tag">ממומן</span></div>
+    <div class="pbanner">${adFrame(p)}</div>
+    ${p.ts?`<div class="meta"><span>${relTime(p.ts)}</span></div>`:""}
+  </div></div></article>`;                                       // באנר בפיד: עדכון ממומן אחד, בלי גלילה (data-vk על הבאנר עצמו)
   return `<article class="post promo" data-vk="${vkAd(p.id)}"><span class="ava">★</span><div class="col"><div class="bubble">
     <div class="src"><span class="adv">${esc(p.advertiser||"")}</span><span class="tag">ממומן</span></div>
     ${p.text?`<div class="bt">${promoText(p.text)}</div>`:""}${p.image?mediaHTML([{type:"image",image:p.image}]):""}${cta}
@@ -499,16 +506,13 @@ function render(isRefresh){
   if(!query&&!filterCh&&!filterKind&&feedAds.length)            // פרסומות הפיד משתלבות לפי הזמן, כמו עדכון
     items=items.concat(feedAds.map(p=>({ad:p,ts:p.ts}))).sort((a,b)=>new Date(b.ts||0)-new Date(a.ts||0));
   if(!items.length){$("feed").innerHTML=`<div class="empty">${query||filterCh||filterKind?"לא נמצאו עדכונים.":"אין עדכונים כרגע. חוזרים בקרוב…"}</div>`;return;}
-  const inl=secPromos().filter(p=>p.enabled!==false&&!p.pin);
-  const banners=inl.filter(p=>p.html).slice(0,CAR_MAX), inline=inl.filter(p=>!p.html&&!p.ts);   // פרסומות ישנות בלי תור: כמו קודם
+  const inline=secPromos().filter(p=>p.enabled!==false&&!p.pin&&!p.html&&!p.ts);   // פרסומות טקסט ישנות בלי תור: כמו קודם
   let html="";
   items.slice(0,shown).forEach((it,i)=>{
     html+=it.ad?promoHTML(it.ad):postHTML(it,isRefresh&&!seen.has(it.post));
     if(i===3) html+=`<article class="post adask">${PLACARD}</article>`;   // נייד/מסך צר: אין עמודת צד
-    if((i+1)%7) return;
-    const k=(i+1)/7-1-(banners.length?1:0);                    // הבאנרים אחרי המודעה השביעית, פרסומות הטקסט בהמשך
-    if(k<0) html+=`<article class="post adpost${banners.every(b=>b.mobile_only)?" m-only":""}">${carHTML(banners,"feed-"+section)}</article>`;
-    else if(inline.length) html+=promoHTML(inline[k%inline.length]);
+    if((i+1)%7||!inline.length) return;
+    html+=promoHTML(inline[((i+1)/7-1)%inline.length]);
   });
   if(items.length>shown) html+=`<button class="more" id="more">עוד עדכונים</button>`;
   $("feed").innerHTML=html; fitAds(); restoreCars(); observeViews($("feed"));
@@ -533,15 +537,16 @@ async function load(isRefresh){
       data.channels[DIRECT_CH]={title:"נטגרם · משרות מהגולשים"};
       data.items=data.items.concat(direct).sort((a,b)=>new Date(b.ts||0)-new Date(a.ts||0));
     }
-    // פרסומות טקסט בפיד הן עדכונים: עולות בזמן שנקבע להן בתור, ו-10 דקות אחרי כל אחת לא מוצגות משרות חדשות,
+    // פרסומות בפיד (טקסט וגם באנרים) הן עדכונים: עולות בזמן שנקבע להן בתור, ו-10 דקות אחרי כל אחת לא מוצגות משרות חדשות,
     // כדי שהיא תישאר בראש הפיד. אחר כך המשרות שהצטברו מופיעות מעליה והיא יורדת למטה כמו כל עדכון.
-    const now=Date.now(), at=x=>new Date(x.ts).getTime();
-    feedAds=secPromos().filter(x=>x.enabled!==false&&!x.pin&&!x.html&&x.ts&&at(x)<=now&&now-at(x)<FEED_MAX_AGE);
+    // באנר "לנייד בלבד" לא נחשב במחשב (שם הוא מוצג בצד), כדי שלא יעצור משרות בלי שרואים אותו.
+    const now=Date.now(), at=x=>new Date(x.ts).getTime(), wide=matchMedia("(min-width:981px)").matches;
+    feedAds=secPromos().filter(x=>x.enabled!==false&&!x.pin&&!(x.mobile_only&&wide)&&x.ts&&at(x)<=now&&now-at(x)<FEED_MAX_AGE);
     const lastAd=Math.max(0,...feedAds.map(at));
     if(now-lastAd<AD_HOLD_MS) data.items=data.items.filter(i=>new Date(i.ts||0).getTime()<=lastAd);
     clearTimeout(holdTimer); clearTimeout(holdTimer2);                                     // בסוף ההשהיה מרעננים מיד, בלי לחכות לרענון הבא
     if(now-lastAd<AD_HOLD_MS) holdTimer=setTimeout(()=>load(true),lastAd+AD_HOLD_MS-now+1500);
-    const nextAd=Math.min(...secPromos().filter(x=>x.enabled!==false&&!x.pin&&!x.html&&x.ts&&at(x)>now).map(at));
+    const nextAd=Math.min(...secPromos().filter(x=>x.enabled!==false&&!x.pin&&!(x.mobile_only&&wide)&&x.ts&&at(x)>now).map(at));
     if(isFinite(nextAd)&&nextAd-now<REFRESH_MS) holdTimer2=setTimeout(()=>load(true),nextAd-now+500);   // פרסומת שמתוזמנת לעוד פחות מדקה
     renderChips(); renderSide(); buildTicker(); render(isRefresh&&!first);
     seen=new Set(data.items.map(i=>i.post)); first=false;

@@ -19,7 +19,8 @@
       "cta_url": "https://smart-mortgage-insurance.github.io/konim-hacham/?utm_source=netgram",
       "id": "konim-feed",
       "pin": false,
-      "mobile_only": true
+      "mobile_only": true,
+      "ts": "2026-10-09T01:34:35Z"
     },
     {
       "enabled": true,
@@ -30,7 +31,8 @@
       "cta_url": "https://smart-mortgage-insurance.github.io/",
       "format": "html",
       "id": "ad261009031926-feed",
-      "pin": false
+      "pin": false,
+      "ts": "2026-10-09T01:24:35Z"
     }
   ]
 }

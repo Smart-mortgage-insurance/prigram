@@ -136,7 +136,7 @@
     {
       "username": "telegram",
       "kind": "jobs",
-      "enabled": true
+      "enabled": false
     },
     {
       "username": "kinopoisk",

@@ -139,6 +139,11 @@
       "enabled": true
     },
     {
+      "username": "kinopoisk",
+      "kind": "jobs",
+      "enabled": true
+    },
+    {
       "username": "NewToolsIBuyIL",
       "enabled": false,
       "kind": "deals"

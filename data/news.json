@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T05:00:56.254250+00:00",
+ "updated": "2026-10-09T05:02:16.576884+00:00",
  "channels": {
   "Workingyes1": {
    "title": "עבודות איכות בכל הארץ",
@@ -75,11 +75,121 @@
  "count": 116,
  "items": [
   {
+   "id": "pc31dbcab68cd",
+   "post": "HiTech_Jobs_In_Israel/137035",
+   "ts": "2026-10-09T05:01:36+00:00",
+   "text": "Interested in advertising and reaching +8600 job seekers? Reach us out 👇\n\nShare your support by boosting ⚡⚡⚡ our channel or sharing a kind donation securely via PayPal https://paypal.me/donateTheBot 😍\nto help us to be there for you 24/7 ⏰\nWe really appreciate it ❤",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p0940efef3cbc",
+   "post": "HiTech_Jobs_In_Israel/137034",
+   "ts": "2026-10-09T05:01:33+00:00",
+   "text": "Software Automation Engineer at Amazon\nLocation: Haifa, Haifa, ISR\nPress here https://www.amazon.jobs/en/jobs/10573136/software-automation-engineer?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/9a176fa2dae21224.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
+   "id": "p2a4b48e8b67f",
+   "post": "HiTech_Jobs_In_Israel/137033",
+   "ts": "2026-10-09T05:01:32+00:00",
+   "text": "SW Automation Student, Annapurna Labs at Amazon\nLocation: Tel Aviv-Yafo, Tel Aviv, ISR\nPress here https://www.amazon.jobs/en/jobs/10573281/sw-automation-student-annapurna-labs?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#StudentPositions",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/30044aea43f8659b.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
+   "id": "pe6b5b825a535",
+   "post": "HiTech_Jobs_In_Israel/137031",
+   "ts": "2026-10-09T05:01:12+00:00",
+   "text": "Senior Program Manager at NVIDIA\nLocation: Israel, Yokneam\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Yokneam/Senior-Program-Manager_JR2027527?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 3,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p4723b2ba8820",
+   "post": "HiTech_Jobs_In_Israel/137032",
+   "ts": "2026-10-09T05:01:12+00:00",
+   "text": "Software Embedded Engineer, DOCA at NVIDIA\nLocation: 2 Locations\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Tel-Aviv/Software-Embedded-Engineer--DOCA_JR2027291-1?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 3,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p828f3ea20bd2",
+   "post": "HiTech_Jobs_In_Israel/137030",
+   "ts": "2026-10-09T05:01:08+00:00",
+   "text": "Senior Software Engineer, DOCA Verification at NVIDIA\nLocation: 2 Locations\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Yokneam/Senior-Software-Engineer--DOCA-Verification_JR2026270?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 3,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "pcd2cc12f692e",
+   "post": "HiTech_Jobs_In_Israel/137029",
+   "ts": "2026-10-09T05:01:07+00:00",
+   "text": "Solution Validation Engineer at NVIDIA\nLocation: Israel, Yokneam\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Yokneam/Solution-Validation-Engineer_JR2027031?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 2,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p5fef717e9449",
+   "post": "HiTech_Jobs_In_Israel/137028",
+   "ts": "2026-10-09T05:01:06+00:00",
+   "text": "VLSI Design Automation Software Engineer at NVIDIA\nLocation: 2 Locations\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Yokneam/VLSI-Design-Automation-Software-Engineer_JR2027412?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 7,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p635be2849d04",
+   "post": "HiTech_Jobs_In_Israel/137027",
+   "ts": "2026-10-09T05:01:05+00:00",
+   "text": "Senior Software Solution Engineer, Switch Networking at NVIDIA\nLocation: 2 Locations\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Tel-Aviv/Senior-Software-Solution-Engineer--Switch-Networking_JR2027382?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 3,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p8f3ced065090",
+   "post": "HiTech_Jobs_In_Israel/137026",
+   "ts": "2026-10-09T05:01:04+00:00",
+   "text": "Senior Networking Solution Engineer at NVIDIA\nLocation: 2 Locations\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Tel-Aviv/Senior-Networking-Solution-Engineer_JR2027369?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 3,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
    "id": "p3a72dab6b156",
    "post": "HiTech_Jobs_In_Israel/137025",
    "ts": "2026-10-09T05:00:53+00:00",
    "text": "Senior Software Engineer, Tools, Automation and AI at NVIDIA\nLocation: 3 Locations\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Yokneam/Senior-Software-Engineer--Tools--Automation-and-AI_JR2026683?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
+   "views": 7,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -89,7 +199,7 @@
    "post": "HiTech_Jobs_In_Israel/137024",
    "ts": "2026-10-09T05:00:47+00:00",
    "text": "Construction Finance Analyst at Intel\nLocation: Israel, Kiryat-Gat\nPress here https://intel.wd1.myworkdayjobs.com/External/job/Israel-Kiryat-Gat/Construction-Finance-Analyst_JR0287953-1?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
+   "views": 2,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -99,7 +209,7 @@
    "post": "HiTech_Jobs_In_Israel/137022",
    "ts": "2026-10-09T05:00:40+00:00",
    "text": "Senior Security Lead at Lendbuzz\nLocation: Tel Aviv\nPress here https://jobs.lever.co/lendbuzz/08b42330-f76c-4e2a-863f-4e8ae7d48b3c?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
+   "views": 2,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -109,7 +219,7 @@
    "post": "HiTech_Jobs_In_Israel/137023",
    "ts": "2026-10-09T05:00:40+00:00",
    "text": "Junior Automation Engineer at Parallel Wireless\nLocation: Kfar Saba\nPress here https://jobs.lever.co/parallelwireless/846f8f4b-2c12-42f8-9822-00f7542f0d26?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#JuniorPositions",
-   "views": 1,
+   "views": 6,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -119,7 +229,7 @@
    "post": "HiTech_Jobs_In_Israel/137021",
    "ts": "2026-10-09T05:00:34+00:00",
    "text": "Senior Product Manager at Tenable, Inc.\nLocation: Israel - Office - Tel Aviv\nPress here https://job-boards.greenhouse.io/tenableinc/jobs/5446550008?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
+   "views": 2,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -129,7 +239,7 @@
    "post": "HiTech_Jobs_In_Israel/137020",
    "ts": "2026-10-09T05:00:28+00:00",
    "text": "Junior Prompt Engineer - AI Research & Reliability at http://Gong.io/\nLocation: Tel Aviv\nPress here https://job-boards.greenhouse.io/gongio/jobs/4717021006?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#JuniorPositions",
-   "views": 1,
+   "views": 2,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -139,7 +249,7 @@
    "post": "HiTech_Jobs_In_Israel/137019",
    "ts": "2026-10-09T05:00:24+00:00",
    "text": "Strategic Core Account Executive at Databricks\nLocation: Herzliya, Israel\nPress here https://databricks.com/company/careers/open-positions/job?gh_jid=8878722002&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
+   "views": 2,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -149,7 +259,7 @@
    "post": "HiTech_Jobs_In_Israel/137018",
    "ts": "2026-10-09T05:00:22+00:00",
    "text": "Biz Ops Coordinator (Temporary position for Maternity Leave) at Cato Networks\nLocation: Tel Aviv District, Israel\nPress here https://www.catonetworks.com/careers/careers-post/4967775101?gh_jid=4967775101&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
+   "views": 2,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -159,7 +269,7 @@
    "post": "HiTech_Jobs_In_Israel/137017",
    "ts": "2026-10-09T05:00:18+00:00",
    "text": "Senior Data Engineer at UVeye\nLocation: Tel Aviv\nPress here https://uveye.com/job/senior-data-engineer/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 2,
+   "views": 3,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -169,126 +279,6 @@
    "post": "HiTech_Jobs_In_Israel/137016",
    "ts": "2026-10-09T05:00:16+00:00",
    "text": "Product Operations at Tenengroup Ltd.\nLocation: Tel Aviv, Israel\nPress here https://www.tenengroup.com/careers/co/tel-aviv-israel/2B.37E/product-operations/all/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p869bf8a7f1f9",
-   "post": "HiTech_Jobs_In_Israel/137015",
-   "ts": "2026-10-09T05:00:13+00:00",
-   "text": "Key Accounts Manager at Papaya Global\nLocation: Herzliya\nPress here https://www.papayaglobal.com/positions/key-accounts-manager/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
-   "forwarded_from": null,
-   "media": [
-    {
-     "type": "image",
-     "file": "data/media/5c41e916d25fa777.jpg"
-    }
-   ],
-   "kind": "jobs"
-  },
-  {
-   "id": "p4ddee8f81355",
-   "post": "HiTech_Jobs_In_Israel/137014",
-   "ts": "2026-10-09T05:00:11+00:00",
-   "text": "M&A Associate at KPMG\nLocation: תל אביב\nPress here https://kpmg.co.il/careers/%D7%9E%D7%A9%D7%A8%D7%95%D7%AA-%D7%A4%D7%AA%D7%95%D7%97%D7%95%D7%AA/%D7%99%D7%99%D7%A2%D7%95%D7%A5-%D7%9B%D7%9C%D7%9B%D7%9C%D7%99/ma-associate?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p33510ed847d1",
-   "post": "HiTech_Jobs_In_Israel/137013",
-   "ts": "2026-10-09T05:00:10+00:00",
-   "text": "Forward Deployed Engineer at Kaltura\nLocation: Israel\nPress here https://corp.kaltura.com/careers/forward-deployed-engineer/96.37A/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
-   "forwarded_from": null,
-   "media": [
-    {
-     "type": "image",
-     "file": "data/media/fc76f74a127f5ce4.jpg"
-    }
-   ],
-   "kind": "jobs"
-  },
-  {
-   "id": "pe3a6e78b83a1",
-   "post": "HiTech_Jobs_In_Israel/137012",
-   "ts": "2026-10-09T05:00:08+00:00",
-   "text": "VP Security & Research at GeoEdge\nLocation: Tel Aviv, Israel\nPress here https://www.geoedge.com/careers/co/other/4B.37F/vp-security-research/all/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p2c9218e576d0",
-   "post": "HiTech_Jobs_In_Israel/137011",
-   "ts": "2026-10-09T05:00:07+00:00",
-   "text": "Junior System & Infrastructure Engineer at Final\nLocation: http://www.final.co.il/\nPress here https://www.final.co.il/career/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#JuniorPositions",
-   "views": 1,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p917458ab83a3",
-   "post": "HiTech_Jobs_In_Israel/137010",
-   "ts": "2026-10-09T05:00:05+00:00",
-   "text": "Personal Assistant to the CEO at Empathy\nLocation: Tel Aviv, Israel\nPress here https://www.empathy.com/careers/personal-assistant-to-the-ceo.33.A6D?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
-   "forwarded_from": null,
-   "media": [
-    {
-     "type": "image",
-     "file": "data/media/866fffb8f1c1b0cb.jpg"
-    }
-   ],
-   "kind": "jobs"
-  },
-  {
-   "id": "p7aa63ffa9f76",
-   "post": "HiTech_Jobs_In_Israel/137009",
-   "ts": "2026-10-09T05:00:04+00:00",
-   "text": "DevOps Team Lead at CommIT\nLocation: Petah Tikva\nPress here https://www.comm-it.com/commit-jobs#career-sec?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 2,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p391ad65670bb",
-   "post": "HiTech_Jobs_In_Israel/137008",
-   "ts": "2026-10-09T05:00:03+00:00",
-   "text": "DevOps Engineer at CommIT\nLocation: Petah Tikva\nPress here https://www.comm-it.com/commit-jobs#career-sec?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p5e1aed4e875b",
-   "post": "HiTech_Jobs_In_Israel/137007",
-   "ts": "2026-10-09T05:00:02+00:00",
-   "text": "Senior Product Manager at Claroty\nLocation: Israel\nPress here https://claroty.com/open-positions/1D.46B?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
-   "forwarded_from": null,
-   "media": [
-    {
-     "type": "image",
-     "file": "data/media/57da441384accd5c.jpg"
-    }
-   ],
-   "kind": "jobs"
-  },
-  {
-   "id": "pa26b50cb880e",
-   "post": "HiTech_Jobs_In_Israel/137006",
-   "ts": "2026-10-09T05:00:01+00:00",
-   "text": "Director of IT & Information Security at Checkmarx\nLocation: Ramat Gan, Israel\nPress here https://checkmarx.com/job-openings/position/69.37E/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
    "views": 1,
    "forwarded_from": null,
    "media": [],

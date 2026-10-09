@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T00:00:14.970399+00:00",
+ "updated": "2026-10-09T00:01:45.866459+00:00",
  "channels": {
   "Workingyes1": {
    "title": "עבודות איכות בכל הארץ",
@@ -75,9 +75,14 @@
    "title": "Telegram News",
    "avatar": "data/media/bbef2769e3138a47.jpg",
    "kind": "jobs"
+  },
+  "kinopoisk": {
+   "title": "Кинопоиск | Фильмы и сериалы",
+   "avatar": "data/media/79864806a1255a0c.jpg",
+   "kind": "jobs"
   }
  },
- "count": 116,
+ "count": 127,
  "items": [
   {
    "id": "p1f3fbf6fdb06",
@@ -152,6 +157,21 @@
    "views": 42,
    "forwarded_from": null,
    "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p348529597d5a",
+   "post": "kinopoisk/54189",
+   "ts": "2026-10-08T15:03:09+00:00",
+   "text": "«Фонарей» https://www.kinopoisk.ru/series/5253825/ испортила концовка или в сериале все сделано отлично, включая финал? Мнения в нашей редакции разнятся.\n\nОцениваем нашумевший сериал DC в видео. А как вам развязка расследования Хэла и Джона?\n\n🔥 Подписаться на канал Кинопоиска",
+   "views": 16000,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/cc4426342a467942.jpg"
+    }
+   ],
    "kind": "jobs"
   },
   {
@@ -430,6 +450,16 @@
    "kind": "jobs"
   },
   {
+   "id": "pecc9ed751d9c",
+   "post": "kinopoisk/54188",
+   "ts": "2026-10-08T12:05:32+00:00",
+   "text": "Зрелищные гонки — ✅\nБроманс Ивана Янковского и Юры Борисова — ✅\nОтсылка к «Назад в будущее» — ✅\n\nА что еще может предложить «Битва моторов», рассказываем в обзоре https://www.kinopoisk.ru/media/news/4013534/?utm_source=telegram .\n\nФильм уже вышел в прокат — билеты на него можно найти https://www.kinopoisk.ru/film/5505674/afisha/city/ на Кинопоиске.\n\n🔥 Подписаться на канал Кинопоиска",
+   "views": 20500,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
    "id": "p85728a9e54f9",
    "post": "Workingyes1/9737",
    "ts": "2026-10-08T11:30:36+00:00",
@@ -527,6 +557,41 @@
    "views": 53,
    "forwarded_from": null,
    "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p88f2c1432984",
+   "post": "kinopoisk/54182",
+   "ts": "2026-10-08T08:59:42+00:00",
+   "text": "«Искусственный интеллект» https://www.kinopoisk.ru/film/8431006/ с Юрой Борисовым удался: критики хвалят и сам фильм, и актерские работы Юры и Эндрю Гарфилда.\n\nПусть и не все в восторге, кино Луки Гуаданьино, похоже, затмит другой новый фильм об интернете — «Социальную расплату». У нее оценки куда ниже.\n\n🔥 Подписаться на канал Кинопоиска",
+   "views": 25100,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/5e59dd06413281c8.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/87a2b72afdc03be1.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/25e7e4ec4f01a25e.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/95196bf80f82c537.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/4dc1950c156f58db.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/7cdab29adba30ea1.jpg"
+    }
+   ],
    "kind": "jobs"
   },
   {
@@ -720,6 +785,40 @@
    "kind": "jobs"
   },
   {
+   "id": "pa296d77f8d31",
+   "post": "kinopoisk/54180",
+   "ts": "2026-10-07T15:02:53+00:00",
+   "text": "Красота из «Голодных игр» в реальности: Маккенна Грейс пришла на выставку в Париже в свадебном платье Китнисс 🤩\n\nПоказ провели в честь скорого выхода фильма по «Рассвету жатвы». https://www.kinopoisk.ru/film/5927239/ В России его выпустят в прокат 26 ноября.\n\nФото: Getty Images\n\n🔥 Подписаться на канал Кинопоиска",
+   "views": 30800,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/3f0fa48250c53a5f.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/f3db72cee2cc1add.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
+   "id": "p9fe260024dbf",
+   "post": "kinopoisk/54179",
+   "ts": "2026-10-07T13:18:42+00:00",
+   "text": "Хм-м-м, какой же сериал https://www.kinopoisk.ru/series/11214887/ понравится админу 😏",
+   "views": 31400,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/b134cff201672223.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
    "id": "pb0fcdedbe129",
    "post": "Jobs_in_Jerusalem/36390",
    "ts": "2026-10-07T12:46:40+00:00",
@@ -802,6 +901,16 @@
      "file": "data/media/e32733e753cdf65f.jpg"
     }
    ],
+   "kind": "jobs"
+  },
+  {
+   "id": "p94ee6d1838d0",
+   "post": "kinopoisk/54178",
+   "ts": "2026-10-07T11:01:27+00:00",
+   "text": "🪏«Диггер», похоже, будет одним из главных провалов в карьере Тома Круза и среди блокбастеров этого года. Но все ли с ним так плохо?\n\nРазбираемся в новом видео. https://www.youtube.com/watch?v=TayaXuSTUV0 А вы планируете смотреть фильм?\n\n❤️— да, хотя бы ради Круза\n🕊— выглядит сомнительно, пропущу\n\n🔥 Подписаться на канал Кинопоиска",
+   "views": 32900,
+   "forwarded_from": null,
+   "media": [],
    "kind": "jobs"
   },
   {
@@ -985,6 +1094,31 @@
    "kind": "jobs"
   },
   {
+   "id": "p04c5dfeaea1c",
+   "post": "kinopoisk/54177",
+   "ts": "2026-10-07T07:32:32+00:00",
+   "text": "Игорь и Анора снова вместе ❤️\n\nЮра Борисов и Майки Мэдисон встретились https://x.com/neonrated/status/2107574045088645316 в Нью-Йорке, где показывали их новые фильмы — «Искусственный интеллект» и «Социальную расплату».\n\nФото: соцсети Neon\n\n🔥 Подписаться на канал Кинопоиска",
+   "views": 43900,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/d382ebd12b1525fc.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
+   "id": "pa977b850dd93",
+   "post": "kinopoisk/54176",
+   "ts": "2026-10-07T07:00:17+00:00",
+   "text": "Проголосуйте за Кинопоиск, и доставка всегда будет прибывать вовремя ☢️",
+   "views": 35100,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
    "id": "pe2df8290393d",
    "post": "jobsHOTjobss/17649",
    "ts": "2026-10-06T20:47:11+00:00",
@@ -995,6 +1129,69 @@
     {
      "type": "image",
      "file": "data/media/7a90309f56c1c9bb.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
+   "id": "pdf20a23af69d",
+   "post": "kinopoisk/54175",
+   "ts": "2026-10-06T16:51:44+00:00",
+   "text": "Юра Борисов очень трогательно представил «Искусственный интеллект» на фестивале в Нью-Йорке — для него этого было настоящее рождение нового фильма 🥹\n\nНо при этом не забыл подколоть Эндрю Гарфилда!\n\n🔥 Подписаться на канал Кинопоиска",
+   "views": 69200,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p659f330ab897",
+   "post": "kinopoisk/54174",
+   "ts": "2026-10-06T13:56:59+00:00",
+   "text": "Братство кольца теперь в семье Крестного отца!\n\nParamount все-таки купила студию Warner Bros., и объединенная компания будет называться Skydance.\n\nНаступает новая эпоха!\n\n🔥 Подписаться на канал Кинопоиска",
+   "views": 39200,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p70ca92bb9455",
+   "post": "kinopoisk/54166",
+   "ts": "2026-10-06T09:49:02+00:00",
+   "text": "Флоренс Пью в мини-сериале «К востоку от Эдема» — 🔥🔥🔥\n\nИ в целом новая экранизация романа Джона Стейнбека понравилась и критикам, и зрителям. Подробнее о ней — в нашей рецензии. https://www.kinopoisk.ru/media/article/4013511/?utm_source=telegram\n\nПризнавайтесь, вы уже посмотрели? Если да, то какую оценку поставили?\n\n🔥 Подписаться на канал Кинопоиска",
+   "views": 39900,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/10a0dc17d5e70516.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/0e741d87c1d08990.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/9884de0e333bdb5a.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/4321418e855f9856.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/1ea810360f6c00f2.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/f6442d6aa26db6f7.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/6e8a07d50c25dfb6.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/d6da7b17d62c5c2d.jpg"
     }
    ],
    "kind": "jobs"

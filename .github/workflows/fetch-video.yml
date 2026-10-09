@@ -1,0 +1,24 @@
+name: Fetch video (temporary, never commits)
+on:
+  push:
+    branches: [fetch-video]
+permissions:
+  contents: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+      - run: pip install requests yt-dlp
+      - run: python fetch_video.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: video
+          path: |
+            *.mp4
+            sources.txt

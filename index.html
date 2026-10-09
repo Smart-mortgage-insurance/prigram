@@ -124,7 +124,9 @@
   .box .ad-img{width:calc(100% + 32px);margin:-15px -16px 12px;display:block;border-radius:14px 14px 0 0}
   .placard{background:var(--gold-soft);border:1px dashed var(--gold);border-radius:14px;padding:16px;text-align:center}
   .placard .h{font-weight:800;color:#6b5a1e}
-  .placard .n{display:block;margin-top:6px;font-weight:800;color:var(--gold);font-size:16px}
+  .placard .n{display:inline-block;margin-top:10px;font-weight:800;color:#fff;background:var(--gold);font-size:15px;padding:9px 20px;border-radius:10px;text-decoration:none}
+  .placard .n:hover{filter:brightness(.92)}
+  .placard .alt{display:block;margin-top:8px;font-size:11.5px;color:#6b5a1e;text-decoration:underline}
 
   footer{max-width:1320px;margin:0 auto;padding:22px 16px 50px;text-align:center;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;line-height:1.8}
   footer button{background:none;border:0;color:var(--tg-deep);font-weight:700;cursor:pointer;font-size:12.5px;padding:0}
@@ -294,7 +296,22 @@
 <script>
 const DIRECT_URL="data/direct.json", DIRECT_CH="_direct";         // משרות שפורסמו ישירות באתר (אחרי אישור)
 const NEWS_URL="data/news.json", PROMO_URL="data/sponsored.json", REMOVED_URL="data/removed.json", REFRESH_MS=60000, PAGE=30;
-const AD_CONTACT="054-8427249";                                   // ← טלפון לפרסום באתר
+const AD_MAIL=["netgram111","gmail.com"];                         // ← מייל לפרסום (מורכב רק בלחיצה, לא מוצג בדף)
+const AD_SUBJECT="בקשה לפרסום בנטגרם";
+const AD_BODY=`שלום,
+אני מעוניין/ת לפרסם בנטגרם.
+
+שם העסק:
+סוג הפרסום (באנר / פרסומת טקסט):
+תקופה מבוקשת:
+טלפון לחזרה:
+
+תודה`;
+function adMailURL(gmail){
+  const to=AD_MAIL.join("@"), q=s=>encodeURIComponent(s);
+  return gmail?`https://mail.google.com/mail/?view=cm&fs=1&to=${q(to)}&su=${q(AD_SUBJECT)}&body=${q(AD_BODY)}`
+              :`mailto:${to}?subject=${q(AD_SUBJECT)}&body=${q(AD_BODY)}`;
+}
 const REPORT_KEY="ada496e6-156f-4974-9ac9-846bdeebbae1";          // ← web3forms access key לבקשות הסרה
 const COLORS=["#658e86","#4a726a","#7a7d80","#55585b","#86a8a1","#3f5f59","#9a9d9f","#6b6e71"];
 
@@ -456,7 +473,7 @@ function renderSide(){
   let h=pinned.filter(p=>!p.html).map(p=>`<div class="box">${p.image?`<img class="ad-img" src="${esc(p.image)}" alt="">`:""}<h3>${esc(p.advertiser||"")}</h3><p style="white-space:pre-wrap">${promoText(p.text)}</p>
     ${p.cta_phone?`<a class="cta" href="tel:${p.cta_phone.replace(/[^0-9+]/g,"")}">${esc(p.cta_label||"לפרטים")}</a>`:""}</div>`).join("");
   h+=`<div class="box"><h3>מה זה נטגרם?</h3><p>לוח דרושים: משרות מערוצי טלגרם ציבוריים, בלי צורך בטלגרם. כל מודעה מובאת כלשונה, בשם הערוץ שפרסם אותה ועם הקישורים המקוריים.</p></div>`;
-  h+=`<div class="placard"><div class="h">📣 מעוניינים לפרסם?</div><span class="n">${AD_CONTACT}</span></div>`;
+  h+=`<div class="placard"><div class="h">📣 מעוניינים לפרסם?</div><a class="n" href="#" data-admail="gmail" target="_blank" rel="noopener">לחצו כאן לפרסום</a><a class="alt" href="#" data-admail="other">לא משתמשים בג'ימייל? שליחה מתוכנת מייל אחרת</a></div>`;
   if(h!==sideHTML){$("side").innerHTML=sideHTML=h;}
   fitAds(); restoreCars();
 }
@@ -599,6 +616,7 @@ document.addEventListener("click",e=>{
   const kd=t.closest("[data-kind]");
   if(kd){filterKind=kd.dataset.kind;filterCh="";shown=PAGE;renderChips();render(false);window.scrollTo({top:0,behavior:"smooth"});return;}
   if(ch){filterCh=ch.dataset.ch;if(!filterCh)filterKind="";shown=PAGE;renderChips();render(false);window.scrollTo({top:0,behavior:"smooth"});return;}
+  const am=t.closest("[data-admail]"); if(am){am.href=adMailURL(am.dataset.admail==="gmail");return;}   // הקישור נבנה רק בלחיצה
   const cn=t.closest("[data-copynum]"); if(cn){navigator.clipboard&&navigator.clipboard.writeText(cn.dataset.copynum).then(()=>{cn.textContent="הועתק ✓";setTimeout(()=>cn.textContent="העתקה",1500);});return;}
   const rep=t.closest("[data-rep]"); if(rep){openReport(rep.dataset.rep);return;}
   const op=t.closest("[data-open]"); if(op){op.dataset.open==="about"?openM("about"):openReport("");return;}

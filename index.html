@@ -319,6 +319,8 @@ const COLORS=["#658e86","#4a726a","#7a7d80","#55585b","#86a8a1","#3f5f59","#9a9d
 
 let data={items:[],channels:{}}, promos={items:[]}, removed=new Set(), seen=new Set();
 let filterCh="", filterKind="", query="", shown=PAGE, first=true;
+const AD_HOLD_MS=10*60000, FEED_MAX_AGE=14*864e5;               // 10 דקות בראש הפיד; כמו גיל המשרות המקסימלי
+let feedAds=[], holdTimer=0, holdTimer2=0;
 const section="jobs";
 const secItems=()=>data.items.filter(i=>i.kind!=="realestate");
 const secPromos=()=>(promos.items||[]).filter(p=>p.section!=="realestate");
@@ -463,6 +465,7 @@ function promoHTML(p){
   return `<article class="post promo"><span class="ava">★</span><div class="col"><div class="bubble">
     <div class="src"><span class="adv">${esc(p.advertiser||"")}</span><span class="tag">ממומן</span></div>
     ${p.text?`<div class="bt">${promoText(p.text)}</div>`:""}${p.image?mediaHTML([{type:"image",image:p.image}]):""}${cta}
+    ${p.ts?`<div class="meta"><span>${relTime(p.ts)}</span></div>`:""}
   </div></div></article>`;
 }
 
@@ -491,12 +494,14 @@ function render(isRefresh){
   if(filterKind) items=items.filter(i=>i.kind===filterKind);
   if(filterCh) items=items.filter(i=>i.post.split("/")[0]===filterCh);
   if(query) items=items.filter(i=>(i.text||"").includes(query)||chName(i.post.split("/")[0]).includes(query));
+  if(!query&&!filterCh&&!filterKind&&feedAds.length)            // פרסומות הפיד משתלבות לפי הזמן, כמו עדכון
+    items=items.concat(feedAds.map(p=>({ad:p,ts:p.ts}))).sort((a,b)=>new Date(b.ts||0)-new Date(a.ts||0));
   if(!items.length){$("feed").innerHTML=`<div class="empty">${query||filterCh||filterKind?"לא נמצאו עדכונים.":"אין עדכונים כרגע. חוזרים בקרוב…"}</div>`;return;}
   const inl=secPromos().filter(p=>p.enabled!==false&&!p.pin);
-  const banners=inl.filter(p=>p.html).slice(0,CAR_MAX), inline=inl.filter(p=>!p.html);
+  const banners=inl.filter(p=>p.html).slice(0,CAR_MAX), inline=inl.filter(p=>!p.html&&!p.ts);   // פרסומות ישנות בלי תור: כמו קודם
   let html="";
   items.slice(0,shown).forEach((it,i)=>{
-    html+=postHTML(it,isRefresh&&!seen.has(it.post));
+    html+=it.ad?promoHTML(it.ad):postHTML(it,isRefresh&&!seen.has(it.post));
     if(i===3) html+=`<article class="post adask">${PLACARD}</article>`;   // נייד/מסך צר: אין עמודת צד
     if((i+1)%7) return;
     const k=(i+1)/7-1-(banners.length?1:0);                    // הבאנרים אחרי המודעה השביעית, פרסומות הטקסט בהמשך
@@ -526,6 +531,16 @@ async function load(isRefresh){
       data.channels[DIRECT_CH]={title:"נטגרם · משרות מהגולשים"};
       data.items=data.items.concat(direct).sort((a,b)=>new Date(b.ts||0)-new Date(a.ts||0));
     }
+    // פרסומות טקסט בפיד הן עדכונים: עולות בזמן שנקבע להן בתור, ו-10 דקות אחרי כל אחת לא מוצגות משרות חדשות,
+    // כדי שהיא תישאר בראש הפיד. אחר כך המשרות שהצטברו מופיעות מעליה והיא יורדת למטה כמו כל עדכון.
+    const now=Date.now(), at=x=>new Date(x.ts).getTime();
+    feedAds=secPromos().filter(x=>x.enabled!==false&&!x.pin&&!x.html&&x.ts&&at(x)<=now&&now-at(x)<FEED_MAX_AGE);
+    const lastAd=Math.max(0,...feedAds.map(at));
+    if(now-lastAd<AD_HOLD_MS) data.items=data.items.filter(i=>new Date(i.ts||0).getTime()<=lastAd);
+    clearTimeout(holdTimer); clearTimeout(holdTimer2);                                     // בסוף ההשהיה מרעננים מיד, בלי לחכות לרענון הבא
+    if(now-lastAd<AD_HOLD_MS) holdTimer=setTimeout(()=>load(true),lastAd+AD_HOLD_MS-now+1500);
+    const nextAd=Math.min(...secPromos().filter(x=>x.enabled!==false&&!x.pin&&!x.html&&x.ts&&at(x)>now).map(at));
+    if(isFinite(nextAd)&&nextAd-now<REFRESH_MS) holdTimer2=setTimeout(()=>load(true),nextAd-now+500);   // פרסומת שמתוזמנת לעוד פחות מדקה
     renderChips(); renderSide(); buildTicker(); render(isRefresh&&!first);
     seen=new Set(data.items.map(i=>i.post)); first=false;
     if(n.updated) $("updatedLine").textContent="עודכן "+relTime(n.updated);

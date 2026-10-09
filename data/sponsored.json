@@ -29,20 +29,8 @@
       "h": 1357,
       "cta_url": "https://smart-mortgage-insurance.github.io/",
       "format": "html",
-      "id": "ad261009031926-side",
-      "pin": true
-    },
-    {
-      "enabled": true,
-      "advertiser": "ביטוח חכם למשכנתא",
-      "html": "ads/ad261009031926/index.html",
-      "w": 320,
-      "h": 1357,
-      "cta_url": "https://smart-mortgage-insurance.github.io/",
-      "format": "html",
       "id": "ad261009031926-feed",
-      "pin": false,
-      "mobile_only": true
+      "pin": false
     }
   ]
 }

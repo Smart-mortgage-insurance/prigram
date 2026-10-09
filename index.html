@@ -186,6 +186,8 @@
   .fab:hover{background:var(--tg)}
   .fab svg{width:18px;height:18px}
   @media(max-width:640px){.fab{padding:12px}.fab span{display:none}}
+  #vpop{position:fixed;z-index:200;background:#1d2b2a;color:#fff;border-radius:12px;padding:10px 14px;font-size:14px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.28);max-width:260px;line-height:1.5}
+  #vpop small{display:block;font-weight:400;color:#b9c7c4;font-size:11.5px;margin-top:2px}
 </style>
 </head>
 <body>
@@ -396,7 +398,7 @@ function mediaHTML(media){
 
 function postHTML(it,fresh){
   const u=it.post.split("/")[0];
-  return `<article class="post${fresh?" fresh":""}">
+  return `<article class="post${fresh?" fresh":""}" data-vk="${vkPost(it.post)}">
     ${avatar(u)}
     <div class="col"><div class="bubble">
       <div class="src"><span class="nm" data-ch="${esc(u)}">${esc(chName(u))}</span>${it.direct?`<span class="via direct">פורסם ישירות בלוח</span>`:`<span class="via">ערוץ טלגרם ציבורי · ${hhmm(it.ts)}</span>`}</div>
@@ -416,7 +418,7 @@ function postHTML(it,fresh){
 
 function adFrame(p){
   const w=p.w||1080,h=p.h||1800;
-  return `<a class="adframe" href="${esc(p.cta_url||"#")}" target="_blank" rel="noopener sponsored" style="aspect-ratio:${w}/${h}" data-adw="${w}" data-adh="${h}"><span class="adtag">מודעה</span><iframe src="${esc(p.html)}" sandbox="allow-scripts" width="${w}" height="${h}" scrolling="no" tabindex="-1" title="${esc(p.advertiser||"מודעה")}"></iframe></a>`;
+  return `<a class="adframe" data-vk="${vkAd(p.id)}" href="${esc(p.cta_url||"#")}" target="_blank" rel="noopener sponsored" style="aspect-ratio:${w}/${h}" data-adw="${w}" data-adh="${h}"><span class="adtag">מודעה</span><iframe src="${esc(p.html)}" sandbox="allow-scripts" width="${w}" height="${h}" scrolling="no" tabindex="-1" title="${esc(p.advertiser||"מודעה")}"></iframe></a>`;
 }
 const CAR_MAX=5, CAR_MS=30000, carIdx={};
 function carHTML(list,key){
@@ -462,7 +464,7 @@ function promoHTML(p){
   let cta="";
   if(p.cta_url) cta+=`<a class="cta" href="${esc(p.cta_url)}" target="_blank" rel="noopener">${esc(p.cta_label||"לפרטים")}</a> `;
   if(p.cta_phone) cta+=`<a class="cta" href="tel:${p.cta_phone.replace(/[^0-9+]/g,"")}">${p.cta_url?"📞":esc(p.cta_label||"לפרטים")} ${esc(p.cta_phone)}</a>`;
-  return `<article class="post promo"><span class="ava">★</span><div class="col"><div class="bubble">
+  return `<article class="post promo" data-vk="${vkAd(p.id)}"><span class="ava">★</span><div class="col"><div class="bubble">
     <div class="src"><span class="adv">${esc(p.advertiser||"")}</span><span class="tag">ממומן</span></div>
     ${p.text?`<div class="bt">${promoText(p.text)}</div>`:""}${p.image?mediaHTML([{type:"image",image:p.image}]):""}${cta}
     ${p.ts?`<div class="meta"><span>${relTime(p.ts)}</span></div>`:""}
@@ -481,12 +483,12 @@ function renderSide(){
   const pinned=secPromos().filter(p=>p.enabled!==false&&p.pin);
   const ah=carHTML(pinned.filter(p=>p.html).slice(0,CAR_MAX),"side-"+section);
   if(ah!==adHTML){$("adside").innerHTML=adHTML=ah;}
-  let h=pinned.filter(p=>!p.html).map(p=>`<div class="box">${p.image?`<img class="ad-img" src="${esc(p.image)}" alt="">`:""}<h3>${esc(p.advertiser||"")}</h3><p style="white-space:pre-wrap">${promoText(p.text)}</p>
+  let h=pinned.filter(p=>!p.html).map(p=>`<div class="box" data-vk="${vkAd(p.id)}">${p.image?`<img class="ad-img" src="${esc(p.image)}" alt="">`:""}<h3>${esc(p.advertiser||"")}</h3><p style="white-space:pre-wrap">${promoText(p.text)}</p>
     ${p.cta_phone?`<a class="cta" href="tel:${p.cta_phone.replace(/[^0-9+]/g,"")}">${esc(p.cta_label||"לפרטים")}</a>`:""}</div>`).join("");
   h+=`<div class="box"><h3>מה זה נטגרם?</h3><p>לוח דרושים: משרות מערוצי טלגרם ציבוריים, בלי צורך בטלגרם. כל מודעה מובאת כלשונה, בשם הערוץ שפרסם אותה ועם הקישורים המקוריים.</p></div>`;
   h+=PLACARD;
   if(h!==sideHTML){$("side").innerHTML=sideHTML=h;}
-  fitAds(); restoreCars();
+  fitAds(); restoreCars(); observeViews($("side")); observeViews($("adside"));
 }
 
 function render(isRefresh){
@@ -509,7 +511,7 @@ function render(isRefresh){
     else if(inline.length) html+=promoHTML(inline[k%inline.length]);
   });
   if(items.length>shown) html+=`<button class="more" id="more">עוד עדכונים</button>`;
-  $("feed").innerHTML=html; fitAds(); restoreCars();
+  $("feed").innerHTML=html; fitAds(); restoreCars(); observeViews($("feed"));
 }
 
 function buildTicker(){
@@ -546,6 +548,53 @@ async function load(isRefresh){
     if(n.updated) $("updatedLine").textContent="עודכן "+relTime(n.updated);
   }catch(e){ if(!isRefresh) $("feed").innerHTML='<div class="empty">לא ניתן לטעון עדכונים כרגע. נסו לרענן בעוד רגע.</div>'; }
 }
+
+/* ── מונה כניסות וצפיות ──
+   abacus: מונה ציבורי, בלי חשבון ובלי מסד נתונים (עובר בנטפרי). לא נשלח שום פרט על הגולש.
+   כניסה: pv-<יום> בכל טעינה, u-<יום> פעם ביום לכל דפדפן. צפייה: פריט שהופיע על המסך לפחות שנייה, פעם אחת לכל דפדפן. */
+const CNT="https://abacus.jasoncameron.dev", CNS="netgram-prigram";
+const dayKey=()=>new Date().toLocaleDateString("en-CA",{timeZone:"Asia/Jerusalem"}).replace(/-/g,"");
+const vkClean=s=>String(s).replace(/[^A-Za-z0-9_.-]/g,"_").slice(0,60);
+const vkPost=post=>"i-"+vkClean(post), vkAd=id=>"a-"+vkClean(String(id||"").replace(/-(side|feed)$/,""));   // פרסומת: צד ופיד נספרים יחד
+const lsGet=(k,d)=>{try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v);}catch(_){return d;}};
+const lsSet=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));}catch(_){}};
+const hitQ=[]; let hitBusy=false;
+function hit(key){ hitQ.push(key); if(!hitBusy) hitPump(); }
+function hitPump(){                                             // לאט: המונה מגביל ל-30 בקשות ב-10 שניות
+  const k=hitQ.shift(); if(!k){hitBusy=false;return;} hitBusy=true;
+  fetch(`${CNT}/hit/${CNS}/${k}`,{keepalive:true}).catch(()=>{}).then(()=>setTimeout(hitPump,400));
+}
+(function countVisit(){ const d=dayKey(); hit("pv-"+d); if(lsGet("ng_day","")!==d){ lsSet("ng_day",d); hit("u-"+d); } })();
+const viewed=new Set(lsGet("ng_seen",[]));
+const vio=("IntersectionObserver" in window)?new IntersectionObserver(es=>es.forEach(e=>{
+  const el=e.target, k=el.dataset.vk;
+  // "נראה": חצי ממנו על המסך, או (בפריט ארוך מהמסך) לפחות 40% מגובה המסך
+  const seenNow=e.isIntersecting&&e.intersectionRect.height>=Math.min(e.boundingClientRect.height*.5,innerHeight*.4);
+  if(!seenNow){clearTimeout(el._vt);el._vt=0;return;}
+  if(el._vt) return;
+  el._vt=setTimeout(()=>{ el._vt=0; vio.unobserve(el); if(viewed.has(k)) return;
+    viewed.add(k); lsSet("ng_seen",[...viewed].slice(-3000)); hit(k); hit("iv-"+dayKey()); },1000);
+}),{threshold:[0,.1,.25,.4,.5,.75,1]}):null;
+function observeViews(root){ if(vio&&root) root.querySelectorAll("[data-vk]").forEach(el=>{ if(!viewed.has(el.dataset.vk)) vio.observe(el); }); }
+
+/* לחצן ימני על משרה / עדכון / פרסומת: כמה אנשים צפו בה באתר */
+function closeVpop(){ const p=$("vpop"); if(p) p.remove(); }
+document.addEventListener("contextmenu",e=>{
+  const el=e.target.closest("[data-vk]");
+  if(!el||$("vpop")||e.target.closest("a,img,video,input,textarea")||String(getSelection())) { closeVpop(); return; }   // קישור/תמונה/טקסט מסומן: התפריט הרגיל
+  e.preventDefault();
+  const p=document.createElement("div"); p.id="vpop"; p.innerHTML="👁 בודק…"; document.body.appendChild(p);
+  p.style.left=Math.max(8,Math.min(e.clientX,innerWidth-p.offsetWidth-8))+"px"; p.style.top=Math.max(8,Math.min(e.clientY,innerHeight-p.offsetHeight-8))+"px";
+  const ad=el.dataset.vk.startsWith("a-");
+  fetch(`${CNT}/get/${CNS}/${el.dataset.vk}`).then(r=>r.ok?r.json():{value:0}).catch(()=>null).then(j=>{
+    if(!p.isConnected) return;
+    const n=j&&j.value||0, what=ad?"את הפרסומת":"בזה";
+    p.innerHTML=j?`👁 ${n===0?"עדיין אף אחד לא "+(ad?"ראה ":"צפה ")+what:n===1?"אדם אחד "+(ad?"ראה ":"צפה ")+what:n.toLocaleString("he-IL")+" אנשים "+(ad?"ראו ":"צפו ")+what} באתר<small>כל גולש נספר פעם אחת · הספירה החלה ב-9.10.2026</small>`
+                 :"לא ניתן לבדוק כרגע. נסו שוב בעוד רגע.";
+  });
+});
+["click","scroll","resize"].forEach(ev=>addEventListener(ev,closeVpop,{passive:true}));
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeVpop(); });
 
 /* modals */
 const openM=id=>$(id).classList.add("open"), closeM=el=>el.closest(".modal").classList.remove("open");

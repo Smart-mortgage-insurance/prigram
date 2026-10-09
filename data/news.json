@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T12:59:53.480239+00:00",
+ "updated": "2026-10-09T13:01:13.879412+00:00",
  "channels": {
   "Workingyes1": {
    "title": "עבודות איכות בכל הארץ",
@@ -75,11 +75,41 @@
  "count": 114,
  "items": [
   {
+   "id": "p5815c6a38884",
+   "post": "HiTech_Jobs_In_Israel/137039",
+   "ts": "2026-10-09T13:00:01+00:00",
+   "text": "Full Stack Engineer, AI Agents at http://riverside.fm/\nLocation: Israel\nPress here https://careers.riverside.com/careers?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 2,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/ef88af67f9af681f.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
+   "id": "p68d675ac9d5c",
+   "post": "HiTech_Jobs_In_Israel/137038",
+   "ts": "2026-10-09T13:00:00+00:00",
+   "text": "AWS GTM & Partnerships Manager, IL at Automat-it\nLocation: Tel-Aviv, Israel\nPress here https://www.automat-it.com/careers/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 3,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/1ac59a013bed4b55.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
    "id": "p3f3d88378590",
    "post": "Jobs_in_Jerusalem/36395",
    "ts": "2026-10-09T11:34:23+00:00",
    "text": "לתלמוד תורה מוריה\nרמת בית שמש\nדרוש/ה מזכיר/ה בכיר/ה\nלפרטים מיטל 0526401013\nאוצפ-055-9119801\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 83,
+   "views": 84,
    "forwarded_from": null,
    "media": [
     {
@@ -159,7 +189,7 @@
    "post": "HiTech_Jobs_In_Israel/137032",
    "ts": "2026-10-09T05:01:12+00:00",
    "text": "Software Embedded Engineer, DOCA at NVIDIA\nLocation: 2 Locations\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Tel-Aviv/Software-Embedded-Engineer--DOCA_JR2027291-1?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 121,
+   "views": 122,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -285,26 +315,6 @@
    "kind": "jobs"
   },
   {
-   "id": "p9d7360ed1ef9",
-   "post": "HiTech_Jobs_In_Israel/137018",
-   "ts": "2026-10-09T05:00:22+00:00",
-   "text": "Biz Ops Coordinator (Temporary position for Maternity Leave) at Cato Networks\nLocation: Tel Aviv District, Israel\nPress here https://www.catonetworks.com/careers/careers-post/4967775101?gh_jid=4967775101&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 91,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p3dd419a088f6",
-   "post": "HiTech_Jobs_In_Israel/137017",
-   "ts": "2026-10-09T05:00:18+00:00",
-   "text": "Senior Data Engineer at UVeye\nLocation: Tel Aviv\nPress here https://uveye.com/job/senior-data-engineer/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 84,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
    "id": "p1f3fbf6fdb06",
    "post": "Workingyes1/9745",
    "ts": "2026-10-08T20:00:04+00:00",
@@ -394,7 +404,7 @@
    "post": "Jobs_in_Jerusalem/36394",
    "ts": "2026-10-08T14:44:16+00:00",
    "text": "לשליחת קו״ח - ibar054269@gmail.com\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 332,
+   "views": 333,
    "forwarded_from": null,
    "media": [
     {
@@ -444,7 +454,7 @@
    "post": "Jobs_in_Jerusalem/36392",
    "ts": "2026-10-08T12:08:39+00:00",
    "text": "דרוש/ה למחר (שישי) מנקה\nלעבודה קצרה וקלה ברמה ג'.\nאופציה לעבודה קבועה\nשכר טוב.\nלפרטים\n0537350150\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 298,
+   "views": 299,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -714,7 +724,7 @@
    "post": "Jobs_in_Jerusalem/36391",
    "ts": "2026-10-07T16:03:01+00:00",
    "text": "#בית_שמש\nדרושה עובדת לחנות בגדי ילדים למשמרות ערב בימי שני רביעי ושישי\nלפרטים 0515206413\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 359,
+   "views": 360,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -734,7 +744,7 @@
    "post": "Jobs_in_Jerusalem/36390",
    "ts": "2026-10-07T12:46:40+00:00",
    "text": "#ביתר_עילית\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 357,
+   "views": 358,
    "forwarded_from": null,
    "media": [
     {
@@ -749,7 +759,7 @@
    "post": "Jobs_in_Jerusalem/36389",
    "ts": "2026-10-07T12:45:56+00:00",
    "text": "#ביתר_עילית\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 330,
+   "views": 331,
    "forwarded_from": null,
    "media": [
     {
@@ -764,7 +774,7 @@
    "post": "Jobs_in_Jerusalem/36388",
    "ts": "2026-10-07T12:37:40+00:00",
    "text": "#ביתר_עילית\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 317,
+   "views": 318,
    "forwarded_from": null,
    "media": [
     {
@@ -779,7 +789,7 @@
    "post": "Jobs_in_Jerusalem/36387",
    "ts": "2026-10-07T12:35:18+00:00",
    "text": "📢 לקידישיק – קניון רמות דרושות עובדות! 👗🛍\nלסניף קידישיק בקניון #רמות דרושות עובדות מגיל 16 ומעלה\n\nלעבודה במשמרות בוקר / ערב.\n✨ עבודה באווירה נעימה\n\n✨ מתאים גם לנערות\n\n✨ אפשרות למשמרות גמישות\n📍 קידישיק, קניון רמות, ירושלים – קומה 1.\nלפרטים והצטרפות\nטל:0533288060\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 298,
+   "views": 299,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -789,7 +799,7 @@
    "post": "Jobs_in_Jerusalem/36386",
    "ts": "2026-10-07T12:33:26+00:00",
    "text": "#ירושלים #גבעת_המטוס ליד #דרך_חברון\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 292,
+   "views": 293,
    "forwarded_from": null,
    "media": [
     {
@@ -804,7 +814,7 @@
    "post": "Jobs_in_Jerusalem/36385",
    "ts": "2026-10-07T11:58:46+00:00",
    "text": "#ביתר_עילית\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 291,
+   "views": 292,
    "forwarded_from": null,
    "media": [
     {
@@ -839,7 +849,7 @@
    "post": "Jobs_in_Jerusalem/36384",
    "ts": "2026-10-07T09:35:33+00:00",
    "text": "#גילה #ירושלים\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 337,
+   "views": 338,
    "forwarded_from": null,
    "media": [
     {
@@ -854,7 +864,7 @@
    "post": "Jobs_in_Jerusalem/36383",
    "ts": "2026-10-07T09:35:18+00:00",
    "text": "#ירושלים\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 307,
+   "views": 308,
    "forwarded_from": null,
    "media": [
     {

@@ -362,11 +362,17 @@ const waNumHTML=text=>waNums(text).map(n=>
   `<div class="wanum">📱 מספר הוואטסאפ של המפרסם: <a href="tel:+${n.intl}">${n.show}</a><button data-copynum="${n.show.replace(/-/g,"")}">העתקה</button></div>`).join("");
 /* טקסט פרסומת: [מילה](קישור) = קישור, [!כיתוב](קישור) = כפתור. מותר רק https / tel / mailto */
 const MK=/\[(!?)([^\]\n]{1,80})\]\(((?:https?:\/\/|tel:|mailto:)[^\s)]+)\)/g;
+// mailto: לא עושה כלום כשאין במחשב תוכנת מייל (רוב הגולשים) -> נפתח חלון כתיבה בג'ימייל
+function gmailFromMailto(u){
+  const [to,qs]=u.slice(7).split("?"), p=new URLSearchParams(qs||""), q=encodeURIComponent;
+  return `https://mail.google.com/mail/?view=cm&fs=1&to=${q(decodeURIComponent(to))}`+(p.get("subject")?`&su=${q(p.get("subject"))}`:"")+(p.get("body")?`&body=${q(p.get("body"))}`:"");
+}
 function promoText(t){
   t=String(t||""); let out="",i=0,m; MK.lastIndex=0;
   while((m=MK.exec(t))){
     out+=linkify(t.slice(i,m.index));
-    out+=`<a class="${m[1]?"cta inl":"tlink"}" href="${esc(m[3])}"${/^http/.test(m[3])?' target="_blank" rel="noopener sponsored"':""}>${esc(m[2])}</a>`;
+    const href=/^mailto:/i.test(m[3])?gmailFromMailto(m[3]):m[3];
+    out+=`<a class="${m[1]?"cta inl":"tlink"}" href="${esc(href)}"${/^http/.test(href)?' target="_blank" rel="noopener sponsored"':""}>${esc(m[2])}</a>`;
     i=MK.lastIndex;
   }
   return out+linkify(t.slice(i));

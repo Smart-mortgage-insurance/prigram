@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T20:19:06.555187+00:00",
+ "updated": "2026-10-09T20:20:55.999375+00:00",
  "channels": {
   "TheMisrot": {
    "title": "משרות - ביטחון וממשל",
@@ -14,11 +14,6 @@
   "taasuka50plusminus": {
    "title": "משרות לבעלי ניסיון",
    "avatar": "data/media/fa0d6a7a753e5d7b.jpg",
-   "kind": "jobs"
-  },
-  "Israel_media_industry": {
-   "title": "אנדר קונטרול - דרושים בתקשורת, דיגיטל והייטק",
-   "avatar": "data/media/9b35e3726ebbeaaa.jpg",
    "kind": "jobs"
   },
   "Jobs_in_Jerusalem": {

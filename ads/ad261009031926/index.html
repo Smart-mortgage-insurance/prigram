@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>באנר פרימיום - ביטוח חיים למשכנתא</title>
+    <style>
+        /* ---- RESET ---- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #10161e;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            padding: 20px 0;
+        }
+
+        /* ===== BANNER ===== */
+        .banner {
+            width: 320px;
+            min-height: 620px;
+            background: linear-gradient(165deg, #0d1a2b 0%, #162a3e 50%, #0d1a2b 100%);
+            border-radius: 24px;
+            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+            padding: 30px 22px 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: visible;
+            border: 1px solid rgba(255, 215, 0, 0.06);
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* animated gold border */
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ffd700, #e8b800, #ffd700, transparent);
+            background-size: 200% 100%;
+            animation: borderShine 4s linear infinite;
+            opacity: 0.6;
+            border-radius: 24px 24px 0 0;
+            overflow: hidden;
+        }
+
+        @keyframes borderShine {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* ===== TOP SECTION ===== */
+        .brand-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            animation: fadeSlideDown 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeSlideDown {
+            0% { opacity: 0; transform: translateY(-12px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .brand-bar .shield-icon {
+            font-size: 26px;
+            filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.2));
+            animation: pulseIcon 3s ease-in-out infinite;
+        }
+
+        @keyframes pulseIcon {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.1)); }
+            50% { transform: scale(1.05); filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3)); }
+        }
+
+        .brand-bar .brand-text {
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: 3px;
+        }
+
+        .brand-bar .brand-text span {
+            font-weight: 700;
+            color: #ffd700;
+        }
+
+        .main-title {
+            color: #ffffff;
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            line-height: 1.25;
+            margin-top: 4px;
+            margin-bottom: 16px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            width: 100%;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            animation: fadeSlideDown 0.8s ease 0.15s forwards;
+            opacity: 0;
+        }
+
+        .main-title .gold {
+            color: #ffd700;
+        }
+
+        /* ===== LIMITED TIME OFFER ===== */
+        .limited-time-offer {
+            background: linear-gradient(90deg, rgba(255, 69, 0, 0.15), rgba(255, 215, 0, 0.1), rgba(255, 69, 0, 0.15));
+            border: 1px solid rgba(255, 215, 0, 0.4);
+            color: #ffd700;
+            font-size: 14px;
+            font-weight: 800;
+            padding: 6px 18px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.2);
+            animation: pulseOffer 2s infinite alternate, fadeSlideDown 0.8s ease forwards;
+            opacity: 0;
+            z-index: 10;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        @keyframes pulseOffer {
+            0% { box-shadow: 0 4px 15px rgba(255, 69, 0, 0.2); transform: scale(1); }
+            100% { box-shadow: 0 4px 25px rgba(255, 215, 0, 0.4); transform: scale(1.03); }
+        }
+
+        /* ===== CARDS AREA (Stacked) ===== */
+        .cards-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            animation: fadeSlideDown 0.8s ease 0.4s forwards;
+            opacity: 0;
+            position: relative;
+        }
+
+        /* ---- PACKAGE CARD ---- */
+        .package-card {
+            position: relative;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 20px;
+            padding: 24px 20px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .package-card.premium {
+            background: linear-gradient(145deg, rgba(255, 215, 0, 0.05), rgba(255, 215, 0, 0.01));
+            border: 1.5px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 8px 32px rgba(255, 215, 0, 0.03);
+        }
+
+        .package-card.extra {
+            background: linear-gradient(145deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.02));
+            border: 1.5px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 8px 40px rgba(255, 215, 0, 0.08);
+            margin-top: 8px;
+            padding-top: 36px;
+        }
+
+        .package-card.extra .pkg-level {
+            color: #ffd700;
+        }
+
+        .pkg-level {
+            font-size: 12px;
+            font-weight: 700;
+            color: #ffd700;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .package-card .price {
+            font-size: 54px;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1;
+            text-shadow: 0 4px 24px rgba(255, 255, 255, 0.1);
+            margin: 2px 0;
+        }
+
+        .package-card .price .shekel { font-size: 28px; font-weight: 600; margin-left: 2px; color: #ffd700; }
+        .package-card .price .duration { font-size: 13px; color: #ffd700; font-weight: 700; letter-spacing: 0.5px; display: block; margin-top: 5px; text-transform: uppercase; }
+
+        .pkg-name-line {
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 12px 0 6px;
+            letter-spacing: 0.3px;
+        }
+
+        .pkg-desc {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.45;
+            max-width: 240px;
+        }
+
+        .pkg-desc strong {
+            color: #ffd700;
+        }
+
+        .star-crown {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, #ffd700, #e8b800);
+            color: #0d1a2b;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 14px rgba(255, 215, 0, 0.3);
+            white-space: nowrap;
+            z-index: 10;
+        }
+
+        /* ===== CTA BUTTON AREA ===== */
+        .cta-container {
+            width: 100%;
+            margin-top: 14px;
+            animation: fadeSlideUp 0.8s ease 0.7s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeSlideUp {
+            0% { opacity: 0; transform: translateY(16px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .cta-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(90deg, #ffd700, #e8b800);
+            color: #0d1a2b;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 14px 16px;
+            border-radius: 60px;
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(255, 215, 0, 0.15);
+            transition: all 0.3s ease;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.2px;
+            white-space: nowrap;
+        }
+
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 200%; }
+        }
+
+        .cta-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 28px rgba(255, 215, 0, 0.3);
+        }
+
+        /* ===== PRICE BADGE ===== */
+        .price-badge {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 12px;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.06), rgba(255, 215, 0, 0.02));
+            border: 1px solid rgba(255, 215, 0, 0.18);
+            border-radius: 14px;
+            padding: 10px 14px;
+            animation: fadeSlideUp 0.8s ease 0.78s forwards;
+            opacity: 0;
+        }
+
+        .price-badge .badge-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .price-badge .badge-text {
+            text-align: center;
+        }
+
+        .price-badge .badge-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #ffd700;
+            line-height: 1.2;
+        }
+
+        .price-badge .badge-sub {
+            font-size: 11.5px;
+            color: rgba(255, 255, 255, 0.55);
+            margin-top: 2px;
+            line-height: 1.35;
+        }
+
+        .price-badge .badge-sub strong {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* ===== PAYMENT NOTE & TERMS ===== */
+        .payment-note {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 13px;
+            text-align: center;
+            margin-top: 14px;
+            background: rgba(255, 215, 0, 0.04);
+            padding: 10px 14px;
+            border-radius: 12px;
+            width: 100%;
+            border: 1px dashed rgba(255, 215, 0, 0.2);
+            animation: fadeSlideUp 0.8s ease 0.85s forwards;
+            opacity: 0;
+        }
+
+        .payment-note strong {
+            color: #ffd700;
+            white-space: nowrap; 
+        }
+
+        .terms {
+            color: rgba(255, 255, 255, 0.22);
+            font-size: 9px;
+            text-align: center;
+            line-height: 1.5;
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            width: 100%;
+            animation: fadeSlideUp 0.8s ease 1s forwards;
+            opacity: 0;
+        }
+
+        /* ===== PARTICLES ===== */
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(255, 215, 0, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: floatParticle linear infinite;
+        }
+
+        @keyframes floatParticle {
+            0% { opacity: 0; transform: translateY(0); }
+            20% { opacity: 1; }
+            80% { opacity: 0.4; }
+            100% { opacity: 0; transform: translateY(-180px); }
+        }
+
+        .particle:nth-child(1) { left: 10%; bottom: 10%; animation-duration: 8s; width: 2px; height: 2px; }
+        .particle:nth-child(2) { left: 40%; bottom: 5%; animation-duration: 10s; animation-delay: 2s; }
+        .particle:nth-child(3) { left: 80%; bottom: 15%; animation-duration: 7s; animation-delay: 4s; width: 2px; height: 2px; }
+
+        @media (max-width: 350px) {
+            .banner { width: 280px; padding: 22px 14px; }
+            .package-card .price { font-size: 42px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="banner">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+
+    <div class="brand-bar">
+        <span class="shield-icon" aria-hidden="true">🛡️</span>
+        <span class="brand-text"><span>LIFE</span> SHIELD</span>
+    </div>
+
+    <div class="main-title">
+        ביטוח חיים<br>
+        <span class="gold">למשכנתא</span>
+    </div>
+
+    <!-- LIMITED TIME OFFER -->
+    <div class="limited-time-offer">
+        🔥 מבצע מטורף לזמן מוגבל 🔥
+    </div>
+
+    <!-- CARDS CONTAINER (Stacked) -->
+    <div class="cards-container">
+
+        <div class="package-card basic">
+            <div class="pkg-level">ניוד פוליסה</div>
+            <div class="price"><span class="shekel">₪</span>80<span class="duration">מענק הצטרפות</span></div>
+            <div class="pkg-name-line">מעבירים ביטוח קיים</div>
+            <div class="pkg-desc">מבצעים <strong>ניוד של ביטוח החיים</strong> הנוכחי שלכם אלינו, ומקבלים את המענק</div>
+        </div>
+
+        <div class="package-card premium">
+            <div class="pkg-level">פוליסה חדשה</div>
+            <div class="price"><span class="shekel">₪</span>200<span class="duration">מענק הצטרפות</span></div>
+            <div class="pkg-name-line">רוכשים ביטוח חדש</div>
+            <div class="pkg-desc">רוכשים דרכנו פוליסת <strong>ביטוח חיים חדשה</strong> למשכנתא ומקבלים את המענק</div>
+        </div>
+
+        <div class="package-card extra">
+            <span class="star-crown">מבצע מיוחד</span>
+            <div class="pkg-level">פוליסת אקסטרה</div>
+            <div class="price"><span class="shekel">₪</span>400<span class="duration">מענק הצטרפות מוגדל</span></div>
+            <div class="pkg-name-line">משכנתא מעל 2 מיליון ₪</div>
+            <div class="pkg-desc">רוכשים <strong>ביטוח חדש</strong> למשכנתאות בגובה של <strong>2,000,000 ₪ ומעלה</strong> ומקבלים מענק מוגדל</div>
+        </div>
+
+    </div>
+
+    <div class="cta-container">
+        <a href="https://smart-mortgage-insurance.github.io/my-site/" class="cta-button">מעבר לאתר להשארת פרטים לחזרה ⟵</a>
+    </div>
+
+    <div class="price-badge">
+        <span class="badge-icon">💰</span>
+        <div class="badge-text">
+            <div class="badge-title">מחירים נמוכים במיוחד</div>
+            <div class="badge-sub">פרמיה חודשית <strong>מהזולות בשוק</strong><br>חוסכים אלפי ₪ לאורך חיי הפוליסה</div>
+        </div>
+    </div>
+
+    <div class="payment-note">
+        את מענק ההצטרפות תקבלו ישירות <strong>בהעברה בנקאית</strong>
+    </div>
+
+    <div class="terms">
+        * מתנת ההצטרפות הינה חד-פעמית ומותנית בסגירת פוליסת ביטוח חיים בלבד, ללא צורך ברכישת או סגירת ביטוח מבנה • כפוף לתנאי החברה והחיתום הרפואי.
+    </div>
+
+</div>
+
+</body>
+</html>

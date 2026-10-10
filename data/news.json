@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T02:18:43.493910+00:00",
+ "updated": "2026-10-10T02:20:04.011795+00:00",
  "channels": {
   "TheMisrot": {
    "title": "משרות - ביטחון וממשל",
@@ -64,6 +64,11 @@
   "Nortech_Spotlight": {
    "title": "Nortech_Spotlight",
    "avatar": "data/media/4404bce836c7d94f.jpg",
+   "kind": "jobs"
+  },
+  "LogOnSoftware": {
+   "title": "Log-On Software",
+   "avatar": "data/media/0971c578000bdd24.jpg",
    "kind": "jobs"
   }
  },

@@ -25,6 +25,8 @@ from datetime import datetime, timezone, timedelta
 import requests
 from bs4 import BeautifulSoup
 
+from shabbat import is_holy, now_is_holy
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 DATA_DIR = os.path.join(ROOT, "data")
@@ -444,6 +446,9 @@ def prune_media(items, channels):
 
 
 def main():
+    if now_is_holy():
+        log("== שבת / יום טוב - no scraping, nothing published ==")
+        return
     log("== נטגרם scraper ==  image filter:", "ON" if GEMINI_KEY else ("OFF (images kept, NetFree filters)" if UNFILTERED_OK else "OFF (text-only)"))
     news = load_json(NEWS_PATH, {"items": [], "channels": {}})
     removed = set(load_json(REMOVED_PATH, {"posts": []}).get("posts", []))
@@ -469,7 +474,7 @@ def main():
     existing = {}
     for it in news.get("items", []):
         if (it.get("post") in removed or it.get("post", "").split("/")[0] not in enabled_names
-                or (it.get("ts") or "") < cutoff):
+                or (it.get("ts") or "") < cutoff or is_holy(it.get("ts"))):
             continue
         if it.get("post") in blocked:
             continue
@@ -515,6 +520,9 @@ def main():
                 continue
             if post in removed or post in blocked or (msg["ts"] or "") < cutoff:
                 continue  # removed on request, or an old post (dead/moved channel)
+            if is_holy(msg["ts"]):
+                log("   - dropped (posted on Shabbat / Yom Tov)")
+                continue
             if not channel_ok(post, msg["text"]):
                 log("   - dropped (sponsored: no channel prefix)")
                 continue

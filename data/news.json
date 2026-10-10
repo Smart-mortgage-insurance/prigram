@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T02:16:54.494829+00:00",
+ "updated": "2026-10-10T02:18:43.493910+00:00",
  "channels": {
   "TheMisrot": {
    "title": "משרות - ביטחון וממשל",
@@ -19,11 +19,6 @@
   "Jobs_in_Jerusalem": {
    "title": "ערוץ העבודות באזור ירושלים",
    "avatar": "data/media/3c9e59f92d560afa.jpg",
-   "kind": "jobs"
-  },
-  "LogOnSoftware": {
-   "title": "Log-On Software",
-   "avatar": "data/media/0971c578000bdd24.jpg",
    "kind": "jobs"
   },
   "HiTech_Jobs_In_Israel": {

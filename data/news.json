@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T05:02:03.185130+00:00",
+ "updated": "2026-10-10T05:03:22.009113+00:00",
  "channels": {
   "TheMisrot": {
    "title": "משרות - ביטחון וממשל",
@@ -9,11 +9,6 @@
   "jobnikim": {
    "title": "‏ג'וֹבְּנִיקִים - ג'וֹבְּים ‏לַמִּלּוּאִימְנִיקִים",
    "avatar": "data/media/58e0e80bed406cf5.jpg",
-   "kind": "jobs"
-  },
-  "taasuka50plusminus": {
-   "title": "משרות לבעלי ניסיון",
-   "avatar": "data/media/fa0d6a7a753e5d7b.jpg",
    "kind": "jobs"
   },
   "Jobs_in_Jerusalem": {
@@ -79,7 +74,7 @@
    "post": "HiTech_Jobs_In_Israel/137041",
    "ts": "2026-10-10T05:00:08+00:00",
    "text": "Staff Software Engineer, Security Factory: Static Analysis at GitLab\nLocation: Remote, Canada; Remote, Israel; Remote, United Kingdom; Remote, United States\nPress here https://job-boards.greenhouse.io/gitlab/jobs/8693563002?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
+   "views": 2,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -89,7 +84,7 @@
    "post": "HiTech_Jobs_In_Israel/137040",
    "ts": "2026-10-09T15:00:17+00:00",
    "text": "Director WWOS Risk&Resilience, Worldwide Security Governance at Amazon\nLocation: Tel Aviv-Yafo, Tel Aviv, ISR\nPress here https://www.amazon.jobs/en/jobs/10508231/director-wwos-risk-resilience-worldwide-security-governance?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 159,
+   "views": 161,
    "forwarded_from": null,
    "media": [
     {
@@ -119,7 +114,7 @@
    "post": "HiTech_Jobs_In_Israel/137039",
    "ts": "2026-10-09T13:00:01+00:00",
    "text": "Full Stack Engineer, AI Agents at http://riverside.fm/\nLocation: Israel\nPress here https://careers.riverside.com/careers?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 202,
+   "views": 203,
    "forwarded_from": null,
    "media": [
     {

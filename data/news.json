@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T05:08:20.671191+00:00",
+ "updated": "2026-10-10T05:09:41.040039+00:00",
  "channels": {
   "TheMisrot": {
    "title": "משרות - ביטחון וממשל",
@@ -64,6 +64,11 @@
   "jobsHOTjobss": {
    "title": "משרות חמות",
    "avatar": "data/media/4564dc94b1ec7f17.jpg",
+   "kind": "jobs"
+  },
+  "taasuka50plusminus": {
+   "title": "משרות לבעלי ניסיון",
+   "avatar": "data/media/fa0d6a7a753e5d7b.jpg",
    "kind": "jobs"
   }
  },

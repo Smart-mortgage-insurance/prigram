@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T02:04:53.216609+00:00",
+ "updated": "2026-10-10T02:06:13.788854+00:00",
  "channels": {
   "TheMisrot": {
    "title": "משרות - ביטחון וממשל",
@@ -64,6 +64,11 @@
   "Israel_media_industry": {
    "title": "אנדר קונטרול - דרושים בתקשורת, דיגיטל והייטק",
    "avatar": "data/media/9b35e3726ebbeaaa.jpg",
+   "kind": "jobs"
+  },
+  "Nortech_Spotlight": {
+   "title": "Nortech_Spotlight",
+   "avatar": null,
    "kind": "jobs"
   }
  },

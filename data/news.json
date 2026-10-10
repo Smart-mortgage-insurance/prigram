@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T05:03:22.009113+00:00",
+ "updated": "2026-10-10T05:05:11.481174+00:00",
  "channels": {
   "TheMisrot": {
    "title": "משרות - ביטחון וממשל",
@@ -36,11 +36,6 @@
    "avatar": "data/media/d41ce98d37dc6e83.jpg",
    "kind": "jobs"
   },
-  "jobsHOTjobss": {
-   "title": "משרות חמות",
-   "avatar": "data/media/4564dc94b1ec7f17.jpg",
-   "kind": "jobs"
-  },
   "Workingyes1": {
    "title": "עבודות איכות בכל הארץ",
    "avatar": "data/media/6be66a8391dabacb.jpg",
@@ -65,6 +60,11 @@
    "title": "Galilee-Golan-Tech(Channel)",
    "avatar": null,
    "kind": "jobs"
+  },
+  "taasuka50plusminus": {
+   "title": "משרות לבעלי ניסיון",
+   "avatar": "data/media/fa0d6a7a753e5d7b.jpg",
+   "kind": "jobs"
   }
  },
  "count": 114,
@@ -74,7 +74,7 @@
    "post": "HiTech_Jobs_In_Israel/137041",
    "ts": "2026-10-10T05:00:08+00:00",
    "text": "Staff Software Engineer, Security Factory: Static Analysis at GitLab\nLocation: Remote, Canada; Remote, Israel; Remote, United Kingdom; Remote, United States\nPress here https://job-boards.greenhouse.io/gitlab/jobs/8693563002?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 2,
+   "views": 4,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"

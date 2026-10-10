@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T04:59:23.734269+00:00",
+ "updated": "2026-10-10T05:00:43.478570+00:00",
  "channels": {
   "TheMisrot": {
    "title": "משרות - ביטחון וממשל",
@@ -74,6 +74,16 @@
  },
  "count": 114,
  "items": [
+  {
+   "id": "p989dae7f2ca8",
+   "post": "HiTech_Jobs_In_Israel/137041",
+   "ts": "2026-10-10T05:00:08+00:00",
+   "text": "Staff Software Engineer, Security Factory: Static Analysis at GitLab\nLocation: Remote, Canada; Remote, Israel; Remote, United Kingdom; Remote, United States\nPress here https://job-boards.greenhouse.io/gitlab/jobs/8693563002?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
   {
    "id": "p93e1c12ed25a",
    "post": "HiTech_Jobs_In_Israel/137040",
@@ -169,7 +179,7 @@
    "post": "HiTech_Jobs_In_Israel/137035",
    "ts": "2026-10-09T05:01:36+00:00",
    "text": "Interested in advertising and reaching +8600 job seekers? Reach us out 👇\n\nShare your support by boosting ⚡⚡⚡ our channel or sharing a kind donation securely via PayPal https://paypal.me/donateTheBot 😍\nto help us to be there for you 24/7 ⏰\nWe really appreciate it ❤",
-   "views": 198,
+   "views": 199,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -179,7 +189,7 @@
    "post": "HiTech_Jobs_In_Israel/137034",
    "ts": "2026-10-09T05:01:33+00:00",
    "text": "Software Automation Engineer at Amazon\nLocation: Haifa, Haifa, ISR\nPress here https://www.amazon.jobs/en/jobs/10573136/software-automation-engineer?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 326,
+   "views": 327,
    "forwarded_from": null,
    "media": [
     {
@@ -320,16 +330,6 @@
    "ts": "2026-10-09T05:00:34+00:00",
    "text": "Senior Product Manager at Tenable, Inc.\nLocation: Israel - Office - Tel Aviv\nPress here https://job-boards.greenhouse.io/tenableinc/jobs/5446550008?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
    "views": 108,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p8185d64ef9d4",
-   "post": "HiTech_Jobs_In_Israel/137020",
-   "ts": "2026-10-09T05:00:28+00:00",
-   "text": "Junior Prompt Engineer - AI Research & Reliability at http://Gong.io/\nLocation: Tel Aviv\nPress here https://job-boards.greenhouse.io/gongio/jobs/4717021006?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#JuniorPositions",
-   "views": 97,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"

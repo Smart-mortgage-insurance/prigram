@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T02:03:34.089561+00:00",
+ "updated": "2026-10-10T02:04:53.216609+00:00",
  "channels": {
   "TheMisrot": {
    "title": "משרות - ביטחון וממשל",
@@ -59,11 +59,6 @@
   "Workingyes1": {
    "title": "עבודות איכות בכל הארץ",
    "avatar": "data/media/6be66a8391dabacb.jpg",
-   "kind": "jobs"
-  },
-  "Nortech_Spotlight": {
-   "title": "Nortech_Spotlight",
-   "avatar": "data/media/4404bce836c7d94f.jpg",
    "kind": "jobs"
   },
   "Israel_media_industry": {

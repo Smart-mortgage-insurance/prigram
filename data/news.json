@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T05:05:11.481174+00:00",
+ "updated": "2026-10-10T05:06:31.859463+00:00",
  "channels": {
   "TheMisrot": {
    "title": "משרות - ביטחון וממשל",
@@ -65,6 +65,11 @@
    "title": "משרות לבעלי ניסיון",
    "avatar": "data/media/fa0d6a7a753e5d7b.jpg",
    "kind": "jobs"
+  },
+  "jobsHOTjobss": {
+   "title": "משרות חמות",
+   "avatar": "data/media/4564dc94b1ec7f17.jpg",
+   "kind": "jobs"
   }
  },
  "count": 114,
@@ -84,7 +89,7 @@
    "post": "HiTech_Jobs_In_Israel/137040",
    "ts": "2026-10-09T15:00:17+00:00",
    "text": "Director WWOS Risk&Resilience, Worldwide Security Governance at Amazon\nLocation: Tel Aviv-Yafo, Tel Aviv, ISR\nPress here https://www.amazon.jobs/en/jobs/10508231/director-wwos-risk-resilience-worldwide-security-governance?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 161,
+   "views": 162,
    "forwarded_from": null,
    "media": [
     {
@@ -159,7 +164,7 @@
    "post": "HiTech_Jobs_In_Israel/137037",
    "ts": "2026-10-09T11:00:13+00:00",
    "text": "Applied Scientist, Personalization, Personalization at Amazon\nLocation: Tel Aviv-Yafo, Tel Aviv, ISR\nPress here https://www.amazon.jobs/en/jobs/10454802/applied-scientist-personalization-personalization?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 182,
+   "views": 183,
    "forwarded_from": null,
    "media": [
     {
@@ -184,7 +189,7 @@
    "post": "HiTech_Jobs_In_Israel/137034",
    "ts": "2026-10-09T05:01:33+00:00",
    "text": "Software Automation Engineer at Amazon\nLocation: Haifa, Haifa, ISR\nPress here https://www.amazon.jobs/en/jobs/10573136/software-automation-engineer?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 327,
+   "views": 328,
    "forwarded_from": null,
    "media": [
     {
@@ -199,7 +204,7 @@
    "post": "HiTech_Jobs_In_Israel/137033",
    "ts": "2026-10-09T05:01:32+00:00",
    "text": "SW Automation Student, Annapurna Labs at Amazon\nLocation: Tel Aviv-Yafo, Tel Aviv, ISR\nPress here https://www.amazon.jobs/en/jobs/10573281/sw-automation-student-annapurna-labs?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#StudentPositions",
-   "views": 293,
+   "views": 294,
    "forwarded_from": null,
    "media": [
     {
@@ -214,7 +219,7 @@
    "post": "HiTech_Jobs_In_Israel/137031",
    "ts": "2026-10-09T05:01:12+00:00",
    "text": "Senior Program Manager at NVIDIA\nLocation: Israel, Yokneam\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Yokneam/Senior-Program-Manager_JR2027527?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 132,
+   "views": 133,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -224,7 +229,7 @@
    "post": "HiTech_Jobs_In_Israel/137032",
    "ts": "2026-10-09T05:01:12+00:00",
    "text": "Software Embedded Engineer, DOCA at NVIDIA\nLocation: 2 Locations\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Tel-Aviv/Software-Embedded-Engineer--DOCA_JR2027291-1?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 145,
+   "views": 146,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -234,7 +239,7 @@
    "post": "HiTech_Jobs_In_Israel/137030",
    "ts": "2026-10-09T05:01:08+00:00",
    "text": "Senior Software Engineer, DOCA Verification at NVIDIA\nLocation: 2 Locations\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Yokneam/Senior-Software-Engineer--DOCA-Verification_JR2026270?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 129,
+   "views": 130,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -244,7 +249,7 @@
    "post": "HiTech_Jobs_In_Israel/137029",
    "ts": "2026-10-09T05:01:07+00:00",
    "text": "Solution Validation Engineer at NVIDIA\nLocation: Israel, Yokneam\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Yokneam/Solution-Validation-Engineer_JR2027031?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 121,
+   "views": 123,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -254,7 +259,7 @@
    "post": "HiTech_Jobs_In_Israel/137028",
    "ts": "2026-10-09T05:01:06+00:00",
    "text": "VLSI Design Automation Software Engineer at NVIDIA\nLocation: 2 Locations\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Yokneam/VLSI-Design-Automation-Software-Engineer_JR2027412?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 157,
+   "views": 159,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -264,7 +269,7 @@
    "post": "HiTech_Jobs_In_Israel/137027",
    "ts": "2026-10-09T05:01:05+00:00",
    "text": "Senior Software Solution Engineer, Switch Networking at NVIDIA\nLocation: 2 Locations\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Tel-Aviv/Senior-Software-Solution-Engineer--Switch-Networking_JR2027382?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 125,
+   "views": 126,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -274,7 +279,7 @@
    "post": "HiTech_Jobs_In_Israel/137026",
    "ts": "2026-10-09T05:01:04+00:00",
    "text": "Senior Networking Solution Engineer at NVIDIA\nLocation: 2 Locations\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Tel-Aviv/Senior-Networking-Solution-Engineer_JR2027369?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 133,
+   "views": 134,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -284,7 +289,7 @@
    "post": "HiTech_Jobs_In_Israel/137025",
    "ts": "2026-10-09T05:00:53+00:00",
    "text": "Senior Software Engineer, Tools, Automation and AI at NVIDIA\nLocation: 3 Locations\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Yokneam/Senior-Software-Engineer--Tools--Automation-and-AI_JR2026683?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 263,
+   "views": 264,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -294,7 +299,7 @@
    "post": "HiTech_Jobs_In_Israel/137024",
    "ts": "2026-10-09T05:00:47+00:00",
    "text": "Construction Finance Analyst at Intel\nLocation: Israel, Kiryat-Gat\nPress here https://intel.wd1.myworkdayjobs.com/External/job/Israel-Kiryat-Gat/Construction-Finance-Analyst_JR0287953-1?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 119,
+   "views": 120,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -304,7 +309,7 @@
    "post": "HiTech_Jobs_In_Israel/137022",
    "ts": "2026-10-09T05:00:40+00:00",
    "text": "Senior Security Lead at Lendbuzz\nLocation: Tel Aviv\nPress here https://jobs.lever.co/lendbuzz/08b42330-f76c-4e2a-863f-4e8ae7d48b3c?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 127,
+   "views": 128,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -314,7 +319,7 @@
    "post": "HiTech_Jobs_In_Israel/137023",
    "ts": "2026-10-09T05:00:40+00:00",
    "text": "Junior Automation Engineer at Parallel Wireless\nLocation: Kfar Saba\nPress here https://jobs.lever.co/parallelwireless/846f8f4b-2c12-42f8-9822-00f7542f0d26?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#JuniorPositions",
-   "views": 254,
+   "views": 255,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"

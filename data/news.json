@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T04:54:06.418634+00:00",
+ "updated": "2026-10-10T04:55:25.205965+00:00",
  "channels": {
   "TheMisrot": {
    "title": "משרות - ביטחון וממשל",
@@ -44,11 +44,6 @@
   "jobsHOTjobss": {
    "title": "משרות חמות",
    "avatar": "data/media/4564dc94b1ec7f17.jpg",
-   "kind": "jobs"
-  },
-  "Tech_Galilee_Golan_Channel": {
-   "title": "Galilee-Golan-Tech(Channel)",
-   "avatar": null,
    "kind": "jobs"
   },
   "Workingyes1": {

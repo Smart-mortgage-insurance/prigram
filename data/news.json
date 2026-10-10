@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T06:59:28.349058+00:00",
+ "updated": "2026-10-10T07:00:48.347269+00:00",
  "channels": {
   "TheMisrot": {
    "title": "משרות - ביטחון וממשל",
@@ -75,6 +75,36 @@
  "count": 114,
  "items": [
   {
+   "id": "pff75c94cd057",
+   "post": "HiTech_Jobs_In_Israel/137042",
+   "ts": "2026-10-10T07:00:08+00:00",
+   "text": "Account Manager at Wideops\nLocation: Haifa | Israel, Hybrid, Sofia | Bulgaria, USA\nPress here https://wideops.com/jobs-archive/account-manager/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/de3ddc5f93735a54.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
+   "id": "pa12a5331553e",
+   "post": "HiTech_Jobs_In_Israel/137043",
+   "ts": "2026-10-10T07:00:08+00:00",
+   "text": "Cloud Solutions Team Leader (GCP & AWS) at Wideops\nLocation: Haifa | Israel, Hybrid, Sofia | Bulgaria, USA\nPress here https://wideops.com/jobs-archive/cloud-solutions-team-leader-gcp-aws/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/f554d28da626ecb0.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
    "id": "p989dae7f2ca8",
    "post": "HiTech_Jobs_In_Israel/137041",
    "ts": "2026-10-10T05:00:08+00:00",
@@ -89,7 +119,7 @@
    "post": "HiTech_Jobs_In_Israel/137040",
    "ts": "2026-10-09T15:00:17+00:00",
    "text": "Director WWOS Risk&Resilience, Worldwide Security Governance at Amazon\nLocation: Tel Aviv-Yafo, Tel Aviv, ISR\nPress here https://www.amazon.jobs/en/jobs/10508231/director-wwos-risk-resilience-worldwide-security-governance?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 186,
+   "views": 187,
    "forwarded_from": null,
    "media": [
     {
@@ -134,7 +164,7 @@
    "post": "HiTech_Jobs_In_Israel/137038",
    "ts": "2026-10-09T13:00:00+00:00",
    "text": "AWS GTM & Partnerships Manager, IL at Automat-it\nLocation: Tel-Aviv, Israel\nPress here https://www.automat-it.com/careers/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 191,
+   "views": 192,
    "forwarded_from": null,
    "media": [
     {
@@ -310,26 +340,6 @@
    "ts": "2026-10-09T05:00:40+00:00",
    "text": "Senior Security Lead at Lendbuzz\nLocation: Tel Aviv\nPress here https://jobs.lever.co/lendbuzz/08b42330-f76c-4e2a-863f-4e8ae7d48b3c?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
    "views": 129,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "pd0a39e8aeaf6",
-   "post": "HiTech_Jobs_In_Israel/137023",
-   "ts": "2026-10-09T05:00:40+00:00",
-   "text": "Junior Automation Engineer at Parallel Wireless\nLocation: Kfar Saba\nPress here https://jobs.lever.co/parallelwireless/846f8f4b-2c12-42f8-9822-00f7542f0d26?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#JuniorPositions",
-   "views": 263,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p352539d6ff40",
-   "post": "HiTech_Jobs_In_Israel/137021",
-   "ts": "2026-10-09T05:00:34+00:00",
-   "text": "Senior Product Manager at Tenable, Inc.\nLocation: Israel - Office - Tel Aviv\nPress here https://job-boards.greenhouse.io/tenableinc/jobs/5446550008?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 108,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -1199,7 +1209,7 @@
    "post": "Tech_Galilee_Golan_Channel/791",
    "ts": "2026-10-04T11:17:40+00:00",
    "text": "צפוניים? צפוניות? 👋\nחברת הסטארט-אפ Nervio מגייסת!\n\nהחברה מפתחת פתרונות רפואיים פורצי דרך מבוססי AI לחדרי ניתוח וממוקמת במשגב (מנוף). תוכלו למצוא אותה בפלטפורמת נורטק - מפת ההייטק של הצפון. 🚀\n\nהצוות גדל והם מחפשים שחקני חיזוק לשלוש משרות פתוחות:\n💻 Software Engineer (C#/.NET)\n🎯 Head of Product\n🔍 QA/RA Lead\n\nכל הפרטים על המשרות והגשת מועמדות מחכים לכם ממש כאן בעמוד החברה במפת נורטק:\n🔗 https://nortech-platform.com/listing/nervio-2/#related-jobs\nהקליקו על המשרה הרלוונטית ויפתח לכם טופס הגשת מועמדות.\n\nמכירים מקצוענים/ות מהצפון שמחפשים את האתגר הבא? העבירו להם/ן🙏 ושתפו בקבוצות רלוונטיות 💪",
-   "views": 180,
+   "views": 181,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"

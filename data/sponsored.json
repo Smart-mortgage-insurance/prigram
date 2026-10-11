@@ -56,17 +56,6 @@
     },
     {
       "enabled": true,
-      "advertiser": "מ.י.מ מערכות",
-      "html": "ads/ad261011032319.html",
-      "w": 520,
-      "h": 866,
-      "cta_url": "https://mispara-david.github.io/hadgama.html",
-      "id": "ad261011032319-feed",
-      "pin": false,
-      "ts": "2026-10-11T00:25:19Z"
-    },
-    {
-      "enabled": true,
       "advertiser": "קונים חכם",
       "html": "ads/ad261011032320.html",
       "w": 720,

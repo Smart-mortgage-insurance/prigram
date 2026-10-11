@@ -23,7 +23,7 @@
       "ts": "2026-10-10T23:27:23Z"
     },
     {
-      "enabled": true,
+      "enabled": false,
       "advertiser": "קונים חכם",
       "html": "ads/ad261011032320.html",
       "w": 720,

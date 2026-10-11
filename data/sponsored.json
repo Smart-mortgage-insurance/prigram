@@ -33,6 +33,48 @@
       "id": "ad261009031926-feed",
       "pin": false,
       "ts": "2026-10-10T23:37:23Z"
+    },
+    {
+      "enabled": true,
+      "advertiser": "ביטוח חכם למשכנתא",
+      "html": "ads/ad261011032317.html",
+      "w": 1200,
+      "h": 1800,
+      "cta_url": "https://smart-mortgage-insurance.github.io/",
+      "id": "ad261011032317-side",
+      "pin": true
+    },
+    {
+      "enabled": true,
+      "advertiser": "מ.י.מ מערכות",
+      "html": "ads/ad261011032318.html",
+      "w": 1080,
+      "h": 1800,
+      "cta_url": "https://mispara-david.github.io/hadgama.html",
+      "id": "ad261011032318-side",
+      "pin": true
+    },
+    {
+      "enabled": true,
+      "advertiser": "מ.י.מ מערכות",
+      "html": "ads/ad261011032319.html",
+      "w": 520,
+      "h": 866,
+      "cta_url": "https://mispara-david.github.io/hadgama.html",
+      "id": "ad261011032319-feed",
+      "pin": false,
+      "ts": "2026-10-11T00:25:19Z"
+    },
+    {
+      "enabled": true,
+      "advertiser": "קונים חכם",
+      "html": "ads/ad261011032320.html",
+      "w": 720,
+      "h": 900,
+      "cta_url": "https://smart-mortgage-insurance.github.io/konim-hacham/?utm_source=netgram",
+      "id": "ad261011032320-feed",
+      "pin": false,
+      "ts": "2026-10-11T00:35:19Z"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-11T19:02:04.266631+00:00",
+ "updated": "2026-10-11T19:03:57.003014+00:00",
  "channels": {
   "TheMisrot": {
    "title": "משרות - ביטחון וממשל",
@@ -75,11 +75,26 @@
  "count": 116,
  "items": [
   {
+   "id": "p9af6ab92f62b",
+   "post": "Jobs_in_Jerusalem/36403",
+   "ts": "2026-10-11T19:02:27+00:00",
+   "text": "#בית_שמש\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
+   "views": 7,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/95fbe96ac93886ea.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
    "id": "p165e8f063a5b",
    "post": "Jobs_in_Jerusalem/36402",
    "ts": "2026-10-11T19:00:10+00:00",
    "text": "🚛 *דרושים נהגים בעלי רישיון C1!* 🚛\nלחברת שליחויות מובילה - בפריסה ארצית!\n\n💰 *שכר חודשי:* כ-*12,000-14,000 ש\"ח!* 💰\n\n📌 *פרטי המשרה:*\n* עבודה יציבה לטווח ארוך (5 ימים בשבוע)\n* פיזור ואיסוף משלוחים 📦\n* *רכב צמוד לנסיעות עבודה בלבד!* (הגעה מהבית לעבודה וחזרה, לא לצרכים אישיים) 🏠\n\n🎯 *דרישות התפקיד:*\n* גיל 21 ומעלה\n* ותק של מעל שנה ברישיון C1 – *יתרון*\n* *עדיפות למגורים:* מודיעין עילית, מודיעין, אלעד, ראש העין, בית שמש, ביתר והסביבה.\n\n📲 *לפרטים והגשת מועמדות מהירה בוואטסאפ\nבטל 0583292185\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 4,
+   "views": 11,
    "forwarded_from": null,
    "media": [
     {
@@ -134,7 +149,7 @@
    "post": "Jobs_in_Jerusalem/36401",
    "ts": "2026-10-11T17:18:54+00:00",
    "text": "🚑 הציל חיים - ונזרק לכלא! 🚨\n\nישראל גרוסמן, חובש מסור, יצא תחת זריקות אבנים להציל פצועים מלינץ' של מחבלים. במקום לקבל גיבוי, הוא נלקח למעצר ויושב כבר מעל חצי שנה מאחורי סורג ובריח.\n\nהמשפחה שלו נלחמת על חפותו וזקוקה לסכומי עתק להגנה המשפטית.\n\nאסור לנו להשאיר אותו לבד! בואו להיות שותפים למאבק.\nתרמו עכשיו להוצאות המשפט ועזרו לנו להחזיר את ישראל הביתה\nלתרומה:\nאשראי וביט:\nhttps://givechak.co.il/114835?ref=s6\n\nפייבוקס:\nhttps://links.payboxapp.com/KnIFvgjK56b\n\nמשחררים את החובש!",
-   "views": 37,
+   "views": 40,
    "forwarded_from": "אלחנן גרונר",
    "media": [
     {
@@ -164,7 +179,7 @@
    "post": "HiTech_Jobs_In_Israel/137101",
    "ts": "2026-10-11T17:00:03+00:00",
    "text": "Service Systems Engineer at Philips\nLocation: Haifa\nPress here https://philips.wd3.myworkdayjobs.com/jobs-and-careers/job/Haifa/Service-Systems-Engineer_592896-1?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 101,
+   "views": 102,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -174,7 +189,7 @@
    "post": "HiTech_Jobs_In_Israel/137100",
    "ts": "2026-10-11T17:00:02+00:00",
    "text": "AI Engineer at Upwind Security\nLocation: Tel Aviv\nPress here https://www.upwind.io/careers/co/tel-aviv/5C.375/ai-engineer/all#jobs?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 100,
+   "views": 101,
    "forwarded_from": null,
    "media": [
     {
@@ -189,7 +204,7 @@
    "post": "HiTech_Jobs_In_Israel/137099",
    "ts": "2026-10-11T17:00:01+00:00",
    "text": "Renewals Manager at Panorays\nLocation: Tel Aviv\nPress here https://panorays.com/careers/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 93,
+   "views": 94,
    "forwarded_from": null,
    "media": [
     {
@@ -204,7 +219,7 @@
    "post": "HiTech_Jobs_In_Israel/137098",
    "ts": "2026-10-11T16:59:59+00:00",
    "text": "Staff Product Manager at Guesty\nLocation: Israel\nPress here https://www.comeet.com/jobs/guesty/10.000/staff-product-manager/3C.37D?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 93,
+   "views": 94,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -259,7 +274,7 @@
    "post": "HiTech_Jobs_In_Israel/137097",
    "ts": "2026-10-11T15:00:05+00:00",
    "text": "Gen AI Staff Researcher at General Motors\nLocation: Herzliya, Tel Aviv District, Israel\nPress here https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Herzliya-Tel-Aviv-District-Israel/Gen-AI-Staff-Researcher_JR-202621235-1?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 137,
+   "views": 138,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -269,7 +284,7 @@
    "post": "HiTech_Jobs_In_Israel/137096",
    "ts": "2026-10-11T15:00:04+00:00",
    "text": "C++ Software Developer at Mobileye\nLocation: Jerusalem, Israel\nPress here https://jobs.eu.lever.co/mobileye/2a817378-710e-43df-929b-a53ce94f1daa?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 137,
+   "views": 138,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -279,7 +294,7 @@
    "post": "HiTech_Jobs_In_Israel/137094",
    "ts": "2026-10-11T15:00:01+00:00",
    "text": "Drone Lab Technician at XTEND\nLocation: Tel-Aviv\nPress here https://xtend.me/careers/drone-lab-technician/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 126,
+   "views": 127,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -289,7 +304,7 @@
    "post": "HiTech_Jobs_In_Israel/137095",
    "ts": "2026-10-11T15:00:01+00:00",
    "text": "Product Manager - Data Security at Cato Networks\nLocation: Tel Aviv District, Israel\nPress here https://www.catonetworks.com/careers/careers-post/5000667101?gh_jid=5000667101&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 131,
+   "views": 132,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -334,7 +349,7 @@
    "post": "jobnikim/296",
    "ts": "2026-10-11T14:31:21+00:00",
    "text": "ג'וֹבְּנִיקִים – ערוץ הקריירה האזרחי עבור משרתי המילואים ובני/ות זוגם http://jobnikim.co.il/tg 🪖\n\nדרוש/ה מילואימניק/ית למשרה אזרחית!\n\nהמשרה: מדריך/ת העשרה רפואית לילדים ולנוער\nשם הארגון: מצפן חוסן\nאזור המשרה בארץ: נתניה, חדרה וכרכור\n\n⬅️ פרטים על החברה והמשרה:\nמצפן חוסן מפעילה קורס ההעשרה רפואית „רופאים צעירים” לתלמידי כיתות ד׳–ט׳ בבתי ספר, ומחפשת מדריכים ומדריכות להעברת הקורס.\n\nתיאור התפקיד:\n* העברת קורס „רופאים צעירים” לתלמידים בבתי ספר במהלך שעות הלימודים.\n\n⬅️ זיקת הארגון לעולם המילואים:\n* הקורס מועבר בעיקר בידי חובשים, פרמדיקים ורופאים המשרתים במילואים.\n* המדריכים מנגישים לתלמידים את חוויותיהם מפינוי ומטיפול בפצועים במהלך המלחמה, במטרה לחבר בין רפואת החירום לעולם החינוך ולעודד בחירה במקצועות הרפואה בעתיד.\n\n⬅️ כישורים נדרשים:\n* תעודת מקצוע רפואית: חובש/ת, אח/ות, פרמדיק/ית או רופא/ה. המשרה רלוונטית גם לסטודנטים בתחומי הרפואה.\n* רקע חינוכי מובהק וניסיון בהדרכה, בצירוף אישור העסקה מבית עסק או מארגון שבו הדרכתם בעבר.\n* אישור היעדר עבירות מין ממשטרת ישראל, כנדרש לעבודה במוסד חינוכי.\n\n⬅️ תנאי העסקה:\n* התקשרות כקבלן/ית משנה או כפרילנסר/ית, כנגד חשבוניות.\n\n⬅️ תקופת העסקה:\n* היקף חלקי: 2–4 ימים בשבוע.\n\n- - - - - - - - - - - - - - - - - - - -\nלהגשת מועמדות יש למלא פרטים בקישור הבא:\nhttps://forms.gle/Tydeh25vkmFkrkAp8\n- - - - - - - - - - - - - - - - - - - -\nחברות וארגונים המעוניינים להעסיק אנשים שעושים יותר - אנשי מילואים:\nאור סביון: 055-9436165\n- - - - - - - - - - - - - - - - - - - -\nמבית:\nעושים יותר ודרושים ⚔️ למילואים",
-   "views": 355,
+   "views": 356,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -534,7 +549,7 @@
    "post": "Israel_media_industry/3854",
    "ts": "2026-10-11T08:27:05+00:00",
    "text": "",
-   "views": 310,
+   "views": 311,
    "forwarded_from": null,
    "media": [
     {
@@ -904,7 +919,7 @@
    "post": "jobnikim/295",
    "ts": "2026-10-08T07:53:17+00:00",
    "text": "ג'וֹבְּנִיקִים – ערוץ הקריירה האזרחי עבור משרתי המילואים ובני/ות זוגם http://jobnikim.co.il/tg 🪖\n\nדרוש/ה מילואימניק/ית למשרה אזרחית!\n\nהמשרה: רכז/ת מיפוי גאוגרפי בפרויקט פינוי מוקשים\nשם הארגון: סייף לאנד\nאזור המשרה בארץ: בקעת הירדן\n\n⬅️ פרטים על החברה והמשרה:\nפרויקט לאומי ומשמעותי לפינוי שדות מוקשים ונפלים בבקעת הירדן.\nתיאור התפקיד:\n• ביצוע מדידות מדויקות בשטח העבודה.\n• בקרה שוטפת על הזנת הנתונים של עובדי החברה.\n• הפקת עזרים יומיים ממערכת הממ\"ג.\n• עבודה עם ArcGIS.\n\n⬅️ זיקת הארגון לעולם המילואים:\n• הנהלת החברה מורכבת ממפקדים וחיילים המשרתים במילואים באופן פעיל.\n\n⬅️ כישורים נדרשים:\n• ניסיון של לפחות חצי שנה בעבודת GIS.\n• ניסיון קודם בעבודה עם ArcGIS – יתרון משמעותי.\n• יכולת עבודה עצמאית ובצוות.\n• נכונות לעבודה בשטח.\n\n⬅️ תנאי העסקה:\n• משרה מלאה, בימים ראשון–חמישי.\n• שכר גבוה.\n• מגורים על חשבון החברה ביישוב סמוך.\n• אפשרויות לפיתוח מקצועי.\n\n⬅️ תקופת העסקה:\n• התחלה מיידית.\n• העסקה לטווח ארוך.\n- - - - - - - - - - - - - - - - - - - -\nלהגשת מועמדות יש למלא פרטים בקישור הבא: https://forms.gle/R1KujcxLPBgytxHPA\n- - - - - - - - - - - - - - - - - - - -\nחברות וארגונים המעוניינים להעסיק אנשים שעושים יותר - אנשי מילואים:\nאור סביון: 055-9436165\n- - - - - - - - - - - - - - - - - - - -\nמבית:\nעושים יותר ודרושים ⚔️ למילואים",
-   "views": 968,
+   "views": 969,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -939,7 +954,7 @@
    "post": "Jobs_in_Jerusalem/36391",
    "ts": "2026-10-07T16:03:01+00:00",
    "text": "#בית_שמש\nדרושה עובדת לחנות בגדי ילדים למשמרות ערב בימי שני רביעי ושישי\nלפרטים 0515206413\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 484,
+   "views": 485,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -959,7 +974,7 @@
    "post": "Jobs_in_Jerusalem/36390",
    "ts": "2026-10-07T12:46:40+00:00",
    "text": "#ביתר_עילית\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 481,
+   "views": 482,
    "forwarded_from": null,
    "media": [
     {
@@ -974,7 +989,7 @@
    "post": "Jobs_in_Jerusalem/36389",
    "ts": "2026-10-07T12:45:56+00:00",
    "text": "#ביתר_עילית\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 471,
+   "views": 472,
    "forwarded_from": null,
    "media": [
     {
@@ -1044,7 +1059,7 @@
    "post": "jobnikim/294",
    "ts": "2026-10-07T09:43:18+00:00",
    "text": "ג'וֹבְּנִיקִים – ערוץ הקריירה האזרחי עבור משרתי המילואים ובני/ות זוגם jobnikim.co.il/tg 🪖 דרוש/ה מילואימניק/ית למשרה אזרחית! המשרה: מנהל/ת אזור ירושלים – תחום הבנייה והביצוע שם הארגון: חברת נדל\"ן יזמית וביצועית אזור המשרה בארץ: ירושלים והסביבה ⬅️ פרטים…",
-   "views": 1020,
+   "views": 1030,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -1087,16 +1102,6 @@
      "file": "data/media/cbc3e7df4e17a022.jpg"
     }
    ],
-   "kind": "jobs"
-  },
-  {
-   "id": "pa549420725c4",
-   "post": "Jobs_in_Jerusalem/36382",
-   "ts": "2026-10-07T09:34:58+00:00",
-   "text": "משפחת עמל מתרחבת ומחפשת עובד/ת מקצועי/ת לסניף חדש ב #מעלה_אדומים\nהיקף המשרה: 08:00–16:00, קיימת גמישות למשרת אם\nתחומי אחריות:\nקשר שוטף עם מטופלים ובני משפחותיהם\nביצוע ביקורי בית ומתן מענה מקצועי בשטח\nבחינת החמרות במצבם של המטופלים וטיפול בהגשת בקשות בהתאם\nליווי ומעקב אחר המטופלים ומתן מענה לצורכיהם\nעבודה המשלבת פעילות בשטח ובעבודה משרדית\nדרישות:\nתואר בעבודה סוציאלית / סיעוד / גרונטולוגיה- חובה\nרוסית ברמת שפת אם- חובה\nיכולת עבודה עצמאית לצד עבודה בצוות\nיחסי אנוש מצוינים, אחריות, יוזמה ויכולת למתן שירות מקצועי ואישי\nשליטה ביישומי Office ויכולת עבודה בסביבה ממוחשבת\nלהגשת מועמדות יש לשלוח קו\"ח: ayala@amalsiudit.co.il\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 346,
-   "forwarded_from": null,
-   "media": [],
    "kind": "jobs"
   },
   {

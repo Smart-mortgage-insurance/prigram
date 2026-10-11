@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-11T06:16:07.961121+00:00",
+ "updated": "2026-10-11T06:17:28.154126+00:00",
  "channels": {
   "TheMisrot": {
    "title": "משרות - ביטחון וממשל",
@@ -72,8 +72,38 @@
    "kind": "jobs"
   }
  },
- "count": 112,
+ "count": 114,
  "items": [
+  {
+   "id": "p5fe854946d06",
+   "post": "Tech_Galilee_Golan_Channel/794",
+   "ts": "2026-10-11T06:16:40+00:00",
+   "text": "משרת Product Designer (UX/UI) בחברת Copyleaks 🎨🧑‍💻\n\nתכירו את Copyleaks - חברת AI גלובלית מקריית שמונה, המפתחת טכנולוגיות לאימות וזיהוי תוכן בעידן ה-AI.\n\nהחברה מגייסת Product Designer לעבודה מקצה לקצה על חוויית המוצר ועל אתר החברה - כולל Product Flows, עיצוב ב-Figma, פיתוח ה-Design System, Landing Pages ו-CMS.\n\n📍 מיקום: קריית שמונה / הגליל העליון\n🏠 עבודה היברידית: יומיים מהבית\n💼 ניסיון: 2-3 שנים בעיצוב אפליקציות Web רספונסיביות\n\nלפרטים והגשה דרך Nortech:\nhttps://nortech-platform.com/listing/product-designer-ux-ui-product-web/",
+   "views": 3,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/493daf10f5d98681.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
+   "id": "p6db73eff5675",
+   "post": "Nortech_Spotlight/108",
+   "ts": "2026-10-11T06:16:17+00:00",
+   "text": "משרת Product Designer (UX/UI) בחברת Copyleaks 🎨🧑‍💻\n\nתכירו את Copyleaks - חברת AI גלובלית מקריית שמונה, המפתחת טכנולוגיות לאימות וזיהוי תוכן בעידן ה-AI.\n\nהחברה מגייסת Product Designer לעבודה מקצה לקצה על חוויית המוצר ועל אתר החברה - כולל Product Flows, עיצוב ב-Figma, פיתוח ה-Design System, Landing Pages ו-CMS.\n\n📍 מיקום: קריית שמונה / הגליל העליון\n🏠 עבודה היברידית: יומיים מהבית\n💼 ניסיון: 2-3 שנים בעיצוב אפליקציות Web רספונסיביות\n\nלפרטים והגשה דרך Nortech:\nhttps://nortech-platform.com/listing/product-designer-ux-ui-product-web/",
+   "views": 2,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/a625342ef2b26caa.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
   {
    "id": "p65eae60cf84b",
    "post": "Workingyes1/9757",
@@ -94,7 +124,7 @@
    "post": "HiTech_Jobs_In_Israel/137044",
    "ts": "2026-10-11T05:00:02+00:00",
    "text": "Director of Technical Program Management at Mobileye\nLocation: Tel-Aviv, Israel\nPress here https://jobs.eu.lever.co/mobileye/cc867509-5068-4ce0-b4e7-63ce3ee02bee?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 84,
+   "views": 85,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -659,7 +689,7 @@
    "post": "Tech_Galilee_Golan_Channel/793",
    "ts": "2026-10-08T08:35:11+00:00",
    "text": "משרה חמה בצפון למהנדסי/ות אלגוריתמים Juniors/mid-level 🔥\n\nחברת WAY2DEEP הממוקמת במשגב , ופועלת בעולם ה- Digital Health והמכשור הרפואי.\n\nהחברה מחפשת מועמד/ת למשרת Algorithm Development and Design Engineer\n\nהגשת מועמדות בקליק דרך פלטפורמת נורטק:\nhttps://nortech-platform.com/listing/way2deep-2/\n\nשתפו עם חברים/ות מהגליל והצפון 💫",
-   "views": 114,
+   "views": 116,
    "forwarded_from": null,
    "media": [
     {
@@ -1044,7 +1074,7 @@
    "post": "Nortech_Spotlight/106",
    "ts": "2026-10-06T06:35:52+00:00",
    "text": "היי לכולם! 👋\nמחפשים את התפקיד הבא בנופים של הצפון? 🌳✨\n\nחברת KappaSense מגייסת למשרת:\n💻 Mid-Junior FPGA\n\nחברה טכנולוגית מבוססת המפתחת ומייצרת חיישנים חכמים וייחודיים (ללא כבלים) לעולמות הרובוטיקה, המכשור הרפואי והאוטומציה התעשייתית.\n\nהחברה יושבת באזור התעשייה תירדיון, משגב ותוכלו למצוא אותה אצלנו בנורטק - מפת הייטק של הצפון. 🚀\n\nכל הפרטים והגשת מועמדות מכאן 👈\n🔗 https://nortech-platform.com/listing/kappasense-2/#related-jobs\n\nמכירים מהנדסים/ות מהצפון שזה תפור עליהם? תעבירו להם ושתפו בקבוצות רלוונטיות! 🤘",
-   "views": 30,
+   "views": 31,
    "forwarded_from": null,
    "media": [
     {
@@ -1139,7 +1169,7 @@
    "post": "OVDIM_BCHIK/5454",
    "ts": "2026-10-04T17:04:02+00:00",
    "text": "דרושים בירושלים! 🇮🇱\nלדוקטור פיצה - בית קפה ומסעדה בירושלים ☕️🍝 דרושים:\nטבחים/עובדי פס 👨‍🍳👩‍🍳 מגיל 18 ומעלה 🔞 למשרה קבועה 🗓️ (טווח ארוך) ⏳\nמשמרת משעה 9:00 עד 18:00 +- ⏰\nשכר נאה למתאימים! 💰💸\nהמסעדה בהר חוצבים, הרטום 10, ירושלים. 📍🗺️\nלפרטים נוספים: 📞 054-784-1270\nלשלוח פרטים בוואטסאפ ונחזור אליכם 💬📲",
-   "views": 286,
+   "views": 287,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -1164,7 +1194,7 @@
    "post": "OVDIM_BCHIK/5453",
    "ts": "2026-10-04T12:02:21+00:00",
    "text": "*דרושים בכל הארץ*\n🛒 קופאיות/ים\n📦 סדרנים/ות\n🏬 מחסנאים/ות\n👔 מנהלי/ות משמרת\n\n✅ פריסה ארצית – מצפון ועד דרום\n✅ ללא ניסיון – הכשרה עלינו\n✅ תנאים מעולים ואפשרויות קידום\n✅ מתאים לגילאי 18+\n\n📲 שלחו וואטסאפ עכשיו\nhttps://wa.me/972502722442?text=%D7%94%D7%99%D7%99+%D7%9C%D7%92%D7%91%D7%99+%D7%94%D7%A2%D7%91%D7%95%D7%93%D7%94+%D7%A9%D7%A4%D7%A8%D7%A1%D7%9E%D7%AA+%D7%90%D7%A9%D7%9E%D7%97+%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D+%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D",
-   "views": 184,
+   "views": 185,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -1204,7 +1234,7 @@
    "post": "Nortech_Spotlight/105",
    "ts": "2026-10-04T11:17:27+00:00",
    "text": "צפוניים? צפוניות? 👋\nחברת הסטארט-אפ Nervio מגייסת!\n\nהחברה מפתחת פתרונות רפואיים פורצי דרך מבוססי AI לחדרי ניתוח וממוקמת במשגב (מנוף). תוכלו למצוא אותה בפלטפורמת נורטק - מפת ההייטק של הצפון. 🚀\n\nהצוות גדל והם מחפשים שחקני חיזוק לשלוש משרות פתוחות:\n💻 Software Engineer (C#/.NET)\n🎯 Head of Product\n🔍 QA/RA Lead\n\nכל הפרטים על המשרות והגשת מועמדות מחכים לכם ממש כאן בעמוד החברה במפת נורטק:\n🔗 https://nortech-platform.com/listing/nervio-2/#related-jobs\nהקליקו על המשרה הרלוונטית ויפתח לכם טופס הגשת מועמדות.\n\nמכירים מקצוענים/ות מהצפון שמחפשים את האתגר הבא? העבירו להם/ן🙏 ושתפו בקבוצות רלוונטיות 💪",
-   "views": 37,
+   "views": 38,
    "forwarded_from": null,
    "media": [
     {

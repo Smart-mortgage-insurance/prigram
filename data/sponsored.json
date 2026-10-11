@@ -11,7 +11,7 @@
       "pin": true
     },
     {
-      "enabled": true,
+      "enabled": false,
       "advertiser": "קונים חכם",
       "html": "ads/konim.html",
       "w": 1080,

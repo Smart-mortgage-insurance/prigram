@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12T14:59:09.071982+00:00",
+ "updated": "2026-10-12T15:00:29.173870+00:00",
  "channels": {
   "jeniatafkidplus": {
    "title": "דרושים/ות משרות בירושלים וכל הארץ",
@@ -75,11 +75,141 @@
  "count": 122,
  "items": [
   {
+   "id": "p8a810c0814c9",
+   "post": "HiTech_Jobs_In_Israel/137168",
+   "ts": "2026-10-12T15:00:24+00:00",
+   "text": "Staff Software Engineer (Veza/Armis) at ServiceNow\nLocation: Tel Aviv\nPress here https://www.smartrecruiters.com/ServiceNow/744000155009821?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p21c8e45dca0b",
+   "post": "HiTech_Jobs_In_Israel/137167",
+   "ts": "2026-10-12T15:00:20+00:00",
+   "text": "Senior Mechanical Simulations Engineer at NVIDIA\nLocation: Israel, Yokneam\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Yokneam/Senior-Mechanical-Simulations-Engineer_JR2027525?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p615d056da22c",
+   "post": "HiTech_Jobs_In_Israel/137166",
+   "ts": "2026-10-12T15:00:18+00:00",
+   "text": "Financial Analyst at Flex\nLocation: Israel, Migdal Ha-Emek\nPress here https://flextronics.wd1.myworkdayjobs.com/Careers/job/Israel-Migdal-Ha-Emek/Financial-Analyst_WD230808-1?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p90304c9249e3",
+   "post": "HiTech_Jobs_In_Israel/137165",
+   "ts": "2026-10-12T15:00:17+00:00",
+   "text": "CNC Quality Control at Envista\nLocation: ISR - Modi’in-Maccabim-Re’ut - Alpha Bio Tec Ltd.\nPress here https://envista.wd1.myworkdayjobs.com/envistacareers/job/ISR---Modiin-Maccabim-Reut---Alpha-Bio-Tec-Ltd/CNC-Quality-Control_R5027510-1?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p209903d334ed",
+   "post": "HiTech_Jobs_In_Israel/137164",
+   "ts": "2026-10-12T15:00:16+00:00",
+   "text": "Experienced Software Engineer - Data Systems & Tools at Mobileye\nLocation: Jerusalem, Israel\nPress here https://jobs.eu.lever.co/mobileye/cf198663-8759-4f08-96c3-e564aca85d8d?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "pdc0074191242",
+   "post": "HiTech_Jobs_In_Israel/137163",
+   "ts": "2026-10-12T15:00:15+00:00",
+   "text": "Experienced Software Engineer - Data Systems & Tools at Mobileye\nLocation: Ramat Gan, Israel\nPress here https://jobs.eu.lever.co/mobileye/78d2b642-98cd-4eeb-893f-3662c46ae13c?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "pf0cf0ecc2b73",
+   "post": "HiTech_Jobs_In_Israel/137162",
+   "ts": "2026-10-12T15:00:10+00:00",
+   "text": "Fullstack Engineer at Resident\nLocation: Tel Aviv\nPress here https://job-boards.greenhouse.io/residenthome/jobs/6212833004?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "pe4c48217cdf9",
+   "post": "HiTech_Jobs_In_Israel/137161",
+   "ts": "2026-10-12T15:00:09+00:00",
+   "text": "Director of Science at MyHeritage\nLocation: Israel\nPress here https://careers.myheritage.com/jobs/8273879?gh_jid=8273879&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/9b978792fd5181c6.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
+   "id": "p2ab46b6b841a",
+   "post": "HiTech_Jobs_In_Israel/137160",
+   "ts": "2026-10-12T15:00:04+00:00",
+   "text": "Game Economy Manager at Play Perfect\nLocation: Tel Aviv (Azrieli Sarona) office, Israel\nPress here https://play-perfect.com/careers/co/tel-aviv-azrieli-sarona-office-israel/AD.24D/game-economy-manager/all/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "pba2628bfaa95",
+   "post": "HiTech_Jobs_In_Israel/137159",
+   "ts": "2026-10-12T15:00:02+00:00",
+   "text": "Principal Software Engineer at Cognyte\nLocation: Israel, Herzliya\nPress here https://www.cognyte.com/careers/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 3,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/271f0e962714bf1f.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
+   "id": "p1b9b2e09baad",
+   "post": "HiTech_Jobs_In_Israel/137158",
+   "ts": "2026-10-12T15:00:01+00:00",
+   "text": "Head of RL Gym - Program Operations at ActiveFence\nLocation: Ramat Gan, IL\nPress here https://alice.io/positions/position-bc_37c?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p3a348dfbd9df",
+   "post": "HiTech_Jobs_In_Israel/137157",
+   "ts": "2026-10-12T15:00:00+00:00",
+   "text": "חשב/ת שכר at abra\nLocation: Center\nPress here https://www.abra-it.com/career?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
    "id": "pea173af72e10",
    "post": "Workingyes1/9779",
    "ts": "2026-10-12T14:33:27+00:00",
    "text": "🚦הזדמנות פ\"ז\nיוצאים לדרך!\n\nנותרו מקומות אחרונים במסלולי ההכשרה המבוקשים של המרכז החרדי להכשרה מקצועית:\n\n✅ הנה\"ח סוג 1+2: מסלול מקצועי, פרקטי וממוקד, עם התמחות מעשית בתוכנות המבוקשות.\n\n✅ חשב שכר בכיר: שדרוג במשכורת ותעודה יוקרתית מטעם לשכת רואי חשבון\n\n✅ מזכירות רפואית: ביקוש שיא בבתי חולים, קופ\"ח ומרפאות, והתנסות מעשית בשטח\n\n✅ עיצוב פנים והום סטיילינג: ידע מקצועי שמוציא מעצבות פנים מהשורה הראשונה\n\n💰 מגוון אפשרוית למלגות\n\n🎁 מבחן תיל חינם עד ד' בחשון תשפ\"ז\n\n📍 שלוחות בירושלים, בני ברק, בית שמש, אשדוד וחיפה, בסביבה חרדית ב-100%\n\n30 שנות מובילות בהכשרה מקצועית. ההרשמה נסגרת, אל תפספסי!\n\n👈 לפרטים והרשמה:\nhttps://charedicts.yrdigital.co.il/leading-tracks/?utm_source=zalul&utm_medium=whatsapp\n\nעבודות איכות לחרדים >>>\nhttps://chat.whatsapp.com/F0dLCUl99vyHsxWcPAvpG1",
-   "views": 11,
+   "views": 12,
    "forwarded_from": null,
    "media": [
     {
@@ -134,7 +264,7 @@
    "post": "HiTech_Jobs_In_Israel/137155",
    "ts": "2026-10-12T13:00:30+00:00",
    "text": "Interested in advertising and reaching +8600 job seekers? Reach us out 👇\n\nShare your support by boosting ⚡⚡⚡ our channel or sharing a kind donation securely via PayPal https://paypal.me/donateTheBot 😍\nto help us to be there for you 24/7 ⏰\nWe really appreciate it ❤",
-   "views": 98,
+   "views": 99,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -144,7 +274,7 @@
    "post": "HiTech_Jobs_In_Israel/137154",
    "ts": "2026-10-12T13:00:29+00:00",
    "text": "Security Researcher - Hybrid at Akamai\nLocation: Israel\nSend your CV + the link below to the admin who works there ✌🏻 or apply on your own: https://jobs.akamai.com/en/sites/CX_1/job/4147/?utm_source=telegram&utm_medium=HiTech_Jobs_In_Israel&utm_campaign=job-updates",
-   "views": 100,
+   "views": 101,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -154,7 +284,7 @@
    "post": "HiTech_Jobs_In_Israel/137153",
    "ts": "2026-10-12T13:00:28+00:00",
    "text": "Senior IC packaging engineer, IC package technologies at Amazon\nLocation: Haifa, Haifa, ISR\nPress here https://www.amazon.jobs/en/jobs/10575635/senior-ic-packaging-engineer-ic-package-technologies?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 88,
+   "views": 90,
    "forwarded_from": null,
    "media": [
     {
@@ -169,7 +299,7 @@
    "post": "HiTech_Jobs_In_Israel/137152",
    "ts": "2026-10-12T13:00:24+00:00",
    "text": "Staff Software Engineer (Armis/Veza) at ServiceNow\nLocation: Tel Aviv-Yafo\nPress here https://www.smartrecruiters.com/ServiceNow/744000154998861?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 78,
+   "views": 79,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -179,7 +309,7 @@
    "post": "HiTech_Jobs_In_Israel/137151",
    "ts": "2026-10-12T13:00:23+00:00",
    "text": "Performance Marketing Analyst at Wix\nLocation: Tel Aviv\nPress here https://www.smartrecruiters.com/Wix2/744000154996031?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 75,
+   "views": 77,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -189,7 +319,7 @@
    "post": "HiTech_Jobs_In_Israel/137150",
    "ts": "2026-10-12T13:00:21+00:00",
    "text": "Data Foundation Account Executive - MuleSoft & Informatica at Salesforce\nLocation: Israel - Tel Aviv\nPress here https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/Israel---Tel-Aviv/Data-Foundation-Account-Executive---MuleSoft---Informatica_JR363787?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 78,
+   "views": 79,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -199,7 +329,7 @@
    "post": "HiTech_Jobs_In_Israel/137149",
    "ts": "2026-10-12T13:00:16+00:00",
    "text": "Board Design Engineer for Customer Engineer Team at Mobileye\nLocation: Jerusalem, Israel\nPress here https://jobs.eu.lever.co/mobileye/c4c85c07-2b70-4b90-8795-10b9dc7f36bc?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 75,
+   "views": 76,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -210,96 +340,6 @@
    "ts": "2026-10-12T13:00:13+00:00",
    "text": "Algorithm Developer - Vision Algorithms at Mobileye\nLocation: Jerusalem, Israel\nPress here https://jobs.eu.lever.co/mobileye/4445a729-d5ec-4ae4-b1f6-5bea979b4dce?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
    "views": 70,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p7a7a87ac365a",
-   "post": "HiTech_Jobs_In_Israel/137147",
-   "ts": "2026-10-12T13:00:12+00:00",
-   "text": "Product Line Manager at Parallel Wireless\nLocation: Kfar Saba\nPress here https://jobs.lever.co/parallelwireless/3fd7bb8a-41d8-47a0-a9bf-95e3ccd406d7?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 67,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p429c45f9ba41",
-   "post": "HiTech_Jobs_In_Israel/137146",
-   "ts": "2026-10-12T13:00:11+00:00",
-   "text": "Senior GenAI Engineer at Taboola\nLocation: Tel Aviv, Israel\nPress here https://www.taboola.com/careers/job/8258238?gh_jid=8258238&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 69,
-   "forwarded_from": null,
-   "media": [
-    {
-     "type": "image",
-     "file": "data/media/f00c1cdd1adcf6aa.jpg"
-    }
-   ],
-   "kind": "jobs"
-  },
-  {
-   "id": "pf0f360a4fa59",
-   "post": "HiTech_Jobs_In_Israel/137145",
-   "ts": "2026-10-12T13:00:10+00:00",
-   "text": "Product Manager at Similarweb\nLocation: Tel Aviv, Israel\nPress here https://job-boards.greenhouse.io/similarweb/jobs/8273657?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 72,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "pfbbf482b4b86",
-   "post": "HiTech_Jobs_In_Israel/137144",
-   "ts": "2026-10-12T13:00:08+00:00",
-   "text": "HR Operations Specialist at NICE\nLocation: Israel - Raanana\nPress here https://boards.eu.greenhouse.io/nice/jobs/5003377101?gh_jid=5003377101&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 78,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "pc72bddb07787",
-   "post": "HiTech_Jobs_In_Israel/137143",
-   "ts": "2026-10-12T13:00:05+00:00",
-   "text": "DevOps Engineer at Workiz\nLocation: Tel Aviv Office\nPress here https://www.workiz.com/careers/single-position/?position=D1.83F&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 85,
-   "forwarded_from": null,
-   "media": [
-    {
-     "type": "image",
-     "file": "data/media/6709ec7c8b714bc5.jpg"
-    }
-   ],
-   "kind": "jobs"
-  },
-  {
-   "id": "p1872b1becaf7",
-   "post": "HiTech_Jobs_In_Israel/137142",
-   "ts": "2026-10-12T13:00:04+00:00",
-   "text": "Account Executive at http://riverside.fm/\nLocation: Israel\nPress here https://careers.riverside.com/careers/account-executive?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 86,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p6e075a70bf77",
-   "post": "HiTech_Jobs_In_Israel/137141",
-   "ts": "2026-10-12T13:00:03+00:00",
-   "text": "Monetization Manager at Play Perfect\nLocation: Tel Aviv (Azrieli Sarona) office, Israel\nPress here https://play-perfect.com/careers/co/tel-aviv-azrieli-sarona-office-israel/14.74F/monetization-manager/all/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 79,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p5c915e9db435",
-   "post": "HiTech_Jobs_In_Israel/137140",
-   "ts": "2026-10-12T13:00:01+00:00",
-   "text": "רפרנט.ית מכרזים at KPMG\nLocation: תל אביב\nPress here https://kpmg.co.il/careers/%D7%9E%D7%A9%D7%A8%D7%95%D7%AA-%D7%A4%D7%AA%D7%95%D7%97%D7%95%D7%AA/%D7%9E%D7%98%D7%94/%D7%A8%D7%A4%D7%A8%D7%A0%D7%98%D7%99%D7%AA-%D7%9E%D7%9B%D7%A8%D7%96%D7%99%D7%9D?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 83,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -380,46 +420,6 @@
    "ts": "2026-10-12T11:17:40+00:00",
    "text": "דרוש פועל ליום אחד גמיש, בבית שמש, צבע, החלפת גופי תאורה, מריחה של גומי גם בחיבורים, 600 ש''ח ליום עבודה, 0546980504 וואצאפ בכתיבה בלבד\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
    "views": 114,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p3d7f7cdcfce3",
-   "post": "HiTech_Jobs_In_Israel/137138",
-   "ts": "2026-10-12T11:00:23+00:00",
-   "text": "Interested in advertising and reaching +8600 job seekers? Reach us out 👇\n\nShare your support by boosting ⚡⚡⚡ our channel or sharing a kind donation securely via PayPal https://paypal.me/donateTheBot 😍\nto help us to be there for you 24/7 ⏰\nWe really appreciate it ❤",
-   "views": 149,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "pd1f9ad0e5771",
-   "post": "HiTech_Jobs_In_Israel/137137",
-   "ts": "2026-10-12T11:00:16+00:00",
-   "text": "Physical Design Engineering Student at Intel\nLocation: Israel, Haifa\nPress here https://intel.wd1.myworkdayjobs.com/External/job/Israel-Haifa/Physical-Design-Engineering-Student_JR0287877?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#StudentPositions",
-   "views": 151,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "pc4797a7a4a80",
-   "post": "HiTech_Jobs_In_Israel/137136",
-   "ts": "2026-10-12T11:00:15+00:00",
-   "text": "Algorithm Developer – REM Change Detection Team at Mobileye\nLocation: Jerusalem, Israel\nPress here https://jobs.eu.lever.co/mobileye/6e5ec7a5-aa8b-4f8d-bdfd-d301bde6098f?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 115,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p2b89e42cb9dc",
-   "post": "HiTech_Jobs_In_Israel/137135",
-   "ts": "2026-10-12T11:00:11+00:00",
-   "text": "Lead Software Engineer (Potential to Grow into Team Leadership) at Bluevine - Israel\nLocation: Tel Aviv-Yafo, Tel Aviv District, Israel\nPress here https://job-boards.greenhouse.io/bluevineisrael/jobs/7743128003?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 112,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -1154,7 +1154,7 @@
    "post": "jobnikim/292",
    "ts": "2026-10-07T08:46:03+00:00",
    "text": "",
-   "views": 848,
+   "views": 849,
    "forwarded_from": null,
    "media": [
     {
@@ -1169,7 +1169,7 @@
    "post": "jobnikim/291",
    "ts": "2026-10-07T08:46:02+00:00",
    "text": "ג'וֹבְּנִיקִים – ערוץ הקריירה האזרחי עבור משרתי המילואים ובני/ות זוגם http://jobnikim.co.il/tg 🪖\n\nדרוש/ה מילואימניק/ית למשרה אזרחית!\n\nהמשרה: מנהל/ת אזור ירושלים – תחום הבנייה והביצוע\nשם הארגון: חברת נדל\"ן יזמית וביצועית\nאזור המשרה בארץ: ירושלים והסביבה\n\n⬅️ פרטים על החברה והמשרה:\nלחברת נדל\"ן יזמית וביצועית דרוש/ה מנהל/ת אזור ירושלים לתפקיד ניהולי בכיר, הכולל אחריות רחבה על פעילות הביצוע של החברה באזור.\n\nהתפקיד מיועד למנהל/ת מנוסה מעולם הביצוע, בעל/ת יכולת להוביל אנשים ומערכות, לבנות שיטות עבודה, לקבל החלטות ולקדם מספר פרויקטים וצוותים במקביל.\nתיאור התפקיד:\n• ניהול והובלת מספר פרויקטים במקביל.\n• ניהול מנהלי פרויקטים וצוותי ביצוע.\n• אחריות על תקציבים, לוחות זמנים, איכות ובטיחות.\n• בנייה והטמעה של שיטות עבודה ותהליכי ניהול ובקרה.\n• עבודה ישירה מול הנהלת החברה.\n• הובלת פעילות אזור ירושלים בהתאם ליעדי הצמיחה וההתפתחות של החברה.\n\n⬅️ זיקת הארגון לעולם המילואים:\n• לתפקיד יש התאמה גבוהה למפקדים בכירים במילואים, שמביאים איתם ניסיון אמיתי בהובלת אנשים ומערכות מורכבות.\n• אנחנו מחפשים בין היתר מג\"דים, סמג\"דים, מ\"פים בכירים וקצינים מנוסים במילואים – אנשים שרגילים לקבל אחריות רחבה, לנהל מספר מאמצים במקביל, לעבוד תחת לחץ, להוביל מנהלים ופקודים, לקבל החלטות ולחתור לעמידה במשימה.\n• השילוב שאנחנו מחפשים הוא בין ניסיון אזרחי משמעותי בעולם הבנייה והביצוע לבין יכולות פיקוד, מנהיגות והובלה שנבנו גם במסגרת השירות הצבאי.\n\n⬅️ כישורים נדרשים:\n• מהנדס/ת אזרחי/ת – חובה.\n• לפחות 10 שנות ניסיון בתחום הביצוע – חובה.\n• ניסיון משמעותי בחברות בנייה גדולות ומובילות.\n• ניסיון בניהול פרויקטים מורכבים ובהובלת צוותים.\n• יכולת ניהול, הובלה וקבלת החלטות ברמה גבוהה.\n• ראייה מערכתית והבנה ביצועית מעמיקה.\n• שחקן/ית קבוצתי/ת, אסרטיבי/ת, נעים/ה ומחויב/ת.\n• ניסיון פיקודי משמעותי בצה\"ל ובמילואים – יתרון משמעותי.\n\n⬅️ תנאי העסקה:\n• חוזה אישי.\n• תנאים מצוינים למתאימים.\n• תפקיד ניהולי בכיר עם סמכות והשפעה רחבה.\n• הזדמנות להיות חלק משמעותי מהשלב הבא בהתפתחות החברה.\n\n⬅️ תקופת העסקה:\n• משרה מלאה.\n• העסקה קבועה.\n• התחלה מיידית.\n• טווח ארוך.\n- - - - - - - - - - - - - - - - - - - -\nלהגשת מועמדות יש למלא פרטים בקישור הבא:\nhttps://app.civi.co.il/promo/id=713893&src=23260\n- - - - - - - - - - - - - - - - - - - -\nחברות וארגונים המעוניינים להעסיק אנשים שעושים יותר - אנשי מילואים:\nאור סביון: 055-9436165\n- - - - - - - - - - - - - - - - - - - -\nמבית:\nעושים יותר ודרושים ⚔️ למילואים",
-   "views": 908,
+   "views": 909,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12T15:00:29.173870+00:00",
+ "updated": "2026-10-12T15:01:49.275218+00:00",
  "channels": {
   "jeniatafkidplus": {
    "title": "דרושים/ות משרות בירושלים וכל הארץ",
@@ -75,11 +75,51 @@
  "count": 122,
  "items": [
   {
+   "id": "p55c8a160d318",
+   "post": "HiTech_Jobs_In_Israel/137171",
+   "ts": "2026-10-12T15:00:30+00:00",
+   "text": "Interested in advertising and reaching +8600 job seekers? Reach us out 👇\n\nShare your support by boosting ⚡⚡⚡ our channel or sharing a kind donation securely via PayPal https://paypal.me/donateTheBot 😍\nto help us to be there for you 24/7 ⏰\nWe really appreciate it ❤",
+   "views": 3,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p137c1b82b695",
+   "post": "HiTech_Jobs_In_Israel/137170",
+   "ts": "2026-10-12T15:00:29+00:00",
+   "text": "System Engineer, Graviton Team at Amazon\nLocation: Haifa, Haifa, ISR\nPress here https://www.amazon.jobs/en/jobs/10575685/system-engineer-graviton-team?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 4,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/6c3a4dc3ffb93cf2.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
+   "id": "pb1fce8a2aa97",
+   "post": "HiTech_Jobs_In_Israel/137169",
+   "ts": "2026-10-12T15:00:28+00:00",
+   "text": "Platform Integration Engineer, Graviton Team at Amazon\nLocation: Haifa, Haifa, ISR\nPress here https://www.amazon.jobs/en/jobs/10575696/platform-integration-engineer-graviton-team?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 3,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/bde2fb0a8ecd8d2e.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
    "id": "p8a810c0814c9",
    "post": "HiTech_Jobs_In_Israel/137168",
    "ts": "2026-10-12T15:00:24+00:00",
    "text": "Staff Software Engineer (Veza/Armis) at ServiceNow\nLocation: Tel Aviv\nPress here https://www.smartrecruiters.com/ServiceNow/744000155009821?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
+   "views": 6,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -89,7 +129,7 @@
    "post": "HiTech_Jobs_In_Israel/137167",
    "ts": "2026-10-12T15:00:20+00:00",
    "text": "Senior Mechanical Simulations Engineer at NVIDIA\nLocation: Israel, Yokneam\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Yokneam/Senior-Mechanical-Simulations-Engineer_JR2027525?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
+   "views": 4,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -99,7 +139,7 @@
    "post": "HiTech_Jobs_In_Israel/137166",
    "ts": "2026-10-12T15:00:18+00:00",
    "text": "Financial Analyst at Flex\nLocation: Israel, Migdal Ha-Emek\nPress here https://flextronics.wd1.myworkdayjobs.com/Careers/job/Israel-Migdal-Ha-Emek/Financial-Analyst_WD230808-1?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
+   "views": 6,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -109,7 +149,7 @@
    "post": "HiTech_Jobs_In_Israel/137165",
    "ts": "2026-10-12T15:00:17+00:00",
    "text": "CNC Quality Control at Envista\nLocation: ISR - Modi’in-Maccabim-Re’ut - Alpha Bio Tec Ltd.\nPress here https://envista.wd1.myworkdayjobs.com/envistacareers/job/ISR---Modiin-Maccabim-Reut---Alpha-Bio-Tec-Ltd/CNC-Quality-Control_R5027510-1?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
+   "views": 6,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -119,7 +159,7 @@
    "post": "HiTech_Jobs_In_Israel/137164",
    "ts": "2026-10-12T15:00:16+00:00",
    "text": "Experienced Software Engineer - Data Systems & Tools at Mobileye\nLocation: Jerusalem, Israel\nPress here https://jobs.eu.lever.co/mobileye/cf198663-8759-4f08-96c3-e564aca85d8d?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
+   "views": 6,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -129,7 +169,7 @@
    "post": "HiTech_Jobs_In_Israel/137163",
    "ts": "2026-10-12T15:00:15+00:00",
    "text": "Experienced Software Engineer - Data Systems & Tools at Mobileye\nLocation: Ramat Gan, Israel\nPress here https://jobs.eu.lever.co/mobileye/78d2b642-98cd-4eeb-893f-3662c46ae13c?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
+   "views": 5,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -139,7 +179,7 @@
    "post": "HiTech_Jobs_In_Israel/137162",
    "ts": "2026-10-12T15:00:10+00:00",
    "text": "Fullstack Engineer at Resident\nLocation: Tel Aviv\nPress here https://job-boards.greenhouse.io/residenthome/jobs/6212833004?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
+   "views": 6,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -149,7 +189,7 @@
    "post": "HiTech_Jobs_In_Israel/137161",
    "ts": "2026-10-12T15:00:09+00:00",
    "text": "Director of Science at MyHeritage\nLocation: Israel\nPress here https://careers.myheritage.com/jobs/8273879?gh_jid=8273879&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
+   "views": 7,
    "forwarded_from": null,
    "media": [
     {
@@ -164,7 +204,7 @@
    "post": "HiTech_Jobs_In_Israel/137160",
    "ts": "2026-10-12T15:00:04+00:00",
    "text": "Game Economy Manager at Play Perfect\nLocation: Tel Aviv (Azrieli Sarona) office, Israel\nPress here https://play-perfect.com/careers/co/tel-aviv-azrieli-sarona-office-israel/AD.24D/game-economy-manager/all/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
+   "views": 6,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -174,7 +214,7 @@
    "post": "HiTech_Jobs_In_Israel/137159",
    "ts": "2026-10-12T15:00:02+00:00",
    "text": "Principal Software Engineer at Cognyte\nLocation: Israel, Herzliya\nPress here https://www.cognyte.com/careers/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 3,
+   "views": 7,
    "forwarded_from": null,
    "media": [
     {
@@ -189,7 +229,7 @@
    "post": "HiTech_Jobs_In_Israel/137158",
    "ts": "2026-10-12T15:00:01+00:00",
    "text": "Head of RL Gym - Program Operations at ActiveFence\nLocation: Ramat Gan, IL\nPress here https://alice.io/positions/position-bc_37c?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
+   "views": 6,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -199,7 +239,7 @@
    "post": "HiTech_Jobs_In_Israel/137157",
    "ts": "2026-10-12T15:00:00+00:00",
    "text": "חשב/ת שכר at abra\nLocation: Center\nPress here https://www.abra-it.com/career?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 1,
+   "views": 7,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -264,7 +304,7 @@
    "post": "HiTech_Jobs_In_Israel/137155",
    "ts": "2026-10-12T13:00:30+00:00",
    "text": "Interested in advertising and reaching +8600 job seekers? Reach us out 👇\n\nShare your support by boosting ⚡⚡⚡ our channel or sharing a kind donation securely via PayPal https://paypal.me/donateTheBot 😍\nto help us to be there for you 24/7 ⏰\nWe really appreciate it ❤",
-   "views": 99,
+   "views": 102,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -274,7 +314,7 @@
    "post": "HiTech_Jobs_In_Israel/137154",
    "ts": "2026-10-12T13:00:29+00:00",
    "text": "Security Researcher - Hybrid at Akamai\nLocation: Israel\nSend your CV + the link below to the admin who works there ✌🏻 or apply on your own: https://jobs.akamai.com/en/sites/CX_1/job/4147/?utm_source=telegram&utm_medium=HiTech_Jobs_In_Israel&utm_campaign=job-updates",
-   "views": 101,
+   "views": 103,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -284,7 +324,7 @@
    "post": "HiTech_Jobs_In_Israel/137153",
    "ts": "2026-10-12T13:00:28+00:00",
    "text": "Senior IC packaging engineer, IC package technologies at Amazon\nLocation: Haifa, Haifa, ISR\nPress here https://www.amazon.jobs/en/jobs/10575635/senior-ic-packaging-engineer-ic-package-technologies?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 90,
+   "views": 91,
    "forwarded_from": null,
    "media": [
     {
@@ -310,36 +350,6 @@
    "ts": "2026-10-12T13:00:23+00:00",
    "text": "Performance Marketing Analyst at Wix\nLocation: Tel Aviv\nPress here https://www.smartrecruiters.com/Wix2/744000154996031?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
    "views": 77,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p08e1e8d32e51",
-   "post": "HiTech_Jobs_In_Israel/137150",
-   "ts": "2026-10-12T13:00:21+00:00",
-   "text": "Data Foundation Account Executive - MuleSoft & Informatica at Salesforce\nLocation: Israel - Tel Aviv\nPress here https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/Israel---Tel-Aviv/Data-Foundation-Account-Executive---MuleSoft---Informatica_JR363787?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 79,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p8e95c4cb8595",
-   "post": "HiTech_Jobs_In_Israel/137149",
-   "ts": "2026-10-12T13:00:16+00:00",
-   "text": "Board Design Engineer for Customer Engineer Team at Mobileye\nLocation: Jerusalem, Israel\nPress here https://jobs.eu.lever.co/mobileye/c4c85c07-2b70-4b90-8795-10b9dc7f36bc?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 76,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "pd3394bcc2399",
-   "post": "HiTech_Jobs_In_Israel/137148",
-   "ts": "2026-10-12T13:00:13+00:00",
-   "text": "Algorithm Developer - Vision Algorithms at Mobileye\nLocation: Jerusalem, Israel\nPress here https://jobs.eu.lever.co/mobileye/4445a729-d5ec-4ae4-b1f6-5bea979b4dce?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 70,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T11:05:14.152010+00:00",
+ "updated": "2026-10-13T11:06:34.372065+00:00",
  "channels": {
   "jeniatafkidplus": {
    "title": "דרושים/ות משרות בירושלים וכל הארץ",
@@ -75,11 +75,26 @@
  "count": 128,
  "items": [
   {
+   "id": "p2ea1bad712e4",
+   "post": "Jobs_in_Jerusalem/36432",
+   "ts": "2026-10-13T11:05:44+00:00",
+   "text": "#בית_שמש\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/4aca51901fc27a0e.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
    "id": "p1982e5d0fcbd",
    "post": "HiTech_Jobs_In_Israel/137205",
    "ts": "2026-10-13T11:00:19+00:00",
    "text": "Interested in advertising and reaching +8600 job seekers? Reach us out 👇\n\nShare your support by boosting ⚡⚡⚡ our channel or sharing a kind donation securely via PayPal https://paypal.me/donateTheBot 😍\nto help us to be there for you 24/7 ⏰\nWe really appreciate it ❤",
-   "views": 22,
+   "views": 25,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -89,7 +104,7 @@
    "post": "HiTech_Jobs_In_Israel/137203",
    "ts": "2026-10-13T11:00:16+00:00",
    "text": "Test Driver for Autonomous Vehicles at Mobileye\nLocation: Jerusalem, Israel\nPress here https://jobs.eu.lever.co/mobileye/e447ddd1-b3aa-4afe-b23e-b40ec58f8a08?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 20,
+   "views": 22,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -109,7 +124,7 @@
    "post": "HiTech_Jobs_In_Israel/137202",
    "ts": "2026-10-13T11:00:15+00:00",
    "text": "Tax Manager at Taboola\nLocation: Tel Aviv, Israel\nPress here https://www.taboola.com/careers/job/8261478?gh_jid=8261478&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 20,
+   "views": 21,
    "forwarded_from": null,
    "media": [
     {
@@ -149,7 +164,7 @@
    "post": "HiTech_Jobs_In_Israel/137199",
    "ts": "2026-10-13T11:00:08+00:00",
    "text": "Senior FP&A Business Partner at AppsFlyer\nLocation: Herzliya\nPress here https://careers.appsflyer.com/jobs/position/8611961002?gh_jid=8611961002&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 18,
+   "views": 22,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -159,7 +174,7 @@
    "post": "HiTech_Jobs_In_Israel/137198",
    "ts": "2026-10-13T11:00:07+00:00",
    "text": "Senior FP&A Analyst at AppsFlyer\nLocation: Herzliya\nPress here https://careers.appsflyer.com/jobs/position/8611963002?gh_jid=8611963002&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 18,
+   "views": 22,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -169,7 +184,7 @@
    "post": "HiTech_Jobs_In_Israel/137196",
    "ts": "2026-10-13T11:00:04+00:00",
    "text": "Elastic Platform Engineer at KPMG\nLocation: תל אביב\nPress here https://kpmg.co.il/technologyconsulting/careers/jobs/elastic-platform-engineer?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 18,
+   "views": 20,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -189,7 +204,7 @@
    "post": "HiTech_Jobs_In_Israel/137194",
    "ts": "2026-10-13T11:00:01+00:00",
    "text": "Data Analyst at abra\nLocation: Center\nPress here https://www.abra-it.com/career?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 17,
+   "views": 21,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -199,7 +214,7 @@
    "post": "HiTech_Jobs_In_Israel/137195",
    "ts": "2026-10-13T11:00:01+00:00",
    "text": "DevOps Infrastructure Engineer at abra\nLocation: Center\nPress here https://www.abra-it.com/career?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 18,
+   "views": 21,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -284,7 +299,7 @@
    "post": "Tech_Galilee_Golan_Channel/795",
    "ts": "2026-10-13T09:26:24+00:00",
    "text": "📢 מפתחים אפליקציות? הזדמנות לייצר אימפקט אמיתי!\n\n*מיזם אימפקט חברתי מהגליל* מחפש מפתח/ת מובייל פרילנסר/ית עם ניסיון של שנתיים ומעלה.\n\n🔹 Flutter / React Native\n🔹 Backend, API ושירותי ענן\n🔹 Location Based Services\n🔹 Fully Remote | Freelancer\n\n🌱 הזדמנות לפתח טכנולוגיה שמייצרת שינוי חברתי אמיתי.\n\n🔗 *לפרטים והגשת מועמדות דרך נורטק:*\nhttps://nortech-platform.com/listing/freelance-mobile-app-developer-social-impact-venture/\n\nמכירים מישהו מתאים? העבירו הלאה!\n\nנורטק | מחברים את ההייטק בצפון 💙",
-   "views": 34,
+   "views": 35,
    "forwarded_from": null,
    "media": [
     {
@@ -299,7 +314,7 @@
    "post": "Nortech_Spotlight/109",
    "ts": "2026-10-13T09:26:17+00:00",
    "text": "📢 מפתחים אפליקציות? הזדמנות לייצר אימפקט אמיתי!\n\n*מיזם אימפקט חברתי מהגליל* מחפש מפתח/ת מובייל פרילנסר/ית עם ניסיון של שנתיים ומעלה.\n\n🔹 Flutter / React Native\n🔹 Backend, API ושירותי ענן\n🔹 Location Based Services\n🔹 Fully Remote | Freelancer\n\n🌱 הזדמנות לפתח טכנולוגיה שמייצרת שינוי חברתי אמיתי.\n\n🔗 *לפרטים והגשת מועמדות דרך נורטק:*\nhttps://nortech-platform.com/listing/freelance-mobile-app-developer-social-impact-venture/\n\nמכירים מישהו מתאים? העבירו הלאה!\n\nנורטק | מחברים את ההייטק בצפון 💙",
-   "views": 9,
+   "views": 10,
    "forwarded_from": null,
    "media": [
     {
@@ -394,7 +409,7 @@
    "post": "HiTech_Jobs_In_Israel/137192",
    "ts": "2026-10-13T09:00:09+00:00",
    "text": "QA Automation Software Student at Intel\nLocation: Israel, Petah-Tikva\nPress here https://intel.wd1.myworkdayjobs.com/External/job/Israel-Petah-Tikva/QA-Automation-Software-Student_JR0287944?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#StudentPositions",
-   "views": 159,
+   "views": 161,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -424,7 +439,7 @@
    "post": "HiTech_Jobs_In_Israel/137189",
    "ts": "2026-10-13T09:00:04+00:00",
    "text": "Data Analytics Project Manager at Mobileye\nLocation: Jerusalem, Israel\nPress here https://jobs.eu.lever.co/mobileye/342bbac1-839f-4aff-a050-ceb39ceef9aa?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 75,
+   "views": 76,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -434,7 +449,7 @@
    "post": "HiTech_Jobs_In_Israel/137188",
    "ts": "2026-10-13T09:00:03+00:00",
    "text": "Customer Service Agent at Global-e\nLocation: Israel, Petah Tikva\nPress here https://www.global-e.com/careers/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 78,
+   "views": 79,
    "forwarded_from": null,
    "media": [
     {
@@ -449,7 +464,7 @@
    "post": "HiTech_Jobs_In_Israel/137187",
    "ts": "2026-10-13T09:00:02+00:00",
    "text": "NOC Engineer at Cross River\nLocation: Jerusalem Office / Hybrid (In Israel)\nPress here https://www.comeet.com/jobs/crossriver/C7.00F/noc-engineer/FB.376?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 79,
+   "views": 80,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -820,16 +835,6 @@
    "ts": "2026-10-12T09:39:22+00:00",
    "text": "דרוש עובד לצביעה בחניון החל ממחר בערב באזור #הר_החוצבים .ימים מ א-ה\nהעבודה היא לצורך עזרה למתיז וגם ידע בחיתוכים ועבודת מברשת.\nתשלום כל סופש.\nיוסי\n052755759\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
    "views": 7,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p4f32abbc597c",
-   "post": "Jobs_in_Jerusalem/36411",
-   "ts": "2026-10-12T09:37:36+00:00",
-   "text": "דרוש/ה מנהל/ת משרד ב #ירושלים\nמשרה א׳ - ה׳ 8:00-16:30 (יש גמישות)\nדרישות: ניסיון קודם בניהול משרד - חובה!\nשליטה ביישומי Office - חובה! לפרטים : 0509703266 דניאל\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 227,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"

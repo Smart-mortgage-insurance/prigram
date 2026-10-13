@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T06:08:21.197848+00:00",
+ "updated": "2026-10-13T06:09:42.124580+00:00",
  "channels": {
   "jeniatafkidplus": {
    "title": "דרושים/ות משרות בירושלים וכל הארץ",
@@ -65,6 +65,11 @@
    "title": "משרות - ביטחון וממשל",
    "avatar": "data/media/5a55b2906f6dcdf2.jpg",
    "kind": "jobs"
+  },
+  "PMO_jobs": {
+   "title": "משרד ראש הממשלה - דרושים",
+   "avatar": "data/media/48df722686ea6fa8.jpg",
+   "kind": "jobs"
   }
  },
  "count": 123,
@@ -74,7 +79,7 @@
    "post": "HiTech_Jobs_In_Israel/137183",
    "ts": "2026-10-13T05:00:48+00:00",
    "text": "Security Manager, Amazon Corporate Security at Amazon\nLocation: Tel Aviv-Yafo, Tel Aviv, ISR\nPress here https://www.amazon.jobs/en/jobs/10576469/security-manager-amazon-corporate-security?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 65,
+   "views": 66,
    "forwarded_from": null,
    "media": [
     {
@@ -89,7 +94,7 @@
    "post": "HiTech_Jobs_In_Israel/137184",
    "ts": "2026-10-13T05:00:48+00:00",
    "text": "Senior II Security Architect at Akamai\nLocation: Israel\nSend your CV + the link below to the admin who works there ✌🏻 or apply on your own: https://jobs.akamai.com/en/sites/CX_1/job/4153/?utm_source=telegram&utm_medium=HiTech_Jobs_In_Israel&utm_campaign=job-updates",
-   "views": 64,
+   "views": 65,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -99,7 +104,7 @@
    "post": "HiTech_Jobs_In_Israel/137182",
    "ts": "2026-10-13T05:00:37+00:00",
    "text": "Senior Software Engineer - Tools and Production Pipelines at NVIDIA\nLocation: 3 Locations\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Tel-Aviv/Senior-Software-Engineer---Tools-and-Production-Pipelines_JR2027027?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 65,
+   "views": 66,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -214,7 +219,7 @@
    "post": "HiTech_Jobs_In_Israel/137176",
    "ts": "2026-10-12T17:00:08+00:00",
    "text": "Product Analyst at Taboola\nLocation: Tel Aviv, Israel\nPress here https://www.taboola.com/careers/job/8274053?gh_jid=8274053&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 177,
+   "views": 178,
    "forwarded_from": null,
    "media": [
     {
@@ -229,7 +234,7 @@
    "post": "HiTech_Jobs_In_Israel/137175",
    "ts": "2026-10-12T17:00:03+00:00",
    "text": "Product Partnerships Lead at AppsFlyer\nLocation: Herzliya\nPress here https://careers.appsflyer.com/jobs/position/8883285002?gh_jid=8883285002&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 167,
+   "views": 168,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -249,7 +254,7 @@
    "post": "HiTech_Jobs_In_Israel/137173",
    "ts": "2026-10-12T17:00:01+00:00",
    "text": "Accounts Receivable & Collections Specialist at Nayax\nLocation: Israel\nPress here https://www.nayax.com/career/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 160,
+   "views": 161,
    "forwarded_from": null,
    "media": [
     {
@@ -294,7 +299,7 @@
    "post": "HiTech_Jobs_In_Israel/137170",
    "ts": "2026-10-12T15:00:29+00:00",
    "text": "System Engineer, Graviton Team at Amazon\nLocation: Haifa, Haifa, ISR\nPress here https://www.amazon.jobs/en/jobs/10575685/system-engineer-graviton-team?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 164,
+   "views": 165,
    "forwarded_from": null,
    "media": [
     {
@@ -309,7 +314,7 @@
    "post": "HiTech_Jobs_In_Israel/137169",
    "ts": "2026-10-12T15:00:28+00:00",
    "text": "Platform Integration Engineer, Graviton Team at Amazon\nLocation: Haifa, Haifa, ISR\nPress here https://www.amazon.jobs/en/jobs/10575696/platform-integration-engineer-graviton-team?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 157,
+   "views": 158,
    "forwarded_from": null,
    "media": [
     {
@@ -334,7 +339,7 @@
    "post": "HiTech_Jobs_In_Israel/137167",
    "ts": "2026-10-12T15:00:20+00:00",
    "text": "Senior Mechanical Simulations Engineer at NVIDIA\nLocation: Israel, Yokneam\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Yokneam/Senior-Mechanical-Simulations-Engineer_JR2027525?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 134,
+   "views": 135,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -354,7 +359,7 @@
    "post": "HiTech_Jobs_In_Israel/137165",
    "ts": "2026-10-12T15:00:17+00:00",
    "text": "CNC Quality Control at Envista\nLocation: ISR - Modi’in-Maccabim-Re’ut - Alpha Bio Tec Ltd.\nPress here https://envista.wd1.myworkdayjobs.com/envistacareers/job/ISR---Modiin-Maccabim-Reut---Alpha-Bio-Tec-Ltd/CNC-Quality-Control_R5027510-1?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 134,
+   "views": 135,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -459,7 +464,7 @@
    "post": "Jobs_in_Jerusalem/36421",
    "ts": "2026-10-12T11:18:23+00:00",
    "text": "..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 229,
+   "views": 230,
    "forwarded_from": null,
    "media": [
     {
@@ -474,7 +479,7 @@
    "post": "Jobs_in_Jerusalem/36422",
    "ts": "2026-10-12T11:18:23+00:00",
    "text": "",
-   "views": 244,
+   "views": 245,
    "forwarded_from": null,
    "media": [
     {
@@ -489,7 +494,7 @@
    "post": "Jobs_in_Jerusalem/36423",
    "ts": "2026-10-12T11:18:23+00:00",
    "text": "🍦 דרוש עובד אחראי למשמרת בוקר\n\nלגלידריה איכותית בלב רמה, בית שמש.\n\n🕘 שעות העבודה: 09:00–17:00\n📅 5 משמרות בשבוע\n💰 שכר התחלתי גבוה\n\nדרישות:\n• גיל 17+\n• אחריות ורצינות\n• חובשי כיפה בלבד\n\nלפרטים נוספים\n0534111458\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 263,
+   "views": 264,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -544,7 +549,7 @@
    "post": "Jobs_in_Jerusalem/36418",
    "ts": "2026-10-12T09:45:09+00:00",
    "text": "דרוש/ה מנהל עבודה עם ניסיון + תעודות במכונאות רכב למכון מ.מ.מ ירושלים. תנאים מצויינים למתאימים.\n053-7529280 גלעד\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 226,
+   "views": 227,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -554,7 +559,7 @@
    "post": "Jobs_in_Jerusalem/36417",
    "ts": "2026-10-12T09:44:52+00:00",
    "text": "*שכר בסיס 15K!!!*\nדרוש/ה מנהל/ת מכירות בירושלים!\nמשרה א׳ - ה׳ 8:00-16:30 דרישות : ניסיון של שנה שנתיים בניהול צוות מכירות - חובה!\nלפרטים : 0509703266 דניאל\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 211,
+   "views": 212,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -564,7 +569,7 @@
    "post": "Jobs_in_Jerusalem/36415",
    "ts": "2026-10-12T09:43:58+00:00",
    "text": "#ירושלים\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 201,
+   "views": 202,
    "forwarded_from": null,
    "media": [
     {
@@ -589,7 +594,7 @@
    "post": "Jobs_in_Jerusalem/36413",
    "ts": "2026-10-12T09:39:35+00:00",
    "text": "#ירושלים\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 206,
+   "views": 207,
    "forwarded_from": null,
    "media": [
     {
@@ -614,7 +619,7 @@
    "post": "Jobs_in_Jerusalem/36411",
    "ts": "2026-10-12T09:37:36+00:00",
    "text": "דרוש/ה מנהל/ת משרד ב #ירושלים\nמשרה א׳ - ה׳ 8:00-16:30 (יש גמישות)\nדרישות: ניסיון קודם בניהול משרד - חובה!\nשליטה ביישומי Office - חובה! לפרטים : 0509703266 דניאל\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 209,
+   "views": 210,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -624,7 +629,7 @@
    "post": "Jobs_in_Jerusalem/36410",
    "ts": "2026-10-12T09:37:14+00:00",
    "text": "#ירושלים\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 196,
+   "views": 197,
    "forwarded_from": null,
    "media": [
     {
@@ -639,7 +644,7 @@
    "post": "Jobs_in_Jerusalem/36409",
    "ts": "2026-10-12T09:36:40+00:00",
    "text": "לשליחת קו״ח - ibar054269@gmail.com\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 200,
+   "views": 201,
    "forwarded_from": null,
    "media": [
     {
@@ -654,7 +659,7 @@
    "post": "Jobs_in_Jerusalem/36408",
    "ts": "2026-10-12T09:32:57+00:00",
    "text": "אם אתם חושבים שאתם יכולים להתאים, נשמח להכיר :)\n\nבבקשה לא להתקשר!\nנשמח לקבל סרטונים שלכם מנגנים לווטסאפ 058-7511542\n(רלוונטי לתפקידים המופעים במודעה בלבד)\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 226,
+   "views": 227,
    "forwarded_from": null,
    "media": [
     {
@@ -704,7 +709,7 @@
    "post": "Jobs_in_Jerusalem/36405",
    "ts": "2026-10-12T09:08:47+00:00",
    "text": "*דרושה לעזר מציון*💫\nאישה/ בחורה מעל 18 לעזרה בסידור ארונות, קיפולי כביסות וסידור בית 🎽🖼️🪞🚪\n*שכר בתלוש*\nלפרטים נוספים:\nשרה- 0529041094\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 236,
+   "views": 237,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -784,7 +789,7 @@
    "post": "Israel_media_industry/3857",
    "ts": "2026-10-12T06:52:53+00:00",
    "text": "לרצועת הבוקר של קשת 12 דרוש צלם לשידורי liveu במשרה מלאה!\nהמשרה כוללת ציוד וידיאו מלא + רכב צמוד\nדרישות התפקיד:\nהתחלת עבודה מיידית\nניסיון בצילום וידיאו ושידורים חיים\nמגורים באזור המרכז - עדיפות\nעדיפות לצלמים שמעוניינים בעבודה לטווח ארוך\n*המודעה מנוסחת בלשון זכר אך פונה לכל המינים\nלהגשת קורות חיים רק במייל\nAdva.m@haboker12.co.il",
-   "views": 332,
+   "views": 334,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -849,7 +854,7 @@
    "post": "Israel_media_industry/3856",
    "ts": "2026-10-11T18:00:36+00:00",
    "text": "📢 דרושים/ות תחקירנים/ות!\n🎥 לעבודה בערוץ 16 לקראת יום הבחירות ובמשדר מיוחד בערב הבחירות מה אנחנו מחפשים?\nהבנה והתמצאות בפוליטיקה\nמהירות מחשבה ויכולת למידה מהירה\nיכולת עבודה תחת לחץ ובסביבה דינמית\nאם אתם חיים ונושמים אקטואליה, מנוסים בעבודה במערכת חדשות, חושבים מהר ומוכנים לאתגר מרתק בזמן אמת ⬅️ אנחנו מחפשים אתכם!\n📩 לפרטים ולהגשת מועמדות: roei.s@ch16.co.il",
-   "views": 358,
+   "views": 359,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -959,7 +964,7 @@
    "post": "Israel_media_industry/3855",
    "ts": "2026-10-11T12:01:26+00:00",
    "text": "אולפני הרצליה מגייסים מפעילי/ות ומקליטי/ות VTR ומפעילי cg וטלפרומפטר\nלמשרה מלאה וקבועה.\n\nדרישות התפקיד:\nידע טכני בתחום הווידאו ואוריינטציה טכנית גבוהה, חשיבה קריאטיבית, אחריות ויכולת עבודה בסביבה דינמית, מרובת משימות ותחת לחץ.\nנדרשת זמינות לעבודה בשעות לא שגרתיות.\nהכשרה מקצועית מלאה תינתן באולפנים ותימשך מספר חודשים.\nמיקום: אולפני הרצליה / ניידות שידור\nניידות - חובה\n\nbetasx@gmail.com",
-   "views": 412,
+   "views": 413,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -969,7 +974,7 @@
    "post": "Israel_media_industry/3854",
    "ts": "2026-10-11T08:27:05+00:00",
    "text": "",
-   "views": 440,
+   "views": 441,
    "forwarded_from": null,
    "media": [
     {

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T08:59:09.632968+00:00",
+ "updated": "2026-10-13T09:00:30.971760+00:00",
  "channels": {
   "jeniatafkidplus": {
    "title": "דרושים/ות משרות בירושלים וכל הארץ",
@@ -74,6 +74,91 @@
  },
  "count": 124,
  "items": [
+  {
+   "id": "p943a0d7fff26",
+   "post": "HiTech_Jobs_In_Israel/137192",
+   "ts": "2026-10-13T09:00:09+00:00",
+   "text": "QA Automation Software Student at Intel\nLocation: Israel, Petah-Tikva\nPress here https://intel.wd1.myworkdayjobs.com/External/job/Israel-Petah-Tikva/QA-Automation-Software-Student_JR0287944?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#StudentPositions",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p28014811df06",
+   "post": "HiTech_Jobs_In_Israel/137191",
+   "ts": "2026-10-13T09:00:07+00:00",
+   "text": "Quality Engineer-1 at Flex\nLocation: Israel, Migdal Ha-Emek\nPress here https://flextronics.wd1.myworkdayjobs.com/Careers/job/Israel-Migdal-Ha-Emek/Quality-Engineer-1_WD231610-1?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "pa6f1285f8100",
+   "post": "HiTech_Jobs_In_Israel/137190",
+   "ts": "2026-10-13T09:00:05+00:00",
+   "text": "NOC Service Analyst (Student Position) at Mobileye\nLocation: Jerusalem, Israel\nPress here https://jobs.eu.lever.co/mobileye/79781651-55c8-427f-852a-ca132a5d8a44?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#StudentPositions",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "paee2c8dd28c0",
+   "post": "HiTech_Jobs_In_Israel/137189",
+   "ts": "2026-10-13T09:00:04+00:00",
+   "text": "Data Analytics Project Manager at Mobileye\nLocation: Jerusalem, Israel\nPress here https://jobs.eu.lever.co/mobileye/342bbac1-839f-4aff-a050-ceb39ceef9aa?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "pe5d79b4c55bc",
+   "post": "HiTech_Jobs_In_Israel/137188",
+   "ts": "2026-10-13T09:00:03+00:00",
+   "text": "Customer Service Agent at Global-e\nLocation: Israel, Petah Tikva\nPress here https://www.global-e.com/careers/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 5,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/6fa9e73f52541797.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
+   "id": "p754ea340f6d8",
+   "post": "HiTech_Jobs_In_Israel/137187",
+   "ts": "2026-10-13T09:00:02+00:00",
+   "text": "NOC Engineer at Cross River\nLocation: Jerusalem Office / Hybrid (In Israel)\nPress here https://www.comeet.com/jobs/crossriver/C7.00F/noc-engineer/FB.376?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p08141d73b87b",
+   "post": "HiTech_Jobs_In_Israel/137186",
+   "ts": "2026-10-13T09:00:01+00:00",
+   "text": "System Security Expert at CommIT\nLocation: Be'er Ya'akov\nPress here https://www.comm-it.com/commit-jobs#career-sec?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "pa9d4945468be",
+   "post": "HiTech_Jobs_In_Israel/137185",
+   "ts": "2026-10-13T09:00:00+00:00",
+   "text": "Salesforce Project Manager at abra\nLocation: Center\nPress here https://www.abra-it.com/career?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
   {
    "id": "p922addfc6975",
    "post": "Workingyes1/9786",
@@ -159,7 +244,7 @@
    "post": "HiTech_Jobs_In_Israel/137181",
    "ts": "2026-10-13T05:00:03+00:00",
    "text": "Product Manager at Navina\nLocation: IL\nPress here https://www.navina.ai/positions/position-0d_37d?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 126,
+   "views": 128,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -330,96 +415,6 @@
    "kind": "jobs"
   },
   {
-   "id": "p55c8a160d318",
-   "post": "HiTech_Jobs_In_Israel/137171",
-   "ts": "2026-10-12T15:00:30+00:00",
-   "text": "Interested in advertising and reaching +8600 job seekers? Reach us out 👇\n\nShare your support by boosting ⚡⚡⚡ our channel or sharing a kind donation securely via PayPal https://paypal.me/donateTheBot 😍\nto help us to be there for you 24/7 ⏰\nWe really appreciate it ❤",
-   "views": 193,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p137c1b82b695",
-   "post": "HiTech_Jobs_In_Israel/137170",
-   "ts": "2026-10-12T15:00:29+00:00",
-   "text": "System Engineer, Graviton Team at Amazon\nLocation: Haifa, Haifa, ISR\nPress here https://www.amazon.jobs/en/jobs/10575685/system-engineer-graviton-team?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 181,
-   "forwarded_from": null,
-   "media": [
-    {
-     "type": "image",
-     "file": "data/media/6c3a4dc3ffb93cf2.jpg"
-    }
-   ],
-   "kind": "jobs"
-  },
-  {
-   "id": "pb1fce8a2aa97",
-   "post": "HiTech_Jobs_In_Israel/137169",
-   "ts": "2026-10-12T15:00:28+00:00",
-   "text": "Platform Integration Engineer, Graviton Team at Amazon\nLocation: Haifa, Haifa, ISR\nPress here https://www.amazon.jobs/en/jobs/10575696/platform-integration-engineer-graviton-team?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 172,
-   "forwarded_from": null,
-   "media": [
-    {
-     "type": "image",
-     "file": "data/media/bde2fb0a8ecd8d2e.jpg"
-    }
-   ],
-   "kind": "jobs"
-  },
-  {
-   "id": "p8a810c0814c9",
-   "post": "HiTech_Jobs_In_Israel/137168",
-   "ts": "2026-10-12T15:00:24+00:00",
-   "text": "Staff Software Engineer (Veza/Armis) at ServiceNow\nLocation: Tel Aviv\nPress here https://www.smartrecruiters.com/ServiceNow/744000155009821?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 158,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p21c8e45dca0b",
-   "post": "HiTech_Jobs_In_Israel/137167",
-   "ts": "2026-10-12T15:00:20+00:00",
-   "text": "Senior Mechanical Simulations Engineer at NVIDIA\nLocation: Israel, Yokneam\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Yokneam/Senior-Mechanical-Simulations-Engineer_JR2027525?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 149,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p615d056da22c",
-   "post": "HiTech_Jobs_In_Israel/137166",
-   "ts": "2026-10-12T15:00:18+00:00",
-   "text": "Financial Analyst at Flex\nLocation: Israel, Migdal Ha-Emek\nPress here https://flextronics.wd1.myworkdayjobs.com/Careers/job/Israel-Migdal-Ha-Emek/Financial-Analyst_WD230808-1?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 152,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p90304c9249e3",
-   "post": "HiTech_Jobs_In_Israel/137165",
-   "ts": "2026-10-12T15:00:17+00:00",
-   "text": "CNC Quality Control at Envista\nLocation: ISR - Modi’in-Maccabim-Re’ut - Alpha Bio Tec Ltd.\nPress here https://envista.wd1.myworkdayjobs.com/envistacareers/job/ISR---Modiin-Maccabim-Reut---Alpha-Bio-Tec-Ltd/CNC-Quality-Control_R5027510-1?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 152,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p209903d334ed",
-   "post": "HiTech_Jobs_In_Israel/137164",
-   "ts": "2026-10-12T15:00:16+00:00",
-   "text": "Experienced Software Engineer - Data Systems & Tools at Mobileye\nLocation: Jerusalem, Israel\nPress here https://jobs.eu.lever.co/mobileye/cf198663-8759-4f08-96c3-e564aca85d8d?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 125,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
    "id": "pea173af72e10",
    "post": "Workingyes1/9779",
    "ts": "2026-10-12T14:33:27+00:00",
@@ -454,7 +449,7 @@
    "post": "Jobs_in_Jerusalem/36425",
    "ts": "2026-10-12T13:12:36+00:00",
    "text": "מחפשים עובד/ת נקיון לאולם תצוגה ברמת #בית_שמש לפעמיים בשבוע\nלפרטים 0535258280\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 319,
+   "views": 320,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -464,7 +459,7 @@
    "post": "Jobs_in_Jerusalem/36424",
    "ts": "2026-10-12T13:12:26+00:00",
    "text": "https://wa.me/972546903105\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 288,
+   "views": 289,
    "forwarded_from": null,
    "media": [
     {
@@ -524,7 +519,7 @@
    "post": "Jobs_in_Jerusalem/36422",
    "ts": "2026-10-12T11:18:23+00:00",
    "text": "",
-   "views": 263,
+   "views": 264,
    "forwarded_from": null,
    "media": [
     {
@@ -539,7 +534,7 @@
    "post": "Jobs_in_Jerusalem/36423",
    "ts": "2026-10-12T11:18:23+00:00",
    "text": "🍦 דרוש עובד אחראי למשמרת בוקר\n\nלגלידריה איכותית בלב רמה, בית שמש.\n\n🕘 שעות העבודה: 09:00–17:00\n📅 5 משמרות בשבוע\n💰 שכר התחלתי גבוה\n\nדרישות:\n• גיל 17+\n• אחריות ורצינות\n• חובשי כיפה בלבד\n\nלפרטים נוספים\n0534111458\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 285,
+   "views": 287,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"

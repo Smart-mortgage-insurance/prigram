@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T18:48:28.889102+00:00",
+ "updated": "2026-10-13T18:49:49.882096+00:00",
  "channels": {
   "jeniatafkidplus": {
    "title": "דרושים/ות משרות בירושלים וכל הארץ",
@@ -74,6 +74,45 @@
  },
  "count": 130,
  "items": [
+  {
+   "id": "p08bea33f0bc6",
+   "post": "Jobs_in_Jerusalem/36434",
+   "ts": "2026-10-13T18:48:14+00:00",
+   "text": "..............................\nקישור לקבוצה:\nקישור לערוץ:",
+   "views": 5,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/98038fbaa342d528.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/71377aae07790657.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/4c6a54745e2467c8.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/f6c20de5afae28b2.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/2e6c2d55ff323ea3.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/24d1db16a85a5ebc.jpg"
+    },
+    {
+     "type": "image",
+     "file": "data/media/7d957e82d87b5353.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
   {
    "id": "p3a1fbb694ef6",
    "post": "Workingyes1/9799",
@@ -489,7 +528,7 @@
    "post": "Jobs_in_Jerusalem/36433",
    "ts": "2026-10-13T11:19:31+00:00",
    "text": "#בית_שמש\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 229,
+   "views": 230,
    "forwarded_from": null,
    "media": [
     {
@@ -819,7 +858,7 @@
    "post": "Jobs_in_Jerusalem/36424",
    "ts": "2026-10-12T13:12:26+00:00",
    "text": "https://wa.me/972546903105\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 344,
+   "views": 345,
    "forwarded_from": null,
    "media": [
     {
@@ -942,21 +981,6 @@
    "views": 166,
    "forwarded_from": null,
    "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "pc4bf25cfbdf1",
-   "post": "Jobs_in_Jerusalem/36413",
-   "ts": "2026-10-12T09:39:35+00:00",
-   "text": "#ירושלים\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 225,
-   "forwarded_from": null,
-   "media": [
-    {
-     "type": "image",
-     "file": "data/media/2985313cf30372b7.jpg"
-    }
-   ],
    "kind": "jobs"
   },
   {

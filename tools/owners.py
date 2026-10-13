@@ -19,7 +19,7 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
 CFG = json.loads((Path(__file__).resolve().parent.parent / "scraper" / "config.json").read_text(encoding="utf-8"))
 ARGS = [a for a in sys.argv[1:] if not a.startswith("--")]
 CHANNELS = ARGS or [c["username"] for c in CFG["channels"] if c.get("enabled", True) and c.get("kind") == "jobs"]
-PAGES = 15
+PAGES = 40 if "--deep" in sys.argv else 15
 
 PHONE = re.compile(r"(?<!\d)(?:\+?972[-\s]?|0)(?:5\d|[2-4]|7\d|[89])[-\s]?\d{3}[-\s]?\d{4}(?!\d)")
 EMAIL = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
@@ -28,6 +28,8 @@ TME = re.compile(r"(?:t\.me|telegram\.me)/(\+?[\w-]+)(?:/\d+)?", re.I)
 WA = re.compile(r"wa\.me/\+?(\d{9,15})|whatsapp\.com/send/?\?[^\s\"']*?phone=\+?(\d{9,15})", re.I)
 WAGROUP = re.compile(r"chat\.whatsapp\.com/\w+", re.I)
 URL = re.compile(r"https?://[^\s\"'<>)]+", re.I)
+RULES = re.compile(r"כללי|חוקי|תקנון|ברוכים הבאים|הנהלת|מנהלי|rules|welcome", re.I)
+EXTRA_POSTS = {"jobs_in_jerusalem": [1528]}          # rules posts referenced from the linked groups' bios
 ADMIN = re.compile(r"לפרסום|פרסום בערוץ|לפרסם|ליצירת קשר|צור קשר|צרו קשר|מנהל|אדמין|לפניות|פניות|contact|admin|advertis", re.I)
 SOCIAL = re.compile(r"t\.me|telegram\.|whatsapp\.|wa\.me|facebook\.|fb\.|instagram\.|linkedin\.|youtube\.|youtu\.be|twitter\.|x\.com|bit\.ly|tiktok\.|paypal\.|forms\.gle|google\.", re.I)
 JUNK_MAIL = re.compile(r"\.(png|jpg|jpeg|gif|webp|svg)$|sentry|wixpress|example\.|@2x|u003e", re.I)
@@ -107,6 +109,48 @@ def channel(u):
         before = min(ids)
         time.sleep(0.25)
 
+    # the first posts of the channel: welcome / rules / "how to advertise here" usually live there
+    old_lines, old_tok, after = [], Counter(), 0
+    for _ in range(4):
+        html = get("https://t.me/s/%s?after=%d" % (u, after))
+        soup = BeautifulSoup(html, "html.parser") if html else None
+        msgs = soup.select(".tgme_widget_message") if soup else []
+        if not msgs:
+            break
+        for m in msgs:
+            body = m.select_one(".tgme_widget_message_text")
+            if not body:
+                continue
+            for br in body.find_all("br"):
+                br.replace_with("\n")
+            text = body.get_text(" ")
+            hrefs = " ".join(a.get("href", "") for a in body.select("a[href]"))
+            if ADMIN.search(text) or RULES.search(text):
+                old_tok.update(tokens(text, hrefs) - {"tg:" + u})
+                if len(old_lines) < 5:
+                    old_lines.append(re.sub(r"\s+", " ", text)[:260])
+        ids = [int(m["data-post"].split("/")[-1]) for m in msgs if m.get("data-post")]
+        if not ids or max(ids) <= after:
+            break
+        after = max(ids)
+        time.sleep(0.25)
+
+    # posts the owner points at as "the rules" (t.me/<channel>/<id>)
+    rules = {}
+    linked = set(re.findall(r"t\.me/(?:s/)?(%s)/(\d+)" % re.escape(u), desc_txt + " " + desc_hrefs, re.I))
+    for extra in EXTRA_POSTS.get(own, []):
+        linked.add((u, str(extra)))
+    for _, pid in sorted(linked)[:4]:
+        html = get("https://t.me/%s/%s?embed=1&mode=tme" % (u, pid))
+        sp = BeautifulSoup(html, "html.parser") if html else None
+        body = sp.select_one(".tgme_widget_message_text") if sp else None
+        if body:
+            for br in body.find_all("br"):
+                br.replace_with("\n")
+            text = body.get_text(" ")
+            hrefs = " ".join(a.get("href", "") for a in body.select("a[href]"))
+            rules[pid] = {"text": re.sub(r"\s+", " ", text)[:500], "contacts": sorted(tokens(text, hrefs) - {"tg:" + u})}
+
     desc_tok = {t for t in tokens(desc_txt, desc_hrefs) if t.lower() != "tg:" + own}
     need = max(4, posts // 4)
     footer = {k: v for k, v in seen.most_common(15) if v >= need}
@@ -152,7 +196,8 @@ def channel(u):
                 found |= {t for t in tokens(sp2.get_text(" "), hrefs) if not t.startswith("tg:")}
         web[site] = sorted(found)[:14] if home else ["(site did not answer)"]
 
-    return {"u": u, "title": title, "subs": subs, "posts_scanned": posts, "desc": desc_txt[:500],
+    return {"u": u, "title": title, "subs": subs, "posts_scanned": posts, "desc": desc_txt[:1500],
+            "first_posts": old_lines, "first_posts_contacts": dict(old_tok.most_common(10)), "rules_posts": rules,
             "desc_contacts": sorted(desc_tok), "admin_lines": admin_lines,
             "admin_contacts": dict(admin_tok.most_common(10)), "footer_contacts": footer,
             "profiles": profiles, "web": web}

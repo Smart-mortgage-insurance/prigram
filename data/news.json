@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T09:25:11.166753+00:00",
+ "updated": "2026-10-13T09:26:31.201496+00:00",
  "channels": {
   "jeniatafkidplus": {
    "title": "דרושים/ות משרות בירושלים וכל הארץ",
@@ -72,14 +72,29 @@
    "kind": "jobs"
   }
  },
- "count": 124,
+ "count": 125,
  "items": [
+  {
+   "id": "p01ad48e09b85",
+   "post": "Nortech_Spotlight/109",
+   "ts": "2026-10-13T09:26:17+00:00",
+   "text": "📢 מפתחים אפליקציות? הזדמנות לייצר אימפקט אמיתי!\n\n*מיזם אימפקט חברתי מהגליל* מחפש מפתח/ת מובייל פרילנסר/ית עם ניסיון של שנתיים ומעלה.\n\n🔹 Flutter / React Native\n🔹 Backend, API ושירותי ענן\n🔹 Location Based Services\n🔹 Fully Remote | Freelancer\n\n🌱 הזדמנות לפתח טכנולוגיה שמייצרת שינוי חברתי אמיתי.\n\n🔗 *לפרטים והגשת מועמדות דרך נורטק:*\nhttps://nortech-platform.com/listing/freelance-mobile-app-developer-social-impact-venture/\n\nמכירים מישהו מתאים? העבירו הלאה!\n\nנורטק | מחברים את ההייטק בצפון 💙",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/c68ebaa8aa70ea1e.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
   {
    "id": "p419cd0bda2cc",
    "post": "Jobs_in_Jerusalem/36429",
    "ts": "2026-10-13T09:17:17+00:00",
    "text": "לשליחת קו״ח - ibar054269@gmail.com\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 12,
+   "views": 16,
    "forwarded_from": null,
    "media": [
     {
@@ -94,7 +109,7 @@
    "post": "Jobs_in_Jerusalem/36430",
    "ts": "2026-10-13T09:17:17+00:00",
    "text": "לשליחת קו״ח - ibar054269@gmail.com",
-   "views": 15,
+   "views": 16,
    "forwarded_from": null,
    "media": [
     {
@@ -109,7 +124,7 @@
    "post": "Jobs_in_Jerusalem/36428",
    "ts": "2026-10-13T09:17:07+00:00",
    "text": "לשליחת קו״ח - ibar054269@gmail.com\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 13,
+   "views": 15,
    "forwarded_from": null,
    "media": [
     {
@@ -124,7 +139,7 @@
    "post": "Jobs_in_Jerusalem/36427",
    "ts": "2026-10-13T09:16:49+00:00",
    "text": "..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 15,
+   "views": 16,
    "forwarded_from": null,
    "media": [
     {
@@ -149,7 +164,7 @@
    "post": "Jobs_in_Jerusalem/36426",
    "ts": "2026-10-13T09:11:17+00:00",
    "text": "דרוש פועל ליום אחד גמיש,(לא עבודה קבועה) בבית שמש, צבע, החלפת גופי תאורה, מריחה של גומי גם בחיבורים, 800 ש''ח ליום0546980503 וואצאפ בכתיבה בלבד\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 24,
+   "views": 26,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -159,7 +174,7 @@
    "post": "HiTech_Jobs_In_Israel/137192",
    "ts": "2026-10-13T09:00:09+00:00",
    "text": "QA Automation Software Student at Intel\nLocation: Israel, Petah-Tikva\nPress here https://intel.wd1.myworkdayjobs.com/External/job/Israel-Petah-Tikva/QA-Automation-Software-Student_JR0287944?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#StudentPositions",
-   "views": 54,
+   "views": 60,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -169,7 +184,7 @@
    "post": "HiTech_Jobs_In_Israel/137191",
    "ts": "2026-10-13T09:00:07+00:00",
    "text": "Quality Engineer-1 at Flex\nLocation: Israel, Migdal Ha-Emek\nPress here https://flextronics.wd1.myworkdayjobs.com/Careers/job/Israel-Migdal-Ha-Emek/Quality-Engineer-1_WD231610-1?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 57,
+   "views": 60,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -179,7 +194,7 @@
    "post": "HiTech_Jobs_In_Israel/137190",
    "ts": "2026-10-13T09:00:05+00:00",
    "text": "NOC Service Analyst (Student Position) at Mobileye\nLocation: Jerusalem, Israel\nPress here https://jobs.eu.lever.co/mobileye/79781651-55c8-427f-852a-ca132a5d8a44?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#StudentPositions",
-   "views": 45,
+   "views": 47,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -189,7 +204,7 @@
    "post": "HiTech_Jobs_In_Israel/137189",
    "ts": "2026-10-13T09:00:04+00:00",
    "text": "Data Analytics Project Manager at Mobileye\nLocation: Jerusalem, Israel\nPress here https://jobs.eu.lever.co/mobileye/342bbac1-839f-4aff-a050-ceb39ceef9aa?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 16,
+   "views": 18,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -199,7 +214,7 @@
    "post": "HiTech_Jobs_In_Israel/137188",
    "ts": "2026-10-13T09:00:03+00:00",
    "text": "Customer Service Agent at Global-e\nLocation: Israel, Petah Tikva\nPress here https://www.global-e.com/careers/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 16,
+   "views": 18,
    "forwarded_from": null,
    "media": [
     {
@@ -214,7 +229,7 @@
    "post": "HiTech_Jobs_In_Israel/137187",
    "ts": "2026-10-13T09:00:02+00:00",
    "text": "NOC Engineer at Cross River\nLocation: Jerusalem Office / Hybrid (In Israel)\nPress here https://www.comeet.com/jobs/crossriver/C7.00F/noc-engineer/FB.376?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 17,
+   "views": 19,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -224,7 +239,7 @@
    "post": "HiTech_Jobs_In_Israel/137186",
    "ts": "2026-10-13T09:00:01+00:00",
    "text": "System Security Expert at CommIT\nLocation: Be'er Ya'akov\nPress here https://www.comm-it.com/commit-jobs#career-sec?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 15,
+   "views": 17,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -234,7 +249,7 @@
    "post": "HiTech_Jobs_In_Israel/137185",
    "ts": "2026-10-13T09:00:00+00:00",
    "text": "Salesforce Project Manager at abra\nLocation: Center\nPress here https://www.abra-it.com/career?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 15,
+   "views": 17,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -289,7 +304,7 @@
    "post": "HiTech_Jobs_In_Israel/137183",
    "ts": "2026-10-13T05:00:48+00:00",
    "text": "Security Manager, Amazon Corporate Security at Amazon\nLocation: Tel Aviv-Yafo, Tel Aviv, ISR\nPress here https://www.amazon.jobs/en/jobs/10576469/security-manager-amazon-corporate-security?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 144,
+   "views": 145,
    "forwarded_from": null,
    "media": [
     {
@@ -304,7 +319,7 @@
    "post": "HiTech_Jobs_In_Israel/137184",
    "ts": "2026-10-13T05:00:48+00:00",
    "text": "Senior II Security Architect at Akamai\nLocation: Israel\nSend your CV + the link below to the admin who works there ✌🏻 or apply on your own: https://jobs.akamai.com/en/sites/CX_1/job/4153/?utm_source=telegram&utm_medium=HiTech_Jobs_In_Israel&utm_campaign=job-updates",
-   "views": 142,
+   "views": 144,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -314,7 +329,7 @@
    "post": "HiTech_Jobs_In_Israel/137182",
    "ts": "2026-10-13T05:00:37+00:00",
    "text": "Senior Software Engineer - Tools and Production Pipelines at NVIDIA\nLocation: 3 Locations\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Tel-Aviv/Senior-Software-Engineer---Tools-and-Production-Pipelines_JR2027027?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 138,
+   "views": 139,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -324,7 +339,7 @@
    "post": "HiTech_Jobs_In_Israel/137181",
    "ts": "2026-10-13T05:00:03+00:00",
    "text": "Product Manager at Navina\nLocation: IL\nPress here https://www.navina.ai/positions/position-0d_37d?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 130,
+   "views": 131,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -334,7 +349,7 @@
    "post": "HiTech_Jobs_In_Israel/137179",
    "ts": "2026-10-13T05:00:02+00:00",
    "text": "Data Scientist - AI Research at Earnix\nLocation: Ramat Gan, Israel\nPress here https://earnix.com/career/d5.d67/data-scientist-ai-research/?jobid=D5.D67&amp;slug=data-scientist-ai-research&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 126,
+   "views": 127,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -344,7 +359,7 @@
    "post": "HiTech_Jobs_In_Israel/137180",
    "ts": "2026-10-13T05:00:02+00:00",
    "text": "Product Group Lead at Navina\nLocation: IL\nPress here https://www.navina.ai/positions/position-dc_378?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 126,
+   "views": 127,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -354,7 +369,7 @@
    "post": "HiTech_Jobs_In_Israel/137178",
    "ts": "2026-10-13T05:00:01+00:00",
    "text": "ראש צוות מעבדת שילובים at CommIT\nLocation: Yehud\nPress here https://www.comm-it.com/commit-jobs#career-sec?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 125,
+   "views": 126,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -464,7 +479,7 @@
    "post": "HiTech_Jobs_In_Israel/137173",
    "ts": "2026-10-12T17:00:01+00:00",
    "text": "Accounts Receivable & Collections Specialist at Nayax\nLocation: Israel\nPress here https://www.nayax.com/career/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 177,
+   "views": 178,
    "forwarded_from": null,
    "media": [
     {
@@ -529,7 +544,7 @@
    "post": "Jobs_in_Jerusalem/36425",
    "ts": "2026-10-12T13:12:36+00:00",
    "text": "מחפשים עובד/ת נקיון לאולם תצוגה ברמת #בית_שמש לפעמיים בשבוע\nלפרטים 0535258280\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 328,
+   "views": 329,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -539,7 +554,7 @@
    "post": "Jobs_in_Jerusalem/36424",
    "ts": "2026-10-12T13:12:26+00:00",
    "text": "https://wa.me/972546903105\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 295,
+   "views": 296,
    "forwarded_from": null,
    "media": [
     {
@@ -624,7 +639,7 @@
    "post": "Jobs_in_Jerusalem/36420",
    "ts": "2026-10-12T11:17:40+00:00",
    "text": "דרוש פועל ליום אחד גמיש, בבית שמש, צבע, החלפת גופי תאורה, מריחה של גומי גם בחיבורים, 600 ש''ח ליום עבודה, 0546980504 וואצאפ בכתיבה בלבד\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 248,
+   "views": 249,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -659,7 +674,7 @@
    "post": "Jobs_in_Jerusalem/36419",
    "ts": "2026-10-12T09:45:26+00:00",
    "text": "אקים #ירושלים מחפשים מדריכים ומדריכות מעל גיל 18\nלעבודה במשמרות עם אנשים עם צרכים מיוחדים.\nאפשרות למשמרת אחת בשבוע!\nעבודה מספקת בסביבה נעימה\nצרו קשר עוד היום.\nלפרטים לפנות לטלפון\n052-2359100\nאו לשלוח קורות חיים למייל\nsival@akim-jerusalem.org.il\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 255,
+   "views": 256,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"

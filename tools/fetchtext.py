@@ -52,6 +52,20 @@ def scan(url):
             "wa": sorted({a or b for a, b in WA.findall(txt)})[:6],
             "sites": sorted(set(re.findall(r'"(?:website|websites?_url|url)"\s*:\s*"(https?://(?!(?:www\.|m\.|l\.)?facebook)[^"]{4,80})"', txt)))[:6],
         }
+        # contact-looking fields inside the page's embedded data (Facebook keeps "about" details there)
+        kv = set()
+        for k, v in re.findall(r'"([a-z_]*(?:email|phone|whatsapp|contact|website|address|category_name|owner|admin)[a-z_]*)"\s*:\s*"([^"]{3,90})"', txt, re.I):
+            if not re.search(r"fbcdn|static\.|\.js|\.php|^https?://(?:www\.)?facebook", v):
+                kv.add(k + "=" + v)
+        info["fields"] = sorted(kv)[:25]
+        near = set()
+        for m in re.finditer(r"(?:מייל|אימייל|טלפון|וואטסאפ|ווטסאפ|WhatsApp|Email|Phone)[^<>{}\"]{0,70}", body):
+            frag = re.sub(r"\s+", " ", m.group(0)).strip()
+            if re.search(r"\d{6,}|@", frag):
+                near.add(frag[:90])
+        info["near"] = sorted(near)[:10]
+        if re.match(r"https?://(?:bit\.ly|did\.li|tinyurl\.com|katzr\.net)/", url):
+            info["redirects_to"] = r.url[:200]
         score = len(info["mails"]) + len(info["phones"]) + len(info["wa"]) + (0 if info["login_wall"] else 1)
         if score > best.get("_score", -1):
             best = dict(info, _score=score)

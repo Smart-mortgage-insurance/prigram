@@ -96,7 +96,8 @@
     {
       "username": "Tech_Galilee_Golan_Channel",
       "enabled": true,
-      "kind": "jobs"
+      "kind": "jobs",
+      "consent": "אושר טלפונית ע\"י מנכ\"ל נורטק, 14.10.2026"
     },
     {
       "username": "taasuka50plusminus",
@@ -111,7 +112,8 @@
     {
       "username": "Nortech_Spotlight",
       "kind": "jobs",
-      "enabled": true
+      "enabled": true,
+      "consent": "אושר טלפונית ע\"י מנכ\"ל נורטק, 14.10.2026"
     },
     {
       "username": "PMO_jobs",

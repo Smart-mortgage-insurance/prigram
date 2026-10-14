@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T12:41:44.539495+00:00",
+ "updated": "2026-10-14T12:43:06.307067+00:00",
  "channels": {
   "jeniatafkidplus": {
    "title": "דרושים/ות משרות בירושלים וכל הארץ",
@@ -65,6 +65,11 @@
    "title": "ערוץ העבודות באזור ירושלים",
    "avatar": "data/media/3c9e59f92d560afa.jpg",
    "kind": "jobs"
+  },
+  "PMO_jobs": {
+   "title": "משרד ראש הממשלה - דרושים",
+   "avatar": "data/media/48df722686ea6fa8.jpg",
+   "kind": "jobs"
   }
  },
  "count": 134,
@@ -99,7 +104,7 @@
    "post": "HiTech_Jobs_In_Israel/137294",
    "ts": "2026-10-14T11:00:30+00:00",
    "text": "Interested in advertising and reaching +8600 job seekers? Reach us out 👇\n\nShare your support by boosting ⚡⚡⚡ our channel or sharing a kind donation securely via PayPal https://paypal.me/donateTheBot 😍\nto help us to be there for you 24/7 ⏰\nWe really appreciate it ❤",
-   "views": 101,
+   "views": 102,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -124,7 +129,7 @@
    "post": "HiTech_Jobs_In_Israel/137293",
    "ts": "2026-10-14T11:00:29+00:00",
    "text": "Project Manager & Operations Lead, Nitro Team at Amazon\nLocation: Haifa, Haifa, ISR\nPress here https://www.amazon.jobs/en/jobs/10578352/project-manager-operations-lead-nitro-team?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 102,
+   "views": 104,
    "forwarded_from": null,
    "media": [
     {
@@ -139,7 +144,7 @@
    "post": "HiTech_Jobs_In_Israel/137291",
    "ts": "2026-10-14T11:00:24+00:00",
    "text": "Principal AI Security Engineer at ServiceNow\nLocation: Petah Tikva\nPress here https://www.smartrecruiters.com/ServiceNow/744000155444856?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 51,
+   "views": 52,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -149,7 +154,7 @@
    "post": "HiTech_Jobs_In_Israel/137290",
    "ts": "2026-10-14T11:00:23+00:00",
    "text": "Staff Software Engineer - Product Security at ServiceNow\nLocation: Petah Tikva\nPress here https://www.smartrecruiters.com/ServiceNow/744000155446386?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 51,
+   "views": 54,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -159,7 +164,7 @@
    "post": "HiTech_Jobs_In_Israel/137288",
    "ts": "2026-10-14T11:00:22+00:00",
    "text": "Sr Staff Product Security Engineer - Product Security Incident Response Team (PSIRT) at ServiceNow\nLocation: Petah Tikva\nPress here https://www.smartrecruiters.com/ServiceNow/744000155448428?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 47,
+   "views": 50,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -169,7 +174,7 @@
    "post": "HiTech_Jobs_In_Israel/137289",
    "ts": "2026-10-14T11:00:22+00:00",
    "text": "Staff AI Security Specialist at ServiceNow\nLocation: Petah Tikva\nPress here https://www.smartrecruiters.com/ServiceNow/744000155447652?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 48,
+   "views": 51,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -179,7 +184,7 @@
    "post": "HiTech_Jobs_In_Israel/137287",
    "ts": "2026-10-14T11:00:20+00:00",
    "text": "Product Manager - Base44 at Wix\nLocation: Tel Aviv\nPress here https://www.smartrecruiters.com/Wix2/744000155442637?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 45,
+   "views": 47,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -199,7 +204,7 @@
    "post": "HiTech_Jobs_In_Israel/137285",
    "ts": "2026-10-14T11:00:11+00:00",
    "text": "Senior Full Stack Developer at Mobileye\nLocation: Jerusalem, Israel\nPress here https://jobs.eu.lever.co/mobileye/050c9118-b8bd-42c7-9a5d-bf0ef7e6a196?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 48,
+   "views": 51,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -209,7 +214,7 @@
    "post": "HiTech_Jobs_In_Israel/137284",
    "ts": "2026-10-14T11:00:09+00:00",
    "text": "Product Analyst at Taboola\nLocation: Tel Aviv, Israel\nPress here https://www.taboola.com/careers/job/8243356?gh_jid=8243356&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 51,
+   "views": 52,
    "forwarded_from": null,
    "media": [
     {
@@ -224,7 +229,7 @@
    "post": "HiTech_Jobs_In_Israel/137283",
    "ts": "2026-10-14T11:00:02+00:00",
    "text": "Real Estate Director at Mindspace\nLocation: Tel Aviv\nPress here https://www.mindspace.me/careers?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 54,
+   "views": 55,
    "forwarded_from": null,
    "media": [
     {
@@ -239,7 +244,7 @@
    "post": "HiTech_Jobs_In_Israel/137282",
    "ts": "2026-10-14T11:00:01+00:00",
    "text": "Head of Integrated Marketing at DealHub\nLocation: Holon, Israel\nPress here https://www.comeet.com/jobs/dealhub/86.005/head-of-integrated-marketing/C0.47A?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 57,
+   "views": 62,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -249,7 +254,7 @@
    "post": "HiTech_Jobs_In_Israel/137280",
    "ts": "2026-10-14T11:00:00+00:00",
    "text": "Help Desk at CommIT\nLocation: Be'er Ya'akov\nPress here https://www.comm-it.com/commit-jobs#career-sec?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 59,
+   "views": 60,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -259,7 +264,7 @@
    "post": "HiTech_Jobs_In_Israel/137281",
    "ts": "2026-10-14T11:00:00+00:00",
    "text": "PMO at CommIT\nLocation: Petah Tikva\nPress here https://www.comm-it.com/commit-jobs#career-sec?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 58,
+   "views": 60,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -269,7 +274,7 @@
    "post": "Jobs_in_Jerusalem/36441",
    "ts": "2026-10-14T10:53:57+00:00",
    "text": "#בית_שמש\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 85,
+   "views": 86,
    "forwarded_from": null,
    "media": [
     {
@@ -474,7 +479,7 @@
    "post": "jobnikim/298",
    "ts": "2026-10-14T08:12:21+00:00",
    "text": "ג'וֹבְּנִיקִים – ערוץ הקריירה האזרחי עבור משרתי המילואים ובני/ות זוגם http://jobnikim.co.il/tg 🪖\n\nדרוש/ה מילואימניק/ית למשרה אזרחית!\n\nהמשרה: מהנדס/ת ביצוע\nאזור המשרה בארץ: ירושלים\n\n⬅️ פרטים על החברה והמשרה:\nתיאור התפקיד:\n• ניהול ופיקוח על עבודות הביצוע באתר וליווי תהליכי הביצוע של הקבלנים.\n• תיאום והנעת קבלני משנה וספקים.\n• התקשרות עם יועצים ועבודה שוטפת מול מנהל הפרויקט, המתכננים והפיקוח.\n• ביצוע הזמנות ברזל.\n• אחריות על עמידה בלוחות זמנים ובתקציב ובקרת איכות הביצוע בשטח.\n• מתן מענה מקצועי ופתרון סוגיות הנדסיות בשטח.\n• הקפדה על נהלי בטיחות ותקני איכות.\n\n⬅️ זיקת הארגון לעולם המילואים:\nבתהליך הגיוס ניתנת עדיפות למהנדסים/ות אזרחיים/ות המשרתים/ות במילואים, מתוך הערכה לניסיון המקצועי וליכולות המנהיגות והניהול שהם מביאים עמם מהשירות הצבאי.\n\n⬅️ כישורים נדרשים:\n• ניסיון של שנה לפחות בעבודות שלד.\n• תואר בהנדסה אזרחית – חובה.\n• ניסיון קודם כמהנדס/ת ביצוע – יתרון משמעותי.\n• יכולת עבודה מול קבלני משנה וממשקים מקצועיים.\n• אחריות, סדר ויכולת עבודה בסביבה דינמית.\n\n⬅️ תנאי העסקה:\n• רכב.\n• שכר מתגמל ותנאים מצוינים למתאימים.\n\n⬅️ תקופת העסקה:\n• משרה מלאה.\n• טווח ארוך.\n• העסקה מיידית.\n- - - - - - - - - - - - - - - - - - - -\nלהגשת מועמדות יש למלא פרטים בקישור הבא: https://app.civi.co.il/promo/id=940830&src=23260\n- - - - - - - - - - - - - - - - - - - -\nחברות וארגונים המעוניינים להעסיק אנשים שעושים יותר - אנשי מילואים:\nאור סביון: 055-9436165\n- - - - - - - - - - - - - - - - - - - -\nמבית:\nעושים יותר ודרושים ⚔️ למילואים",
-   "views": 330,
+   "views": 331,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -639,7 +644,7 @@
    "post": "Jobs_in_Jerusalem/36434",
    "ts": "2026-10-13T18:48:14+00:00",
    "text": "..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 271,
+   "views": 272,
    "forwarded_from": null,
    "media": [
     {
@@ -758,7 +763,7 @@
    "post": "Jobs_in_Jerusalem/36433",
    "ts": "2026-10-13T11:19:31+00:00",
    "text": "#בית_שמש\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 338,
+   "views": 339,
    "forwarded_from": null,
    "media": [
     {
@@ -773,7 +778,7 @@
    "post": "Jobs_in_Jerusalem/36432",
    "ts": "2026-10-13T11:05:44+00:00",
    "text": "#בית_שמש\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 308,
+   "views": 309,
    "forwarded_from": null,
    "media": [
     {
@@ -853,7 +858,7 @@
    "post": "Jobs_in_Jerusalem/36429",
    "ts": "2026-10-13T09:17:17+00:00",
    "text": "לשליחת קו״ח - ibar054269@gmail.com\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 274,
+   "views": 275,
    "forwarded_from": null,
    "media": [
     {
@@ -868,7 +873,7 @@
    "post": "Jobs_in_Jerusalem/36430",
    "ts": "2026-10-13T09:17:17+00:00",
    "text": "לשליחת קו״ח - ibar054269@gmail.com",
-   "views": 286,
+   "views": 287,
    "forwarded_from": null,
    "media": [
     {
@@ -898,7 +903,7 @@
    "post": "Jobs_in_Jerusalem/36427",
    "ts": "2026-10-13T09:16:49+00:00",
    "text": "..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 262,
+   "views": 263,
    "forwarded_from": null,
    "media": [
     {
@@ -913,7 +918,7 @@
    "post": "Jobs_in_Jerusalem/36426",
    "ts": "2026-10-13T09:11:17+00:00",
    "text": "דרוש פועל ליום אחד גמיש,(לא עבודה קבועה) בבית שמש, צבע, החלפת גופי תאורה, מריחה של גומי גם בחיבורים, 800 ש''ח ליום0546980503 וואצאפ בכתיבה בלבד\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 285,
+   "views": 287,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -973,7 +978,7 @@
    "post": "Jobs_in_Jerusalem/36424",
    "ts": "2026-10-12T13:12:26+00:00",
    "text": "https://wa.me/972546903105\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 379,
+   "views": 380,
    "forwarded_from": null,
    "media": [
     {
@@ -1003,7 +1008,7 @@
    "post": "Jobs_in_Jerusalem/36422",
    "ts": "2026-10-12T11:18:23+00:00",
    "text": "",
-   "views": 338,
+   "views": 339,
    "forwarded_from": null,
    "media": [
     {

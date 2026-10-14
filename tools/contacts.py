@@ -14,7 +14,7 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
 CFG = json.loads((Path(__file__).resolve().parent.parent / "scraper" / "config.json").read_text(encoding="utf-8"))
 ENABLED = [c["username"] for c in CFG["channels"] if c.get("enabled", True) and c.get("kind")]
 KNOWN = {c["username"].lower() for c in CFG["channels"]}
-ARGS = " ".join(sys.argv[1:]).split()
+ARGS = (" ".join(sys.argv[1:]) + " " + __import__("os").environ.get("CONTACT_ARGS", "")).split()   # env: safe for URLs with & and #
 DISCOVER = "--discover" in ARGS          # also probe every channel mentioned by the given/enabled ones
 URLS = [a for a in ARGS if a.startswith("http")]          # web pages to mine for t.me links
 CHANNELS = [a for a in ARGS if not a.startswith(("--", "http"))] or ([] if URLS else ENABLED)

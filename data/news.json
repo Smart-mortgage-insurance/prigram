@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T14:59:33.649230+00:00",
+ "updated": "2026-10-14T15:01:44.583109+00:00",
  "channels": {
   "jeniatafkidplus": {
    "title": "דרושים/ות משרות בירושלים וכל הארץ",
@@ -75,6 +75,106 @@
  "count": 134,
  "items": [
   {
+   "id": "pcc3e24859ef2",
+   "post": "HiTech_Jobs_In_Israel/137320",
+   "ts": "2026-10-14T15:00:30+00:00",
+   "text": "Startup Representative, Temporary Role, Marketing Response Center at Amazon\nLocation: Tel Aviv-Yafo, Tel Aviv, ISR\nPress here https://www.amazon.jobs/en/jobs/10578487/startup-representative-temporary-role-marketing-response-center?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 7,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/5b8a02913ec5be95.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
+   "id": "pde6ec7951554",
+   "post": "HiTech_Jobs_In_Israel/137319",
+   "ts": "2026-10-14T15:00:27+00:00",
+   "text": "Product Manager - Base44 at Wix\nLocation: Tel Aviv\nPress here https://www.smartrecruiters.com/Wix2/744000155517676?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 9,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p420878b11660",
+   "post": "HiTech_Jobs_In_Israel/137318",
+   "ts": "2026-10-14T15:00:26+00:00",
+   "text": "Product Manager - Wix Editor Platform at Wix\nLocation: Tel Aviv\nPress here https://www.smartrecruiters.com/Wix2/744000155520957?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 7,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p0e3850ba427d",
+   "post": "HiTech_Jobs_In_Israel/137317",
+   "ts": "2026-10-14T15:00:24+00:00",
+   "text": "Senior Director, Analytics & Business Intelligence at Nuvei\nLocation: Israel Tel Aviv-Yafo\nPress here https://apply.workable.com/nuvei/j/47E6CE6418/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 7,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p01981235b8f0",
+   "post": "HiTech_Jobs_In_Israel/137316",
+   "ts": "2026-10-14T15:00:17+00:00",
+   "text": "CNC Quality Control at Envista\nLocation: Israel, Central District, Modi'in-Macabim-Re'ut\nPress here https://envista.wd1.myworkdayjobs.com/envistacareers/job/Israel-Central-District-Modiin-Macabim-Reut/CNC-Quality-Control_R5027618?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 8,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "pfca65777aff0",
+   "post": "HiTech_Jobs_In_Israel/137315",
+   "ts": "2026-10-14T15:00:16+00:00",
+   "text": "C++ Software Engineer at Mobileye\nLocation: Jerusalem, Israel\nPress here https://jobs.eu.lever.co/mobileye/9495066e-ebcc-49ed-bac5-0480be15753f?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 7,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "pae6cd0ea56c2",
+   "post": "HiTech_Jobs_In_Israel/137314",
+   "ts": "2026-10-14T15:00:13+00:00",
+   "text": "Product Analyst at Taboola\nLocation: Tel Aviv, Israel\nPress here https://www.taboola.com/careers/job/8281185?gh_jid=8281185&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 8,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/627ba3bb98475bac.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
+   "id": "paa8b66e910ae",
+   "post": "HiTech_Jobs_In_Israel/137313",
+   "ts": "2026-10-14T15:00:03+00:00",
+   "text": "Performance Analyst at ZIM\nLocation: IL-Haifa\nPress here https://www.zim.com/he/careers/job-opportunities/84C6C?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 8,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "pa9da8be41ec9",
+   "post": "HiTech_Jobs_In_Israel/137312",
+   "ts": "2026-10-14T15:00:01+00:00",
+   "text": "AI & Data Consultant at KPMG\nLocation: תל אביב\nPress here https://kpmg.co.il/technologyconsulting/he/vacancies/technology-consulting/ai-data-consultant?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 8,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
    "id": "p7a75207a11c1",
    "post": "Workingyes1/9817",
    "ts": "2026-10-14T14:27:58+00:00",
@@ -124,7 +224,7 @@
    "post": "HiTech_Jobs_In_Israel/137310",
    "ts": "2026-10-14T13:00:31+00:00",
    "text": "Interested in advertising and reaching +8600 job seekers? Reach us out 👇\n\nShare your support by boosting ⚡⚡⚡ our channel or sharing a kind donation securely via PayPal https://paypal.me/donateTheBot 😍\nto help us to be there for you 24/7 ⏰\nWe really appreciate it ❤",
-   "views": 115,
+   "views": 117,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -134,7 +234,7 @@
    "post": "HiTech_Jobs_In_Israel/137309",
    "ts": "2026-10-14T13:00:30+00:00",
    "text": "Software Engineer, System Verification, Graviton Team at Amazon\nLocation: Haifa, Haifa, ISR\nPress here https://www.amazon.jobs/en/jobs/10575582/software-engineer-system-verification-graviton-team?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 112,
+   "views": 113,
    "forwarded_from": null,
    "media": [
     {
@@ -189,7 +289,7 @@
    "post": "HiTech_Jobs_In_Israel/137305",
    "ts": "2026-10-14T13:00:21+00:00",
    "text": "Research Software Engineering Student, AI and GPU Networking at NVIDIA\nLocation: Israel, Tel Aviv\nPress here https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Israel-Tel-Aviv/Research-Software-Engineering-Student--AI-and-GPU-Networking_JR2026765?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#StudentPositions",
-   "views": 76,
+   "views": 77,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -199,7 +299,7 @@
    "post": "HiTech_Jobs_In_Israel/137304",
    "ts": "2026-10-14T13:00:18+00:00",
    "text": "Validation Engineer at Mobileye\nLocation: Jerusalem, Israel\nPress here https://jobs.eu.lever.co/mobileye/e5a7fb78-7847-499a-94b8-a66033db3998?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 72,
+   "views": 73,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -209,7 +309,7 @@
    "post": "HiTech_Jobs_In_Israel/137303",
    "ts": "2026-10-14T13:00:15+00:00",
    "text": "Senior Product Manager at Taboola\nLocation: Tel Aviv, Israel\nPress here https://www.taboola.com/careers/job/8273430?gh_jid=8273430&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 74,
+   "views": 75,
    "forwarded_from": null,
    "media": [
     {
@@ -224,7 +324,7 @@
    "post": "HiTech_Jobs_In_Israel/137302",
    "ts": "2026-10-14T13:00:14+00:00",
    "text": "Senior Product Manager, AI-Native Platform at Similarweb\nLocation: Tel Aviv, Israel\nPress here https://job-boards.greenhouse.io/similarweb/jobs/8281070?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 73,
+   "views": 74,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -234,7 +334,7 @@
    "post": "HiTech_Jobs_In_Israel/137301",
    "ts": "2026-10-14T13:00:12+00:00",
    "text": "Developer Support Engineer at JFrog\nLocation: Tel Aviv/ Netanya, Israel\nPress here https://join.jfrog.com/job/?job=8264438&amp;gh_jid=8264438&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 75,
+   "views": 76,
    "forwarded_from": null,
    "media": [
     {
@@ -252,51 +352,6 @@
    "views": 78,
    "forwarded_from": null,
    "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "pe2dc457851b2",
-   "post": "HiTech_Jobs_In_Israel/137299",
-   "ts": "2026-10-14T13:00:03+00:00",
-   "text": "ACO QA E2E Team Leader at DRIVENETS\nLocation: Raanana, Israel\nPress here https://drivenets.com/careers/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 140,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p08f94992be91",
-   "post": "HiTech_Jobs_In_Israel/137298",
-   "ts": "2026-10-14T13:00:02+00:00",
-   "text": "ACO QA E2E Engineer at DRIVENETS\nLocation: Raanana, Israel\nPress here https://drivenets.com/job/?id=51.859&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 144,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "pe8c7f1c2cc41",
-   "post": "HiTech_Jobs_In_Israel/137297",
-   "ts": "2026-10-14T13:00:01+00:00",
-   "text": "Senior Mobile SDK Engineer at Coralogix\nLocation: Ramat Gan, Israel\nPress here https://www.comeet.com/jobs/coralogix/06.004/senior-mobile-sdk-engineer/E0.475?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 87,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p12146e28725d",
-   "post": "HiTech_Jobs_In_Israel/137296",
-   "ts": "2026-10-14T13:00:00+00:00",
-   "text": "QA Automation Engineer at Claroty\nLocation: Israel\nPress here https://claroty.com/open-positions/3C.374?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 149,
-   "forwarded_from": null,
-   "media": [
-    {
-     "type": "image",
-     "file": "data/media/57d21eb39774b26e.jpg"
-    }
-   ],
    "kind": "jobs"
   },
   {
@@ -320,66 +375,6 @@
    "ts": "2026-10-14T11:27:36+00:00",
    "text": "🔥🥞 לאולם אירועים בבני ברק דרוש/ה קונדיטור/ית 🥞🔥\n\n⏰ שעות עבודה: כ 10 שעות ביום, ימים - ראשון עד חמישי.\n\n🫶סביבת עבודה משפחתית.\n\n🔹 דרישות התפקיד:\n🥐 ידע וניסיון בקונדטוריה, חובה!\n✌️ זריזות, חריצות ועקביות\n👌 תנאים טובים מאוד למתאימים\n\n📲 לפרטים והגשת מועמדות: https://wa.me/972527663007\n\nלשלוח בבקשה קו\"ח בקובץ.\n\nתודה\n\nעבודות איכות לחרדים >>>",
    "views": 42,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p16dbcf2300cb",
-   "post": "HiTech_Jobs_In_Israel/137294",
-   "ts": "2026-10-14T11:00:30+00:00",
-   "text": "Interested in advertising and reaching +8600 job seekers? Reach us out 👇\n\nShare your support by boosting ⚡⚡⚡ our channel or sharing a kind donation securely via PayPal https://paypal.me/donateTheBot 😍\nto help us to be there for you 24/7 ⏰\nWe really appreciate it ❤",
-   "views": 137,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p3ab8c8049122",
-   "post": "HiTech_Jobs_In_Israel/137292",
-   "ts": "2026-10-14T11:00:29+00:00",
-   "text": "HW Lead Engineer, Nitro Team at Amazon\nLocation: Haifa, Haifa, ISR\nPress here https://www.amazon.jobs/en/jobs/10578355/hw-lead-engineer-nitro-team?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 91,
-   "forwarded_from": null,
-   "media": [
-    {
-     "type": "image",
-     "file": "data/media/b69efa2bbd92ceac.jpg"
-    }
-   ],
-   "kind": "jobs"
-  },
-  {
-   "id": "pa4a84b388980",
-   "post": "HiTech_Jobs_In_Israel/137293",
-   "ts": "2026-10-14T11:00:29+00:00",
-   "text": "Project Manager & Operations Lead, Nitro Team at Amazon\nLocation: Haifa, Haifa, ISR\nPress here https://www.amazon.jobs/en/jobs/10578352/project-manager-operations-lead-nitro-team?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 135,
-   "forwarded_from": null,
-   "media": [
-    {
-     "type": "image",
-     "file": "data/media/65ffc8c0ea5caf51.jpg"
-    }
-   ],
-   "kind": "jobs"
-  },
-  {
-   "id": "p58938d5aef3f",
-   "post": "HiTech_Jobs_In_Israel/137291",
-   "ts": "2026-10-14T11:00:24+00:00",
-   "text": "Principal AI Security Engineer at ServiceNow\nLocation: Petah Tikva\nPress here https://www.smartrecruiters.com/ServiceNow/744000155444856?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 60,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p0fe550e44390",
-   "post": "HiTech_Jobs_In_Israel/137290",
-   "ts": "2026-10-14T11:00:23+00:00",
-   "text": "Staff Software Engineer - Product Security at ServiceNow\nLocation: Petah Tikva\nPress here https://www.smartrecruiters.com/ServiceNow/744000155446386?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 60,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -539,7 +534,7 @@
    "post": "jobnikim/298",
    "ts": "2026-10-14T08:12:21+00:00",
    "text": "ג'וֹבְּנִיקִים – ערוץ הקריירה האזרחי עבור משרתי המילואים ובני/ות זוגם http://jobnikim.co.il/tg 🪖\n\nדרוש/ה מילואימניק/ית למשרה אזרחית!\n\nהמשרה: מהנדס/ת ביצוע\nאזור המשרה בארץ: ירושלים\n\n⬅️ פרטים על החברה והמשרה:\nתיאור התפקיד:\n• ניהול ופיקוח על עבודות הביצוע באתר וליווי תהליכי הביצוע של הקבלנים.\n• תיאום והנעת קבלני משנה וספקים.\n• התקשרות עם יועצים ועבודה שוטפת מול מנהל הפרויקט, המתכננים והפיקוח.\n• ביצוע הזמנות ברזל.\n• אחריות על עמידה בלוחות זמנים ובתקציב ובקרת איכות הביצוע בשטח.\n• מתן מענה מקצועי ופתרון סוגיות הנדסיות בשטח.\n• הקפדה על נהלי בטיחות ותקני איכות.\n\n⬅️ זיקת הארגון לעולם המילואים:\nבתהליך הגיוס ניתנת עדיפות למהנדסים/ות אזרחיים/ות המשרתים/ות במילואים, מתוך הערכה לניסיון המקצועי וליכולות המנהיגות והניהול שהם מביאים עמם מהשירות הצבאי.\n\n⬅️ כישורים נדרשים:\n• ניסיון של שנה לפחות בעבודות שלד.\n• תואר בהנדסה אזרחית – חובה.\n• ניסיון קודם כמהנדס/ת ביצוע – יתרון משמעותי.\n• יכולת עבודה מול קבלני משנה וממשקים מקצועיים.\n• אחריות, סדר ויכולת עבודה בסביבה דינמית.\n\n⬅️ תנאי העסקה:\n• רכב.\n• שכר מתגמל ותנאים מצוינים למתאימים.\n\n⬅️ תקופת העסקה:\n• משרה מלאה.\n• טווח ארוך.\n• העסקה מיידית.\n- - - - - - - - - - - - - - - - - - - -\nלהגשת מועמדות יש למלא פרטים בקישור הבא: https://app.civi.co.il/promo/id=940830&src=23260\n- - - - - - - - - - - - - - - - - - - -\nחברות וארגונים המעוניינים להעסיק אנשים שעושים יותר - אנשי מילואים:\nאור סביון: 055-9436165\n- - - - - - - - - - - - - - - - - - - -\nמבית:\nעושים יותר ודרושים ⚔️ למילואים",
-   "views": 373,
+   "views": 374,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -604,7 +599,7 @@
    "post": "Israel_media_industry/3860",
    "ts": "2026-10-14T05:59:29+00:00",
    "text": "מחפשים עבודה עם משמעות? מנחי קבוצות, אנשי חינוך, טיפול והדרכה – אנחנו מחפשים אתכם\n\nמרכז שרון ישראל – סרטים יוצרים שינוי, מגייס מנחי קבוצות ומדריכים לקראת שנת הפעילות הקרובה.\n\nהתוכנית פועלת ברחבי הארץ, בפיקוח ובאישור משרדי הממשלה, ומשלבת עבודה חינוכית, רגשית וקהילתית באמצעות יצירת סרטים – כי סרטים יוצרים שינוי.\n\nלאור התרחבות הפעילות והביקוש הרב לתוכניות, אנו פותחים את שערינו למועמדים חדשים, בנוסף לבוגרי תוכניות ההכשרה של המרכז.\n\nאנו מחפשים מנחים ומדריכים בנהריה ,כרמיאל ובאזור באר שבע.\n\nדרישות התפקיד\n\n✔️ תואר ראשון ומעלה בתחומי החינוך, הפסיכולוגיה, העבודה הסוציאלית, ההבעה והיצירה – או לימודים מקצועיים מוכרים בתחומי הווידאו, הקולנוע, הדרמה או המשחק.\n✔️ ניסיון קודם בהנחיה, הדרכה או טיפול עם ילדים ובני נוער – חובה.\n✔️ זמינות לעבודה בשעות הבוקר.\n✔️ רכב ורישיון נהיגה – חובה.\n\nלמה כדאי להצטרף אלינו?\n\n✨ הכשרה מקצועית ייחודית בתחום הוידאו תרפיה.\n\n✨ ליווי אישי, הדרכה מקצועית ותמיכה לאורך הדרך.\n✨ סדנאות העשרה במהלך השנה.\n✨ עבודה משמעותית עם אוכלוסיות מגוונות בפריסה ארצית.\n✨ שכר גבוה למתאימים.\n\nאין צורך בניסיון קודם בתחום הקולנוע – אנו מעניקים הכשרה מקצועית וליווי לאורך הדרך.\n\nרוצים להצטרף אלינו?\n\nאם אתם אנשי חינוך, טיפול או הדרכה, ומחפשים עשייה מקצועית בעלת משמעות – נשמח להכיר אתכם.\n\n📩 לשליחת קורות חיים:\njoin-us@kolnoam.com\n\nלפרטים נוספים על העשייה שלנו, חפשו בגוגל:\n“מרכז שרון ישראל – סרטים יוצרים שינוי”",
-   "views": 221,
+   "views": 222,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -783,7 +778,7 @@
    "post": "Israel_media_industry/3859",
    "ts": "2026-10-13T13:48:23+00:00",
    "text": "דרוש/ה רכז/ת מערכת לעמוד בידור | ערוץ 16\n\nאנחנו יוצאים לדרך עם פרויקט חדש ומשמעותי בערוץ 16, שמחבר בין טלוויזיה, דיגיטל, תוכן, טאלנטים ומשפיענים, ומחפשים רכז/ת מערכת שיהיה/תהיה חלק מרכזי מצוות ההקמה ויוביל/תוביל את הפעילות השוטפת של המערכת.\n\nמחפשים מישהו/י שחי/ה ונושם/ת את עולם הבידור, מכיר/ה את התעשייה מבפנים, יודע/ת לנהל משימות, לתאם בין גורמים שונים ולהחזיק מערכת דינמית ומתפתחת. מישהו/י עם יכולות ארגון וניהול גבוהות, ראש גדול, יוזמה ויכולת להניע תהליכים בסביבה שבה הכול קורה מהר.\n\nניסיון קודם בעולמות הבידור – חובה.\n\nיתרון משמעותי לניסיון קודם במערכת בידור או בגוף תקשורת דומה.\n\nמשרה מלאה | התחלה מיידית | תל אביב\n\nקו״ח: or@artzigroup.com",
-   "views": 312,
+   "views": 313,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -958,7 +953,7 @@
    "post": "Israel_media_industry/3858",
    "ts": "2026-10-13T07:33:01+00:00",
    "text": "דרושים/ות עורכי/ות וידאו למחלקת הווידאו של ערוץ חדשות מוביל בתל אביב-יפו דרושים/ות עורכי/ות וידאו מנוסים/ות, עם היכרות עמוקה עם עולם החדשות והאקטואליה ויכולת להפוך חומרי גלם לסיפור מדויק, מעניין ובעל קצב. מה אנחנו מחפשים?\nניסיון מוכח בעריכת וידאו בעולמות החדשות, האקטואליה והתוכן.\nניסיון בעריכת כתבות, אייטמים ומגזינים או רצון ויכולת להתפתח לכיוון זה.\nהיכרות עם תהליכי עבודה במערכת חדשותית ויכולת לעבוד בקצב גבוה ובלוחות זמנים משתנים.\nאחריות, עצמאות, סדר ויכולת לקבל החלטות עריכתיות בזמן אמת.\nנכונות לעבודה במשמרות מהמשרדים בתל אביב-יפו.\nזיקה אמיתית לחדשות, אקטואליה ותוכן.\nיתרון ל:\nניסיון בעריכת כתבות חדשותיות ואקטואליות ועריכת כתבות מגזין.\nניסיון בעבודה בגופי תקשורת, טלוויזיה או מערכות תוכן.\nשליטה בשפות נוספות, המאפשרת עבודה עם מקורות וחומרי גלם מגוונים.\nהמערכת של הערוץ מבוססת על העבודה ב- Premiere, לעורכי Avid תינתן האפשרות לעבור הכשרה לעבודה בסביבת Adobe.\nקורות חיים ותיק עבודות ניתן לשלוח ל: v.uchitel@i24news.tv",
-   "views": 358,
+   "views": 359,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -1168,7 +1163,7 @@
    "post": "Israel_media_industry/3857",
    "ts": "2026-10-12T06:52:53+00:00",
    "text": "לרצועת הבוקר של קשת 12 דרוש צלם לשידורי liveu במשרה מלאה!\nהמשרה כוללת ציוד וידיאו מלא + רכב צמוד\nדרישות התפקיד:\nהתחלת עבודה מיידית\nניסיון בצילום וידיאו ושידורים חיים\nמגורים באזור המרכז - עדיפות\nעדיפות לצלמים שמעוניינים בעבודה לטווח ארוך\n*המודעה מנוסחת בלשון זכר אך פונה לכל המינים\nלהגשת קורות חיים רק במייל\nAdva.m@haboker12.co.il",
-   "views": 499,
+   "views": 500,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -1178,7 +1173,7 @@
    "post": "Israel_media_industry/3856",
    "ts": "2026-10-11T18:00:36+00:00",
    "text": "📢 דרושים/ות תחקירנים/ות!\n🎥 לעבודה בערוץ 16 לקראת יום הבחירות ובמשדר מיוחד בערב הבחירות מה אנחנו מחפשים?\nהבנה והתמצאות בפוליטיקה\nמהירות מחשבה ויכולת למידה מהירה\nיכולת עבודה תחת לחץ ובסביבה דינמית\nאם אתם חיים ונושמים אקטואליה, מנוסים בעבודה במערכת חדשות, חושבים מהר ומוכנים לאתגר מרתק בזמן אמת ⬅️ אנחנו מחפשים אתכם!\n📩 לפרטים ולהגשת מועמדות: roei.s@ch16.co.il",
-   "views": 458,
+   "views": 459,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -1213,7 +1208,7 @@
    "post": "Israel_media_industry/3855",
    "ts": "2026-10-11T12:01:26+00:00",
    "text": "אולפני הרצליה מגייסים מפעילי/ות ומקליטי/ות VTR ומפעילי cg וטלפרומפטר\nלמשרה מלאה וקבועה.\n\nדרישות התפקיד:\nידע טכני בתחום הווידאו ואוריינטציה טכנית גבוהה, חשיבה קריאטיבית, אחריות ויכולת עבודה בסביבה דינמית, מרובת משימות ותחת לחץ.\nנדרשת זמינות לעבודה בשעות לא שגרתיות.\nהכשרה מקצועית מלאה תינתן באולפנים ותימשך מספר חודשים.\nמיקום: אולפני הרצליה / ניידות שידור\nניידות - חובה\n\nbetasx@gmail.com",
-   "views": 491,
+   "views": 492,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -1223,7 +1218,7 @@
    "post": "Israel_media_industry/3854",
    "ts": "2026-10-11T08:27:05+00:00",
    "text": "",
-   "views": 510,
+   "views": 511,
    "forwarded_from": null,
    "media": [
     {

@@ -83,6 +83,7 @@ for url in URLS:
     try:
         page = requests.get(url, headers=UA, timeout=25).text
         names = {m for m in TME.findall(page) if m.lower() not in ("s", "share", "joinchat")}
+        names |= set(re.findall(r"/channels/\d+-([A-Za-z][A-Za-z0-9_]{3,31})", page))      # telemetr / tlmtr catalog links
         if "--deep" in ARGS:      # follow same-site links one level down (index sites link via their own pages)
             host = url.split("/")[2]
             subs = {h for h in re.findall(r'href="(https?://%s/[^"#?]+)"' % re.escape(host), page)}

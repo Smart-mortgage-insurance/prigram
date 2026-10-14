@@ -60,8 +60,9 @@
     },
     {
       "username": "Workingyes1",
-      "enabled": true,
-      "kind": "jobs"
+      "enabled": false,
+      "kind": "jobs",
+      "consent": "בעל הערוץ ביקש להסיר, 14.10.2026 – לא להחזיר"
     },
     {
       "username": "Jobs_in_Jerusalem",

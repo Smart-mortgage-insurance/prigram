@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T14:59:37.695617+00:00",
+ "updated": "2026-10-15T15:00:55.749670+00:00",
  "channels": {
   "jeniatafkidplus": {
    "title": "דרושים/ות משרות בירושלים וכל הארץ",
@@ -65,11 +65,121 @@
  "count": 109,
  "items": [
   {
+   "id": "p3c8b96516497",
+   "post": "HiTech_Jobs_In_Israel/137380",
+   "ts": "2026-10-15T15:00:28+00:00",
+   "text": "Formal Verification Engineer, Annapurna Labs at Amazon\nLocation: Haifa, Haifa, ISR\nPress here https://www.amazon.jobs/en/jobs/10579756/formal-verification-engineer-annapurna-labs?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/c7e3acb979710350.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
+   "id": "p05d909876564",
+   "post": "HiTech_Jobs_In_Israel/137379",
+   "ts": "2026-10-15T15:00:25+00:00",
+   "text": "Staff Software Engineer - Product Security at ServiceNow\nLocation: Petah Tikva\nPress here https://www.smartrecruiters.com/ServiceNow/744000155745276?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "pf1a9e9143956",
+   "post": "HiTech_Jobs_In_Israel/137378",
+   "ts": "2026-10-15T15:00:23+00:00",
+   "text": "Brand and Web Designer - DesignDev team at Wix\nLocation: Tel Aviv\nPress here https://www.smartrecruiters.com/Wix2/744000155746891?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "pe68dacdbb20f",
+   "post": "HiTech_Jobs_In_Israel/137377",
+   "ts": "2026-10-15T15:00:11+00:00",
+   "text": "Senior Product Designer at Melio\nLocation: Tel Aviv\nPress here https://job-boards.greenhouse.io/melio/jobs/8029987003?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p27f31f924e95",
+   "post": "HiTech_Jobs_In_Israel/137376",
+   "ts": "2026-10-15T15:00:09+00:00",
+   "text": "BizOps Junior Associate (Student Position) at Connecteam\nLocation: Tel Aviv District, Israel\nPress here https://connecteam.com/careers/6225248004?gh_jid=6225248004&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#StudentPositions #JuniorPositions",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/ca82af4f887214b9.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
+   "id": "pf7a7019844bf",
+   "post": "HiTech_Jobs_In_Israel/137375",
+   "ts": "2026-10-15T15:00:05+00:00",
+   "text": "Senior Data Scientist at Vi\nLocation: Tel Aviv\nPress here https://www.comeet.com/jobs/vi/B1.002/senior-data-scientist/7D.375?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 2,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "pf7635baf9791",
+   "post": "HiTech_Jobs_In_Israel/137374",
+   "ts": "2026-10-15T15:00:04+00:00",
+   "text": "Data Scientist at Play Perfect\nLocation: Tel Aviv (Azrieli Sarona) office, Israel\nPress here https://play-perfect.com/careers/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p6b42e72d6767",
+   "post": "HiTech_Jobs_In_Israel/137372",
+   "ts": "2026-10-15T15:00:02+00:00",
+   "text": "AI Fabric - QA SIT Team Leader at DRIVENETS\nLocation: Raanana, Israel\nPress here https://drivenets.com/careers/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p22246ddab844",
+   "post": "HiTech_Jobs_In_Israel/137373",
+   "ts": "2026-10-15T15:00:02+00:00",
+   "text": "Hardware Project Manager – AI Data Center at DRIVENETS\nLocation: Tel Aviv- Toha\nPress here https://drivenets.com/careers/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 4,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
+   "id": "p6833df1e8a97",
+   "post": "HiTech_Jobs_In_Israel/137371",
+   "ts": "2026-10-15T15:00:01+00:00",
+   "text": "Software Architect at CommIT\nLocation: Petah Tikva\nPress here https://www.comm-it.com/commit-jobs#career-sec?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
+  {
    "id": "pcf17991ed2af",
    "post": "HiTech_Jobs_In_Israel/137369",
    "ts": "2026-10-15T13:00:28+00:00",
    "text": "Interested in advertising and reaching +8600 job seekers? Reach us out 👇\n\nShare your support by boosting ⚡⚡⚡ our channel or sharing a kind donation securely via PayPal https://paypal.me/donateTheBot 😍\nto help us to be there for you 24/7 ⏰\nWe really appreciate it ❤",
-   "views": 97,
+   "views": 99,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -79,7 +189,7 @@
    "post": "HiTech_Jobs_In_Israel/137368",
    "ts": "2026-10-15T13:00:27+00:00",
    "text": "PCIe Validation Engineer, SPIV team at Amazon\nLocation: Haifa, Haifa, ISR\nPress here https://www.amazon.jobs/en/jobs/10579685/pcie-validation-engineer-spiv-team?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 97,
+   "views": 98,
    "forwarded_from": null,
    "media": [
     {
@@ -177,111 +287,6 @@
      "file": "data/media/2437d276e8e96914.jpg"
     }
    ],
-   "kind": "jobs"
-  },
-  {
-   "id": "p925dc374067f",
-   "post": "HiTech_Jobs_In_Israel/137359",
-   "ts": "2026-10-15T13:00:08+00:00",
-   "text": "Network Engineer - AI Infrastructure, RDMA & Storage at VAST Data\nLocation: Israel\nPress here https://www.comeet.com/jobs/vastdata/43.001/network-engineer---ai-infrastructure-rdma--storage/91.475?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 71,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p21d6ea158eb5",
-   "post": "HiTech_Jobs_In_Israel/137358",
-   "ts": "2026-10-15T13:00:07+00:00",
-   "text": "Espresso Clinical - Senior Full Stack Developer at Team8\nLocation: Tel Aviv, Israel\nPress here https://team8.vc/career/espresso-clinical/espresso-clinical-senior-full-stack-developer/?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 79,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p840af43551d8",
-   "post": "HiTech_Jobs_In_Israel/137357",
-   "ts": "2026-10-15T13:00:06+00:00",
-   "text": "Data Engineer at Upstream Security\nLocation: Herzliya, Israel\nPress here https://www.comeet.com/jobs/upstream/E4.003/data-engineer/F0.47C?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 76,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p9e248fc49e46",
-   "post": "HiTech_Jobs_In_Israel/137356",
-   "ts": "2026-10-15T13:00:05+00:00",
-   "text": "Algorithm Student at Samsung Research and Development Center Israel\nLocation: Samsung Israel R&D Center- SIRC\nPress here https://www.comeet.com/jobs/samsung/D4.005/algorithm-student/81.470?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#StudentPositions",
-   "views": 73,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p668c0800499f",
-   "post": "HiTech_Jobs_In_Israel/137355",
-   "ts": "2026-10-15T13:00:04+00:00",
-   "text": "Software Engineer Team Lead at ScyllaDB\nLocation: Israel\nPress here https://www.comeet.com/jobs/scylladb/E4.006/software-engineer-team-lead/AC.370-75.10C?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 82,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p90f258a55666",
-   "post": "HiTech_Jobs_In_Israel/137354",
-   "ts": "2026-10-15T13:00:03+00:00",
-   "text": "אחראי.ת אחזקה ותפעול at KPMG\nLocation: תל אביב\nPress here https://kpmg.co.il/%D7%A7%D7%A8%D7%99%D7%99%D7%A8%D7%94?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 73,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p9ae1bbbaa4a2",
-   "post": "HiTech_Jobs_In_Israel/137352",
-   "ts": "2026-10-15T13:00:01+00:00",
-   "text": "ERP Logistics Consultant at abra\nLocation: Center\nPress here https://www.abra-it.com/career?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 81,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p507aee02440e",
-   "post": "HiTech_Jobs_In_Israel/137353",
-   "ts": "2026-10-15T13:00:01+00:00",
-   "text": "Support Renewal Specialist at AudioCodes\nLocation: Naimi Park, Or Yehuda, Israel\nPress here https://www.audiocodes.com/careers/positions/4D376?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 77,
-   "forwarded_from": null,
-   "media": [
-    {
-     "type": "image",
-     "file": "data/media/4dda2417b72a3f95.jpg"
-    }
-   ],
-   "kind": "jobs"
-  },
-  {
-   "id": "p4c78c5e8038b",
-   "post": "HiTech_Jobs_In_Israel/137351",
-   "ts": "2026-10-15T13:00:00+00:00",
-   "text": "Senior Data Product Manager, AI at ActiveFence\nLocation: Ramat Gan, IL\nPress here https://alice.io/positions/position-91_47e?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 89,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p2d9e2a6b87ab",
-   "post": "HiTech_Jobs_In_Israel/137349",
-   "ts": "2026-10-15T11:00:24+00:00",
-   "text": "Interested in advertising and reaching +8600 job seekers? Reach us out 👇\n\nShare your support by boosting ⚡⚡⚡ our channel or sharing a kind donation securely via PayPal https://paypal.me/donateTheBot 😍\nto help us to be there for you 24/7 ⏰\nWe really appreciate it ❤",
-   "views": 92,
-   "forwarded_from": null,
-   "media": [],
    "kind": "jobs"
   },
   {
@@ -698,7 +703,7 @@
    "post": "Israel_media_industry/3858",
    "ts": "2026-10-13T07:33:01+00:00",
    "text": "דרושים/ות עורכי/ות וידאו למחלקת הווידאו של ערוץ חדשות מוביל בתל אביב-יפו דרושים/ות עורכי/ות וידאו מנוסים/ות, עם היכרות עמוקה עם עולם החדשות והאקטואליה ויכולת להפוך חומרי גלם לסיפור מדויק, מעניין ובעל קצב. מה אנחנו מחפשים?\nניסיון מוכח בעריכת וידאו בעולמות החדשות, האקטואליה והתוכן.\nניסיון בעריכת כתבות, אייטמים ומגזינים או רצון ויכולת להתפתח לכיוון זה.\nהיכרות עם תהליכי עבודה במערכת חדשותית ויכולת לעבוד בקצב גבוה ובלוחות זמנים משתנים.\nאחריות, עצמאות, סדר ויכולת לקבל החלטות עריכתיות בזמן אמת.\nנכונות לעבודה במשמרות מהמשרדים בתל אביב-יפו.\nזיקה אמיתית לחדשות, אקטואליה ותוכן.\nיתרון ל:\nניסיון בעריכת כתבות חדשותיות ואקטואליות ועריכת כתבות מגזין.\nניסיון בעבודה בגופי תקשורת, טלוויזיה או מערכות תוכן.\nשליטה בשפות נוספות, המאפשרת עבודה עם מקורות וחומרי גלם מגוונים.\nהמערכת של הערוץ מבוססת על העבודה ב- Premiere, לעורכי Avid תינתן האפשרות לעבור הכשרה לעבודה בסביבת Adobe.\nקורות חיים ותיק עבודות ניתן לשלוח ל: v.uchitel@i24news.tv",
-   "views": 402,
+   "views": 403,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"
@@ -908,7 +913,7 @@
    "post": "Israel_media_industry/3857",
    "ts": "2026-10-12T06:52:53+00:00",
    "text": "לרצועת הבוקר של קשת 12 דרוש צלם לשידורי liveu במשרה מלאה!\nהמשרה כוללת ציוד וידיאו מלא + רכב צמוד\nדרישות התפקיד:\nהתחלת עבודה מיידית\nניסיון בצילום וידיאו ושידורים חיים\nמגורים באזור המרכז - עדיפות\nעדיפות לצלמים שמעוניינים בעבודה לטווח ארוך\n*המודעה מנוסחת בלשון זכר אך פונה לכל המינים\nלהגשת קורות חיים רק במייל\nAdva.m@haboker12.co.il",
-   "views": 539,
+   "views": 540,
    "forwarded_from": null,
    "media": [],
    "kind": "jobs"

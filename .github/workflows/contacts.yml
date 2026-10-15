@@ -17,3 +17,4 @@ jobs:
       - run: python tools/contacts.py
         env:
           CONTACT_ARGS: ${{ inputs.args }}
+          CAND_MAX: "450"

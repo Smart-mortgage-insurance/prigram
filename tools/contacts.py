@@ -102,4 +102,4 @@ run(CHANNELS, "CONTACT")
 if DISCOVER:
     done = {c.lower() for c in CHANNELS} | KNOWN
     cands = sorted(c for c in FOUND if c.lower() not in done and not c.startswith("+") and not c.lower().endswith("bot"))
-    run(cands[:120], "CAND")
+    run(cands[:int(__import__("os").environ.get("CAND_MAX", "120"))], "CAND")

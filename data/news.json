@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T04:59:02.882569+00:00",
+ "updated": "2026-10-15T05:00:41.730699+00:00",
  "channels": {
   "jeniatafkidplus": {
    "title": "דרושים/ות משרות בירושלים וכל הארץ",
@@ -69,6 +69,46 @@
  },
  "count": 114,
  "items": [
+  {
+   "id": "pc530d4ed5c5e",
+   "post": "HiTech_Jobs_In_Israel/137323",
+   "ts": "2026-10-15T05:00:18+00:00",
+   "text": "Sales Engineer at Riskified\nLocation: Tel Aviv\nPress here https://www.riskified.com/careers/job-description/?gh_jid=8888283002&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/410b0a7231858fbc.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
+   "id": "pc4321d3659e3",
+   "post": "HiTech_Jobs_In_Israel/137322",
+   "ts": "2026-10-15T05:00:17+00:00",
+   "text": "Growth Marketing Manager at Riskified\nLocation: Tel Aviv\nPress here https://www.riskified.com/careers/job-description/?gh_jid=8878439002&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/5c13a7a90c69a773.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
+  {
+   "id": "p559e01fe78af",
+   "post": "HiTech_Jobs_In_Israel/137321",
+   "ts": "2026-10-15T05:00:01+00:00",
+   "text": "Senior Strategy Researcher at Kayhut\nLocation: Herzliya, Israel\nPress here https://www.comeet.com/jobs/Kayhut/F0.00B/senior-strategy-researcher/21.47E?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [],
+   "kind": "jobs"
+  },
   {
    "id": "p383e2fba8cb5",
    "post": "jobsHOTjobss/17663",
@@ -327,41 +367,6 @@
      "file": "data/media/ff616d2d96e54600.jpg"
     }
    ],
-   "kind": "jobs"
-  },
-  {
-   "id": "p115e020a1e5e",
-   "post": "HiTech_Jobs_In_Israel/137302",
-   "ts": "2026-10-14T13:00:14+00:00",
-   "text": "Senior Product Manager, AI-Native Platform at Similarweb\nLocation: Tel Aviv, Israel\nPress here https://job-boards.greenhouse.io/similarweb/jobs/8281070?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 121,
-   "forwarded_from": null,
-   "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p795d18a7a7cc",
-   "post": "HiTech_Jobs_In_Israel/137301",
-   "ts": "2026-10-14T13:00:12+00:00",
-   "text": "Developer Support Engineer at JFrog\nLocation: Tel Aviv/ Netanya, Israel\nPress here https://join.jfrog.com/job/?job=8264438&amp;gh_jid=8264438&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
-   "views": 133,
-   "forwarded_from": null,
-   "media": [
-    {
-     "type": "image",
-     "file": "data/media/7714249cd0a798d6.jpg"
-    }
-   ],
-   "kind": "jobs"
-  },
-  {
-   "id": "p05ff35a91b16",
-   "post": "HiTech_Jobs_In_Israel/137300",
-   "ts": "2026-10-14T13:00:05+00:00",
-   "text": "HR Student at Landa Corporation\nLocation: Rehovot, Israel\nPress here https://www.comeet.com/jobs/landacorp/A4.000/hr-student/6D.27C?utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#StudentPositions",
-   "views": 78,
-   "forwarded_from": null,
-   "media": [],
    "kind": "jobs"
   },
   {

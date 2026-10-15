@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T00:20:57.747843+00:00",
+ "updated": "2026-10-15T00:22:28.464559+00:00",
  "channels": {
   "jeniatafkidplus": {
    "title": "דרושים/ות משרות בירושלים וכל הארץ",
@@ -69,6 +69,21 @@
  },
  "count": 114,
  "items": [
+  {
+   "id": "p6367e21333f4",
+   "post": "jobsHOTjobss/17662",
+   "ts": "2026-10-15T00:21:32+00:00",
+   "text": "",
+   "views": 1,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/1e8be90d30cd6a5c.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
   {
    "id": "pd6239f164cbf",
    "post": "taasuka50plusminus/930",
@@ -1426,21 +1441,6 @@
    "views": 983,
    "forwarded_from": null,
    "media": [],
-   "kind": "jobs"
-  },
-  {
-   "id": "p1edc74b897bd",
-   "post": "jobsHOTjobss/17641",
-   "ts": "2026-10-04T09:14:59+00:00",
-   "text": "",
-   "views": 163,
-   "forwarded_from": null,
-   "media": [
-    {
-     "type": "image",
-     "file": "data/media/9d4529ec8861c55e.jpg"
-    }
-   ],
    "kind": "jobs"
   },
   {

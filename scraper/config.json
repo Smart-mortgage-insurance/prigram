@@ -189,7 +189,8 @@
     {
       "username": "KSPcoil",
       "kind": "deals",
-      "enabled": true
+      "enabled": false,
+      "consent": "הוסר 17.10.2026: אתר KSP חוסם גולשי נטפרי, כל הקישורים בערוץ לא נפתחים"
     },
     {
       "username": "AceIsraelofficial",

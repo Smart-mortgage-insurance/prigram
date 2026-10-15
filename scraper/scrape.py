@@ -213,6 +213,9 @@ def clean_board(text):
 
 def allowed(kind, text):
     if kind:  # boards: the ad is the content, only empty fragments are dropped
+        if kind == "deals" and CFG["text_filter"].get("deals_drop_regex") and \
+                re.search(CFG["text_filter"]["deals_drop_regex"], text, re.I):
+            return False  # deals that don't suit the audience (food that isn't kosher, immodest clothing, gambling)
         return len(re.sub(r"[\W\d_]", "", text)) >= CFG["text_filter"].get("min_letters", 12)
     return text_allowed(text)
 

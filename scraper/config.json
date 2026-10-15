@@ -165,6 +165,36 @@
       "username": "dealsvip",
       "enabled": false,
       "kind": "deals"
+    },
+    {
+      "username": "iBuyIL",
+      "kind": "deals",
+      "enabled": true
+    },
+    {
+      "username": "ILcoupons",
+      "kind": "deals",
+      "enabled": true
+    },
+    {
+      "username": "DealIsraeli",
+      "kind": "deals",
+      "enabled": true
+    },
+    {
+      "username": "SALAMTAK_DEALS",
+      "kind": "deals",
+      "enabled": true
+    },
+    {
+      "username": "KSPcoil",
+      "kind": "deals",
+      "enabled": true
+    },
+    {
+      "username": "AceIsraelofficial",
+      "kind": "deals",
+      "enabled": true
     }
   ],
   "limits": {
@@ -286,7 +316,8 @@
     "caption_max_words": 6,
     "replace_with_space": [
       "[🎥📷📸📹🎬☝]️?"
-    ]
+    ],
+    "deals_drop_regex": "מקדונלד|ביג מק|בורגר קינג|KFC|שרימפס|חזיר|בייקון|בגד ים|בגדי ים|ביקיני|הלבשה תחתונה|לנז'רי|חזיי|תחתוני|שמלת |שמלות |יוגה לנשים|קזינו|הימורים|winner|ווינר|טוטו|לוטו"
   },
   "media_filter": {
     "gemini_model": "gemini-2.5-flash",

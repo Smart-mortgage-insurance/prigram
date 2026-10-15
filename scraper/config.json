@@ -113,8 +113,8 @@
     {
       "username": "Nortech_Spotlight",
       "kind": "jobs",
-      "enabled": true,
-      "consent": "אושר בכתב בוואטסאפ ע\"י מנכ\"ל נורטק, 14.10.2026"
+      "enabled": false,
+      "consent": "אושר בכתב בוואטסאפ ע\"י מנכ\"ל נורטק, 14.10.2026 · הוסר 15.10 כי הוא כפול ל-Galilee-Golan-Tech"
     },
     {
       "username": "PMO_jobs",

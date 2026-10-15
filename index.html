@@ -56,18 +56,19 @@
   .chips-bar{background:var(--card);border-bottom:1px solid var(--line)}
   .chips{max-width:1320px;margin:0 auto;padding:10px 16px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
   .chips::-webkit-scrollbar{display:none}
-  .chip{display:inline-flex;align-items:center;gap:7px;flex-shrink:0;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px 5px 6px;font-size:13.5px;font-weight:600;cursor:pointer;color:var(--ink)}
+  .chip{display:inline-flex;align-items:center;gap:7px;flex-shrink:0;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px 5px 6px;font-size:14.5px;font-weight:600;cursor:pointer;color:var(--ink)}
+  .chip .cn{max-width:170px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}   /* שמות ערוצים ארוכים מתקצרים */
   .chip.all{padding-inline:14px}
   .chip.on{background:var(--tg);border-color:var(--tg);color:#fff}
   .chip .ava{width:24px;height:24px;font-size:11px}
 
   /* layout */
   .wrap{max-width:1320px;margin:0 auto;display:flex;gap:24px;padding:18px 16px;align-items:flex-start}
-  .side{width:230px;flex-shrink:0;position:sticky;top:180px}
+  .side{width:250px;flex-shrink:0;position:sticky;top:180px;overflow-y:auto;scrollbar-width:thin;padding:2px 4px 2px 2px}   /* גלילה משלה כשהעמודה גבוהה מהמסך */
   .adside{width:300px;flex-shrink:0;position:sticky;top:180px}
   .adside .adframe{margin:0 auto 14px}
   @media(max-width:1240px){.side{display:none}}
-  .feed{flex:1;min-width:0;max-width:680px;margin-inline:auto}
+  .feed{flex:1;min-width:0;max-width:760px;margin-inline:auto}
   @media(max-width:980px){.side,.adside{display:none}}
 
   .notice{background:#fff;border:1px solid var(--line);color:#4b5563;border-radius:12px;padding:10px 14px;font-size:13px;margin-bottom:16px;display:flex;gap:9px;align-items:flex-start}
@@ -99,11 +100,11 @@
   .post .col{flex:1;min-width:0}
   .bubble{background:var(--card);border:1px solid var(--line);border-radius:16px;border-top-right-radius:5px;box-shadow:var(--shadow);padding:11px 15px 9px}
   .src{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:5px}
-  .src .nm{font-weight:800;font-size:14.5px;color:var(--tg-deep);cursor:pointer}
+  .src .nm{font-weight:800;font-size:16px;color:var(--tg-deep);cursor:pointer}
   .src .via{font-size:11.5px;color:var(--muted);font-weight:600}
   .fwd{font-size:12.5px;color:var(--muted);margin-bottom:4px}
   .fwd b{color:var(--tg-deep);font-weight:700}
-  .bt{font-size:16px;white-space:pre-wrap;word-break:break-word;line-height:1.6}
+  .bt{font-size:17.5px;white-space:pre-wrap;word-break:break-word;line-height:1.65}
   .post.fresh .bubble{animation:flash 1.8s ease}
   @keyframes flash{0%{background:var(--tg-soft);border-color:var(--tg)}100%{background:var(--card)}}
   .media{margin-top:10px;display:grid;gap:5px;border-radius:12px;overflow:hidden}
@@ -111,7 +112,7 @@
   .media.n3 > :first-child{grid-column:1 / -1}
   .media img,.media video{width:100%;height:100%;max-height:460px;object-fit:cover;display:block;border-radius:8px;background:#e6edf2}
   .media img{cursor:zoom-in}
-  .meta{display:flex;align-items:center;gap:12px;margin-top:8px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+  .meta{display:flex;align-items:center;gap:12px;margin-top:8px;font-size:13px;color:var(--muted);flex-wrap:wrap}
   .meta .sp{flex:1}
   .meta a,.meta button{background:none;border:0;padding:0;color:var(--muted);font-size:12px;font-weight:600;cursor:pointer}
   .meta a:hover,.meta button:hover{color:var(--tg-deep)}
@@ -125,8 +126,8 @@
   .cta{display:inline-block;margin-top:10px;background:var(--ink);color:#fff;font-weight:700;font-size:14px;padding:9px 18px;border-radius:10px}
 
   /* side */
-  .box{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:15px 16px;margin-bottom:14px;font-size:13.5px}
-  .box h3{margin:0 0 8px;font-size:15px}
+  .box{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:15px 16px;margin-bottom:14px;font-size:14.5px}
+  .box h3{margin:0 0 8px;font-size:16.5px}
   .box p{margin:0;color:#4b5a66}
   .box .ad-img{width:calc(100% + 32px);margin:-15px -16px 12px;display:block;border-radius:14px 14px 0 0}
   .placard{background:var(--gold-soft);border:1px dashed var(--gold);border-radius:14px;padding:16px;text-align:center}
@@ -511,6 +512,7 @@ function fitAds(){
   hd.style.top=-hide+"px";
   const top=hd.offsetHeight-hide+14;
   document.querySelectorAll(".side,.adside").forEach(e=>e.style.top=top+"px");
+  const sd=$("side"); if(sd) sd.style.maxHeight=(innerHeight-top-12)+"px";
   document.querySelectorAll(".adframe").forEach(a=>{
     const w0=+a.dataset.adw, col=a.closest(".adside");
     if(col) a.style.width=Math.max(150,Math.min(col.clientWidth,(innerHeight-top-16)*w0/+a.dataset.adh))+"px";
@@ -541,7 +543,7 @@ function renderChips(){
   $("chips").innerHTML=`<button class="chip all${filterCh||filterKind||filterMine?"":" on"}" data-ch="">כל הערוצים</button>`+
     `<button class="chip mine${filterMine?" on":""}" data-mine>★ הערוצים שלי${mine.size?" ("+[...mine].filter(u=>counts[u]).length+")":""}</button>`+
     Object.keys(KIND).filter(k=>secItems().some(i=>i.kind===k)).filter((k,_,a)=>a.length>1).map(k=>`<button class="chip kind${filterKind===k&&!filterCh?" on":""}" data-kind="${k}">${KIND[k]}</button>`).join("")+
-    us.map(u=>`<button class="chip${filterCh===u?" on":""}" data-ch="${esc(u)}">${avatar(u)}${esc(chName(u))}<span class="star${mine.has(u)?" on":""}" data-star="${esc(u)}" title="${mine.has(u)?"הסרה מהערוצים שלי":"הוספה לערוצים שלי"}">${mine.has(u)?"★":"☆"}</span></button>`).join("")+
+    us.map(u=>`<button class="chip${filterCh===u?" on":""}" data-ch="${esc(u)}" title="${esc(chName(u))}">${avatar(u)}<span class="cn">${esc(chName(u))}</span><span class="star${mine.has(u)?" on":""}" data-star="${esc(u)}" title="${mine.has(u)?"הסרה מהערוצים שלי":"הוספה לערוצים שלי"}">${mine.has(u)?"★":"☆"}</span></button>`).join("")+
     `<button class="chip addch" data-addch>＋ הוספת ערוץ</button>`;
 }
 

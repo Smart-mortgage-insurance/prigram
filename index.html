@@ -179,6 +179,15 @@
   .car-dots i.on{background:var(--tg-deep);width:20px;border-radius:999px}
   .bt .cta.inl,.box .cta.inl{margin:3px 0;text-decoration:none}
   .tlink{color:var(--tg-deep);font-weight:700;text-decoration:underline}
+  .chip .star{font-size:14px;line-height:1;color:#b9c2c7;margin-inline-start:2px;padding:0 2px}
+  .chip .star.on{color:#e6a800}
+  .chip.on .star{color:#fff}
+  .chip.mine{font-weight:800}
+  .chip.addch{border-style:dashed;color:var(--tg-deep);font-weight:700}
+  .box.addbox{border:1.5px dashed var(--tg);background:var(--tg-soft)}
+  .box.addbox button{margin-top:8px;border:0;background:var(--tg-deep);color:#fff;font-family:inherit;font-weight:700;font-size:13.5px;padding:8px 14px;border-radius:10px;cursor:pointer}
+  .consent-row{display:flex;gap:8px;align-items:flex-start;margin-top:12px;font-size:13.5px;line-height:1.5}
+  .consent-row input{width:auto;margin-top:3px}
   .post.adpost{justify-content:center}
   .post.adpost .adframe{max-width:360px}
   .promo .pbanner{margin:8px 0 2px}
@@ -219,7 +228,7 @@
 <footer>
   © <span id="yr"></span> נטגרם · <span id="updatedLine"></span><br>
   התכנים באתר מועתקים כלשונם מערוצי טלגרם ציבוריים. האחריות לתוכן כל פוסט חלה על הערוץ שפרסם אותו.<br>
-  <button data-open="about">הבהרה משפטית ותנאי שימוש</button> · <button data-open="report-general">בקשת הסרה / פנייה</button>
+  <button data-open="about">הבהרה משפטית ותנאי שימוש</button> · <button data-open="report-general">בקשת הסרה / פנייה</button> · <button data-addch>הוספת ערוץ לנטגרם</button>
 </footer>
 
 <div class="lb" id="lightbox"><img id="lbImg" alt=""></div>
@@ -285,6 +294,25 @@
   </form>
 </div></div>
 
+<div class="modal" id="addch"><div class="card">
+  <h2>הוספת ערוץ טלגרם לנטגרם</h2>
+  <p>יש לך ערוץ טלגרם ציבורי? גולשי נטפרי לא יכולים לראות אותו היום. בנטגרם הוא יוצג להם כלשונו, בשם הערוץ ועם קישור אליו – בחינם.</p>
+  <form id="addForm">
+    <label for="addLink">קישור לערוץ</label>
+    <input id="addLink" required dir="ltr" placeholder="https://t.me/..." autocomplete="off" maxlength="120">
+    <div class="two">
+      <div><label for="addName">שם (בעל/ת הערוץ)</label><input id="addName" required maxlength="60" autocomplete="off"></div>
+      <div><label for="addContact">טלפון או מייל לחזרה</label><input id="addContact" required maxlength="80" autocomplete="off"></div>
+    </div>
+    <label for="addKind">תחום הערוץ</label>
+    <select id="addKind"><option>דרושים</option><option>מבצעים והנחות</option><option>עדכוני קהילה</option><option>חדשות</option><option>אחר</option></select>
+    <label class="consent-row"><input type="checkbox" id="addOk" required><span>אני בעל/ת הערוץ או מנהל/ת אותו, ומאשר/ת לנטגרם להציג את הפוסטים הציבוריים שלו כלשונם, עם שם הערוץ וקישור למקור. אפשר לבטל בכל עת בהודעה.</span></label>
+    <input type="checkbox" name="botcheck" id="addBot" tabindex="-1" autocomplete="off" style="display:none">
+    <div class="status" id="addStatus"></div>
+    <div class="row"><button class="btn pri" type="submit" id="addSend">שליחה</button><button class="btn sec" type="button" data-close>ביטול</button></div>
+  </form>
+</div></div>
+
 <div class="modal" id="msg"><div class="card">
   <h2>הודעה למערכת</h2>
   <p>יש לכם ידיעה, הצעה לשיפור, ערוץ שכדאי להוסיף או סתם מילה טובה? כתבו לנו.</p>
@@ -323,6 +351,10 @@ const COLORS=["#658e86","#4a726a","#7a7d80","#55585b","#86a8a1","#3f5f59","#9a9d
 
 let data={items:[],channels:{}}, promos={items:[]}, removed=new Set(), seen=new Set();
 let filterCh="", filterKind="", query="", shown=PAGE, first=true;
+/* "הערוצים שלי": הגולש מסמן ערוצים בכוכב, נשמר רק בדפדפן שלו */
+let mine=new Set(), filterMine=false;
+try{ mine=new Set(JSON.parse(localStorage.getItem("ng_mine")||"[]")); }catch(_){}
+const saveMine=()=>{ try{ localStorage.setItem("ng_mine",JSON.stringify([...mine])); }catch(_){} };
 const AD_HOLD_MS=10*60000, FEED_MAX_AGE=14*864e5;               // 10 דקות בראש הפיד; כמו גיל המשרות המקסימלי
 let feedAds=[], holdTimer=0, holdTimer2=0;
 const section="jobs";
@@ -481,9 +513,11 @@ function promoHTML(p){
 function renderChips(){
   const counts={};secItems().forEach(i=>{const u=i.post.split("/")[0];counts[u]=(counts[u]||0)+1;});
   const us=Object.keys(data.channels).filter(u=>counts[u]&&(!filterKind||data.channels[u].kind===filterKind)).sort((a,b)=>(counts[b]||0)-(counts[a]||0));
-  $("chips").innerHTML=`<button class="chip all${filterCh||filterKind?"":" on"}" data-ch="">כל הערוצים</button>`+
+  $("chips").innerHTML=`<button class="chip all${filterCh||filterKind||filterMine?"":" on"}" data-ch="">כל הערוצים</button>`+
+    `<button class="chip mine${filterMine?" on":""}" data-mine>★ הערוצים שלי${mine.size?" ("+[...mine].filter(u=>counts[u]).length+")":""}</button>`+
     Object.keys(KIND).filter(k=>secItems().some(i=>i.kind===k)).filter((k,_,a)=>a.length>1).map(k=>`<button class="chip kind${filterKind===k&&!filterCh?" on":""}" data-kind="${k}">${KIND[k]}</button>`).join("")+
-    us.map(u=>`<button class="chip${filterCh===u?" on":""}" data-ch="${esc(u)}">${avatar(u)}${esc(chName(u))}</button>`).join("");
+    us.map(u=>`<button class="chip${filterCh===u?" on":""}" data-ch="${esc(u)}">${avatar(u)}${esc(chName(u))}<span class="star${mine.has(u)?" on":""}" data-star="${esc(u)}" title="${mine.has(u)?"הסרה מהערוצים שלי":"הוספה לערוצים שלי"}">${mine.has(u)?"★":"☆"}</span></button>`).join("")+
+    `<button class="chip addch" data-addch>＋ הוספת ערוץ</button>`;
 }
 
 function renderSide(){
@@ -492,6 +526,7 @@ function renderSide(){
   if(ah!==adHTML){$("adside").innerHTML=adHTML=ah;}
   let h=pinned.filter(p=>!p.html).map(p=>`<div class="box" data-vk="${vkAd(p.id)}">${p.image?`<img class="ad-img" src="${esc(p.image)}" alt="">`:""}<h3>${esc(p.advertiser||"")}</h3><p style="white-space:pre-wrap">${promoText(p.text)}</p>
     ${p.cta_phone?`<a class="cta" href="tel:${p.cta_phone.replace(/[^0-9+]/g,"")}">${esc(p.cta_label||"לפרטים")}</a>`:""}</div>`).join("");
+  h+=`<div class="box addbox"><h3>יש לך ערוץ טלגרם?</h3><p>גולשי נטפרי לא רואים אותו היום. הוסיפו אותו לנטגרם – בחינם, בשם הערוץ ועם קישור אליו.</p><button data-addch>＋ הוספת הערוץ שלי</button></div>`;
   h+=`<div class="box"><h3>מה זה נטגרם?</h3><p>לוח דרושים: משרות מערוצי טלגרם ציבוריים, בלי צורך בטלגרם. כל מודעה מובאת כלשונה, בשם הערוץ שפרסם אותה ועם הקישורים המקוריים.</p></div>`;
   h+=PLACARD;
   if(h!==sideHTML){$("side").innerHTML=sideHTML=h;}
@@ -502,10 +537,11 @@ function render(isRefresh){
   let items=secItems().filter(i=>!removed.has(i.post));
   if(filterKind) items=items.filter(i=>i.kind===filterKind);
   if(filterCh) items=items.filter(i=>i.post.split("/")[0]===filterCh);
+  else if(filterMine) items=items.filter(i=>mine.has(i.post.split("/")[0]));
   if(query) items=items.filter(i=>(i.text||"").includes(query)||chName(i.post.split("/")[0]).includes(query));
   if(!query&&!filterCh&&!filterKind&&feedAds.length)            // פרסומות הפיד משתלבות לפי הזמן, כמו עדכון
     items=items.concat(feedAds.map(p=>({ad:p,ts:p.ts}))).sort((a,b)=>new Date(b.ts||0)-new Date(a.ts||0));
-  if(!items.length){$("feed").innerHTML=`<div class="empty">${query||filterCh||filterKind?"לא נמצאו עדכונים.":"אין עדכונים כרגע. חוזרים בקרוב…"}</div>`;return;}
+  if(!items.length){$("feed").innerHTML=`<div class="empty">${query||filterCh||filterKind?"לא נמצאו עדכונים.":filterMine?(mine.size?"אין כרגע פוסטים חדשים בערוצים שסימנת.":"עוד לא סימנת ערוצים. לחצו על ☆ ליד שם ערוץ ברשימה למעלה."):"אין עדכונים כרגע. חוזרים בקרוב…"}</div>`;return;}
   const inline=secPromos().filter(p=>p.enabled!==false&&!p.pin&&!p.html&&!p.ts);   // פרסומות טקסט ישנות בלי תור: כמו קודם
   let html="";
   items.slice(0,shown).forEach((it,i)=>{
@@ -661,6 +697,28 @@ $("jobForm").addEventListener("submit",async e=>{
     setTimeout(()=>$("job").classList.remove("open"),2600);
   }catch(_){ $("jobSend").disabled=false; $("jobStatus").style.color="#c0392b"; $("jobStatus").textContent="השליחה נכשלה. נסו שוב בעוד רגע."; }
 });
+function openAdd(){ $("addStatus").textContent=""; $("addSend").disabled=false; openM("addch"); setTimeout(()=>$("addLink").focus(),50); }
+$("addForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const v=id=>$(id).value.trim();
+  if(!/t\.me\/|^@?[A-Za-z][\w]{3,}$/.test(v("addLink"))){ $("addStatus").style.color="#c0392b"; $("addStatus").textContent="יש להדביק קישור לערוץ (למשל https://t.me/השם_של_הערוץ)."; return; }
+  if(!$("addOk").checked) return;
+  const fd=new FormData();
+  fd.append("access_key",REPORT_KEY);
+  fd.append("subject","נטגרם – בקשה להוספת ערוץ: "+v("addLink"));
+  fd.append("from_name","נטגרם");
+  fd.append("channel",v("addLink")); fd.append("owner",v("addName")); fd.append("contact",v("addContact")); fd.append("kind",$("addKind").value);
+  fd.append("consent","בעל/ת הערוץ אישר/ה בטופס: הצגת הפוסטים הציבוריים כלשונם, עם שם הערוץ וקישור למקור. "+new Date().toLocaleString("he-IL"));
+  if($("addBot").checked) fd.append("botcheck","1");
+  $("addSend").disabled=true; $("addStatus").style.color=""; $("addStatus").textContent="שולח…";
+  try{
+    const r=await fetch("https://api.web3forms.com/submit",{method:"POST",body:fd}); const j=await r.json();
+    if(!j.success) throw 0;
+    $("addStatus").style.color="var(--free)"; $("addStatus").textContent="✓ תודה! נבדוק את הערוץ ונעלה אותו בהקדם.";
+    $("addForm").reset();
+    setTimeout(()=>$("addch").classList.remove("open"),2600);
+  }catch(_){ $("addSend").disabled=false; $("addStatus").style.color="#c0392b"; $("addStatus").textContent="השליחה נכשלה. נסו שוב בעוד רגע."; }
+});
 function openMsg(){ $("msgStatus").textContent=""; $("msgSend").disabled=false; openM("msg"); setTimeout(()=>$("msgText").focus(),50); }
 $("msgForm").addEventListener("submit",async e=>{
   e.preventDefault();
@@ -689,11 +747,14 @@ document.addEventListener("click",e=>{
   const cg=t.closest("[data-cargo]"); if(cg){const c=cg.closest(".adcar");carGo(c,(carIdx[c.dataset.car]||0)+(+cg.dataset.cargo),true);carStart();return;}
   const cd=t.closest("[data-cardot]"); if(cd){carGo(cd.closest(".adcar"),+cd.dataset.cardot,true);carStart();return;}
   if(t.closest("[data-job]")){openJob();return;}
+  const st=t.closest("[data-star]"); if(st){const u=st.dataset.star; mine.has(u)?mine.delete(u):mine.add(u); saveMine(); renderChips(); if(filterMine) render(false); return;}
+  if(t.closest("[data-addch]")){openAdd();return;}
+  if(t.closest("[data-mine]")){filterMine=!filterMine; filterCh=""; filterKind=""; shown=PAGE; renderChips(); render(false); window.scrollTo({top:0,behavior:"smooth"}); return;}
   if(t.closest("[data-msg]")){openMsg();return;}
   const ch=t.closest("[data-ch]");
   const kd=t.closest("[data-kind]");
   if(kd){filterKind=kd.dataset.kind;filterCh="";shown=PAGE;renderChips();render(false);window.scrollTo({top:0,behavior:"smooth"});return;}
-  if(ch){filterCh=ch.dataset.ch;if(!filterCh)filterKind="";shown=PAGE;renderChips();render(false);window.scrollTo({top:0,behavior:"smooth"});return;}
+  if(ch){filterCh=ch.dataset.ch;filterMine=false;if(!filterCh)filterKind="";shown=PAGE;renderChips();render(false);window.scrollTo({top:0,behavior:"smooth"});return;}
   const am=t.closest("[data-admail]"); if(am){am.href=adMailURL();return;}   // הקישור נבנה רק בלחיצה
   const cn=t.closest("[data-copynum]"); if(cn){navigator.clipboard&&navigator.clipboard.writeText(cn.dataset.copynum).then(()=>{cn.textContent="הועתק ✓";setTimeout(()=>cn.textContent="העתקה",1500);});return;}
   const rep=t.closest("[data-rep]"); if(rep){openReport(rep.dataset.rep);return;}

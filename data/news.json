@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T00:37:38.707130+00:00",
+ "updated": "2026-10-16T00:39:03.754832+00:00",
  "channels": {
   "jeniatafkidplus": {
    "title": "דרושים/ות משרות בירושלים וכל הארץ",
@@ -80,6 +80,11 @@
    "title": "אייס",
    "avatar": "data/media/ddaf00714b6c52b3.jpg",
    "kind": "deals"
+  },
+  "Tech_Galilee_Golan_Channel": {
+   "title": "Galilee-Golan-Tech(Channel)",
+   "avatar": null,
+   "kind": "jobs"
   }
  },
  "count": 204,

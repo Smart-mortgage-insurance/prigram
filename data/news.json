@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T16:59:44.161542+00:00",
+ "updated": "2026-10-17T17:01:08.560200+00:00",
  "channels": {
   "jeniatafkidplus": {
    "title": "דרושים/ות משרות בירושלים וכל הארץ",
@@ -89,6 +89,21 @@
  },
  "count": 205,
  "items": [
+  {
+   "id": "p36268c22f740",
+   "post": "HiTech_Jobs_In_Israel/137458",
+   "ts": "2026-10-17T17:00:01+00:00",
+   "text": "Senior DevOps Engineer at Cellebrite\nLocation: Israel - Petah Tikva\nPress here https://cellebrite.com/en/about/careers/positions/?comeet_cat=israel-petah-tikva&amp;comeet_pos=8B.278&amp;comeet_all=all&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply",
+   "views": 4,
+   "forwarded_from": null,
+   "media": [
+    {
+     "type": "image",
+     "file": "data/media/d5fdef1b2d2ac1b1.jpg"
+    }
+   ],
+   "kind": "jobs"
+  },
   {
    "id": "p036a1607f94f",
    "post": "DealIsraeli/61217",
@@ -760,21 +775,6 @@
    "kind": "jobs"
   },
   {
-   "id": "p27f31f924e95",
-   "post": "HiTech_Jobs_In_Israel/137376",
-   "ts": "2026-10-15T15:00:09+00:00",
-   "text": "BizOps Junior Associate (Student Position) at Connecteam\nLocation: Tel Aviv District, Israel\nPress here https://connecteam.com/careers/6225248004?gh_jid=6225248004&amp;utm_source=telegram&amp;utm_medium=HiTech_Jobs_In_Israel&amp;utm_campaign=job-updates to apply\n#StudentPositions #JuniorPositions",
-   "views": 155,
-   "forwarded_from": null,
-   "media": [
-    {
-     "type": "image",
-     "file": "data/media/ca82af4f887214b9.jpg"
-    }
-   ],
-   "kind": "jobs"
-  },
-  {
    "id": "p0e0f0c488d1e",
    "post": "iBuyIL/27446",
    "ts": "2026-10-15T14:38:04+00:00",
@@ -1324,7 +1324,7 @@
    "post": "Jobs_in_Jerusalem/36442",
    "ts": "2026-10-14T13:09:53+00:00",
    "text": "#בית_שמש\n\n..............................\nקישור לקבוצה:\nקישור לערוץ:",
-   "views": 438,
+   "views": 439,
    "forwarded_from": null,
    "media": [
     {

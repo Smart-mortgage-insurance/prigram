@@ -2,61 +2,61 @@
   "channels": [
     {
       "username": "merkaz",
-      "enabled": false
+      "enabled": true
     },
     {
       "username": "hamoked_il",
-      "enabled": false,
+      "enabled": true,
       "require_prefix": "המוקד:"
     },
     {
       "username": "ramreports",
-      "enabled": false
+      "enabled": true
     },
     {
       "username": "abualiexpress",
-      "enabled": false
+      "enabled": true
     },
     {
       "username": "amitsegal",
-      "enabled": false
+      "enabled": true
     },
     {
       "username": "news0404il",
-      "enabled": false
+      "enabled": true
     },
     {
       "username": "israelhayomofficial",
-      "enabled": false
+      "enabled": true
     },
     {
       "username": "N12chat",
-      "enabled": false
+      "enabled": true
     },
     {
       "username": "ynetalerts",
-      "enabled": false
+      "enabled": true
     },
     {
       "username": "Moshepargod",
-      "enabled": false,
+      "enabled": true,
       "require_prefix": "הפרגוד:"
     },
     {
       "username": "behadrey",
-      "enabled": false
+      "enabled": true
     },
     {
       "username": "hamechadesh",
-      "enabled": false
+      "enabled": true
     },
     {
       "username": "haskupim",
-      "enabled": false
+      "enabled": true
     },
     {
       "username": "RealKikarHashabat",
-      "enabled": false
+      "enabled": true
     },
     {
       "username": "Workingyes1",

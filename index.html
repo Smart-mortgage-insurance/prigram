@@ -229,7 +229,7 @@
     </div>
     <button class="postjob" data-job>＋ <span id="postLbl">פרסום משרה</span> <small>חינם</small></button>
   </div>
-  <div class="secbar"><div class="sectabs"><button class="sectab on" data-sec="jobs">💼 דרושים</button><button class="sectab" data-sec="deals">🏷️ מבצעים <span class="new">חדש</span></button></div></div>
+  <div class="secbar"><div class="sectabs"><button class="sectab on" data-sec="jobs">💼 דרושים</button><button class="sectab" data-sec="deals">🏷️ מבצעים</button><button class="sectab" data-sec="news">📰 מבזקים</button></div></div>
   <div class="chips-bar"><div class="chips" id="chips"></div></div>
   <div class="ticker"><div class="label"><span class="dot"></span>חדש בלוח</div><div class="tw"><div class="track" id="tickTrack"></div></div></div>
 </header>
@@ -378,10 +378,12 @@ let feedAds=[], holdTimer=0, holdTimer2=0;
 /* שני לוחות באותו אתר: דרושים ומבצעים */
 const SEC={
   jobs:{tag:"לוח דרושים מטלגרם לגולשי נטפרי",q:"חיפוש משרה, תחום או עיר…",post:"פרסום משרה",empty:"אין משרות כרגע. חוזרים בקרוב…",hash:""},
-  deals:{tag:"מבצעים ודילים מטלגרם לגולשי נטפרי",q:"חיפוש מוצר, מותג או חנות…",post:"הוספת ערוץ",empty:"אין מבצעים כרגע. חוזרים בקרוב…",hash:"#deals"}
+  deals:{tag:"מבצעים ודילים מטלגרם לגולשי נטפרי",q:"חיפוש מוצר, מותג או חנות…",post:"הוספת ערוץ",empty:"אין מבצעים כרגע. חוזרים בקרוב…",hash:"#deals"},
+  news:{tag:"מבזקים מטלגרם לגולשי נטפרי",q:"חיפוש בחדשות…",post:"הוספת ערוץ",empty:"אין מבזקים כרגע. חוזרים בקרוב…",hash:"#news"}
 };
-let section=location.hash==="#deals"?"deals":"jobs";
-const secItems=()=>data.items.filter(i=>i.kind!=="realestate"&&((i.kind==="deals")===(section==="deals")));
+let section=location.hash==="#deals"?"deals":location.hash==="#news"?"news":"jobs";
+const kindOf=i=>i.kind||"news";                                       // פוסט בלי סוג = ערוץ חדשות
+const secItems=()=>data.items.filter(i=>kindOf(i)===section);
 const secPromos=()=>(promos.items||[]).filter(p=>p.section!=="realestate");
 function applySection(){
   const c=SEC[section];
@@ -565,7 +567,7 @@ function renderSide(){
   let h=pinned.filter(p=>!p.html).map(p=>`<div class="box" data-vk="${vkAd(p.id)}">${p.image?`<img class="ad-img" src="${esc(p.image)}" alt="">`:""}<h3>${esc(p.advertiser||"")}</h3><p style="white-space:pre-wrap">${promoText(p.text)}</p>
     ${p.cta_phone?`<a class="cta" href="tel:${p.cta_phone.replace(/[^0-9+]/g,"")}">${esc(p.cta_label||"לפרטים")}</a>`:""}</div>`).join("");
   h+=`<div class="box addbox"><h3>יש לך ערוץ טלגרם?</h3><p>גולשי נטפרי לא רואים אותו היום. הוסיפו אותו לנטגרם – בחינם, בשם הערוץ ועם קישור אליו.</p><button data-addch>＋ הוספת הערוץ שלי</button></div>`;
-  h+=`<div class="box"><h3>מה זה נטגרם?</h3><p>דרושים ומבצעים מערוצי טלגרם ציבוריים, בלי צורך בטלגרם. כל מודעה מובאת כלשונה, בשם הערוץ שפרסם אותה ועם הקישורים המקוריים.</p><button class="sidelink" data-msg>💬 הודעה למערכת</button></div>`;
+  h+=`<div class="box"><h3>מה זה נטגרם?</h3><p>דרושים, מבצעים ומבזקים מערוצי טלגרם ציבוריים, בלי צורך בטלגרם. כל מודעה מובאת כלשונה, בשם הערוץ שפרסם אותה ועם הקישורים המקוריים.</p><button class="sidelink" data-msg>💬 הודעה למערכת</button></div>`;
   h+=PLACARD;
   if(h!==sideHTML){$("side").innerHTML=sideHTML=h;}
   fitAds(); restoreCars(); observeViews($("side")); observeViews($("adside"));
@@ -778,14 +780,14 @@ $("msgForm").addEventListener("submit",async e=>{
   }catch(_){ $("msgSend").disabled=false; $("msgStatus").style.color="#c0392b"; $("msgStatus").textContent="השליחה נכשלה. נסו שוב בעוד רגע."; }
 });
 if(location.hash==="#msg") openMsg();
-addEventListener("hashchange",()=>{ if(location.hash==="#msg") openMsg(); if(location.hash==="#deals") setSection("deals"); });
+addEventListener("hashchange",()=>{ if(location.hash==="#msg") openMsg(); if(location.hash==="#deals") setSection("deals"); if(location.hash==="#news") setSection("news"); });
 
 document.addEventListener("click",e=>{
   const t=e.target;
   const cg=t.closest("[data-cargo]"); if(cg){const c=cg.closest(".adcar");carGo(c,(carIdx[c.dataset.car]||0)+(+cg.dataset.cargo),true);carStart();return;}
   const cd=t.closest("[data-cardot]"); if(cd){carGo(cd.closest(".adcar"),+cd.dataset.cardot,true);carStart();return;}
   const sc=t.closest("[data-sec]"); if(sc){setSection(sc.dataset.sec);return;}
-  if(t.closest("[data-job]")){section==="deals"?openAdd():openJob();return;}
+  if(t.closest("[data-job]")){section==="jobs"?openJob():openAdd();return;}
   const st=t.closest("[data-star]"); if(st){const u=st.dataset.star; mine.has(u)?mine.delete(u):mine.add(u); saveMine(); renderChips(); if(filterMine) render(false); return;}
   if(t.closest("[data-addch]")){openAdd();return;}
   if(t.closest("[data-mine]")){filterMine=!filterMine; filterCh=""; filterKind=""; shown=PAGE; renderChips(); render(false); window.scrollTo({top:0,behavior:"smooth"}); return;}

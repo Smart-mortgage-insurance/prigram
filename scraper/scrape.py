@@ -484,8 +484,8 @@ def main():
         # re-apply the current filters, so filter changes also clean older posts
         if not it.get("kind"):
             it["text"] = clean_text(it.get("text", ""))
-        if not MEDIA_ON:
-            it["media"] = []  # also strips photos/videos already published
+        if not MEDIA_ON or not it.get("kind"):
+            it["media"] = []  # also strips photos/videos already published; news = text only (photos of people)
         if not channel_ok(it["post"], it["text"]):
             continue
         if it["text"] and not allowed(it.get("kind"), it["text"]):
@@ -538,7 +538,7 @@ def main():
             if text and not allowed(kind, text):
                 log("   - dropped (ad/spam)")
                 continue
-            media = process_media(post, msg["media"])
+            media = process_media(post, msg["media"]) if kind else []   # news = text only
             if not text and not media:
                 continue
             if msg["media"] and not media and is_caption(post, text):

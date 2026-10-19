@@ -255,7 +255,7 @@ def download(url, max_bytes):
 
 
 def gemini_image_ok(img_bytes, mime):
-    model = CFG["media_filter"].get("gemini_model", "gemini-2.5-flash")
+    model = CFG["media_filter"].get("gemini_model", "gemini-3.5-flash")
     endpoint = ("https://generativelanguage.googleapis.com/v1beta/models/"
                 "{}:generateContent?key={}".format(model, GEMINI_KEY))
     prompt = (
@@ -380,7 +380,7 @@ def gemini_person_check(texts):
     """Returns a list of booleans (True = block) for the given posts, or None on any failure."""
     pf = CFG.get("person_filter", {})
     endpoint = ("https://generativelanguage.googleapis.com/v1beta/models/"
-                "{}:generateContent?key={}".format(pf.get("gemini_model", "gemini-2.5-flash-lite"), GEMINI_KEY))
+                "{}:generateContent?key={}".format(pf.get("gemini_model", "gemini-3.5-flash-lite"), GEMINI_KEY))
     listing = "\n\n".join("מבזק {}:\n{}".format(n + 1, t[:1500]) for n, t in enumerate(texts))
     body = {"contents": [{"parts": [{"text": PERSON_PROMPT + HEADLINE_PROMPT + listing}]}],
             "generationConfig": {"temperature": 0, "responseMimeType": "application/json",
@@ -430,7 +430,7 @@ def person_filter(existing, blocked, state):
         return
     state["pf_last"] = now
     size = pf.get("batch", 20)
-    n_blocked = 0
+    n_blocked = n_checked = 0
     for start in range(0, len(pending), size):
         batch = pending[start:start + size]
         verdicts = gemini_person_check([it["text"] for it in batch])
@@ -439,6 +439,7 @@ def person_filter(existing, blocked, state):
             break
         for it, (block, title) in zip(batch, verdicts):
             it["title"] = title
+            n_checked += 1
             if block:
                 existing.pop(it["post"], None)
                 blocked.add(it["post"])
@@ -446,7 +447,8 @@ def person_filter(existing, blocked, state):
             else:
                 it["checked"] = True
         time.sleep(4)
-    log("person filter: {} checked, {} blocked".format(len(pending), n_blocked))
+    log("person filter: {} of {} checked, {} blocked, {} titled".format(
+        n_checked, len(pending), n_blocked, sum(1 for it in pending if it.get("title"))))
 
 
 # --------------------------------------------------------------------------- #

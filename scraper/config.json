@@ -321,14 +321,14 @@
     "deals_drop_regex": "מקדונלד|ביג מק|בורגר קינג|KFC|שרימפס|חזיר|בייקון|בגד ים|בגדי ים|ביקיני|הלבשה תחתונה|לנז'רי|חזיי|תחתוני|שמלת |שמלות |יוגה לנשים|קזינו|הימורים|winner|ווינר|טוטו|לוטו"
   },
   "media_filter": {
-    "gemini_model": "gemini-2.5-flash",
+    "gemini_model": "gemini-3.5-flash",
     "allow_videos": true,
     "allow_without_gemini": true,
     "enabled": true
   },
   "person_filter": {
     "enabled": true,
-    "gemini_model": "gemini-2.5-flash-lite",
+    "gemini_model": "gemini-3.5-flash-lite",
     "batch": 20,
     "min_interval_sec": 180
   }

@@ -151,11 +151,11 @@ def parse_messages(soup):
             if vid.get("src"):
                 media.append({"type": "video", "src": vid["src"], "poster": vid.get("poster")})
             elif vid.get("poster"):
-                media.append({"type": "image", "src": vid["poster"]})
+                media.append({"type": "image", "src": vid["poster"], "from_video": True})
         for vthumb in msg.select("i.tgme_widget_message_video_thumb"):
             m = BG_URL_RE.search(vthumb.get("style", ""))
             if m and not any(x["type"] == "video" for x in media):
-                media.append({"type": "image", "src": m.group(1)})
+                media.append({"type": "image", "src": m.group(1), "from_video": True})
 
         if not text and not media:
             continue
@@ -324,6 +324,13 @@ def process_media(post, media):
             entry["poster"] = save_media(post + m["poster"], pdata, pctype, ".jpg")
         kept.append(entry)
     return kept
+
+
+def missing_media(orig, shown):
+    """What the original post had that we don't show (so a caption isn't left hanging)."""
+    if shown or not orig:
+        return None
+    return "video" if any(m["type"] == "video" or m.get("from_video") for m in orig) else "image"
 
 
 def process_avatar(info):
@@ -520,6 +527,11 @@ def main():
             if post in existing:
                 if msg["views"] is not None:
                     existing[post]["views"] = msg["views"]  # keep view counts fresh
+                miss = missing_media(msg["media"], existing[post].get("media"))
+                if miss:
+                    existing[post]["missing"] = miss
+                else:
+                    existing[post].pop("missing", None)
                 continue
             if post in removed or post in blocked or (msg["ts"] or "") < cutoff:
                 continue  # removed on request, or an old post (dead/moved channel)
@@ -554,6 +566,8 @@ def main():
                 "media": media,
                 "_new": True,
             }
+            if missing_media(msg["media"], media):
+                existing[post]["missing"] = missing_media(msg["media"], media)
             if kind:
                 existing[post]["kind"] = kind
             new_count += 1

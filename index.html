@@ -117,6 +117,7 @@
   .bt.clamp{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:6;overflow:hidden}
   .more-t{border:0;background:none;color:var(--tg-deep);font-weight:800;font-family:inherit;font-size:14.5px;cursor:pointer;padding:4px 0 0}
   .more-t:hover{text-decoration:underline}
+  .miss{margin-top:8px;display:inline-block;background:#f1f4f7;color:#5b6b7a;font-size:13.5px;padding:5px 10px;border-radius:8px}
   .media img{cursor:zoom-in}
   .meta{display:flex;align-items:center;gap:12px;margin-top:8px;font-size:13px;color:var(--muted);flex-wrap:wrap}
   .meta .sp{flex:1}
@@ -478,6 +479,7 @@ function postHTML(it,fresh){
       ${it.forwarded_from?`<div class="fwd">הועבר מתוך: <b>${esc(it.forwarded_from)}</b></div>`:""}
       ${it.text?`<div class="bt${openPosts.has(it.post)?"":" clamp"}">${linkify(it.text)}</div><button class="more-t" data-more="${esc(it.post)}" hidden>${openPosts.has(it.post)?"הצג פחות ▴":"קרא עוד ▾"}</button>`:""}
       ${mediaHTML(it.media)}
+      ${it.missing&&!(it.media||[]).length?`<div class="miss">${it.missing==="video"?"🎬 בפוסט המקורי מצורף סרטון שלא מוצג כאן":"🖼️ בפוסט המקורי מצורפת תמונה שלא מוצגת כאן"}</div>`:""}
       ${waNumHTML(it.text)}
       <div class="meta">
         <span>${relTime(it.ts)}</span>${it.views!=null?`<span>👁 ${fmtViews(it.views)}</span>`:""}

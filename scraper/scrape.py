@@ -364,6 +364,17 @@ PERSON_PROMPT = (
     'החזר JSON בלבד בצורה: [{"i": 1, "block": false}, ...] עם רשומה לכל מבזק.\n\n'
 )
 
+# Hagizra-style headline: 2-6 bold words shown before the post text, followed by " |"
+HEADLINE_PROMPT = (
+    "\n\nבנוסף, לכל הודעה כתוב בשדה t כותרת קצרה בסגנון אתרי מבזקים חרדיים: "
+    "2 עד 6 מילים בעברית, עניינית ומדויקת לפי תוכן ההודעה בלבד, בלי סימן פיסוק בסוף, "
+    "בלי אימוג'י, בלי מירכאות ובלי שם הערוץ. במודעת דרושים - התפקיד (ואם כתוב, המקום). "
+    "במבצע - המוצר והמחיר אם מופיע. אם אין להודעה תוכן ברור - t ריק.\n\n"
+)
+RESULT_SCHEMA = {"type": "ARRAY", "items": {"type": "OBJECT", "properties": {
+    "i": {"type": "INTEGER"}, "block": {"type": "BOOLEAN"}, "t": {"type": "STRING"}},
+    "required": ["i", "block", "t"]}}
+
 
 def gemini_person_check(texts):
     """Returns a list of booleans (True = block) for the given posts, or None on any failure."""
@@ -371,15 +382,16 @@ def gemini_person_check(texts):
     endpoint = ("https://generativelanguage.googleapis.com/v1beta/models/"
                 "{}:generateContent?key={}".format(pf.get("gemini_model", "gemini-2.5-flash-lite"), GEMINI_KEY))
     listing = "\n\n".join("מבזק {}:\n{}".format(n + 1, t[:1500]) for n, t in enumerate(texts))
-    body = {"contents": [{"parts": [{"text": PERSON_PROMPT + listing}]}],
-            "generationConfig": {"temperature": 0, "responseMimeType": "application/json"}}
+    body = {"contents": [{"parts": [{"text": PERSON_PROMPT + HEADLINE_PROMPT + listing}]}],
+            "generationConfig": {"temperature": 0, "responseMimeType": "application/json",
+                                 "responseSchema": RESULT_SCHEMA}}
     try:
         r = requests.post(endpoint, json=body, timeout=90)
         if r.status_code != 200:
             log("   ! person filter HTTP {}: {}".format(r.status_code, r.text[:200].replace(GEMINI_KEY, "***")))
             return None
         rows = json.loads(r.json()["candidates"][0]["content"]["parts"][0]["text"])
-        verdict = {int(row["i"]): bool(row["block"]) for row in rows}
+        verdict = {int(row["i"]): (bool(row["block"]), clean_title(row.get("t", ""))) for row in rows}
         if set(verdict) != set(range(1, len(texts) + 1)):
             log("   ! person filter: answer does not cover every post")
             return None
@@ -389,11 +401,18 @@ def gemini_person_check(texts):
         return None
 
 
+def clean_title(t):
+    t = re.sub(r"\s+", " ", str(t or "")).strip().strip("|:.-– \"'״")
+    words = t.split()
+    return " ".join(words[:8]) if len(words) >= 2 else ""
+
+
 def person_filter(existing, blocked, state):
     """Checks every unchecked post. New posts that could not be checked are held back
     (not published) and tried again on a later cycle; blocked ones are remembered."""
     pf = CFG.get("person_filter", {})
-    pending = [it for it in existing.values() if it.get("text") and not it.get("checked")]
+    pending = [it for it in existing.values()
+               if it.get("text") and (not it.get("checked") or "title" not in it)]
     if not pf.get("enabled") or not pending:
         return
     if not GEMINI_KEY:
@@ -418,7 +437,8 @@ def person_filter(existing, blocked, state):
         if verdicts is None:
             hold_new(pending[start:])
             break
-        for it, block in zip(batch, verdicts):
+        for it, (block, title) in zip(batch, verdicts):
+            it["title"] = title
             if block:
                 existing.pop(it["post"], None)
                 blocked.add(it["post"])

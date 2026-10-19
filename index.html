@@ -104,6 +104,7 @@
   .src .via{font-size:11.5px;color:var(--muted);font-weight:600}
   .fwd{font-size:12.5px;color:var(--muted);margin-bottom:4px}
   .fwd b{color:var(--tg-deep);font-weight:700}
+  .bt .hl{font-weight:800}
   .bt{font-size:17.5px;white-space:pre-wrap;word-break:break-word;line-height:1.65}
   .post.fresh .bubble{animation:flash 1.8s ease}
   @keyframes flash{0%{background:var(--tg-soft);border-color:var(--tg)}100%{background:var(--card)}}
@@ -477,7 +478,7 @@ function postHTML(it,fresh){
     <div class="col"><div class="bubble">
       <div class="src"><span class="nm" data-ch="${esc(u)}">${esc(chName(u))}</span>${it.direct?`<span class="via direct">פורסם ישירות בלוח</span>`:`<span class="via">ערוץ טלגרם ציבורי · ${hhmm(it.ts)}</span>`}</div>
       ${it.forwarded_from?`<div class="fwd">הועבר מתוך: <b>${esc(it.forwarded_from)}</b></div>`:""}
-      ${it.text?`<div class="bt${openPosts.has(it.post)?"":" clamp"}">${linkify(it.text)}</div><button class="more-t" data-more="${esc(it.post)}" hidden>${openPosts.has(it.post)?"הצג פחות ▴":"קרא עוד ▾"}</button>`:""}
+      ${it.text?`<div class="bt${openPosts.has(it.post)?"":" clamp"}">${it.title?`<strong class="hl">${esc(it.title)} |</strong> `:""}${linkify(it.text)}</div><button class="more-t" data-more="${esc(it.post)}" hidden>${openPosts.has(it.post)?"הצג פחות ▴":"קרא עוד ▾"}</button>`:""}
       ${mediaHTML(it.media)}
       ${it.missing&&!(it.media||[]).length?`<div class="miss">${it.missing==="video"?"🎬 בפוסט המקורי מצורף סרטון שלא מוצג כאן":"🖼️ בפוסט המקורי מצורפת תמונה שלא מוצגת כאן"}</div>`:""}
       ${waNumHTML(it.text)}
@@ -598,7 +599,7 @@ function render(isRefresh){
 
 function buildTicker(){
   const top=secItems().filter(i=>i.text&&!removed.has(i.post)).slice(0,10);
-  const one=top.map(i=>`<span class="t-item"><span class="t-time">${hhmm(i.ts)}</span><span class="t-src">${esc(chName(i.post.split("/")[0]))}:</span>${esc(i.text.split("\n")[0].slice(0,80))}</span>`).join("");
+  const one=top.map(i=>`<span class="t-item"><span class="t-time">${hhmm(i.ts)}</span><span class="t-src">${esc(chName(i.post.split("/")[0]))}:</span>${esc(i.title||i.text.split("\n")[0].slice(0,80))}</span>`).join("");
   $("tickTrack").innerHTML=one+one;
   document.querySelector(".ticker").style.display=top.length?"":"none";
 }

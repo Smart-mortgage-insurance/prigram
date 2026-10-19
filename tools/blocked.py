@@ -40,7 +40,7 @@ def main():
             'body{font-family:Arial,sans-serif;background:#f4f4f4;margin:0;padding:16px;max-width:760px;margin:auto}'
             '.c{background:#fff;border-radius:10px;padding:12px 14px;margin:10px 0;box-shadow:0 1px 3px #0002}'
             '.h{color:#777;font-size:13px;margin-bottom:6px}.t{white-space:pre-wrap;line-height:1.6}</style>'
-            '<h2>{} / {}</h2>{}</html>').format(ok, len(blocked), "".join(cards))
+            '<h2>@N</h2>@C</html>').replace("@N", "{} / {}".format(ok, len(blocked))).replace("@C", "".join(cards))
     open(os.path.join(ROOT, "blocked.html"), "w", encoding="utf-8").write(page)
     print("found {} of {} requested ({} blocked total)".format(ok, len(posts), len(blocked)))
 

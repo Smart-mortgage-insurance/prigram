@@ -348,20 +348,21 @@ def process_avatar(info):
 # Person filter: posts that speak badly about specific people never go up
 # --------------------------------------------------------------------------- #
 PERSON_PROMPT = (
-    "אתה בודק מבזקי חדשות לפני פרסום באתר, כדי למנוע פרסום לשון הרע ופגיעה בפרטיות.\n"
-    "לפניך רשימת מבזקים ממוספרת. לכל מבזק החזר block=true או block=false.\n\n"
-    "block=true כאשר המבזק עוסק באדם מסוים שאפשר לזהות (בשמו, בתפקידו או בתיאורו), "
-    "או בעסק או מוסד פרטי מסוים, ויש בו אחד מאלה:\n"
-    "- ייחוס עבירה, שחיתות, מרמה, אלימות, פגיעה מינית או התנהגות מבישה;\n"
-    "- שם או פרטים מזהים של חשוד, עצור, נאשם, קטין, נפגע עבירה או חולה;\n"
-    "- עלבון, לעג, כינוי גנאי או ביזוי, גם אם הוא מובא כציטוט מפי אדם אחר;\n"
-    "- רכילות, שמועה או טענה לא מבוססת, ופרטים אישיים, משפחתיים, רפואיים או כספיים.\n\n"
-    "block=false כאשר: המבזק אינו עוסק באדם מסוים; דיווח ענייני ונייטרלי על אירוע; "
-    "הודעה רשמית של צבא, משטרה, ממשלה או בית משפט בלי פרטים מזהים של אדם פרטי; "
-    "עמדה או ביקורת עניינית על מדיניות ועל החלטות של נבחרי ציבור, בלי עלבון אישי; "
-    "דיווח על אויב, ארגון טרור או מחבל; מזג אוויר, תחבורה, ספורט, אירועים.\n\n"
-    "בכל מקרה של ספק החזר block=true.\n"
-    'החזר JSON בלבד בצורה: [{"i": 1, "block": false}, ...] עם רשומה לכל מבזק.\n\n'
+    "You review Hebrew Telegram news posts for a Haredi news site that avoids lashon hara and "
+    "defamation of individuals - but it is a NEWS site, so ordinary news must be published.\n"
+    "For each numbered post set block=true ONLY if the post itself attributes a crime, a scandal, "
+    "a moral failing, an embarrassing personal matter, or an insult or mockery to a SPECIFIC, "
+    "IDENTIFIABLE person (named, or recognizable from the details), or spreads gossip or rumors "
+    "about a person.\n"
+    "Set block=false for everything else, including:\n"
+    "- security, military, terror and war reports, including about terrorists, enemy leaders and enemy states;\n"
+    "- accidents, fires, weather, health, traffic, economy and consumer news;\n"
+    "- arrests, investigations and court cases where the suspect is not named or identifiable;\n"
+    "- statements, decisions, votes and quotes of politicians, ministers, rabbis, officials and public "
+    "bodies, and plain reports of political disagreements between them;\n"
+    "- criticism of policies, laws, organizations, parties or governments (not of a private person);\n"
+    "- deaths, funerals, condolences, praise, events, Torah and community news.\n"
+    "When unsure, block=false.\n"
 )
 
 # Hagizra-style headline: 2-6 bold words shown before the post text, followed by " |"

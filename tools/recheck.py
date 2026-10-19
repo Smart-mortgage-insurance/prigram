@@ -45,7 +45,7 @@ def main():
             'body{font-family:Arial,sans-serif;background:#f3f3f3;max-width:760px;margin:auto;padding:16px}'
             '.c{background:#fff;border-radius:10px;padding:12px;margin:10px 0;line-height:1.5}'
             '.h{color:#777;font-size:13px;margin-bottom:6px}</style>'
-            '<h2>{}</h2>{}</html>').format(len(released), cards)
+            '<h2>@N</h2>@C</html>').replace("@N", str(len(released))).replace("@C", cards)
     open(os.path.join(os.path.dirname(HERE), "released.html"), "w", encoding="utf-8").write(page)
     json.dump([p for p, _ in released], open(os.path.join(os.path.dirname(HERE), "released.json"), "w"))
     print("blocked before: {}, fetched: {}, released: {}, still blocked: {}, not checked: {}".format(
